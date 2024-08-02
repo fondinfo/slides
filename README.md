@@ -1,4 +1,4 @@
-# Slide
+# Slide e lezioni
 
 ## Programmazione
 
