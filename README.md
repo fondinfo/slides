@@ -1,5 +1,3 @@
-# Slide e lezioni
-
 ## Programmazione
 
 - [Problem solving](/slides/p11-probsolv.html) - [Basi](/slides/p12-basi.html) - [Iterazioni](/slides/p13-cicli.html)
