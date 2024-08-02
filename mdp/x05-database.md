@@ -1,4 +1,4 @@
-![](images/db/overflow.png)
+![](/images/db/overflow.png)
 # Basi di dati
 ## Introduzione all'informatica
 
@@ -22,7 +22,7 @@
 
 ---
 
-![](images/db/mgmt.svg)
+![](/images/db/mgmt.svg)
 # Gestione distinta dei dati
 
 - **Ridondanza** : più copie dello stesso dato
@@ -33,7 +33,7 @@
 
 ---
 
-![](images/db/dbms.svg)
+![](/images/db/dbms.svg)
 # Gestione condivisa dei dati
 
 - Tutte le azioni sui dati vengono mediate dal **DBMS** (*DataBase Management System*)
@@ -61,7 +61,7 @@
 
 ---
 
-![](images/db/concurrency.svg) Stesso CC, <br> disponibilità 1000 € <br> Alla fine CC = -1000€, <br> oppure 0!
+![](/images/db/concurrency.svg) Stesso CC, <br> disponibilità 1000 € <br> Alla fine CC = -1000€, <br> oppure 0!
 # Accessi concorrenti
 
 - Problemi di consistenza dei dati condivisi
@@ -71,7 +71,7 @@
 
 ---
 
-![](images/db/transaction.svg): Stesso CC, <br> disponibilità 1000 € <br> Permessa solo prima <br> transazione: OK!
+![](/images/db/transaction.svg): Stesso CC, <br> disponibilità 1000 € <br> Permessa solo prima <br> transazione: OK!
 # Transazione
 
 - **Insieme di operazioni non decomponibili**
@@ -86,7 +86,7 @@
 
 # Architettura a tre livelli
 
-![large](images/db/dbms-levels.svg)
+![large](/images/db/dbms-levels.svg)
 
 ---
 
@@ -120,7 +120,7 @@
 
 ---
 
-![](images/hist/1971-codd.jpg) Edgar F. Codd
+![](/images/hist/1971-codd.jpg) Edgar F. Codd
 # Modello relazionale
 
 - *Edgar F. Codd* @ IBM, 1970
@@ -152,13 +152,13 @@
 
 # Database universitario
 
-![large](images/db/university.svg)
+![large](/images/db/university.svg)
 
 ---
 
 # Terminologia
 
-![large](images/db/terminology.svg)
+![large](/images/db/terminology.svg)
 
 ---
 
@@ -207,7 +207,7 @@
 
 # Concetto e tipo di chiave
 
-![large](images/db/keys.svg)
+![large](/images/db/keys.svg)
 
 ---
 
@@ -231,7 +231,7 @@
 
 ---
 
-![large](images/db/shop-0.svg) ![](images/db/shop-1.svg)
+![large](/images/db/shop-0.svg) ![](/images/db/shop-1.svg)
 # Prima forma normale
 
 - La relazione rispetta il modello relazionale
@@ -242,14 +242,14 @@
 
 ---
 
-![large](images/db/shop-2.svg)
+![large](/images/db/shop-2.svg)
 # Seconda forma normale
 
 - Non ci sono attributi non-chiave che dipendono **parzialmente** dalla chiave
 
 ---
 
-![large](images/db/shop-3.svg)
+![large](/images/db/shop-3.svg)
 # Terza forma normale
 
 - Non ci sono attributi non-chiave che dipendono **transitivamente** dalla chiave
@@ -276,73 +276,73 @@
 
 # Operatori insiemistici
 
-![large](images/db/set-ops.svg)
+![large](/images/db/set-ops.svg)
 
 ---
 
 # Unione
 
-![large](images/db/union.svg)
+![large](/images/db/union.svg)
 
 ---
 
 # Intersezione
 
-![large](images/db/intersection.svg)
+![large](/images/db/intersection.svg)
 
 ---
 
 # Differenza
 
-![large](images/db/difference.svg)
+![large](/images/db/difference.svg)
 
 ---
 
 # Selezione e proiezione
 
-![large](images/db/selection-projection.svg)
+![large](/images/db/selection-projection.svg)
 
 ---
 
 # Selezione
 
-![large](images/db/selection.svg)
+![large](/images/db/selection.svg)
 
 ---
 
 # Proiezione
 
-![large](images/db/projection.svg)
+![large](/images/db/projection.svg)
 
 ---
 
 # Prodotto cartesiano
 
-![large](images/db/cartesian-product.svg)
+![large](/images/db/cartesian-product.svg)
 
 ---
 
 # Join
 
-![large](images/db/join.svg)
+![large](/images/db/join.svg)
 
 ---
 
 # Proiezione + selezione
 
-![large](images/db/query-1.svg)
+![large](/images/db/query-1.svg)
 
 ---
 
 # Join + selezione
 
-![large](images/db/query-2.svg)
+![large](/images/db/query-2.svg)
 
 ---
 
 # Join + proiezione
 
-![large](images/db/query-3.svg)
+![large](/images/db/query-3.svg)
 
 ---
 
@@ -485,12 +485,12 @@ delete from Table [where Condition]
 
 ---
 
-![](images/db/nosql.png)
+![](/images/db/nosql.png)
 # NoSQL
 
 ---
 
-![](images/db/nosql.png)
+![](/images/db/nosql.png)
 # Movimento NoSQL
 
 - *Not Only SQL*
@@ -526,7 +526,7 @@ delete from Table [where Condition]
 
 ---
 
-![](images/db/json.svg)
+![](/images/db/json.svg)
 # JSON - Tipi di dati
 
 - *Booleani* : `true` o `false`
@@ -543,7 +543,7 @@ delete from Table [where Condition]
 
 ---
 
-![](images/db/json.svg)
+![](/images/db/json.svg)
 # JSON - Esempio
 
 ``` json
@@ -580,12 +580,12 @@ delete from Table [where Condition]
 
 ---
 
-![](images/db/mongodb.svg)
+![](/images/db/mongodb.svg)
 # MongoDB
 
 ---
 
-![](images/db/mongodb.svg)
+![](/images/db/mongodb.svg)
 # MongoDB
 
 - Pensato per i Big Data (*“humongous”*)
@@ -1067,12 +1067,12 @@ Tomaiuolo Michele michele.tomaiuolo@unipr.it 43.0
 
 ---
 
-![](images/db/python-requests.png)
+![](/images/db/python-requests.png)
 # Python requests
 
 ---
 
-![](images/db/python-requests.png)
+![](/images/db/python-requests.png)
 # Python requests
 
 - Accesso semplificato ai servizi REST
@@ -1131,12 +1131,12 @@ https://httpbin.org/get?key1=value1&key2=value2&key2=value3
 
 ---
 
-![](images/db/twitter.svg)
+![](/images/db/twitter.svg)
 # Esempio su Twitter
 
 ---
 
-![](images/db/twitter.svg)
+![](/images/db/twitter.svg)
 # Applicazione pratica
 
 - Molti servizi utilizzano dati in formato JSON
@@ -1150,7 +1150,7 @@ https://httpbin.org/get?key1=value1&key2=value2&key2=value3
 
 ---
 
-![](images/db/mongo-graph.png)
+![](/images/db/mongo-graph.png)
 # Esempio di tweet
 
 ``` json

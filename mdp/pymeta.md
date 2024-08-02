@@ -1,4 +1,4 @@
-![](images/metaprogramming.png)
+![](/images/metaprogramming.png)
 # Metaprogramming in Python
 ## Make software great again!
 
@@ -131,7 +131,7 @@ class User:
 
 ---
 
-![](images/dev/reflection.png)
+![](/images/dev/reflection.png)
 # Reflection
 
 - Ability of a computer program
@@ -265,7 +265,7 @@ AttributeError: 'Dummy' object has no attribute 'incX'
 
 ---
 
-![](images/dev/decorator.jpg)
+![](/images/dev/decorator.jpg)
 # Decorator
 
 - A function that creates a wrapper around another function
@@ -295,7 +295,7 @@ def add(x, y):
 
 ---
 
-![](images/misc/bleah.jpg)
+![](/images/misc/bleah.jpg)
 # Too much printing
 
 - Many functions with debug…
@@ -404,7 +404,7 @@ def add(x,y):
 
 ---
 
-![](images/dev/metaprogramming.png)
+![](/images/dev/metaprogramming.png)
 # Metaclasses
 
 ---
@@ -445,7 +445,7 @@ def debugmethods(cls):
 
 ---
 
-![](images/dev/bleah.jpg)
+![](/images/dev/bleah.jpg)
 # Decorating many classes
 
 - What if I have more classes ?
@@ -478,7 +478,7 @@ class Third:
     - Like a *class* defines how its instances behave
     - A *metaclass* defines how its classes behave
 
-![](images/dev/metaclass.png)
+![](/images/dev/metaclass.png)
 
 ---
 
@@ -720,7 +720,7 @@ class Host(Structure):
 
 ---
 
-![](images/misc/idea.jpg)
+![](/images/misc/idea.jpg)
 # Setter and getter
 
 ``` py
@@ -761,7 +761,7 @@ p1.x = p1.x + p2.x
 
 ---
 
-![](images/rel_users_groups.png)
+![](/images/rel_users_groups.png)
 # Metaclasses in Django
 
 - Django is a MVC framework in Python

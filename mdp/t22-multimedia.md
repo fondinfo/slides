@@ -1,16 +1,16 @@
 
-![](images/repr/binary-hacker.jpg)
+![](/images/repr/binary-hacker.jpg)
 # Multimedia
 ## Introduzione all'informatica <br> Michele Tomaiuolo @ Ingegneria UniPR
 
 ---
 
-![](images/repr/guybrush.png)
+![](/images/repr/guybrush.png)
 # Immagini
 
 ---
 
-![](images/repr/rgb-raster.png)
+![](/images/repr/rgb-raster.png)
 # ⭐ Immagini raster
 
 - *Digitalizzazione* : da immagine a sequenza binaria
@@ -27,7 +27,7 @@
 
 ---
 
-![](images/repr/spectral-sensitivity.svg) ![](images/repr/additive-color.svg) Rosso, verde, blu + <br> Ciano, magenta, giallo
+![](/images/repr/spectral-sensitivity.svg) ![](/images/repr/additive-color.svg) Rosso, verde, blu + <br> Ciano, magenta, giallo
 # 🔬 Modelli di colore
 
 - Occhio sensibile a variaz. luminosità
@@ -66,7 +66,7 @@
 
 ---
 
-![small](images/repr/bmp-header.jpg)
+![small](/images/repr/bmp-header.jpg)
 # 🧪 Formato BMP
 
 ``` text
@@ -93,7 +93,7 @@ Palette (RGBQUAD)
 
 # 🧪 Es. Redbrick.BMP
 
-![large](images/repr/redbrick-dump.png)
+![large](/images/repr/redbrick-dump.png)
 
 - Ogni riga occupa sempre un multiplo di 4 byte (con *padding*)
 - Dimensione file: `$54 + 4\cdot colors + ⌈w\cdot bpp / 32⌉\cdot 4\cdot h$` byte
@@ -102,7 +102,7 @@ Palette (RGBQUAD)
 
 # 🧪 Es. Redbrick.BMP
 
-![large](images/repr/redbrick-scan.png)
+![large](/images/repr/redbrick-scan.png)
 
 >
 
@@ -161,7 +161,7 @@ for y, row in enumerate(reversed(image)):
 
 ---
 
-![](images/repr/vector-example.svg)
+![](/images/repr/vector-example.svg)
 # 💡️ Grafica vettoriale
 
 - Immagine: insieme di primitive geometriche
@@ -193,7 +193,7 @@ for y, row in enumerate(reversed(image)):
 
 ---
 
-![](images/repr/svg-example.svg)
+![](/images/repr/svg-example.svg)
 # 🧪 Esempio di file SVG
 
 ``` svg
@@ -220,12 +220,12 @@ for y, row in enumerate(reversed(image)):
 ---
 
 
-![](images/repr/multimedia.png)
+![](/images/repr/multimedia.png)
 # Audio digitale
 
 ---
 
-![](images/repr/sampled-signal.svg) ![](images/repr/digital-signal.svg)
+![](/images/repr/sampled-signal.svg) ![](/images/repr/digital-signal.svg)
 # ⭐ Audio digitale
 
 - Suono: onde di compressione e rarefazione dell'aria
@@ -263,18 +263,18 @@ for y, row in enumerate(reversed(image)):
 
 # 🧪 Formato WAV
 
-![large](images/repr/wav-format.png)
+![large](/images/repr/wav-format.png)
 
 ---
 
 # 🧪 Esempio di file WAV
 
-![large](images/repr/wav-bytes.png)
+![large](/images/repr/wav-bytes.png)
 
 ---
 
 
-![](images/repr/document-struct.png)
+![](/images/repr/document-struct.png)
 # Documenti strutturati
 
 ---
@@ -304,7 +304,7 @@ for y, row in enumerate(reversed(image)):
 
 ---
 
-![](images/repr/w3c-keys.jpg)
+![](/images/repr/w3c-keys.jpg)
 # ⭐ HyperText Markup Language
 
 - Documenti *strutturati* *ipertestuali*
@@ -329,7 +329,7 @@ for y, row in enumerate(reversed(image)):
 
 # ⭐ Anatomia di una pagina
 
-![large](images/repr/html-page.svg)
+![large](/images/repr/html-page.svg)
 
 ---
 
@@ -358,7 +358,7 @@ for y, row in enumerate(reversed(image)):
 
 ---
 
-![](images/repr/html5-logo.svg)
+![](/images/repr/html5-logo.svg)
 # 🧪 Html 5
 
 - Nuovi elementi di struttura di Html 5
@@ -378,7 +378,7 @@ for y, row in enumerate(reversed(image)):
 
 ---
 
-![large](images/sys/globe.jpg)
+![large](/images/sys/globe.jpg)
 # 🔬 The World Wide Web
 
 - *WWW* ≈ HTML + URL + HTTP
@@ -388,4 +388,4 @@ for y, row in enumerate(reversed(image)):
     - Riferimento a una risorsa in rete
     - Per HTTP, include: host; porta (80); percorso; query (dopo `?`); *id* frammento (dopo `#`)
 
-![](images/repr/uri-diagram.svg)
+![](/images/repr/uri-diagram.svg)

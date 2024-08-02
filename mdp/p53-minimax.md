@@ -1,4 +1,4 @@
-![](images/misc/tic-tac-toe.svg)
+![](/images/misc/tic-tac-toe.svg)
 # Minimax
 ## Introduzione alla programmazione
 
@@ -26,7 +26,7 @@
 
 ---
 
-![large](images/fun/tictactoe-minimax.png)
+![large](/images/fun/tictactoe-minimax.png)
 # Esplorazione completa
 
 - Ogni nodo è etichettato con *+1* o *-1*
@@ -39,7 +39,7 @@
 
 ---
 
-![large](images/comp/minimax1.png)
+![large](/images/comp/minimax1.png)
 # Strategie di Min e Max
 
 - L'algoritmo *Minimax* attraversa l'albero completo del gioco
@@ -52,7 +52,7 @@
 
 ---
 
-![large](images/comp/minimax3.png)
+![large](/images/comp/minimax3.png)
 # Utilità non binaria
 
 - In alcuni casi, il risultato non è binario
@@ -63,7 +63,7 @@
 
 ---
 
-![large](images/comp/minimax4.png)
+![large](/images/comp/minimax4.png)
 # Ricorsione
 
 - L'algoritmo *Minimax* calcola la scelta ottima per un dato stato del gioco

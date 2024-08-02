@@ -1,10 +1,10 @@
-![](images/oop/lego-blocks.png)
+![](/images/oop/lego-blocks.png)
 # Relazioni
 ## Introduzione alla programmazione
 
 ---
 
-![](images/oop/ball-arena.svg)
+![](/images/oop/ball-arena.svg)
 # 💡️ Composizione
 
 - Associazione **has-a**, **part-of** tra oggetti
@@ -28,7 +28,7 @@ arena.tick()
 
 ---
 
-![large](images/oop/carnivora.png)
+![large](/images/oop/carnivora.png)
 # 💡️ Relazione is-a
 
 - **Classificazione**, es. in biologia
@@ -43,7 +43,7 @@ arena.tick()
 
 ---
 
-![large](images/oop/animals.png)
+![large](/images/oop/animals.png)
 # 🧪 Fattoria parlante
 
 - Noi definiremo una *classe base* come **interfaccia astratta**
@@ -63,7 +63,7 @@ class Animal:
 
 ---
 
-![large](images/oop/polymorphism.png)
+![large](/images/oop/polymorphism.png)
 # 🧪 Classi concrete
 
 ``` py
@@ -84,7 +84,7 @@ class Cat(Animal):
 
 ---
 
-![large](images/oop/peppa.png)
+![large](/images/oop/peppa.png)
 # 🧪 Lista di oggetti
 
 ``` py
@@ -108,7 +108,7 @@ I am George Pig. I say: OINK!
 
 ---
 
-![](images/oop/actor.svg)
+![](/images/oop/actor.svg)
 # ⭐ Interfaccia dei personaggi
 
 - `Actor`: *interfaccia astratta*
@@ -176,7 +176,7 @@ class Ghost(Actor):  # ...
 
 ---
 
-![](images/oop/actors.svg)
+![](/images/oop/actors.svg)
 # 💡️ Sostituzione
 
 ``` py
@@ -202,7 +202,7 @@ https://en.wikipedia.org/wiki/Liskov_substitution_principle
 
 ---
 
-![](images/oop/bounce.png)
+![](/images/oop/bounce.png)
 # 🧪 Animazione dei rimbalzi
 
 ``` py
@@ -247,7 +247,7 @@ class Turtle(Actor): # ...
 
 ---
 
-![](images/oop/collision.svg) ![](images/oop/reflection.png)
+![](/images/oop/collision.svg) ![](/images/oop/reflection.png)
 # 🧪 Collisioni
 
 - Molti algoritmi di *collision detection*
@@ -278,7 +278,7 @@ class Turtle(Actor):
 
 ---
 
-![](images/oop/bounce.png)
+![](/images/oop/bounce.png)
 # Bounce, gioco e GUI
 
 - `BounceGame` : sottoclasse di `Arena` per gestire il gioco *Bounce*
@@ -298,7 +298,7 @@ class Turtle(Actor):
 
 ---
 
-![](images/misc/frogger.png)
+![](/images/misc/frogger.png)
 # Rana nell'arena
 
 - Rendere la classe `Vehicle` un `Actor`
@@ -313,7 +313,7 @@ class Turtle(Actor):
 
 ---
 
-![](images/misc/space-invaders-school.png)
+![](/images/misc/space-invaders-school.png)
 # Alieni nell'arena
 
 - Rendere la classe `Alien` un `Actor`
@@ -327,7 +327,7 @@ class Turtle(Actor):
 
 ---
 
-![](images/misc/super-mario.jpg)
+![](/images/misc/super-mario.jpg)
 # Mario nell'arena
 
 - Classe `Mario` da `Turtle` dell'es. `bounce`

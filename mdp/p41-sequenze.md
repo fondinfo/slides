@@ -1,4 +1,4 @@
-![](images/oop/lego-blocks.png)
+![](/images/oop/lego-blocks.png)
 # Sequenze
 ## Introduzione alla programmazione
 
@@ -8,7 +8,7 @@
 
 ---
 
-![](images/fun/shopping-list.png)
+![](/images/fun/shopping-list.png)
 # ⭐ Lista
 
 - Sequenza mutabile di elementi omogenei
@@ -27,7 +27,7 @@ results_by_month = [0] * 12  # 12 times 0 (list repetition)
 
 ---
 
-![](images/misc/rock-cubes.png)
+![](/images/misc/rock-cubes.png)
 # ⭐ Cicli su liste: for
 
 ``` py
@@ -50,7 +50,7 @@ for val in values:
 
 ---
 
-![](images/fun/wile-coyote.png)
+![](/images/fun/wile-coyote.png)
 # ⭐ Accesso agli elementi
 
 - **Attenzione a usare indici validi!**
@@ -70,7 +70,7 @@ groceries                    # guess!
 
 ---
 
-![](images/fun/month-list.svg)
+![](/images/fun/month-list.svg)
 # 🧪 Elementi e slice
 
 - Indici *negativi* contano dalla fine
@@ -162,7 +162,7 @@ def main():
 
 ---
 
-![](images/fun/fun-reset.svg)
+![](/images/fun/fun-reset.svg)
 # 🧪 Variabili e valori
 
 - ❓ Qual è l'output del seguente programma?
@@ -208,7 +208,7 @@ days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
 
 ---
 
-![](images/misc/characters.png)
+![](/images/misc/characters.png)
 # 🧪 Cicli su stringhe
 
 - Il ciclo `for` scorre i valori di qualsiasi sequenza
@@ -231,7 +231,7 @@ for c in line:
 
 ---
 
-![](images/fun/brackets.svg)
+![](/images/fun/brackets.svg)
 # 🧪 Testo tra marcatori
 
 - Di un testo, trascrivere solo parti comprese tra `<` e `>`
@@ -257,7 +257,7 @@ for c in text:
 
 ---
 
-![](images/misc/numbers.png)
+![](/images/misc/numbers.png)
 # 🧪 Lista di contatori
 
 - Contare separatamente le cifre in un testo
@@ -301,7 +301,7 @@ a, b = b, a
 
 ---
 
-![](images/fun/shopping-list.png)
+![](/images/fun/shopping-list.png)
 # 🧪 Ciclo di lettura da file
 
 - Apertura file in lettura con **`open`**
@@ -322,7 +322,7 @@ with open("shopping_list.txt") as groceries_file:
 
 ---
 
-![](images/fun/rollinz.jpg)
+![](/images/fun/rollinz.jpg)
 # 🥷 Insieme
 
 - Collezione non ordinata e *senza ripetizioni*
@@ -347,7 +347,7 @@ empty_set = set()  # ⚠️ {} is an empty dict
 
 ---
 
-![](images/fun/dictionary.png)
+![](/images/fun/dictionary.png)
 # 🥷 Dizionario
 
 - Chiamato anche *mappa* o *array associativo*
@@ -447,7 +447,7 @@ for state in states:
 
 ---
 
-![](images/dev/computer-ninja.svg)
+![](/images/dev/computer-ninja.svg)
 # 🥷 List comprehension
 
 - Modo conciso per creare una lista, rielaborando una data sequenza
@@ -470,7 +470,7 @@ nums = [int(c) for c in "h3ll0 w0rld" if "0" <= c <= "9"]
 
 ---
 
-![](images/fun/zip.png)
+![](/images/fun/zip.png)
 # 🥷 Zip
 
 - Accoppia elementi di due (o +) sequenze
@@ -493,7 +493,7 @@ z = list(zip(groceries, quantities))  # if you *really* need a list
 
 ---
 
-![](images/repr/child-fingers.png)
+![](/images/repr/child-fingers.png)
 # 🥷 Enumerate
 
 - Accoppia un indice crescente con i valori di una sequenza
@@ -535,7 +535,7 @@ print(groceries)     # ["spam", "egg", "bacon"]
 
 ---
 
-![](images/fun/legomap.png)
+![](/images/fun/legomap.png)
 # 🥷 Map
 
 - Parametri: funzione `f`, sequenza `l`
@@ -675,7 +675,7 @@ True
 
 ---
 
-![](images/misc/histogram-rot.svg)
+![](/images/misc/histogram-rot.svg)
 # Istogramma con barre orizzontali
 
 - Chiedere all'utente una lista di valori positivi
@@ -690,7 +690,7 @@ True
 
 ---
 
-![](images/misc/dice.png)
+![](/images/misc/dice.png)
 # Risultati casuali
 
 - Simulare `n` lanci di una coppia di dadi
@@ -707,7 +707,7 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 
 ---
 
-![](images/misc/merge-sign.png) ![](images/comp/merge.svg)
+![](/images/misc/merge-sign.png) ![](/images/comp/merge.svg)
 # Merge
 
 - Definire una funzione `merge`
@@ -728,7 +728,7 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 
 ---
 
-![](images/misc/pac-man.png)
+![](/images/misc/pac-man.png)
 # Mappe per Pac-Man
 
 - Classe `PacMan` da `Turtle` dell'es. `bounce`
@@ -746,7 +746,7 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 
 ---
 
-![](images/misc/resistors.png) `$$R_{ser} = \sum_i R_i$$` `$$\frac{1}{R_{par}} = \sum_i \frac{1}{R_i}$$`
+![](/images/misc/resistors.png) `$$R_{ser} = \sum_i R_i$$` `$$\frac{1}{R_{par}} = \sum_i \frac{1}{R_i}$$`
 # Resistenze da file
 
 - Leggere da un file una sequenza di valori di resistenze elettriche
@@ -759,7 +759,7 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 
 ---
 
-![](images/misc/gold-price.svg)
+![](/images/misc/gold-price.svg)
 # Sequenza di valori
 
 - Chiedere all'utente il nome di un file
@@ -769,7 +769,7 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 
 ---
 
-![](images/comp/fsm4.svg)
+![](/images/comp/fsm4.svg)
 # FSM
 
 - Simulare il comportamento della FSM in figura
@@ -781,7 +781,7 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 
 ---
 
-![](images/comp/nfsm.svg)
+![](/images/comp/nfsm.svg)
 # NFSM
 
 - Simulare il comportamento della FSM in figura
@@ -793,7 +793,7 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 
 ---
 
-![](images/comp/pda3.svg)
+![](/images/comp/pda3.svg)
 # PDA
 
 - Simulare il comportamento del PDA mostrato in figura

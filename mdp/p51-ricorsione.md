@@ -1,4 +1,4 @@
-![](images/fun/matryoshka.png)
+![](/images/fun/matryoshka.png)
 # Ricorsione
 ## Introduzione alla programmazione
 
@@ -9,11 +9,11 @@
 - Molti linguaggi consentono a una funzione (o procedura) di chiamare se stessa
 - Chiamata ricorsiva, diretta o indiretta
 
-![](images/fun/recursion.svg)
+![](/images/fun/recursion.svg)
 
 ---
 
-`$$\begin{cases}0! = 1 \\ n! = n · (n-1)!, n>0\end{cases}$$` ![](images/fun/stack.svg)
+`$$\begin{cases}0! = 1 \\ n! = n · (n-1)!, n>0\end{cases}$$` ![](/images/fun/stack.svg)
 # ⭐ Fattoriale, ricorsione
 
 ``` py
@@ -49,7 +49,7 @@ def factorial(n: int) -> int:
 
 ---
 
-![](images/fun/books-stack.png)
+![](/images/fun/books-stack.png)
 # 🔬 Stack dell'applicazione
 
 - Pila: memoria dinamica *LIFO (Last In First Out)*
@@ -67,13 +67,13 @@ Ai primordi (Fortran 66 ecc.) solo allocazione statica <br> Spazio fisso e unico
 
 # 🔬 Vista semplificata dello stack
 
-![large](images/fun/stack-content.svg)
+![large](/images/fun/stack-content.svg)
 
 ---
 
 # 🔬 Record di attivazione
 
-![large](images/fun/records.svg)
+![large](/images/fun/records.svg)
 
 ---
 
@@ -94,7 +94,7 @@ Ai primordi (Fortran 66 ecc.) solo allocazione statica <br> Spazio fisso e unico
 
 # 🧪 I conigli di Fibonacci
 
-![large](images/fun/fib-rabbits.png)
+![large](/images/fun/fib-rabbits.png)
 
 ---
 
@@ -107,7 +107,7 @@ def fibonacci(n: int) -> int:
     return fibonacci(n-1) + fibonacci(n-2)
 ```
 
-![](images/fun/fib-calls.svg)
+![](/images/fun/fib-calls.svg)
 
 >
 
@@ -161,7 +161,7 @@ def fibonacci(n: int) -> int:
     - Vuota / `None`, oppure...
     - Nodo di testa, seguito da una *lista collegata*
 
-![](images/fun/linked-list.svg)
+![](/images/fun/linked-list.svg)
 
 ``` py
 class ListNode:
@@ -175,7 +175,7 @@ class ListNode:
 
 ---
 
-![](images/comp/binary-tree.svg)
+![](/images/comp/binary-tree.svg)
 # Albero binario
 
 - *Albero*
@@ -197,7 +197,7 @@ class TreeNode:
 
 ---
 
-![](images/comp/sorted-tree.svg)
+![](/images/comp/sorted-tree.svg)
 # Albero ordinato
 
 ``` py
@@ -220,7 +220,7 @@ def flatten(tree) -> list:
 
 ---
 
-![](images/comp/sorted-tree.svg)
+![](/images/comp/sorted-tree.svg)
 # Ricerca binaria
 
 ``` py
@@ -245,7 +245,7 @@ print(contains(t, 5))
 
 ---
 
-![](images/repr/file-system.svg)
+![](/images/repr/file-system.svg)
 # Documenti e cartelle
 
 - Albero che rappresenti una gerarchia di documenti
@@ -268,7 +268,7 @@ class Folder(Node):
 
 ---
 
-![](images/comp/list-tree.svg)
+![](/images/comp/list-tree.svg)
 # Liste annidate
 
 - Casi semplici di alberi : liste annidate
@@ -313,7 +313,7 @@ Stringa rimanente (senza prima e ultima lettera) palindroma
 
 ---
 
-![](images/fun/sierpinski-triangle.svg)
+![](/images/fun/sierpinski-triangle.svg)
 # Triangolo di Sierpinski
 
 - Disegnare su un'area rettangolare (nera): `x`, `y`, `w`, `h`
@@ -333,7 +333,7 @@ Stringa rimanente (senza prima e ultima lettera) palindroma
 
 ---
 
-![](images/fun/fractal-tree.png)
+![](/images/fun/fractal-tree.png)
 # Albero frattale
 
 - Funzione ricorsiva per disegnare un albero
@@ -353,7 +353,7 @@ Stringa rimanente (senza prima e ultima lettera) palindroma
 
 ---
 
-![](images/hist/euclid.jpg)
+![](/images/hist/euclid.jpg)
 # Massimo Comun Divisore
 
 - Leggere due numeri
@@ -372,7 +372,7 @@ MCD(a, b) = MCD(b, a mod b), se b > 0
 
 ---
 
-![](images/misc/cubic-function.png)
+![](/images/misc/cubic-function.png)
 # Bisezione, ricorsione
 
 - Trovare lo zero della seguente funzione matematica
@@ -390,7 +390,7 @@ MCD(a, b) = MCD(b, a mod b), se b > 0
 
 ---
 
-![](images/fun/bike-lock.png)
+![](/images/fun/bike-lock.png)
 # Generazione di password
 
 - Generare tutte le password di una data lunghezza (*disposizioni con ripetizione*)
@@ -410,7 +410,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](images/fun/anagram.svg)
+![](/images/fun/anagram.svg)
 # Anagrammi
 
 - Generare tutti gli anagrammi (permutazioni) di una stringa
@@ -426,7 +426,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](images/fun/hanoi-tower.png)
+![](/images/fun/hanoi-tower.png)
 # Torre di Hanoi
 
 - Tre paletti + N dischi di diametro decrescente
@@ -468,7 +468,7 @@ Supporre che i “token” siano tutti separati da spazio e che gli operatori ab
 
 ---
 
-![](images/repr/file-system.svg)
+![](/images/repr/file-system.svg)
 # Documenti e cartelle
 
 - Un sistema gerarchico di gestione documenti è composto di due tipi di *nodi* (classe base)
@@ -484,7 +484,7 @@ Supporre che i “token” siano tutti separati da spazio e che gli operatori ab
 
 ---
 
-![](images/repr/file-system.svg)
+![](/images/repr/file-system.svg)
 # Dimensione delle cartelle
 
 - Metodo `size` per tutti i nodi (es. precedente)
@@ -505,7 +505,7 @@ Supporre che i “token” siano tutti separati da spazio e che gli operatori ab
 
 ---
 
-![](images/comp/expression.svg)
+![](/images/comp/expression.svg)
 # Espressioni
 
 - Definire una gerarchia di classi per rappresentare espressioni matematiche
@@ -525,7 +525,7 @@ Supporre che i “token” siano tutti separati da spazio e che gli operatori ab
 
 ---
 
-![](images/comp/expression.svg)
+![](/images/comp/expression.svg)
 # Espressioni prefisse
 
 - Aggiungere un  metodo `prefix` a `Expression` (es. precedente)
@@ -549,7 +549,7 @@ print(prod2.prefix())
 
 ---
 
-![](images/comp/expression.svg)
+![](/images/comp/expression.svg)
 # Albero da stringa
 
 - Analizzare una stringa, fornita dall'utente

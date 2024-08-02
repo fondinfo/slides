@@ -1,4 +1,4 @@
-![](images/algo/rubik-cube.png)
+![](/images/algo/rubik-cube.png)
 # Algoritmi in Go
 ## Introduzione alla programmazione
 
@@ -22,7 +22,7 @@ Dopo una presentazione di 35 nuove caratteristiche del C++11, durante le pause p
 
 ---
 
-![](images/algo/helloworld.png)
+![](/images/algo/helloworld.png)
 # Hello, browser!
 
 - Esecuzione parte da funzione **`main`** in modulo `main`
@@ -80,7 +80,7 @@ func main() {
 
 ---
 
-![](images/algo/my-shoes.png)
+![](/images/algo/my-shoes.png)
 # Variabile
 
 - Le comuni variabili sono *contenitori* di dati
@@ -100,7 +100,7 @@ Println(i, j, k, ans, txt)
 
 ---
 
-![large](images/algo/assign.png)
+![large](/images/algo/assign.png)
 # Riassegnamento
 
 - Riassegnamento, operatore `=`
@@ -142,11 +142,11 @@ Println('🌐' == 127760)      // true
 
 # ⚙️ Tabella ASCII
 
-![large](images/repr/ascii.svg)
+![large](/images/repr/ascii.svg)
 
 ---
 
-![](images/algo/hello-user.svg)
+![](/images/algo/hello-user.svg)
 # Leggere e scrivere
 
 - **`g2d.Prompt`**: *ricezione di input dall'utente*
@@ -161,7 +161,7 @@ Alert("Hello, ", user)
 
 ---
 
-![](images/algo/sum3.svg)
+![](/images/algo/sum3.svg)
 # Somma di tre numeri
 
 - **`g2d.ToInt`**: conversione da `string` a `int`
@@ -182,7 +182,7 @@ Alert("The sum is ", total)
 
 ---
 
-![](images/repr/additive-color.svg)
+![](/images/repr/additive-color.svg)
 # Strutture per grafica
 
 - Strutture e funzioni definite nel modulo `g2d`
@@ -200,7 +200,7 @@ myBlue := Color{10, 10, 200}  // each component in 0..255
 
 ---
 
-![](images/oop/raster-coord.png)
+![](/images/oop/raster-coord.png)
 # Disegno nel browser
 
 ``` go
@@ -222,7 +222,7 @@ MainLoop()
 
 ---
 
-![](images/oop/raster-coord.png)
+![](/images/oop/raster-coord.png)
 # Linee e testi
 
 ``` go
@@ -245,7 +245,7 @@ DrawText("Hello", Point{150, 100}, 40)
 
 ---
 
-![](images/algo/if.svg)
+![](/images/algo/if.svg)
 # Selezione: if
 
 - Corpo di `if` o `else` tra graffe
@@ -267,7 +267,7 @@ FillCircle(Point{200, 200}, 25)
 
 ---
 
-![](images/algo/if-else.svg)
+![](/images/algo/if-else.svg)
 # Selezione: else
 
 - Clausola `else`: opzionale
@@ -293,7 +293,7 @@ FillCircle(Point{200, 200}, 25)
 
 ---
 
-![](images/algo/words.svg)
+![](/images/algo/words.svg)
 # Confronto tra parole
 
 ``` go
@@ -311,7 +311,7 @@ if a < b {
 
 ---
 
-![](images/algo/calc.svg)
+![](/images/algo/calc.svg)
 # ⏩ Operazioni aritmetiche
 
 ``` go
@@ -334,7 +334,7 @@ if op == "+" {
 
 ---
 
-![](images/algo/count.svg)
+![](/images/algo/count.svg)
 # Iterazione: for
 
 - Condizione di *permanenza* nel ciclo
@@ -354,7 +354,7 @@ for count <= n {
 
 ---
 
-![](images/algo/sum1n.svg)
+![](/images/algo/sum1n.svg)
 # Somma di numeri consecutivi
 
 - Occorre tenere traccia del *totale parziale*
@@ -378,7 +378,7 @@ Alert("The sum is ", total)
 
 ---
 
-![](images/algo/average.svg)
+![](/images/algo/average.svg)
 # Media di N campioni
 
 ``` go
@@ -402,7 +402,7 @@ if count != 0 {
 
 ---
 
-![](images/algo/sentinel.svg)
+![](/images/algo/sentinel.svg)
 # Ciclo con sentinella
 
 ``` go
@@ -429,7 +429,7 @@ if count != 0 {
 
 ---
 
-![](images/algo/perfect-square.svg)
+![](/images/algo/perfect-square.svg)
 # 🥷 Quadrato perfetto
 
 ``` go
@@ -452,7 +452,7 @@ if i*i == n {
 
 ---
 
-![](images/algo/sum10.svg)
+![](/images/algo/sum10.svg)
 # Cicli su intervalli
 
 - Incremento e decremento: `++`, `--`
@@ -475,7 +475,7 @@ for i := 1; i < 11; i++ {
 
 ---
 
-![](images/misc/red-squares.svg)
+![](/images/misc/red-squares.svg)
 # Sequenza di quadrati
 
 ``` go
@@ -522,7 +522,7 @@ Sono esportati dai moduli solo i nomi con la prima lettera **maiuscola** <br>
 
 ---
 
-![](images/misc/dice.png)
+![](/images/misc/dice.png)
 # Valori casuali
 
 - **`g2d.RandInt`**: *generazione di numeri casuali*
@@ -546,7 +546,7 @@ func main() {
 
 ---
 
-![](images/misc/greek-pi.png)
+![](/images/misc/greek-pi.png)
 # 1.1 Cerchio
 
 - Chiedere all'utente il valore del raggio `r` di un cerchio
@@ -559,7 +559,7 @@ func main() {
 
 ---
 
-![](images/misc/three-brothers.png)
+![](/images/misc/three-brothers.png)
 # 1.2 Minore e maggiore
 
 - Generare e stampare tre numeri interi casuali: `a`, `b`, `c`
@@ -590,7 +590,7 @@ Espressione booleana composta con **AND**, **OR**, **NOT**
 
 ---
 
-![](images/misc/random-squares.svg)
+![](/images/misc/random-squares.svg)
 # 1.4 Quadrati casuali
 
 - Chiedere all'utente un numero `n`
@@ -605,7 +605,7 @@ Cominciare a disegnare un solo quadrato grigio, in posizione casuale
 
 ---
 
-![](images/misc/red-circles.svg)
+![](/images/misc/red-circles.svg)
 # 1.5 Cerchi concentrici
 
 - Chiedere all'utente il numero di cerchi da disegnare
@@ -621,7 +621,7 @@ Per iniziare, inserire l'operazione di disegno un ciclo, togliendo a ogni passo 
 
 ---
 
-![](images/misc/bingo-balls.png)
+![](/images/misc/bingo-balls.png)
 # 1.6 Numero segreto
 
 - Generare all'inizio del programma un numero “segreto” a caso tra 1 e 90
@@ -630,7 +630,7 @@ Per iniziare, inserire l'operazione di disegno un ciclo, togliendo a ogni passo 
 
 ---
 
-![](images/misc/resistors.png)
+![](/images/misc/resistors.png)
 # 🥷 1.7 Resistenze, ciclo
 
 - Leggere, attraverso un ciclo, una sequenza di valori di resistenze elettriche
@@ -647,7 +647,7 @@ Rₛ = ∑ Rᵢ
 
 ---
 
-![](images/misc/classical-watch.jpg)
+![](/images/misc/classical-watch.jpg)
 # 🥷 1.8 Orologio classico
 
 - Disegnare 12 tacche a raggiera, come in un orologio classico
@@ -659,7 +659,7 @@ Usare `math.Sin` e `math.Cos` per determinare le posizioni in cui disegnare
 
 ---
 
-![](images/misc/monster.png)
+![](/images/misc/monster.png)
 # 🥷 1.9 La stanza del mostro
 
 - Il giocatore si muove su una scacchiera di 5x5 celle, partendo da un angolo

@@ -1,10 +1,10 @@
-![](images/dev/android-python.png)
+![](/images/dev/android-python.png)
 # Python su Android
 ## Introduzione alla programmazione
 
 ---
 
-![](images/dev/qpython-00.png)
+![](/images/dev/qpython-00.png)
 # QPython
 
 - App scaricabile dallo *store* Android
@@ -24,10 +24,10 @@
 
 ---
 
-![](images/dev/qpython-02.png) ![](images/dev/qpython-03.png)
+![](/images/dev/qpython-02.png) ![](/images/dev/qpython-03.png)
 # QPython, sviluppo su/per Android
 
-![](images/dev/qpython-05.png)
+![](/images/dev/qpython-05.png)
 
 >
 
@@ -37,7 +37,7 @@ In alternativa, QPython include un server FTP sul cell/tablet
 
 ---
 
-![](images/dev/qpython-10.png)
+![](/images/dev/qpython-10.png)
 # Hello, Py4A developer!
 
 ``` Python
@@ -75,7 +75,7 @@ droid.makeToast(message)
 
 ---
 
-![](images/dev/kivy.svg)
+![](/images/dev/kivy.svg)
 # Kivy
 
 - Libreria moderna e flessibile, per interfacce grafiche
@@ -92,7 +92,7 @@ droid.makeToast(message)
 
 ---
 
-![](images/oop/tk-notepad-1.png)
+![](/images/oop/tk-notepad-1.png)
 # Hello Notepad
 
 ``` Python
@@ -117,7 +117,7 @@ runTouchApp(t)
 
 ---
 
-![](images/oop/tk-notepad-2.png)
+![](/images/oop/tk-notepad-2.png)
 # Aggiungere un bottone
 
 ``` Python
@@ -141,7 +141,7 @@ if __name__ == '__main__':
 
 ---
 
-![](images/oop/tk-notepad-3.png)
+![](/images/oop/tk-notepad-3.png)
 # Riquadri compositi
 
 ``` Python
@@ -165,7 +165,7 @@ class Notepad(BoxLayout):
 
 ---
 
-![](images/dev/kivy-coord.png)
+![](/images/dev/kivy-coord.png)
 # Widget e grafica
 
 ``` Python
@@ -185,7 +185,7 @@ if __name__ == '__main__':
 
 ---
 
-![](images/dev/kivy-android.jpg)
+![](/images/dev/kivy-android.jpg)
 # Multi-touch
 
 ``` Python
@@ -205,7 +205,7 @@ http://kivy.org/docs/guide/firstwidget.html
 
 ---
 
-![](images/dev/kivy-coord.png)
+![](/images/dev/kivy-coord.png)
 # Ridisegno periodico
 
 ``` Python
@@ -230,7 +230,7 @@ class GameWidget(Widget):
 
 ---
 
-![](images/misc/typewriter-caps-lock.png)
+![](/images/misc/typewriter-caps-lock.png)
 # Tastiera
 
 ``` Python
@@ -254,7 +254,7 @@ class GameWidget(Widget):
 
 ---
 
-![](images/qt/puzzle.png)
+![](/images/qt/puzzle.png)
 # Fifteen – Layout a griglia
 
 ``` Python

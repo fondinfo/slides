@@ -1,10 +1,10 @@
-![](images/oop/lego-blocks.png)
+![](/images/oop/lego-blocks.png)
 # Liste e composizione
 ## Introduzione alla programmazione
 
 ---
 
-![](images/fun/shopping-list.png)
+![](/images/fun/shopping-list.png)
 # Slice
 
 - Sequenza di elementi, dello stesso **tipo**
@@ -26,7 +26,7 @@ resultsByMonth := make([]int, 12)  // 12 times 0
 
 ---
 
-![](images/fun/wile-coyote.png)
+![](/images/fun/wile-coyote.png)
 # Accesso agli elementi
 
 - **Attenzione a usare indici validi!**
@@ -49,7 +49,7 @@ Println(groceries)                      // guess!
 
 ---
 
-![](images/fun/shopping-list.jpg)
+![](/images/fun/shopping-list.jpg)
 # Cicli su liste: for
 
 ``` go
@@ -88,7 +88,7 @@ for _, x := range "Hello, 🌐!" {
 
 ---
 
-![](images/fun/month-list.svg)
+![](/images/fun/month-list.svg)
 # 🥷 Porzioni di lista
 
 - Selezione degli elementi tra...
@@ -178,7 +178,7 @@ func main() {
 
 ---
 
-![](images/oop/ball-arena.svg)
+![](/images/oop/ball-arena.svg)
 # Composizione
 
 - Associazione **has-a**, **part-of** tra oggetti
@@ -205,7 +205,7 @@ func main() {
 
 ---
 
-![large](images/oop/carnivora.png)
+![large](/images/oop/carnivora.png)
 # 🌱️ Relazione is-a
 
 - **Classificazione**, es. in biologia
@@ -221,7 +221,7 @@ func main() {
 
 ---
 
-![](images/oop/animals.png)
+![](/images/oop/animals.png)
 # Fattoria parlante
 
 - Noi definiremo una **interfaccia** come astrazione di base
@@ -241,7 +241,7 @@ type Animal interface {
 
 ---
 
-![](images/oop/polymorphism.png)
+![](/images/oop/polymorphism.png)
 # Classi concrete
 
 ``` go
@@ -260,7 +260,7 @@ func (c *Cat) Say() {
 
 ---
 
-![](images/oop/peppa.png)
+![](/images/oop/peppa.png)
 # Lista di oggetti
 
 ``` py
@@ -284,7 +284,7 @@ I am George Pig. I say: OINK!
 
 ---
 
-![](images/oop/actors.svg)
+![](/images/oop/actors.svg)
 # Interfacce
 
 - `Actor`: *interfaccia*
@@ -320,7 +320,7 @@ func (a *Arena) MoveAll() {
 
 ---
 
-![](images/oop/actor.svg)
+![](/images/oop/actor.svg)
 # Sostituzione
 
 ``` go
@@ -415,7 +415,7 @@ func main() {
 
 ---
 
-![](images/oop/bounce.png)
+![](/images/oop/bounce.png)
 # Controllo da tastiera
 
 ``` go
@@ -435,7 +435,7 @@ func tick() {
 
 ---
 
-![](images/oop/collision.svg) ![](images/oop/reflection.png)
+![](/images/oop/collision.svg) ![](/images/oop/reflection.png)
 # Collisioni
 
 - Molti algoritmi di *collision detection*
@@ -474,7 +474,7 @@ func (b *Ball) Collide(other Actor) {
 
 ---
 
-![](images/misc/histogram-rot.svg)
+![](/images/misc/histogram-rot.svg)
 # 3.1 Istogramma con barre orizzontali
 
 - Chiedere all'utente una lista di valori positivi
@@ -485,7 +485,7 @@ func (b *Ball) Collide(other Actor) {
 
 ---
 
-![](images/misc/dice.png)
+![](/images/misc/dice.png)
 # 3.2 Risultati casuali
 
 - Simulare `n` lanci di una coppia di dadi
@@ -500,7 +500,7 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 
 ---
 
-![](images/misc/frogger.png)
+![](/images/misc/frogger.png)
 # 3.3 Veicoli nell'arena
 
 - Partire dalla classe `Vehicle`
@@ -513,7 +513,7 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 
 ---
 
-![](images/misc/frogger.png)
+![](/images/misc/frogger.png)
 # 3.4 Rana in arena
 
 - Partire dalla classe `Turtle`, per creare un personaggio `Frog`
@@ -525,7 +525,7 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 
 ---
 
-![](images/misc/frogger.png)
+![](/images/misc/frogger.png)
 # 3.5 Rana investita
 
 - Scrivere il metodo `collide` della rana
@@ -535,7 +535,7 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 
 ---
 
-![](images/misc/space-invaders-school.png)
+![](/images/misc/space-invaders-school.png)
 # 3.6 Alieni nell'arena
 
 - Partire dalla classe `Alien`
@@ -548,7 +548,7 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 
 ---
 
-![](images/misc/space-invaders-school.png)
+![](/images/misc/space-invaders-school.png)
 # 3.7 Pallottole
 
 - Continuare l'es. precedente

@@ -1,4 +1,4 @@
-![](images/oop/modules.png)
+![](/images/oop/modules.png)
 # Sistemi a oggetti
 ## Introduzione all'informatica
 
@@ -59,7 +59,7 @@
 
 # Associazioni e relazioni in UML
 
-![large](images/dev/uml-relations.svg)
+![large](/images/dev/uml-relations.svg)
 
 ---
 
@@ -79,7 +79,7 @@
 
 ---
 
-![](images/oop/character.svg)
+![](/images/oop/character.svg)
 # Contenimento
 
 - Associazione che esprime un contenimento fisico, o in generale un legame di tipo **has-a**
@@ -141,7 +141,7 @@
 
 # Figure geometriche
 
-![large](images/dev/abs-shapes.svg)
+![large](/images/dev/abs-shapes.svg)
 
 ---
 
@@ -207,7 +207,7 @@
 
 # Implementazioni di Shape
 
-![large](images/dev/shapes.svg)
+![large](/images/dev/shapes.svg)
 
 ---
 

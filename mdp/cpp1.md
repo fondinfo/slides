@@ -1,4 +1,4 @@
-![](images/dev/cpp.svg)
+![](/images/dev/cpp.svg)
 # Linguaggio C++
 ## Programmazione strutturata
 
@@ -515,7 +515,7 @@ vector<DayOfYear> days(3);
 
 ---
 
-![](images/dev/cpp.svg)
+![](/images/dev/cpp.svg)
 # Modern C++
 
 - Nuova versione dello linguaggio, approvata da ISO il 2011-08-12
@@ -531,7 +531,7 @@ vector<DayOfYear> days(3);
 
 ---
 
-![](images/algo/my-shoes.png)
+![](/images/algo/my-shoes.png)
 # Tipizzazione statica
 
 - Modello di memoria: le comuni variabili non sono *riferimenti*, ma *contenitori* di dati
@@ -572,7 +572,7 @@ int val = stoi(txt);  // see also `stod`, `stof`...
 
 ---
 
-![](images/fun/shopping-list.jpg)
+![](/images/fun/shopping-list.jpg)
 # Vector, array dinamici
 
 ``` cpp

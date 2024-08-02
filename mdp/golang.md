@@ -1,4 +1,4 @@
-![](images/dev/gopher.svg)
+![](/images/dev/gopher.svg)
 # Go language
 ## Programming paradigms
 

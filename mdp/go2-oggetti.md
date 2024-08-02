@@ -1,10 +1,10 @@
-![](images/oop/balls.png)
+![](/images/oop/balls.png)
 # Funzioni e oggetti
 ## Introduzione alla programmazione
 
 ---
 
-![](images/fun/function.png)
+![](/images/fun/function.png)
 # Definizione di funzioni
 
 - **Funzione**: operatore, applicato a operandi, per ottenere un risultato
@@ -86,7 +86,7 @@ func Hypotenuse(leg1, leg2 float64) float64 {
 
 ---
 
-![](images/fun/times-table.svg)
+![](/images/fun/times-table.svg)
 # Cicli e annidamento
 
 ``` go
@@ -201,7 +201,7 @@ func main() {
 
 ---
 
-![](images/oop/anim-bounce.png)
+![](/images/oop/anim-bounce.png)
 # Funzione per rimbalzi
 
 - Le funzioni forniscono limitata astrazione
@@ -265,7 +265,7 @@ Se `x, y = 3, 4`, ad esempio, i due risultati sono `-2` e `4`
 
 ---
 
-![](images/oop/pointer.png)
+![](/images/oop/pointer.png)
 # Puntatori
 
 - Ogni dato in memoria ha un indirizzo
@@ -288,7 +288,7 @@ Come in *C*, ma *senza* “aritmetica”
 
 ---
 
-![](images/oop/basic-object.svg)
+![](/images/oop/basic-object.svg)
 # Oggetto
 
 - Rappresenta un *oggetto fisico* o un *concetto* del dominio
@@ -299,7 +299,7 @@ Come in *C*, ma *senza* “aritmetica”
 
 ---
 
-![](images/oop/cookie-cutter.png)
+![](/images/oop/cookie-cutter.png)
 # Classi e oggetti
 
 - Ogni *oggetto* ha una **classe** di origine
@@ -310,7 +310,7 @@ Come in *C*, ma *senza* “aritmetica”
 
 ---
 
-![](images/oop/ball-object.svg) ![](images/oop/ball-uml.svg) Class diagram UML
+![](/images/oop/ball-object.svg) ![](/images/oop/ball-uml.svg) Class diagram UML
 # Definizione della classe
 
 - **Incapsulamento** dei dati
@@ -332,7 +332,7 @@ func NewBall(pos Point) *Ball {
 
 ---
 
-![](images/oop/bob-builder.jpg)
+![](/images/oop/bob-builder.jpg)
 # Costruzione oggetti
 
 - **`NewBall`**: funzione *costruttore*
@@ -446,7 +446,7 @@ func main() {
 
 ---
 
-![](images/misc/ellipse.svg)
+![](/images/misc/ellipse.svg)
 # 2.1 Area di un'ellisse
 
 - Definire una *funzione* `EllipseArea` che:
@@ -459,7 +459,7 @@ func main() {
 
 ---
 
-![](images/misc/color-grid.png) ![](images/oop/raster-tile.png)
+![](/images/misc/color-grid.png) ![](/images/oop/raster-tile.png)
 # 2.2 Griglia di colori
 
 - Chiedere all'utente dei valori per `rows` e `cols`
@@ -476,7 +476,7 @@ Lasciare tra i riquadri un piccolo margine
 
 ---
 
-![](images/misc/frogger.png)
+![](/images/misc/frogger.png)
 # 2.3 Movimento orizzontale
 
 - Mostrare una pallina che si muove in orizzontale
@@ -489,7 +489,7 @@ Lasciare tra i riquadri un piccolo margine
 
 ---
 
-![](images/misc/frogger.png)
+![](/images/misc/frogger.png)
 # 2.4 Movimento per 5 fotogrammi
 
 - Riprendere l'esercizio 2.3
@@ -503,7 +503,7 @@ Incrementare (o decrementare) un contatore a ogni chiamata a `tick`
 
 ---
 
-![](images/misc/ellipse.svg)
+![](/images/misc/ellipse.svg)
 # 2.5 Classe per ellisse
 
 - Classe che modella un'ellisse
@@ -518,7 +518,7 @@ Incrementare (o decrementare) un contatore a ogni chiamata a `tick`
 
 ---
 
-![](images/misc/frogger.png)
+![](/images/misc/frogger.png)
 # 2.6 Animazione di un veicolo
 
 - Partire dalla classe `Ball` vista a lezione
@@ -531,7 +531,7 @@ Incrementare (o decrementare) un contatore a ogni chiamata a `tick`
 
 ---
 
-![](images/misc/frogger.png)
+![](/images/misc/frogger.png)
 # 2.7 Pallina con conteggio
 
 - Partire di nuovo dalla classe `Ball` vista a lezione
@@ -541,7 +541,7 @@ Incrementare (o decrementare) un contatore a ogni chiamata a `tick`
 
 ---
 
-![](images/misc/space-invaders-school.png)
+![](/images/misc/space-invaders-school.png)
 # 2.8 Animazione di un alieno
 
 - Partire di nuovo dalla classe `Ball` vista a lezione
@@ -553,7 +553,7 @@ Incrementare (o decrementare) un contatore a ogni chiamata a `tick`
 
 ---
 
-![](images/misc/spiral-circles.svg)
+![](/images/misc/spiral-circles.svg)
 # 🥷 2.9 Spirale a oggetti
 
 - Mostrare l'*animazione* di un cerchio lungo una spirale

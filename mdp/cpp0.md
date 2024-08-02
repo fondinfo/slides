@@ -1,10 +1,10 @@
-![](images/dev/cpp.svg)
+![](/images/dev/cpp.svg)
 # Modern C++
 ## Introduzione alla programmazione
 
 ---
 
-![small](images/dev/python-logo.svg) ![small](images/dev/cpp.svg)
+![small](/images/dev/python-logo.svg) ![small](/images/dev/cpp.svg)
 # 💾 Strumenti software
 
 - Strumenti open source, multi-piattaforma
@@ -22,7 +22,7 @@ sudo apt install build-essential libboost-dev geany
 
 ---
 
-![](images/fun/books-stack.png)
+![](/images/fun/books-stack.png)
 # 📚 Testi per C++
 
 - A.B. Downey: *How to Think Like a Computer Scientist C++ Version* - <http://greenteapress.com/thinkcpp/>
@@ -60,7 +60,7 @@ g++ hello.cpp -o hello
 
 ---
 
-![](images/algo/my-shoes.png)
+![](/images/algo/my-shoes.png)
 # Tipizzazione statica
 
 - Ogni variabile è un *contenitore* di dati
@@ -80,7 +80,7 @@ string txt = "hello";
 
 ---
 
-![](images/algo/my-shoes.png)
+![](/images/algo/my-shoes.png)
 # Type inference (auto)
 
 - Se presente valore di inizializzazione…
@@ -186,7 +186,7 @@ int main() {
 
 ---
 
-![](images/algo/words.svg)
+![](/images/algo/words.svg)
 # Selezione
 
 ``` cpp
@@ -210,7 +210,7 @@ if (a < b) {
 
 ---
 
-![](images/algo/sentinel.svg)
+![](/images/algo/sentinel.svg)
 # Iterazione
 
 ``` cpp
@@ -325,7 +325,7 @@ In alternativa (con estremi inclusi): `g2d::randint(1, 90)`
 
 ---
 
-![](images/fun/shopping-list.jpg)
+![](/images/fun/shopping-list.jpg)
 # ⭐ Vector, array dinamici
 
 ``` cpp
@@ -422,7 +422,7 @@ vector<int> last_two = {vals.end()-2 , vals.end()};  // [4, 5]
 
 ---
 
-![large](images/fun/iterator.png)
+![large](/images/fun/iterator.png)
 # 🔬 Iteratori e algoritmi
 
 ``` cpp
@@ -449,7 +449,7 @@ if (pos != groceries.end()) {
 
 ---
 
-![](images/fun/magnetic-tape.png)
+![](/images/fun/magnetic-tape.png)
 # 🔬 Scrittura e lettura di file
 
 ``` cpp
@@ -502,7 +502,7 @@ int main() {
 
 ---
 
-![](images/oop/ball-object.svg) ![](images/oop/ball-uml.svg) Class diagram UML
+![](/images/oop/ball-object.svg) ![](/images/oop/ball-uml.svg) Class diagram UML
 # ⭐ Definizione di una classe
 
 ``` cpp
@@ -526,7 +526,7 @@ public:
 
 ---
 
-![](images/oop/balls.png)
+![](/images/oop/balls.png)
 # ⭐ Creazione e uso degli oggetti
 
 ``` cpp
@@ -578,7 +578,7 @@ for i in range(25):
 
 # 🧪 Calcolo dell'integrale
 
-![](images/fun/integral.svg)
+![](/images/fun/integral.svg)
 
 - Approssimare l'integrale di una funzione `f`
 - Dividere un intervallo `(a, b)` sulle ascisse in `n` segmenti
@@ -596,7 +596,7 @@ for i in range(25):
 
 ---
 
-![](images/oop/pointer.png)
+![](/images/oop/pointer.png)
 # 🔬 Puntatori
 
 - Ogni dato presente in memoria ha un indirizzo: variabile puntatore per memorizzarlo
@@ -634,7 +634,7 @@ delete b2;
 
 ---
 
-![](images/oop/animals.png)
+![](/images/oop/animals.png)
 # 🔬 Fattoria parlante
 
 - *Classe base* come **interfaccia astratta**
@@ -654,7 +654,7 @@ public:
 
 ---
 
-![](images/oop/polymorphism.png)
+![](/images/oop/polymorphism.png)
 # 🔬 Classi concrete
 
 ``` cpp
@@ -678,7 +678,7 @@ class Cat : public Animal {
 
 ---
 
-![](images/oop/peppa.png)
+![](/images/oop/peppa.png)
 # 🔬 Lista di puntatori a oggetti
 
 ``` cpp
@@ -704,7 +704,7 @@ I am George Pig. I say: OINK!
 
 ---
 
-![](images/oop/actor.svg)
+![](/images/oop/actor.svg)
 # 🔬 Metodi virtuali puri
 
 - Es.: metodo `move` di `Actor`
@@ -729,7 +729,7 @@ class Actor {
 
 ---
 
-![](images/qt/fifteen-puzzle.jpg)
+![](/images/qt/fifteen-puzzle.jpg)
 # 🔬 Fifteen - Gioco astratto
 
 ``` c++
@@ -770,7 +770,7 @@ public:
 
 ---
 
-![](images/oop/ball-object.svg) ![](images/oop/ball-uml.svg) Class diagram UML
+![](/images/oop/ball-object.svg) ![](/images/oop/ball-uml.svg) Class diagram UML
 # 🔬 Definizione: ball.h
 
 ``` cpp
@@ -792,7 +792,7 @@ public:
 
 ---
 
-![](images/oop/anim-bounce.png)
+![](/images/oop/anim-bounce.png)
 # 🔬 Implementazione: ball.cpp
 
 ``` cpp
@@ -814,7 +814,7 @@ int Ball::pos_y() { return y_; }
 
 ---
 
-![](images/oop/balls.png)
+![](/images/oop/balls.png)
 # 🔬 Applicazione: main.cpp
 
 ``` cpp

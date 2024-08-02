@@ -1,11 +1,11 @@
 
-![](images/comp/attack.svg)
+![](/images/comp/attack.svg)
 # Grammatiche
 ## Introduzione all'informatica <br> Michele Tomaiuolo @ Ingegneria UniPR
 
 ---
 
-![](images/hist/chomsky.png) Noam Chomsky nel 2017
+![](/images/hist/chomsky.png) Noam Chomsky nel 2017
 # 💡️ Grammatiche di Chomsky
 
 - Grammatica `$G := <V_t, V_n, P, S>$`
@@ -30,7 +30,7 @@
 
 ---
 
-![large](images/comp/grammar11.svg)
+![large](/images/comp/grammar11.svg)
 # ⭐ Albero delle frasi
 
 - La radice dell'albero è l'*assioma*
@@ -43,7 +43,7 @@
 
 ---
 
-![large](images/comp/grammar12.svg)
+![large](/images/comp/grammar12.svg)
 # ⭐ Grammatica equivalente
 
 
@@ -88,7 +88,7 @@ Vedremo che `$P_3$` rende la grammatica di tipo 0, RE
 
 ---
 
-![](images/comp/two-face.png)
+![](/images/comp/two-face.png)
 # 🧪 Parsing e ambiguità
 
 - **Parsing**: trovare le produzioni che generano una certa stringa
@@ -108,7 +108,7 @@ Vedremo che `$P_3$` rende la grammatica di tipo 0, RE
     - `$E \to E + E | E * E | ( E ) | N$`
     - `$N \to D N | D \\ D \to 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9$`
 
-![](images/comp/ambiguity.svg)
+![](/images/comp/ambiguity.svg)
 
 ---
 
@@ -129,7 +129,7 @@ Vedremo che `$P_3$` rende la grammatica di tipo 0, RE
 
 ---
 
-![](images/comp/hierarchy.svg)
+![](/images/comp/hierarchy.svg)
 # ⭐ Classificazione di Chomsky
 
 - **Tipo 0**: grammatiche **RE**, *ricorsivam. enumerabili*
@@ -221,7 +221,7 @@ digit := "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 
 ---
 
-![](images/comp/pumping-lemma-3.svg)
+![](/images/comp/pumping-lemma-3.svg)
 # 🥷 Pumping lemma REG
 
 - Formalmente, `$\forall L$` regolare...
@@ -238,7 +238,7 @@ Esempio con `$G_1$`: `$S \to b | aA; A \to aS$`
 
 ---
 
-![](images/comp/pumping-lemma-2.svg)
+![](/images/comp/pumping-lemma-2.svg)
 # 🥷 Pumping lemma CF
 
 - Formalmente, `$\forall L$` non contestuale...
@@ -276,7 +276,7 @@ Esempio con `$G_1$`: `$S \to b | aA; A \to aS$`
 
 ---
 
-![large](images/dev/syntax-diagrams.png)
+![large](/images/dev/syntax-diagrams.png)
 # ⭐ Sintassi
 
 - Insieme di regole formali per scrivere *frasi* ben formate (programmi) in un certo linguaggio
@@ -315,7 +315,7 @@ Esempio con `$G_1$`: `$S \to b | aA; A \to aS$`
 
 ---
 
-![large](images/dev/compiler.svg)
+![large](/images/dev/compiler.svg)
 # ⭐ Architettura compilatore
 
 - Traduttore, spesso modulare
@@ -330,7 +330,7 @@ Esempio con `$G_1$`: `$S \to b | aA; A \to aS$`
 
 ---
 
-![large](images/dev/ast-euclid.svg)
+![large](/images/dev/ast-euclid.svg)
 # 🧪 Es. albero sintattico
 
 - Analisi *sintattica*: regole grammaticali di derivazione del sorgente
@@ -363,7 +363,7 @@ Algoritmo di Euclide per MCD
 - Programmi **interpretati**: applicati i 3 passi...
     - In sequenza, su ogni istruzione; a tempo di esecuzione
 
-![](images/dev/build.svg)
+![](/images/dev/build.svg)
 
 ---
 
@@ -382,7 +382,7 @@ Algoritmo di Euclide per MCD
 
 ---
 
-![](images/dev/relocation.png)
+![](/images/dev/relocation.png)
 # 🥷 Caricamento
 
 - Il **loader** carica in memoria un programma
@@ -409,7 +409,7 @@ Algoritmo di Euclide per MCD
 
 ---
 
-![](images/dev/garbage-truck.svg)
+![](/images/dev/garbage-truck.svg)
 # 🥷 Sistemi di garbage collection
 
 - Restituzione automatica della memoria
@@ -447,7 +447,7 @@ Algoritmo di Euclide per MCD
 
 ---
 
-![large](images/dev/assembly.png)
+![large](/images/dev/assembly.png)
 # 💡️ Linguaggi di basso livello
 
 - Più orientati alla macchina che ai problemi da trattare
@@ -474,7 +474,7 @@ Algoritmo di Euclide per MCD
 
 # 💡️ Storia dei linguaggi
 
-![large](images/dev/languages-timeline.svg)
+![large](/images/dev/languages-timeline.svg)
 
 >
 
@@ -488,10 +488,10 @@ Algoritmo di Euclide per MCD
 
 ---
 
-![large](images/dev/lang-spectrum.png)
+![large](/images/dev/lang-spectrum.png)
 # 💡️ The Top 10
 
-![](images/dev/lang-rank.png)
+![](/images/dev/lang-rank.png)
 
 >
 

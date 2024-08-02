@@ -1,10 +1,10 @@
-![](images/oop/balls.png)
+![](/images/oop/balls.png)
 # Oggetti
 ## Introduzione alla programmazione
 
 ---
 
-![](images/dev/abstraction.png)
+![](/images/dev/abstraction.png)
 # 💡️ Pensiero astratto
 
 - **Astrazione**, da “*ab trahere*” = togliere via ✂️
@@ -27,11 +27,11 @@ https://thevaluable.dev/abstraction-type-software-example/
 
 # 💡️ The map is not the territory
 
-![large](images/dev/map-levels.png)
+![large](/images/dev/map-levels.png)
 
 ---
 
-![](images/oop/basic-object.svg)
+![](/images/oop/basic-object.svg)
 # 💡️ Oggetto
 
 - Rappresenta un *oggetto fisico* o un *concetto* del dominio
@@ -42,7 +42,7 @@ https://thevaluable.dev/abstraction-type-software-example/
 
 ---
 
-![](images/oop/cookie-cutter.png)
+![](/images/oop/cookie-cutter.png)
 # 💡️ Classi e oggetti
 
 - Ogni *oggetto* ha una **classe** di origine
@@ -53,7 +53,7 @@ https://thevaluable.dev/abstraction-type-software-example/
 
 ---
 
-![](images/oop/ball-object.svg) ![](images/oop/ball-uml.svg) Class diagram UML
+![](/images/oop/ball-object.svg) ![](/images/oop/ball-uml.svg) Class diagram UML
 # ⭐ Definizione della classe
 
 - **Incapsulamento** dei dati: *convenzione* sui nomi
@@ -75,7 +75,7 @@ class Ball:  # …
 
 ---
 
-![](images/oop/bob-builder.jpg)
+![](/images/oop/bob-builder.jpg)
 # ⭐ Costruzione oggetti
 
 - **`__init__`** : metodo *costruttore*
@@ -95,7 +95,7 @@ ball = Ball(40, 80)  # Allocation and initialization
 
 ---
 
-![](images/oop/anim-bounce.png)
+![](/images/oop/anim-bounce.png)
 # ⭐ Metodi
 
 - Espongono *servizi* ad altri oggetti
@@ -119,7 +119,7 @@ class Ball:  # …
 
 ---
 
-![](images/oop/balls.png)
+![](/images/oop/balls.png)
 # ⭐ Uso degli oggetti
 
 ``` py
@@ -226,7 +226,7 @@ b1.multiple_move(2)
 
 ---
 
-![](images/misc/hiccup.png)
+![](/images/misc/hiccup.png)
 # 🧪 Personaggio D&D
 
 - Consideriamo un personaggio fantasy
@@ -290,7 +290,7 @@ print(c.alive())
 
 ---
 
-![](images/fun/shopping-list.png)
+![](/images/fun/shopping-list.png)
 # ⭐ Lista
 
 - Sequenza *mutabile* di valori *omogenei*
@@ -432,7 +432,7 @@ def tick():
 ---
 
 
-![](images/misc/ellipse.svg)
+![](/images/misc/ellipse.svg)
 # Classe per ellisse
 
 - Classe che modella un'ellisse
@@ -447,7 +447,7 @@ def tick():
 
 ---
 
-![](images/misc/frogger.png)
+![](/images/misc/frogger.png)
 # Animazione di un veicolo
 
 - Creare una classe `Vehicle`
@@ -464,7 +464,7 @@ def tick():
 
 ---
 
-![](images/misc/space-invaders-school.png)
+![](/images/misc/space-invaders-school.png)
 # Animazione di alieni
 
 - Creare una classe `Alien`
@@ -492,7 +492,7 @@ def tick():
 
 ---
 
-![](images/games/viewport.svg)
+![](/images/games/viewport.svg)
 # Scroll della vista
 
 - Impostare uno spazio ampio per i movimenti dei personaggi (`ARENA_W, ARENA_H`)
@@ -503,7 +503,7 @@ def tick():
 
 ---
 
-![](images/misc/spiral-circles.svg)
+![](/images/misc/spiral-circles.svg)
 # 🥷 Spirale a oggetti
 
 - Mostrare un cerchio in movimento

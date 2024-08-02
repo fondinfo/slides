@@ -1,13 +1,13 @@
-![](images/algo/rubik-cube.png)
+![](/images/algo/rubik-cube.png)
 # Basi
 ## Introduzione alla programmazione
 
 ---
 
-![large](images/dev/python-cases.png) Web, data science, machine learning, scripting, teaching, games, hardware, multiplatform…
+![large](/images/dev/python-cases.png) Web, data science, machine learning, scripting, teaching, games, hardware, multiplatform…
 # 💡️ Python is fun!
 
-![](images/algo/antigravity.png)
+![](/images/algo/antigravity.png)
 
 >
 
@@ -67,7 +67,7 @@ True
 
 ---
 
-![large](images/algo/assign.svg)
+![large](/images/algo/assign.svg)
 # ⭐ Assegnamento
 
 - Una **variabile** serve per ricordare un risultato utile
@@ -88,7 +88,7 @@ True
 
 ---
 
-![](images/algo/var-label.svg)
+![](/images/algo/var-label.svg)
 # 🔬 Variabile
 
 - **Nome** associato a un certo **valore**
@@ -177,7 +177,7 @@ TypeError: can only concatenate str (not "int") to str
 
 ---
 
-![](images/fun/shopping-list.png) [Spam…](https://www.youtube.com/watch?v=Gxtsa-OvQLA)
+![](/images/fun/shopping-list.png) [Spam…](https://www.youtube.com/watch?v=Gxtsa-OvQLA)
 # ⭐ Lista
 
 - Sequenza **mutabile** di valori *omogenei*
@@ -201,7 +201,7 @@ True
 
 ---
 
-![large](images/algo/holy-grail.jpg) [The Bridge of Death](https://www.youtube.com/watch?v=Xel0c6mpqPA)
+![large](/images/algo/holy-grail.jpg) [The Bridge of Death](https://www.youtube.com/watch?v=Xel0c6mpqPA)
 
 # 🧪 Leggere e scrivere
 
@@ -220,7 +220,7 @@ Right. Off you go, Lancelot .
 
 ---
 
-![](images/algo/sum3.svg)
+![](/images/algo/sum3.svg)
 # 🧪 Somma di tre numeri
 
 - Salvare il programma seguente come “`sum3.py`”
@@ -250,7 +250,7 @@ print("The sum is", total)
 
 ---
 
-![large](images/repr/raster-coords.svg) ![large](images/repr/color-mixing.svg)
+![large](/images/repr/raster-coords.svg) ![large](/images/repr/color-mixing.svg)
 # ⭐ Disegno su canvas
 
 - **Coordinate raster**
@@ -266,7 +266,7 @@ print("The sum is", total)
 
 ---
 
-![large](images/repr/pixel-grid.png)
+![large](/images/repr/pixel-grid.png)
 # ⭐ Tupla
 
 - Sequenza **immutabile** di valori
@@ -305,7 +305,7 @@ g2d.main_loop()  # manage the window/canvas
 
 ---
 
-![](images/repr/draw.svg)
+![](/images/repr/draw.svg)
 # 🧪 Linee e testi
 
 ``` py
@@ -351,7 +351,7 @@ g2d.main_loop()
 
 ---
 
-![](images/algo/calculator.svg) [☞ `math`](https://docs.python.org/3/library/math.html)
+![](/images/algo/calculator.svg) [☞ `math`](https://docs.python.org/3/library/math.html)
 # 🧪 Battery included 🔋
 
 - Modulo [`math`](https://docs.python.org/3/library/math.html) in *Python Standard Library*
@@ -375,7 +375,7 @@ print(sqrt(4))
 
 ---
 
-![](images/algo/red-dice.svg) [☞ `random`](https://docs.python.org/3/library/random.html)
+![](/images/algo/red-dice.svg) [☞ `random`](https://docs.python.org/3/library/random.html)
 # 🧪 Random 🎲
 
 - Modulo [`random`](https://docs.python.org/3/library/random.html) in *Python Standard Library*
@@ -399,7 +399,7 @@ prime = choice([2, 3, 5, 7, 11, 13])  # one from a sequence
 
 ---
 
-![](images/algo/if.svg)
+![](/images/algo/if.svg)
 # ⭐ Selezione: if
 
 - Corpo di `if` o `else`: **indentazione**
@@ -422,7 +422,7 @@ g2d.draw_circle((200, 200), 25)
 
 ---
 
-![](images/algo/if-else.svg)
+![](/images/algo/if-else.svg)
 # ⭐ Selezione: else
 
 - Clausola `else`: opzionale
@@ -447,7 +447,7 @@ g2d.draw_circle((200, 200), 25)
 
 ---
 
-![](images/algo/dice.svg)
+![](/images/algo/dice.svg)
 # ⭐ Selezione: elif
 
 - `elif` : contrazione di `else if`
@@ -469,7 +469,7 @@ else:
 
 ---
 
-![](images/algo/while.svg)
+![](/images/algo/while.svg)
 # ⭐ Iterazione: while
 
 - Condizione di *permanenza* nel ciclo
@@ -493,7 +493,7 @@ g2d.draw_circle((200, 200), r)
 
 ---
 
-![](images/misc/rock-cubes.png)
+![](/images/misc/rock-cubes.png)
 # ⭐ Iterazione: for
 
 - Opera solo su **sequenze e iterabili**
@@ -536,7 +536,7 @@ for i in reversed(range(5)):  # 4, 3, 2, 1, 0
 
 ---
 
-![](images/misc/red-squares.svg)
+![](/images/misc/red-squares.svg)
 # 🧪 Sequenza di quadrati
 
 ``` py
@@ -566,7 +566,7 @@ g2d.main_loop()
 
 ---
 
-![](images/misc/handshake.svg)
+![](/images/misc/handshake.svg)
 # Hello, admin!
 
 - Scrivere un programma in un file `hello.py`
@@ -583,7 +583,7 @@ Hello, Adam!
 
 ---
 
-![](images/misc/greek-pi.png)
+![](/images/misc/greek-pi.png)
 # Cerchio
 
 - Chiedere all'utente il valore del raggio `r` di un cerchio
@@ -596,7 +596,7 @@ Hello, Adam!
 
 ---
 
-![large](images/algo/holy-grail.jpg)
+![large](/images/algo/holy-grail.jpg)
 # The Bridge of Death
 
 - Porre tre domande all'utente:
@@ -614,7 +614,7 @@ Prima versione: chiedere e controllare solo il nome
 
 ---
 
-![](images/misc/calendar-cols.jpg)
+![](/images/misc/calendar-cols.jpg)
 # Calcolo dell'età
 
 - Chiedere all'utente la sua data di nascita
@@ -632,7 +632,7 @@ Espressione booleana composta con `and`, `or`, `not`…
 
 ---
 
-![](images/misc/three-brothers.png)
+![](/images/misc/three-brothers.png)
 # Minore e maggiore
 
 - Generare e stampare tre numeri interi casuali: `a`, `b`, `c`
@@ -649,7 +649,7 @@ Altrimenti…
 
 ---
 
-![](images/misc/random-squares.svg)
+![](/images/misc/random-squares.svg)
 # Quadrati casuali
 
 - Chiedere all'utente un numero `n`
@@ -664,7 +664,7 @@ Cominciare a disegnare un solo quadrato grigio, in posizione casuale
 
 ---
 
-![](images/misc/diagonal-squares.svg)
+![](/images/misc/diagonal-squares.svg)
 # Quadrati in diagonale
 
 - Chiedere all'utente un numero `n`
@@ -677,7 +677,7 @@ Cominciare a disegnare un solo quadrato grigio, in posizione casuale
 ---
 
 
-![large](images/misc/segments-1.svg)
+![large](/images/misc/segments-1.svg)
 # Segmenti casuali
 
 - Chiedere all'utente il numero di segmenti da disegnare
@@ -688,7 +688,7 @@ Cominciare a disegnare un solo quadrato grigio, in posizione casuale
 
 ---
 
-![large](images/misc/segments-2.svg)
+![large](/images/misc/segments-2.svg)
 # Linea spezzata
 
 - Chiedere all'utente il numero di segmenti da disegnare

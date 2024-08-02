@@ -1,4 +1,4 @@
-![](images/repr/w3c-keys.jpg)
+![](/images/repr/w3c-keys.jpg)
 # HTML e CSS
 ## Introduzione all'informatica
 
@@ -22,7 +22,7 @@
 
 # Anatomia di una pagina
 
-![large](images/repr/html-page.svg)
+![large](/images/repr/html-page.svg)
 
 ---
 
@@ -50,7 +50,7 @@
 
 - Una URL è un riferimento per una risorsa
 
-![](images/repr/url-example.png)
+![](/images/repr/url-example.png)
 
 - Il nome della risorsa dipende interamente dal protocollo. Per HTTP include:
 - Nome dell’host su cui risiede la risorsa
@@ -129,7 +129,7 @@ UniPR, riquadro News</a>.</p>
 
 ---
 
-![](images/repr/table-complete.png)
+![](/images/repr/table-complete.png)
 # Tabella con celle unite
 
 ``` HTML
@@ -198,7 +198,7 @@ UniPR, riquadro News</a>.</p>
     - <http://www.w3.org/TR/WCAG10-HTML-TECHS/>
 
 ---
-![](images/repr/html5-logo.svg)
+![](/images/repr/html5-logo.svg)
 # Html 5
 
 - Nuovi elementi di struttura di Html 5
@@ -213,7 +213,7 @@ UniPR, riquadro News</a>.</p>
 
 ---
 
-![](images/repr/browser-war.jpg)
+![](/images/repr/browser-war.jpg)
 # Cascading Style Sheets
 
 > In principio il web era popolato di semantici tag p e h1; ma presto arrivarono font, center, color; le tabelle nascoste erano in agguato; era già scoppiata la Guerra dei Browser, tra Netscape e IE.
@@ -326,7 +326,7 @@ p.gossip { display: none; }
 
 ---
 
-![large](images/repr/box-model.svg)
+![large](/images/repr/box-model.svg)
 # Box model
 
 - `margin, padding, border-width` – 1-4 valori

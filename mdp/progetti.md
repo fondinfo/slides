@@ -1,10 +1,10 @@
-![](images/dev/theory-practice.png)
+![](/images/dev/theory-practice.png)
 # Esempi di progetti
 ## Informatica e lab di programmazione<br> Michele Tomaiuolo @ Ingegneria UniPR
 
 ---
 
-![](images/misc/pengo.png)
+![](/images/misc/pengo.png)
 # Pengo
 
 - **SnoBee** si muovono casualmente
@@ -22,7 +22,7 @@
 
 ---
 
-![](images/misc/pac-man.png)
+![](/images/misc/pac-man.png)
 # Pac-Man
 
 - *Pac-Man*
@@ -39,7 +39,7 @@
 
 ---
 
-![](images/misc/super-mario.jpg)
+![](/images/misc/super-mario.jpg)
 # Super Mario
 
 - *Mario*: guidato dal giocatore
@@ -56,7 +56,7 @@
 
 ---
 
-![](images/misc/bubble-bobble.png)
+![](/images/misc/bubble-bobble.png)
 # Bubble Bobble
 
 - *Draghetto*: guidato dal giocatore
@@ -73,7 +73,7 @@
 
 ---
 
-![](images/misc/moon-patrol.png)
+![](/images/misc/moon-patrol.png)
 # Moon Patrol
 
 - Animazione in *parallasse* degli sfondi
@@ -84,7 +84,7 @@
 
 ---
 
-![](images/misc/frogger.png)
+![](/images/misc/frogger.png)
 # Frogger
 
 - **Rana** guidata dall'utente, salta in 4 direzioni: ↕ ↔
@@ -101,7 +101,7 @@
 
 ---
 
-![](images/misc/invaders.png)
+![](/images/misc/invaders.png)
 # Space invaders
 
 - **Cannone**: l'utente lo sposta in orizzontale; spara verso l'alto, contro gli alieni
@@ -110,7 +110,7 @@
 
 ---
 
-![](images/misc/donkey-kong.png)
+![](/images/misc/donkey-kong.png)
 # Donkey Kong
 
 - **Mario** : guidato dall'utente, cade se non è su una piattaforma
@@ -120,7 +120,7 @@
 
 ---
 
-![](images/misc/snake.png)
+![](/images/misc/snake.png)
 # Snake
 
 - **Serpente**: guidato dal giocatore
@@ -134,7 +134,7 @@
 
 ---
 
-![](images/misc/pong.png)
+![](/images/misc/pong.png)
 # Pong
 
 - Campo rettangolare
@@ -144,7 +144,7 @@
 
 ---
 
-![](images/misc/minesweeper.png)
+![](/images/misc/minesweeper.png)
 # Campo minato
 
 - N **mine nascoste** a caso in tabella rettangolare
@@ -155,7 +155,7 @@
 
 ---
 
-![](images/misc/connect4.svg)
+![](/images/misc/connect4.svg)
 # Forza 4
 
 - Due giocatori, a turno
@@ -166,7 +166,7 @@
 
 ---
 
-![](images/misc/othello.png)
+![](/images/misc/othello.png)
 # Othello
 
 - In due, bianco e nero
@@ -178,7 +178,7 @@
 
 ---
 
-![](images/misc/slitherlink-solved.png)
+![](/images/misc/slitherlink-solved.png)
 # Slitherlink
 
 - Regole
@@ -194,7 +194,7 @@
 
 ---
 
-![](images/misc/hitori.svg) ![](images/misc/hitori-completed.svg)
+![](/images/misc/hitori.svg) ![](/images/misc/hitori-completed.svg)
 # Hitori
 
 - Regole
@@ -211,7 +211,7 @@
 
 ---
 
-![](images/misc/akari.svg)
+![](/images/misc/akari.svg)
 # Akari - Light up
 
 - Scopo: *illuminare* tutte le celle bianche
@@ -225,7 +225,7 @@
 
 ---
 
-![](images/misc/tents.png)
+![](/images/misc/tents.png)
 # Tents puzzle
 
 - Posizionare tende sulla griglia, in modo che ogni albero sia *assegnato* a una tenda
@@ -241,7 +241,7 @@
 
 ---
 
-![](images/misc/skyscrapers.jpg)
+![](/images/misc/skyscrapers.jpg)
 # Sudoku Skyscrapers
 
 - Celle tutte piene
@@ -255,7 +255,7 @@
 
 ---
 
-![](images/misc/3inarow.svg)
+![](/images/misc/3inarow.svg)
 # 3-in-a-row
 
 - Regole

@@ -1,10 +1,10 @@
-![](images/sys/motherboard-example.jpg)
+![](/images/sys/motherboard-example.jpg)
 # Calcolatori
 ## Introduzione all'informatica <br> Michele Tomaiuolo @ Ingegneria UniPR
 
 ---
 
-![](images/hist/1837-analytical-engine.jpg)
+![](/images/hist/1837-analytical-engine.jpg)
 # 💡️ Calcolatore
 
 - Macchina *programmabile*
@@ -21,7 +21,7 @@
 
 ---
 
-![](images/hist/zuse.jpg) ![](images/hist/eniac.jpg)
+![](/images/hist/zuse.jpg) ![](/images/hist/eniac.jpg)
 # 💡️ Primi calcolatori
 
 - 1941, *Z3* (Berlino, Konrad Zuse)
@@ -36,7 +36,7 @@
 
 ---
 
-![](images/hist/von-neumann.jpg) ![](images/sys/von-neumann-architecture.svg)
+![](/images/hist/von-neumann.jpg) ![](/images/sys/von-neumann-architecture.svg)
 # 💡️ Architettura di von Neumann
 
 - Dati e codice in *Random Access Memory*
@@ -57,7 +57,7 @@
 
 # 💡️ Computer girls
 
-![large](images/hist/women-in-cs.jpg)
+![large](/images/hist/women-in-cs.jpg)
 
 >
 
@@ -78,11 +78,11 @@ Grace Hopper, Margaret Hamilton — Donne in corsi CS: 37%, 1983 → 18%, 2013
 
 # ⭐ Architettura CPU
 
-![large](images/sys/cpu-architecture.png)
+![large](/images/sys/cpu-architecture.png)
 
 ---
 
-![](images/sys/settling-time.svg) ![](images/sys/propagation-delay.png)
+![](/images/sys/settling-time.svg) ![](/images/sys/propagation-delay.png)
 # 🔬 Circuiti logici sincroni
 
 - Ritardo di commutazione delle porte logiche
@@ -106,37 +106,37 @@ Grace Hopper, Margaret Hamilton — Donne in corsi CS: 37%, 1983 → 18%, 2013
 
 # ⭐ Lettura dalla memoria
 
-![large](images/sys/cpu-memory.svg)
+![large](/images/sys/cpu-memory.svg)
 
 ---
 
 # 🔬 Sequenza di lettura
 
-![large](images/sys/cpu-read-1.svg)
+![large](/images/sys/cpu-read-1.svg)
 
 ---
 
 # 🔬 Sequenza di lettura
 
-![large](images/sys/cpu-read-2.svg)
+![large](/images/sys/cpu-read-2.svg)
 
 ---
 
 # 🔬 Sequenza di scrittura
 
-![large](images/sys/cpu-write-1.svg)
+![large](/images/sys/cpu-write-1.svg)
 
 ---
 
 # 🔬 Sequenza di scrittura
 
-![large](images/sys/cpu-write-2.svg)
+![large](/images/sys/cpu-write-2.svg)
 
 ---
 
 # 🔬 Fetch istruzioni
 
-![large](images/sys/cpu-fetch.svg)
+![large](/images/sys/cpu-fetch.svg)
 
 ---
 
@@ -154,14 +154,14 @@ Grace Hopper, Margaret Hamilton — Donne in corsi CS: 37%, 1983 → 18%, 2013
 
 # 🔬 Esecuzione istruzioni
 
-![large](images/sys/cpu-exec.svg)
+![large](/images/sys/cpu-exec.svg)
 
 ---
 
-![large](images/sys/motherboard.svg)
+![large](/images/sys/motherboard.svg)
 # ⭐ Architettura PC
 
-![small](images/sys/motherboard-example.jpg)
+![small](/images/sys/motherboard-example.jpg)
 
 - *Northbridge*, ora integrato nella CPU
     - Graphics & Memory Controller Hub (GMCH) : ~ 50 GB/s
@@ -170,7 +170,7 @@ Grace Hopper, Margaret Hamilton — Donne in corsi CS: 37%, 1983 → 18%, 2013
 
 ---
 
-![large](images/sys/flynn.svg)
+![large](/images/sys/flynn.svg)
 # ⭐ Classificazione di Flynn
 
 - **Parallelismo**: ↑ prestazioni, a parità di velocità su singola istruzione

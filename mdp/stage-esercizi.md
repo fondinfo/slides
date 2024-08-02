@@ -1,6 +1,6 @@
 # Esercizi stage
 subtitle: Introduzione alla programmazione
-![](images/dev/geek-girl.svg)
+![](/images/dev/geek-girl.svg)
 
 ---
 
@@ -8,7 +8,7 @@ subtitle: Introduzione alla programmazione
 
 ---
 
-![](images/misc/greek-pi.png)
+![](/images/misc/greek-pi.png)
 # 1.1 Cerchio
 
 - Chiedere all'utente il valore del raggio `r` di un cerchio
@@ -21,7 +21,7 @@ subtitle: Introduzione alla programmazione
 
 ---
 
-![](images/misc/three-brothers.png)
+![](/images/misc/three-brothers.png)
 # 1.2 Minore e maggiore
 
 - Generare e stampare tre numeri interi casuali: `a`, `b`, `c`
@@ -52,7 +52,7 @@ Espressione booleana composta con `and`, `or`, `not`...
 
 ---
 
-![](images/misc/random-squares.svg)
+![](/images/misc/random-squares.svg)
 # 1.4 Quadrati casuali
 
 - Chiedere all'utente un numero `n`
@@ -67,7 +67,7 @@ Cominciare a disegnare un solo quadrato grigio, in posizione casuale
 
 ---
 
-![](images/misc/red-circles.svng)
+![](/images/misc/red-circles.svng)
 # 1.5 Cerchi concentrici
 
 - Chiedere all'utente il numero di cerchi da disegnare
@@ -83,7 +83,7 @@ Per iniziare, inserire l'operazione di disegno un ciclo, togliendo a ogni passo 
 
 ---
 
-![](images/misc/bingo-balls.png)
+![](/images/misc/bingo-balls.png)
 # 1.6 Numero segreto
 
 - Generare all'inizio del programma un numero “segreto” a caso tra 1 e 90
@@ -92,7 +92,7 @@ Per iniziare, inserire l'operazione di disegno un ciclo, togliendo a ogni passo 
 
 ---
 
-![](images/misc/resistors.png)
+![](/images/misc/resistors.png)
 # 🥷 1.7 Resistenze, ciclo
 
 - Leggere, attraverso un ciclo, una sequenza di valori di resistenze elettriche
@@ -109,7 +109,7 @@ Rₛ = ∑ Rᵢ
 
 ---
 
-![](images/misc/classical-watch.jpg)
+![](/images/misc/classical-watch.jpg)
 # 🥷 1.8 Orologio classico
 
 - Disegnare 12 tacche a raggiera, come in un orologio classico
@@ -121,7 +121,7 @@ Usare `math.Sin` e `math.Cos` per determinare le posizioni in cui disegnare
 
 ---
 
-![](images/misc/monster.png)
+![](/images/misc/monster.png)
 # 🥷 1.9 La stanza del mostro
 
 - Il giocatore si muove su una scacchiera di 5x5 celle, partendo da un angolo
@@ -144,7 +144,7 @@ Non è richiesto di utilizzare la grafica
 
 ---
 
-![](images/misc/numbers.png)
+![](/images/misc/numbers.png)
 # 2.1 Conteggio cifre
 
 - Chiedere una riga di testo all'utente
@@ -157,7 +157,7 @@ Usare un ciclo `for` sulla stringa (sequenza di caratteri)
 
 ---
 
-![](images/fun/sin-cos.png)
+![](/images/fun/sin-cos.png)
 # 2.2 Array, precalcolo
 
 - Riempire una lista con i valori di `sin(x)`
@@ -178,7 +178,7 @@ In alternativa, usare la `list comprehension`
 
 ---
 
-![](images/misc/pythagorean-theorem.png)
+![](/images/misc/pythagorean-theorem.png)
 # 2.3 Ipotenusa
 
 - Scrivere una `funzione` per il calcolo dell'ipotenusa di un triangolo rettangolo
@@ -195,7 +195,7 @@ from math import sqrt
 
 ---
 
-![](images/misc/red-circles.svg)
+![](/images/misc/red-circles.svg)
 # 2.4 Cerchi concentrici
 
 - Chiedere all'utente il numero di cerchi da disegnare
@@ -214,7 +214,7 @@ Infine, determinare automaticamente, prima del ciclo, le variazioni migliori per
 
 ---
 
-![](images/misc/color-grid.png) ![](images/oop/raster-tile.png)
+![](/images/misc/color-grid.png) ![](/images/oop/raster-tile.png)
 # 2.5 Griglia di colori (*)
 
 - Chidere all'utente dei valori per `rows` e `cols`
@@ -231,7 +231,7 @@ Lasciare tra i riquadri un piccolo margine
 
 ---
 
-![](images/misc/winding-path.png)
+![](/images/misc/winding-path.png)
 # 2.6 Serpentina (*)
 
 - Chidere all'utente dei valori per `rows` e `cols`
@@ -247,7 +247,7 @@ Poi invertire il verso delle righe con indice dispari
 
 ---
 
-![](images/misc/spiral-circles.svg)
+![](/images/misc/spiral-circles.svg)
 # 2.7 Spirale (*)
 
 - Disegnare una sequenza di cerchi (`n` scelto dall'utente) lungo una spirale
@@ -266,7 +266,7 @@ xc, yc, r, angle = 320, 240, 40, 0.0
 
 ---
 
-![](images/misc/street-fighter.png)
+![](/images/misc/street-fighter.png)
 # 2.8 Movimento orizzontale (*)
 
 - Mostrare una pallina che si muove in orizzontale
@@ -276,7 +276,7 @@ xc, yc, r, angle = 320, 240, 40, 0.0
 
 ---
 
-![](images/misc/bouncing-ball.jpg)
+![](/images/misc/bouncing-ball.jpg)
 # 2.9 Pallina con gravità (*)
 
 - All'esercizio precedente, aggiungere l'effetto di gravità
@@ -291,12 +291,12 @@ xc, yc, r, angle = 320, 240, 40, 0.0
 
 ---
 
-![](images/misc/space-invaders-school.png)
+![](/images/misc/space-invaders-school.png)
 # 3.1 Movimento a serpentina
 
 ---
 
-![](images/misc/bouncing-ball.jpg)
+![](/images/misc/bouncing-ball.jpg)
 # 3.1 Palline con gravità
 
 - Riprendere l'esercizio 2.9, ma visualizzare numerose palline in movimento

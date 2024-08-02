@@ -1,10 +1,10 @@
-![](images/oop/modules.png)
+![](/images/oop/modules.png)
 # Python for data analysis
 ## NumPy, Pandas, PyPlotLib
 
 ---
 
-![large](images/dev/python-powered.png)
+![large](/images/dev/python-powered.png)
 # Python applications
 
 - Web
@@ -18,7 +18,7 @@
 
 ---
 
-![](images/algo/perfect-square.svg)
+![](/images/algo/perfect-square.svg)
 # Readability counts
 
 ``` py
@@ -42,7 +42,7 @@ else:
 
 ---
 
-![](images/fun/function.png)
+![](/images/fun/function.png)
 # Functions
 
 - **`def`**, to define a function
@@ -60,7 +60,7 @@ result = hypotenuse(3, 4)  # 5.0
 
 ---
 
-![](images/fun/month-list.svg)
+![](/images/fun/month-list.svg)
 # List
 
 - **Mutable** sequence of elements
@@ -84,7 +84,7 @@ results_by_month = [0] * 12  # List repetition
 
 ---
 
-![](images/fun/wile-coyote.png)
+![](/images/fun/wile-coyote.png)
 # Elements and slices
 
 - **Attention: use valid indices!**
@@ -110,7 +110,7 @@ Third value for step, possibly negative
 
 ---
 
-![](images/fun/shopping-list.png)
+![](/images/fun/shopping-list.png)
 # Insertion and removal
 
 ``` py
@@ -324,7 +324,7 @@ while v := input("val? "):  # sentinel, "" is falsy
 
 ---
 
-![](images/dev/computer-ninja.svg)
+![](/images/dev/computer-ninja.svg)
 # List comprehension
 
 - Terse way to create a list
@@ -394,7 +394,7 @@ even_nums = (str(x) for x in range(12) if (x % 2) == 0)
 
 ---
 
-![](images/repr/child-fingers.png)
+![](/images/repr/child-fingers.png)
 # Enumerate
 
 - Couple each value of a sequence with its index
@@ -420,7 +420,7 @@ Otherwise, Python doesn't generate results immediately (*lazy*)
 
 ---
 
-![](images/fun/zip.png)
+![](/images/fun/zip.png)
 # Zip
 
 - Couples elements of two (or *more*) sequences
@@ -441,7 +441,7 @@ Results in a list: only (!) to visualize them
 
 ---
 
-![](images/fun/legomap.png)
+![](/images/fun/legomap.png)
 # Map
 
 - Takes a function and a sequence (or *more*) as params
@@ -467,7 +467,7 @@ Results in a list: only (!) to visualize them
 
 ---
 
-![](images/fun/legomap.png)
+![](/images/fun/legomap.png)
 # Mapping on processes
 
 - Vectorize a task over a *pool* of processes
@@ -554,7 +554,7 @@ Results in a list: only (!) to visualize them
 
 ---
 
-![large](images/repr/matrix.svg)
+![large](/images/repr/matrix.svg)
 # Matrix in a simple list
 
 - Rows concatenated in a single list
@@ -648,7 +648,7 @@ not_a_matrix[1][2] = 1        # guess not_a_matrix?
 
 ---
 
-![](images/fun/dictionary.png)
+![](/images/fun/dictionary.png)
 # 🥷 Dictionary
 
 - Sometimes called *map* or *associative array*
@@ -673,7 +673,7 @@ for k, v in tel.items():
 
 ---
 
-![](images/fun/sparse-matrix.svg)
+![](/images/fun/sparse-matrix.svg)
 # 🥷 Sparse matrix
 
 - Matrix with many “empty” cells
@@ -720,7 +720,7 @@ while name := input("Name? "):
 
 ---
 
-![large](images/fun/rollinz.jpg)
+![large](/images/fun/rollinz.jpg)
 # 🥷 Set
 
 - Collection of elements *without repetitions*
@@ -743,7 +743,7 @@ empty_set = set()  # ⚠️ {} is an empty dict
 
 ---
 
-![](images/fun/magnetic-tape.png)
+![](/images/fun/magnetic-tape.png)
 # Data streams
 
 - **Stream**: abstraction for information stream
@@ -871,7 +871,7 @@ for line in sys.stdin:  # CTRL-D (Lin) or CTRL-Z (Win) to end the input
 
 ---
 
-![](images/fun/garbled-tape.png)
+![](/images/fun/garbled-tape.png)
 # Errors on file
 
 - **Exceptions**: to handle unexpected cases separately
@@ -890,7 +890,7 @@ except IOError as err:
 
 ---
 
-![](images/misc/merge-sign.png) ![](images/comp/merge.svg)
+![](/images/misc/merge-sign.png) ![](/images/comp/merge.svg)
 # Exercise: merge two sorted files
 
 - Merge two files, *without* using lists
@@ -905,7 +905,7 @@ except IOError as err:
 
 ---
 
-![](images/misc/quiz.png)
+![](/images/misc/quiz.png)
 # Exercise: courses' marks
 
 - Analyze students' answers to questionnaires about courses
@@ -923,13 +923,13 @@ except IOError as err:
 
 # Python lists in memory
 
-![large](images/scipy/python-list-list.svg)
+![large](/images/scipy/python-list-list.svg)
 
 ---
 
 # C arrays in memory
 
-![large](images/scipy/c-array-array.svg)
+![large](/images/scipy/c-array-array.svg)
 
 ---
 
@@ -985,7 +985,7 @@ $ python3 -m pip install numpy jupyter
 
 ---
 
-![large](images/dev/jupyter-notebook.png)
+![large](/images/dev/jupyter-notebook.png)
 # Anaconda
 
 - Popular open-source distribution of Python: <http://anaconda.com>
@@ -1018,7 +1018,7 @@ $ conda remove --name myenv --all
 
 ---
 
-![large](images/scipy/numpy-mem.svg) `np.zeros(shape=(2, 5), dtype=np.int32)`
+![large](/images/scipy/numpy-mem.svg) `np.zeros(shape=(2, 5), dtype=np.int32)`
 # NumPy module
 
 - Numeric, 1995; NumPy, 2006
@@ -1106,7 +1106,7 @@ array([[0, 1, 2, 3, 4, 5],
 
 ---
 
-![large](images/scipy/stdev.svg) 68-95-99.7 rule
+![large](/images/scipy/stdev.svg) 68-95-99.7 rule
 # Random
 
 - Acquire a random number generator
@@ -1152,7 +1152,7 @@ array([5, 3, 2, 4, 1, 0]])
 
 ---
 
-![](images/misc/memory.png)
+![](/images/misc/memory.png)
 # Exercise - Memory game
 
 - `np.tile(a, reps)` repeats the whole `a`
@@ -1183,7 +1183,7 @@ array([5, 3, 2, 4, 1, 0]])
 
 ---
 
-![large](images/scipy/tensor-timeseries.png)
+![large](/images/scipy/tensor-timeseries.png)
 # Timeseries or sequence data
 
 - Each sample encoded as a 2D tensor: time sequence of vectors
@@ -1198,7 +1198,7 @@ array([5, 3, 2, 4, 1, 0]])
 
 ---
 
-![large](images/scipy/tensor-image.png)
+![large](/images/scipy/tensor-image.png)
 # Image data
 
 - By convention, image tensors are always 3D
@@ -1277,7 +1277,7 @@ a  # array([(6.e-08, [2, 0]), (2.e-07, [4, 0])],
 
 ---
 
-![large](images/scipy/strides.svg)
+![large](/images/scipy/strides.svg)
 # Strides
 
 ``` py
@@ -1314,7 +1314,7 @@ array([2, 8, 0, 4, 5, 1])
 
 ---
 
-![](images/scipy/strides.svg) ![large](images/scipy/strides-t.svg)
+![](/images/scipy/strides.svg) ![large](/images/scipy/strides-t.svg)
 # Transposition
 
 ``` py
@@ -1336,7 +1336,7 @@ array([ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
 
 ---
 
-![](images/scipy/row-col-major.svg)
+![](/images/scipy/row-col-major.svg)
 # Row or column-major
 
 - C-order, row-major: a row is contiguous
@@ -1445,7 +1445,7 @@ array([[ 1,  2,  3],
 
 ---
 
-![](images/scipy/matrix-mult.svg)
+![](/images/scipy/matrix-mult.svg)
 # Matrix multiplication
 
 ``` py
@@ -1486,7 +1486,7 @@ array([6, 22, 38])
 
 ---
 
-![](images/scipy/normalization.png)
+![](/images/scipy/normalization.png)
 # Normalizing and standardizing
 
 - **Rescaling** a vector
@@ -1618,7 +1618,7 @@ array([[ 1,  2,  3,  4],
 
 ---
 
-![](images/misc/dice.png)
+![](/images/misc/dice.png)
 # Ex. - Rolling dice with Numpy
 
 - Roll a pair of dice and get the result (sum)
@@ -1692,7 +1692,7 @@ array([[1., 0.],
 
 ---
 
-![large](images/misc/fair-tickets.jpg)
+![large](/images/misc/fair-tickets.jpg)
 # Exercise - Fair tickets
 
 - Cost of a ticket for a fair
@@ -1767,7 +1767,7 @@ array([0, 0])
 
 ---
 
-![](images/misc/sidewinder.jpg)
+![](/images/misc/sidewinder.jpg)
 # Creating a DataFrame
 
 - **DataFrame** : ~ Excel worksheet
@@ -1981,7 +1981,7 @@ dtype: int64
 
 ---
 
-![](images/misc/dice.png)
+![](/images/misc/dice.png)
 # Ex. - Rolling dice with Pandas
 
 - Roll a pair of dice and get the result (sum)
@@ -2059,7 +2059,7 @@ two    0.091446  0.236650
 
 ---
 
-![large](images/scipy/pyplot-1.png) ![](images/scipy/pyplot-2.png)
+![large](/images/scipy/pyplot-1.png) ![](/images/scipy/pyplot-2.png)
 # MatPlotLib plots
 
 - Plotting library, based on *NumPy*
@@ -2086,7 +2086,7 @@ plt.show()
 
 ---
 
-![large](images/scipy/pyplot-3.png)
+![large](/images/scipy/pyplot-3.png)
 # Formatting the plot
 
 ``` py
@@ -2112,7 +2112,7 @@ plt.show()
 
 ---
 
-![large](images/scipy/pyplot-4.png)
+![large](/images/scipy/pyplot-4.png)
 # Plotting NumPy arrays
 
 ``` py
@@ -2132,7 +2132,7 @@ To use a logarithmic scale: `plt.yscale('log')`
 
 ---
 
-![large](images/scipy/pyplot-5.png)
+![large](/images/scipy/pyplot-5.png)
 # Plotting data from dict
 
 ``` py
@@ -2152,7 +2152,7 @@ plt.show()
 
 ---
 
-![large](images/scipy/pyplot-6.png)
+![large](/images/scipy/pyplot-6.png)
 # Subplots in row
 
 - Compare `bar`, `scatter` and `plot`
@@ -2175,7 +2175,7 @@ plt.show()
 
 ---
 
-![large](images/scipy/pyplot-7.png)
+![large](/images/scipy/pyplot-7.png)
 # Subplots in column
 
 ``` py
@@ -2218,7 +2218,7 @@ for label in plt.get_figlabels():
 
 ---
 
-![](images/scipy/dice-counts.png)
+![](/images/scipy/dice-counts.png)
 # Histogram of dicrete values
 
 - Count some discrete values
@@ -2243,7 +2243,7 @@ counts=[3, 5, 6, 13, 9, 16, 20, 13, 7, 7, 1]
 
 ---
 
-![large](images/scipy/rugs.png) ![large](images/scipy/pyplot-8.png)
+![large](/images/scipy/rugs.png) ![large](/images/scipy/pyplot-8.png)
 # Histogram and text
 
 - Show the distribution of some continuous values (~ *Dirac deltas*)
@@ -2267,7 +2267,7 @@ plt.show()
 
 ---
 
-![large](images/scipy/sns-distplot.png)
+![large](/images/scipy/sns-distplot.png)
 # Seaborn
 
 - High level data visualization library based on *MatPlotLib*
@@ -2291,7 +2291,7 @@ plt.show()
 
 ---
 
-![large](images/scipy/sns-regplot.png)
+![large](/images/scipy/sns-regplot.png)
 # Linear regression
 
 - Best fitting linear model
@@ -2336,7 +2336,7 @@ mse = ((y_true - y_pred) ** 2).mean()  # 2.8
 
 ---
 
-![large](images/scipy/curve-fit.png)
+![large](/images/scipy/curve-fit.png)
 # Comparing models
 
 ``` py
@@ -2359,7 +2359,7 @@ plt.show()
 
 ---
 
-![large](images/scipy/tips-kde.png)
+![large](/images/scipy/tips-kde.png)
 # Laboratory 1
 
 - Load the tips dataset of Seaborn
@@ -2368,7 +2368,7 @@ plt.show()
 
 ---
 
-![large](images/misc/quiz.png)
+![large](/images/misc/quiz.png)
 # Laboratory 2
 
 - Students' answers to questionnaires about courses
@@ -2391,7 +2391,7 @@ plt.show()
 
 ---
 
-![](images/scipy/gilet-jaunes-graph.png) ![large](images/scipy/gilet-jaunes-degree.png)
+![](/images/scipy/gilet-jaunes-graph.png) ![large](/images/scipy/gilet-jaunes-degree.png)
 # Laboratory 3
 
 - Graphs of social network users

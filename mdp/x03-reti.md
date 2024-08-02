@@ -1,4 +1,4 @@
-![](images/sys/globe.jpg)
+![](/images/sys/globe.jpg)
 # Reti di calcolatori
 ## Introduzione all'informatica
 
@@ -30,7 +30,7 @@
 
 ---
 
-![large](images/sys/topologies.svg)
+![large](/images/sys/topologies.svg)
 # Collegamento
 
 - **Topologia**
@@ -45,7 +45,7 @@
 
 ---
 
-![](images/sys/internet-nodes.png)
+![](/images/sys/internet-nodes.png)
 # Internet
 
 - La “*rete delle reti*”: interconnessione tra svariate reti di calcolatori, di dimensione planetaria
@@ -80,7 +80,7 @@
 
 # Pacchetto IPv4
 
-![large](images/sys/ipv4.svg)
+![large](/images/sys/ipv4.svg)
 
 ---
 
@@ -138,7 +138,7 @@ Liv. | Definizione   | Descrizione
 - 1990: Tim Berners-Lee @ CERN, x doc scientifici
 - 1993: Marc Andreessen @ Mosaic/Netscape, primo browser grafico
 
-![](images/hist/tim-berners-lee.png)
+![](/images/hist/tim-berners-lee.png)
 
 ---
 
@@ -172,7 +172,7 @@ Liv. | Definizione   | Descrizione
 
 ---
 
-![](images/dev/php.svg)
+![](/images/dev/php.svg)
 # Linguaggio PHP
 
 - *Php: Hypertext Preprocessor* <br> (in origine: *Personal Home Page*)
@@ -186,7 +186,7 @@ Liv. | Definizione   | Descrizione
 
 ---
 
-![](images/repr/html5-logo.svg) ![](images/sys/pacman-js.png)
+![](/images/repr/html5-logo.svg) ![](/images/sys/pacman-js.png)
 # Linguaggio JavaScript
 
 - Netscape: interattività per HTML
@@ -203,7 +203,7 @@ Liv. | Definizione   | Descrizione
 
 ---
 
-![](images/sys/http-url.png)
+![](/images/sys/http-url.png)
 # HyperText Transfer Protocol
 
 - Protocollo di livello 5, sessione
@@ -297,7 +297,7 @@ Content-Type: text/html
 
 ---
 
-![](images/sys/cookies.jpg)
+![](/images/sys/cookies.jpg)
 # Cookie
 
 - Meccanismo generale per memorizzare e recuperare informazioni sul lato client di una connessione HTTP

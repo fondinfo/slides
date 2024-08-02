@@ -1,4 +1,4 @@
-![](images/dev/geek-girl.svg)
+![](/images/dev/geek-girl.svg)
 # Esercizi 2023
 ## Introduzione alla programmazione
 
@@ -8,7 +8,7 @@
 
 ---
 
-![large](images/algo/holy-grail.jpg)
+![large](/images/algo/holy-grail.jpg)
 # 1.1 Lancelot
 
 - Porre una domanda all'utente:
@@ -20,7 +20,7 @@
 
 ---
 
-![large](images/algo/holy-grail.jpg)
+![large](/images/algo/holy-grail.jpg)
 # 1.2 The Bridge of Death
 
 - Porre tre domande all'utente:
@@ -37,7 +37,7 @@
 
 ---
 
-![large](images/misc/segments-1.svg)
+![large](/images/misc/segments-1.svg)
 # 1.3 Segmenti casuali
 
 - Chiedere all'utente il numero di segmenti da disegnare
@@ -48,7 +48,7 @@
 
 ---
 
-![large](images/misc/segments-2.svg)
+![large](/images/misc/segments-2.svg)
 # 1.4 Linea spezzata
 
 - Chiedere all'utente il numero di segmenti da disegnare
@@ -59,7 +59,7 @@
 
 ---
 
-![large](images/misc/segments-3.svg)
+![large](/images/misc/segments-3.svg)
 #  1.5 Toni di grigio
 
 - Chiedere all'utente il numero di segmenti da disegnare
@@ -71,7 +71,7 @@
 
 ---
 
-![](images/misc/quadratic-eq.svg) ![](images/misc/quadratic-formula.svg)
+![](/images/misc/quadratic-eq.svg) ![](/images/misc/quadratic-formula.svg)
 # 1.6 Equazione di secondo grado
 
 - Chiedere all'utente i tre coefficienti `a, b, c` di una equazione di secondo grado
@@ -87,7 +87,7 @@ Non è richiesto il valore delle soluzioni
 
 ---
 
-![](images/misc/quadratic-eq.svg) ![](images/misc/quadratic-formula.svg)
+![](/images/misc/quadratic-eq.svg) ![](/images/misc/quadratic-formula.svg)
 # 1.7 Equazione di 2° grado, con ciclo
 
 - Riprendere l'esercizio precedente
@@ -113,7 +113,7 @@ Usare la funzione `sqrt` del modulo `math`
 
 ---
 
-![large](images/misc/center-target.svg)
+![large](/images/misc/center-target.svg)
 # 1.9 Bersaglio al centro
 
 - Disegnare vari cerchi casuali
@@ -131,7 +131,7 @@ Usare la funzione `sqrt` del modulo `math`
 
 ---
 
-![](images/misc/triangle-notations.svg)
+![](/images/misc/triangle-notations.svg)
 # 2.1 Funzione, Erone
 
 - Definire una funzione `heron` per il calcolo dell'area di un triangolo
@@ -219,7 +219,7 @@ Usare due cicli for annidati; cominciare a scrivere il solo ciclo sulla `x`, con
 
 ---
 
-![](images/misc/slope.svg) $y = m·x + q$
+![](/images/misc/slope.svg) $y = m·x + q$
 # 2.6 Segmento e retta
 
 - Definire *funzione* `slope` per una retta
@@ -237,7 +237,7 @@ Usare due cicli for annidati; cominciare a scrivere il solo ciclo sulla `x`, con
 
 ---
 
-![large](images/misc/gold-price.svg)
+![large](/images/misc/gold-price.svg)
 # 2.7 Media, uno ogni tre
 
 - Leggere, attraverso un ciclo, una sequenza di numeri naturali
@@ -251,7 +251,7 @@ Attenzione: il numero negativo non fa media
 
 ---
 
-![](images/misc/leap-centuries.svg)
+![](/images/misc/leap-centuries.svg)
 # 2.8 Anni bisestili
 
 - Chiedere all'utente di inserire un anno
@@ -266,7 +266,7 @@ Un anno è bisestile se il suo numero è divisibile per 4, con l'eccezione degli
 
 ---
 
-![](images/fun/polygon.svg)
+![](/images/fun/polygon.svg)
 # 2.9 Poligono regolare
 
 - Disegnare un poligono regolare
@@ -282,7 +282,7 @@ Un anno è bisestile se il suo numero è divisibile per 4, con l'eccezione degli
 
 ---
 
-![](images/misc/triangle-notations.svg)
+![](/images/misc/triangle-notations.svg)
 # 3.1 Classe triangolo
 
 - Creare una classe `Triangle`
@@ -301,7 +301,7 @@ $area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}, s = \frac{a+b+c}{2}$
 
 ---
 
-![](images/oop/ball-object.svg) ![](images/oop/ball-uml.svg) Class diagram UML
+![](/images/oop/ball-object.svg) ![](/images/oop/ball-uml.svg) Class diagram UML
 # 3.2 Pallina al centro
 
 - Modificare la classe `Ball` presente negli esempi
@@ -315,7 +315,7 @@ $area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}, s = \frac{a+b+c}{2}$
 
 ---
 
-![](images/oop/ball-object.svg) ![](images/oop/ball-uml.svg) Class diagram UML
+![](/images/oop/ball-object.svg) ![](/images/oop/ball-uml.svg) Class diagram UML
 # 3.3 Ritorno a casa
 
 - Riprendere l'esercizio precedente
@@ -328,7 +328,7 @@ $area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}, s = \frac{a+b+c}{2}$
 
 ---
 
-![](images/misc/slope.svg)
+![](/images/misc/slope.svg)
 # 3.4 Funzione distanza
 
 - Definire una funzione `distance`
@@ -341,7 +341,7 @@ $area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}, s = \frac{a+b+c}{2}$
 
 ---
 
-![](images/misc/slope.svg)
+![](/images/misc/slope.svg)
 # 3.5 Classe segmento
 
 - Creare una classe `Segment`
@@ -357,7 +357,7 @@ $area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}, s = \frac{a+b+c}{2}$
 
 ---
 
-![](images/misc/characters.png)
+![](/images/misc/characters.png)
 # 3.6 Punti e spazi
 
 - Data una stringa inserita dall'utente
@@ -366,7 +366,7 @@ $area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}, s = \frac{a+b+c}{2}$
 
 ---
 
-![](images/misc/characters.png)
+![](/images/misc/characters.png)
 # 3.7 Codici pari e dispari
 
 - Data una stringa inserita dall'utente
@@ -379,7 +379,7 @@ $area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}, s = \frac{a+b+c}{2}$
 
 ---
 
-![](images/algo/guard.png)
+![](/images/algo/guard.png)
 # 3.8 Sentinella
 
 - Riprendere l'esercizio precedente
@@ -391,7 +391,7 @@ $area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}, s = \frac{a+b+c}{2}$
 
 ---
 
-![](images/misc/three-cards.png)
+![](/images/misc/three-cards.png)
 # 3.9 Tre carte
 
 - All'inizio l'utente ha 10 monete
@@ -409,7 +409,7 @@ $area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}, s = \frac{a+b+c}{2}$
 
 ---
 
-![](images/fun/polygon.svg)
+![](/images/fun/polygon.svg)
 # 4.1 Lato poligono
 
 - Definire una funzione `polygon_side`
@@ -424,7 +424,7 @@ $area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}, s = \frac{a+b+c}{2}$
 
 ---
 
-![](images/fun/polygon.svg)
+![](/images/fun/polygon.svg)
 # 4.2 Classe poligono
 
 - Definire una classe `Polygon`
@@ -442,7 +442,7 @@ $area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}, s = \frac{a+b+c}{2}$
 
 ---
 
-![](images/misc/blue-row.svg)
+![](/images/misc/blue-row.svg)
 # 4.3 Cerchi blu
 
 - Chiedere all'utente un numero $n$
@@ -456,7 +456,7 @@ $area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}, s = \frac{a+b+c}{2}$
 
 ---
 
-![](images/repr/ascii.svg)
+![](/images/repr/ascii.svg)
 # 4.4 Tabella ASCII
 
 - Mostrare in tabella i caratteri ASCII
@@ -479,7 +479,7 @@ p q r s t u v w x y z { | } ~ .
 
 ---
 
-![](images/oop/ball-object.svg)
+![](/images/oop/ball-object.svg)
 # 4.5 Movimento a yo-yo
 
 - Modificare la classe `Ball` presente negli esempi
@@ -511,7 +511,7 @@ Le palline possono anche uscire dal canvas
 
 ---
 
-![](images/misc/characters.png)
+![](/images/misc/characters.png)
 # 4.7 Gruppi di lettere
 
 - Definire una funzione `count_groups`
@@ -528,7 +528,7 @@ Le palline possono anche uscire dal canvas
 
 ---
 
-![](images/algo/guard.png)
+![](/images/algo/guard.png)
 # 4.8 Sentinella su righe
 
 - Sfruttare la funzione `count_groups`
@@ -563,7 +563,7 @@ Usare una variabile booleana per segnare il caso di sovrapposizione
 
 ---
 
-![](images/oop/border.png)
+![](/images/oop/border.png)
 # 5.1 Movimento diagonale
 
 - Modificare `Ball` nell'esempio `bounce`
@@ -578,7 +578,7 @@ Usare una variabile booleana per segnare il caso di sovrapposizione
 
 ---
 
-![](images/oop/border.png)
+![](/images/oop/border.png)
 # 5.2 Controllo da tastiera
 
 - Riprendere l'esercizio precedente
@@ -592,7 +592,7 @@ Usare una variabile booleana per segnare il caso di sovrapposizione
 
 ---
 
-![](images/misc/histogram.svg)
+![](/images/misc/histogram.svg)
 # 5.3 Skyscrapers, da sinistra
 
 - Chiedere all'utente una sequenza in numeri naturali
@@ -607,7 +607,7 @@ Non usare nessuna lista
 
 ---
 
-![](images/misc/histogram.svg)
+![](/images/misc/histogram.svg)
 # 5.4 Skyscrapers, da destra
 
 - Chiedere all'utente una sequenza in numeri naturali
@@ -636,7 +636,7 @@ La funzione `reversed` restituisce una sequenza rovesciata
 
 ---
 
-![](images/misc/troll-key.png)
+![](/images/misc/troll-key.png)
 # 5.6 Maiuscole tra asterischi
 
 - Scrivere una funzione che:
@@ -655,7 +655,7 @@ Non usare gli indici sulla stringa
 
 ---
 
-![](images/misc/donkey-kong.png)
+![](/images/misc/donkey-kong.png)
 # 5.7 Donkey Kong: Mario
 
 - *Primo progetto* (in coppia o da soli)
@@ -675,7 +675,7 @@ Non usare gli indici sulla stringa
 
 ---
 
-![](images/misc/donkey-kong.png)
+![](/images/misc/donkey-kong.png)
 # 5.8 Donkey Kong: piattaforme
 
 - Creare `Platform` come sottoclasse di `Actor`
@@ -688,7 +688,7 @@ Non usare gli indici sulla stringa
 
 ---
 
-![](images/misc/donkey-kong.png)
+![](/images/misc/donkey-kong.png)
 # 5.9 Donkey Kong: sprite
 
 - Disegnare lo sfondo di Donkey Kong
@@ -733,7 +733,7 @@ Aggiungere ciascun valore a una lista inizialmente vuota, con `append`
 
 ---
 
-![](images/fun/bike-lock.png)
+![](/images/fun/bike-lock.png)
 # 6.3 Configurazioni di simboli
 
 - Scrivere una funzione per generare tutte le configurazioni di lunghezza 3
@@ -748,7 +748,7 @@ Aggiungere ciascun valore a una lista inizialmente vuota, con `append`
 
 ---
 
-![](images/misc/histogram-rot.svg)
+![](/images/misc/histogram-rot.svg)
 # 6.4 Istogramma in orizzontale
 
 - Leggere da un file una sequenza di valori (positivi)
@@ -773,7 +773,7 @@ Memorizzare i valori in una lista
     - Chiedere all'utente i coefficienti per istanziare un unico oggetto
     - In un ciclo, valutare l'espressione per vari valori *x* inseriti dall'utente
 
-![large](images/misc/quadratic.svg)
+![large](/images/misc/quadratic.svg)
 
 ---
 
@@ -789,11 +789,11 @@ Memorizzare i valori in una lista
     - Chiedere all'utente i coefficienti per istanziare un unico oggetto
     - In un ciclo, valutare l'espressione per vari valori *x* inseriti dall'utente
 
-![large](images/misc/polynomial.svg)
+![large](/images/misc/polynomial.svg)
 
 ---
 
-![](images/misc/donkey-kong.png)
+![](/images/misc/donkey-kong.png)
 # 6.7 Donkey Kong: scale
 
 - Inserire in gioco personaggi immobili per le scale
@@ -805,7 +805,7 @@ Memorizzare i valori in una lista
 
 ---
 
-![](images/misc/donkey-kong.png)
+![](/images/misc/donkey-kong.png)
 # 6.8 Donkey Kong: barili
 
 - I barili sono generati casualmente in alto
@@ -818,7 +818,7 @@ Memorizzare i valori in una lista
 
 ---
 
-![](images/misc/donkey-kong.png)
+![](/images/misc/donkey-kong.png)
 # 6.9 Donkey Kong: dati da file
 
 - Ottenere le posizioni di piattaforme e scale da file
@@ -849,7 +849,7 @@ Memorizzare i valori in una lista
 
 ---
 
-![](images/misc/histogram.svg)
+![](/images/misc/histogram.svg)
 # 7.2 Istogramma con barre verticali
 
 - Leggere da un file una sequenza di valori (positivi)
@@ -878,7 +878,7 @@ Some text (123) 0th3r (t3xt) (25) etc.
 
 ---
 
-![](images/misc/measure-tape.png)
+![](/images/misc/measure-tape.png)
 # 7.4 Lunghezza parole
 
 - Leggere il file `license.txt`, riga per riga
@@ -890,7 +890,7 @@ Some text (123) 0th3r (t3xt) (25) etc.
 
 ---
 
-![](images/misc/college-student.jpg)
+![](/images/misc/college-student.jpg)
 # 7.5 Classe studente
 
 - Scrivere classe per uno *studente*, rappresentata così:
@@ -907,7 +907,7 @@ Due date si possono confrontare direttamente come testo
 
 ---
 
-![](images/misc/college-student.jpg)
+![](/images/misc/college-student.jpg)
 # 7.6 Esami da file
 
 - Istanziare un oggetto studente (esercizio precedente)
@@ -919,7 +919,7 @@ Due date si possono confrontare direttamente come testo
 
 ---
 
-![](images/misc/donkey-kong.png)
+![](/images/misc/donkey-kong.png)
 # 7.7 Donkey Kong: scale
 
 - *Scale e salti*
@@ -931,7 +931,7 @@ Due date si possono confrontare direttamente come testo
 
 ---
 
-![](images/misc/donkey-kong.png)
+![](/images/misc/donkey-kong.png)
 # 7.8 Donkey Kong: fuoco
 
 - Quando i barili arrivano in basso a sx, possono:
@@ -944,7 +944,7 @@ Due date si possono confrontare direttamente come testo
 
 ---
 
-![](images/misc/donkey-kong.png)
+![](/images/misc/donkey-kong.png)
 # 7.9 Donkey Kong: fine partita
 
 - Creare sottoclasse di `Arena` per *Donkey Kong*
@@ -961,7 +961,7 @@ Due date si possono confrontare direttamente come testo
 
 ---
 
-![](images/fun/matryoshka.png)
+![](/images/fun/matryoshka.png)
 # 8.1 Radice comune con ricorsione
 
 - Scrivere funzione ricorsiva `len_common_prefix`
@@ -1027,7 +1027,7 @@ Attenzione al `\n` a fine riga
 
 ---
 
-![](images/fun/htree.png)
+![](/images/fun/htree.png)
 # 8.5 Albero di H
 
 - Disegnare ricorsivamente un *H-Tree*
@@ -1042,7 +1042,7 @@ Attenzione al `\n` a fine riga
 
 ---
 
-![](images/hist/eratostenes.jpg)
+![](/images/hist/eratostenes.jpg)
 # 8.6 Crivello di Eratostene
 
 - Trovare tutti i numeri primi ≤ `n`, scelto dall'utente
@@ -1080,7 +1080,7 @@ Usare una list di `int`, con vere rimozioni, sarebbe problematico e inefficiente
 
 ---
 
-![](images/dev/bug-feature.png)
+![](/images/dev/bug-feature.png)
 # 8.8 Donkey Kong: test
 
 - Testare le funzionalità del gioco Donkey Kong
@@ -1094,7 +1094,7 @@ Usare una list di `int`, con vere rimozioni, sarebbe problematico e inefficiente
 
 ---
 
-![](images/misc/handwriting.jpg)
+![](/images/misc/handwriting.jpg)
 # 8.9 Donkey Kong: bella copia
 
 - **Codice leggibile**
@@ -1133,7 +1133,7 @@ t,r,e,f
 
 ---
 
-![](images/fun/matryoshka.png)
+![](/images/fun/matryoshka.png)
 # 9.2 Massimo con ricorsione
 
 - Definire una funzione ricorsiva `max_char`
@@ -1151,7 +1151,7 @@ Confrontare testo con testo, senza usare `ord`
 
 ---
 
-![](images/misc/recur-polygon.svg)
+![](/images/misc/recur-polygon.svg)
 # 9.3 Poligono ricorsivo
 
 - Riprendere l'esempio del poligono
@@ -1163,7 +1163,7 @@ Confrontare testo con testo, senza usare `ord`
 
 ---
 
-![](images/misc/random-walk.svg)
+![](/images/misc/random-walk.svg)
 # 9.4 Passeggiata casuale
 
 - Chiedere all'utente un numero `n`
@@ -1195,7 +1195,7 @@ Ciascun elemento nella lista è un contatore, per una delle direzioni
 
 ---
 
-![](images/fun/bike-lock.png)
+![](/images/fun/bike-lock.png)
 # 9.6 Lucchetto a combinazione
 
 - Generare tutte le “combinazioni” di lunghezza `n`
@@ -1213,7 +1213,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](images/misc/akari.svg)
+![](/images/misc/akari.svg)
 # 9.7 Akari - Light up
 
 - *Secondo progetto* (in coppia o da soli)
@@ -1264,7 +1264,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](images/fun/matryoshka.png)
+![](/images/fun/matryoshka.png)
 # 10.1 Potenze con ricorsione
 
 - Definire una funzione ricorsiva per calcolare la potenza intera positiva di un numero
@@ -1283,7 +1283,7 @@ IEEE definisce anche $0^0 = 1$, anzichè indeterminato
 
 ---
 
-![](images/fun/sin-cos.png) ![](images/misc/interpolation.svg)
+![](/images/fun/sin-cos.png) ![](/images/misc/interpolation.svg)
 # 10.2 Classe FastSin
 
 - Definire una classe `FastSin`
@@ -1297,7 +1297,7 @@ IEEE definisce anche $0^0 = 1$, anzichè indeterminato
 
 ---
 
-![](images/misc/sierpinski-rgb.svg)
+![](/images/misc/sierpinski-rgb.svg)
 # 10.3 Quadratini in RGB
 
 - Scrivere una funzione ricorsiva di disegno
@@ -1314,7 +1314,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](images/fun/neighborhood4.png)
+![](/images/fun/neighborhood4.png)
 # 10.4 Massimo in vicinato
 
 - Scrivere una funzione `max_neighbor`
@@ -1330,7 +1330,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](images/comp/list-tree.svg) Però, stringhe al posto di interi
+![](/images/comp/list-tree.svg) Però, stringhe al posto di interi
 # 10.5 Liste annidate, ricerca
 
 - Definire una funzione *ricorsiva*
@@ -1452,7 +1452,7 @@ Usare una lista di 26 contatori
 
 ---
 
-![](images/fun/bw-circles.svg)
+![](/images/fun/bw-circles.svg)
 # 11.3 Cerchi annidati
 
 - Funzione che disegna *cerchi annidati*
@@ -1470,7 +1470,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](images/repr/file-system.svg)
+![](/images/repr/file-system.svg)
 # 11.4 Documento più grande
 
 - Partire dall'esempio di cartelle e documenti
@@ -1485,7 +1485,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](images/fun/neighborhood4.png)
+![](/images/fun/neighborhood4.png)
 # 11.5 Cleanup
 
 - Scrivere e usare una sottoclasse di `BoardGame`
@@ -1527,7 +1527,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](images/misc/dead-end.jpg)
+![](/images/misc/dead-end.jpg)
 # 11.7 Akari - Vicolo cieco
 
 - Metodo booleano `unsolvable`, senza parametri
@@ -1590,7 +1590,7 @@ copy2.move(x, y, "flag")     # place `dot` on the 2nd copy
 
 ---
 
-![](images/misc/handwriting.jpg)
+![](/images/misc/handwriting.jpg)
 # 11.9 Akari - Bella copia e test
 
 - **Codice leggibile**

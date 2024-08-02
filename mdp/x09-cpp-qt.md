@@ -1,4 +1,4 @@
-![](images/dev/qt.svg)
+![](/images/dev/qt.svg)
 # Gui con Qt
 ## Introduzione alla programmazione
 
@@ -38,30 +38,30 @@
 
 # Bottoni e display
 
-![](images/qt/buttons.jpg)
+![](/images/qt/buttons.jpg)
 
-![](images/qt/displays.jpg)
+![](/images/qt/displays.jpg)
 
 ---
 
-![](images/qt/calendar-example.png) Esempio, con `QCalendarWidget`
+![](/images/qt/calendar-example.png) Esempio, con `QCalendarWidget`
 # Input
 
-![](images/qt/inputs.jpg)
+![](/images/qt/inputs.jpg)
 
 ---
 
 # Viste di elementi
 
-![](images/qt/views.jpg)
+![](/images/qt/views.jpg)
 
 ---
 
 # Contenitori
 
-![](images/qt/single-page-containers.jpg)
+![](/images/qt/single-page-containers.jpg)
 
-![](images/qt/multi-page-containers.jpg)
+![](/images/qt/multi-page-containers.jpg)
 
 >
 
@@ -71,19 +71,19 @@ Inoltre: QMenu, QMenuBar, QToolBar, QStatusBar
 
 # Finestre di dialogo
 
-![](images/qt/feedback-dialogs.jpg)
+![](/images/qt/feedback-dialogs.jpg)
 
 ---
 
 # File e stampa
 
-![](images/qt/file-print-dialogs.jpg)
+![](/images/qt/file-print-dialogs.jpg)
 
 ---
 
 # Colori e font
 
-![](images/qt/color-font-dialogs.jpg)
+![](/images/qt/color-font-dialogs.jpg)
 
 ---
 
@@ -96,7 +96,7 @@ Inoltre: QMenu, QMenuBar, QToolBar, QStatusBar
     - `QApplication::setStyleSheet`
     - `QWidget::setStyleSheet`
 
-![](images/qt/styles.png)
+![](/images/qt/styles.png)
 
 ---
 
@@ -104,7 +104,7 @@ Inoltre: QMenu, QMenuBar, QToolBar, QStatusBar
 
 ---
 
-![](images/qt/notepad-1.png)
+![](/images/qt/notepad-1.png)
 # Visualizzare un widget
 
 ``` cpp
@@ -136,7 +136,7 @@ int main(int argc, char* argv[]) {
 
 ---
 
-![](images/qt/notepad-2.png)
+![](/images/qt/notepad-2.png)
 # Sottoclasse di QWidget
 
 ``` cpp
@@ -157,7 +157,7 @@ private:
 
 ---
 
-![](images/qt/notepad-2.png)
+![](/images/qt/notepad-2.png)
 # Costruire la GUI
 
 ``` cpp
@@ -191,7 +191,7 @@ Notepad::Notepad() {
 
 ---
 
-![](images/qt/notepad-layout.png) ![](images/qt/notepad-nostretch.png) Con/senza *stretch*
+![](/images/qt/notepad-layout.png) ![](/images/qt/notepad-nostretch.png) Con/senza *stretch*
 # Layout compositi
 
 - È possibile inserire un layout dentro un altro
@@ -248,11 +248,11 @@ Notepad::Notepad() {
 }
 ```
 
-![](images/qt/notepad-connections.svg)
+![](/images/qt/notepad-connections.svg)
 
 ---
 
-![](images/qt/abstract-connections.png)
+![](/images/qt/abstract-connections.png)
 # Accoppiamento tra segnali e slot
 
 - **Accoppiamento lasco**
@@ -331,7 +331,7 @@ void Notepad::exit() {
 
 ---
 
-![](images/qt/mainwindow.png)
+![](/images/qt/mainwindow.png)
 # Finestra principale
 
 - `QMainWindow`: widget complesso, con un proprio layout particolare, per aggiungere:
@@ -346,7 +346,7 @@ centralWidget()->setLayout(layout);
 
 ---
 
-![](images/qt/notepad-toolbar.png)
+![](/images/qt/notepad-toolbar.png)
 # Menù e toolbar
 
 ``` cpp
@@ -375,7 +375,7 @@ NotepadWindow::NotepadWindow() {
 
 ---
 
-![](images/qt/calculator.png)
+![](/images/qt/calculator.png)
 # Griglia di bottoni
 
 - **`QGridLayout`**: dispone i widget in una griglia
@@ -384,7 +384,7 @@ NotepadWindow::NotepadWindow() {
 
 ---
 
-![](images/qt/fifteen-puzzle.jpg)
+![](/images/qt/fifteen-puzzle.jpg)
 # BoardGame astratto
 
 ``` cpp
@@ -410,7 +410,7 @@ public:
 
 ---
 
-![](images/qt/puzzle.png)
+![](/images/qt/puzzle.png)
 # BoardGame – Gui generica
 
 ``` cpp
@@ -434,7 +434,7 @@ BoardGameGui::BoardGameGui(BoardGame* g) {
 
 ---
 
-![](images/qt/puzzle-solved.png)
+![](/images/qt/puzzle-solved.png)
 # BoardGame – Aggiornamento bottoni
 
 ``` cpp
@@ -457,7 +457,7 @@ void BoardGameGui::update_buttons() {
 
 ---
 
-![](images/qt/puzzle.png)
+![](/images/qt/puzzle.png)
 # PyQt5 – Costruzione gui
 
 ``` python
@@ -480,7 +480,7 @@ class BoardGameGui(QWidget):
 
 ---
 
-![](images/qt/puzzle-solved.png)
+![](/images/qt/puzzle-solved.png)
 # PyQt5 – Aggiornamento bottoni
 
 ``` python
@@ -522,7 +522,7 @@ class BoardGameGui(QWidget):
 
 ---
 
-![](images/qt/tetrix.png)
+![](/images/qt/tetrix.png)
 # Eventi della tastiera
 
 ``` cpp
@@ -545,7 +545,7 @@ Metodi `keyPressEvent` e `keyReleaseEvent` per gestire la tastiera
 
 ---
 
-![](images/qt/analogclock.png)
+![](/images/qt/analogclock.png)
 # Segnali periodici
 
 ``` cpp
@@ -584,7 +584,7 @@ Metodo `paintEvent` per ridisegno di un widget, con oggetto `painter`
 
 ---
 
-![](images/qt/coord-rect.png) ![](images/qt/coord-line.png)
+![](/images/qt/coord-rect.png) ![](/images/qt/coord-line.png)
 # Sistema di coordinate
 
 ``` cpp
@@ -611,7 +611,7 @@ painter.drawLine(2, 7, 6, 1);
 
 ---
 
-![](images/dev/qt.svg) ![](images/oop/raster-coord.png)
+![](/images/dev/qt.svg) ![](/images/oop/raster-coord.png)
 # Rettangoli e cerchi con Qt
 
 ``` cpp
@@ -665,7 +665,7 @@ Progetto: *Application* → *Qt Widgets Application*
 
 ---
 
-![](images/qt/graphicsview.png)
+![](/images/qt/graphicsview.png)
 # Superfici ed elementi grafici
 
 - **`QGraphicsScene`**
@@ -745,7 +745,7 @@ void RightPushButton::mouseReleaseEvent(QMouseEvent* e) {
 
 # Altre caratteristiche di Qt
 
-![](images/qt/resources.png)
+![](/images/qt/resources.png)
 
 - Possibile inserire dati (img, snd ecc.) direttamente nel file eseguibile
     - Aggiungere un “*Qt Resource File*” al progetto

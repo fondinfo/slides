@@ -1,4 +1,4 @@
-![](images/dev/cpp.svg)
+![](/images/dev/cpp.svg)
 # Linguaggio C++
 ## Introduzione alla programmazione
 
@@ -132,7 +132,7 @@ int main() {
 
 ---
 
-![large](images/fun/dynamic-array.svg)
+![large](/images/fun/dynamic-array.svg)
 # Vector, array dinamici
 
 - **Array**: area di memoria che contiene in *celle contigue* elementi tutti dello *stesso tipo*
@@ -189,7 +189,7 @@ void FloatVector::expand_capacity() {
 
 # Liste concatenate
 
-![](images/fun/linked-list.svg)
+![](/images/fun/linked-list.svg)
 
 - Ciascun **nodo** contiene un *valore* della lista e un *puntatore* al nodo successivo
     - Accesso casuale: `O(n)`

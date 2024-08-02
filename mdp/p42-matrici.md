@@ -1,10 +1,10 @@
-![](images/misc/tic-tac-toe.svg)
+![](/images/misc/tic-tac-toe.svg)
 # Matrici
 ## Introduzione alla programmazione
 
 ---
 
-![large](images/repr/matrix.svg)
+![large](/images/repr/matrix.svg)
 # ⭐ Matrice in lista singola
 
 - Righe concatenate in una lista singola
@@ -117,7 +117,7 @@ def console_play(game: BoardGame):
 
 ---
 
-![](images/qt/fifteen-puzzle.jpg)
+![](/images/qt/fifteen-puzzle.jpg)
 # 🧪 Fifteen - Costruttore
 
 ``` py
@@ -258,7 +258,7 @@ multidim = [["-" for x in range(cols)] for y in range(rows)]
 
 ---
 
-![](images/fun/cassette-tape.png)
+![](/images/fun/cassette-tape.png)
 # 💡️ Stream
 
 - Astrazione per flussi di informazione
@@ -276,7 +276,7 @@ multidim = [["-" for x in range(cols)] for y in range(rows)]
 
 ---
 
-![](images/hist/typewriter.png)
+![](/images/hist/typewriter.png)
 # ⭐ Scrittura su file
 
 - Funzione **`open`** per accedere a un file (di testo)
@@ -294,7 +294,7 @@ with open("squares.txt", "w") as squares:
 
 ---
 
-![](images/fun/shopping-list.png)
+![](/images/fun/shopping-list.png)
 # ⭐ Ciclo di lettura da file
 
 - Apertura file in lettura con **`open`**
@@ -354,7 +354,7 @@ print("The square is", x ** 2)
 
 ---
 
-![](images/fun/tape-pencil.png)
+![](/images/fun/tape-pencil.png)
 # 🥷 Errori con i file
 
 - Per un `try`, possibili vari blocchi `except`
@@ -424,7 +424,7 @@ Angle: 135; Sin: 0.71
 
 ---
 
-![](images/misc/merge-sign.png)
+![](/images/misc/merge-sign.png)
 # Fusione
 
 - Due file di testo contengono sequenze di numeri
@@ -484,7 +484,7 @@ In ogni posizione, calcolare il carattere da visualizzare: `x * ROWS + y`...
 
 ---
 
-![](images/hist/scytale.png)
+![](/images/hist/scytale.png)
 # Scitala spartana
 
 - Leggere un intero file di testo
@@ -499,7 +499,7 @@ In ogni posizione, calcolare il carattere da visualizzare: `x * ROWS + y`...
 
 ---
 
-![](images/fun/neighborhood4.png)
+![](/images/fun/neighborhood4.png)
 # Funzione di smooth
 
 - Scrivere una funzione `smooth`
@@ -516,7 +516,7 @@ In ogni posizione, calcolare il carattere da visualizzare: `x * ROWS + y`...
 
 ---
 
-![](images/misc/spiral.png)
+![](/images/misc/spiral.png)
 # Spirale
 
 - Scrivere una funzione per riempire di numeri crescenti una matrice quadrata (o rettangolare)
@@ -537,7 +537,7 @@ In generale: `(x', y') = (x⋅cos(θ) - y⋅sin(θ), x⋅sin(θ) + y⋅cos(θ))`
 
 ---
 
-![large](images/misc/lightsout.svg)
+![large](/images/misc/lightsout.svg)
 # Lights out
 
 - Gioco basato su una griglia di luci

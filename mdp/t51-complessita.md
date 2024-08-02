@@ -1,4 +1,4 @@
-![](images/comp/chess.jpg)
+![](/images/comp/chess.jpg)
 # Complessità computazionale
 ## Introduzione all'informatica <br> Michele Tomaiuolo @ Ingegneria UniPR
 
@@ -17,7 +17,7 @@
 
 ---
 
-![](images/comp/catalogue.png)
+![](/images/comp/catalogue.png)
 # 🧪 Ricerca lineare
 
 - Ricerca in lista (*array*) non necessariamente ordinata
@@ -37,7 +37,7 @@ def linear_search(v: list, value, beg, end) -> int:
 
 ---
 
-![large](images/comp/binary-search.svg)
+![large](/images/comp/binary-search.svg)
 # 🧪 Ricerca binaria
 
 - Ricerca in lista ordinata
@@ -105,7 +105,7 @@ def binary_search(v: list, value, beg, end) -> int:
 
 ---
 
-![](images/comp/orders.svg)
+![](/images/comp/orders.svg)
 # 💡️ Analisi asintotica
 
 - Per `$n$` abbastanza grande, a meno di una costante moltiplicativa, `$f(n)$` non supera in modulo `$g(n)$`
@@ -159,7 +159,7 @@ def binary_search(v: list, value, beg, end) -> int:
 
 ---
 
-![large](images/comp/bubble-sort.svg)
+![large](/images/comp/bubble-sort.svg)
 # 🧪 Bubble sort
 
 ``` py
@@ -186,7 +186,7 @@ def bubble_sort(v: list, beg, end):
 
 ---
 
-![](images/hist/1840-gauss.png) `$$\sum_{k=1}^n k = \frac{n(n+1)}{2}$$` “Gauss’ trick”
+![](/images/hist/1840-gauss.png) `$$\sum_{k=1}^n k = \frac{n(n+1)}{2}$$` “Gauss’ trick”
 # ⭐ Analisi Bubble Sort
 
 ``` py
@@ -204,7 +204,7 @@ bubble_sort(vals, 0, len(vals))
 
 ---
 
-![large](images/comp/selection-sort.svg)
+![large](/images/comp/selection-sort.svg)
 # 🧪 Selection Sort
 
 ``` py
@@ -247,7 +247,7 @@ Numero di confronti (si applica Gauss): <br>
 
 ---
 
-![large](images/comp/insertion-sort.svg)
+![large](/images/comp/insertion-sort.svg)
 # 🧪 Insertion sort
 
 ``` py
@@ -286,7 +286,7 @@ def insertion_sort(v: list, beg, end, mid=1):
 
 ---
 
-![large](images/comp/quick-sort-pivot.svg) ![large](images/comp/quick-sort.png)
+![large](/images/comp/quick-sort-pivot.svg) ![large](/images/comp/quick-sort.png)
 # 🧪 Quick Sort
 
 ``` py
@@ -310,7 +310,7 @@ def quick_sort(v: list, beg, end):
 
 ---
 
-![large](images/comp/quick-sort-best.png)
+![large](/images/comp/quick-sort-best.png)
 # ⭐ Quick Sort caso migliore
 
 - ➊ Si sceglie un valore `pivot` (ultimo?)
@@ -326,7 +326,7 @@ def quick_sort(v: list, beg, end):
 
 ---
 
-![large](images/comp/quick-sort-worst.png)
+![large](/images/comp/quick-sort-worst.png)
 # ⭐ Quick Sort caso peggiore
 
 - Complessità *caso peggiore* : **`$O(n^2)$`**
@@ -337,7 +337,7 @@ def quick_sort(v: list, beg, end):
 
 ---
 
-![large](images/comp/merge.svg)
+![large](/images/comp/merge.svg)
 # 🧪 Merge, con appoggio
 
 - Merge tra liste *ordinate* : costo **lineare**
@@ -358,7 +358,7 @@ def merge(v1: list, b1, e1,  # beg, end
 
 ---
 
-![large](images/comp/merge-sort.svg) Split in rosso; merge in verde
+![large](/images/comp/merge-sort.svg) Split in rosso; merge in verde
 # 🧪 Merge Sort
 
 - **Divide...** - *Split* sempre a metà
@@ -399,7 +399,7 @@ def merge_sort(v: list, beg, end: int):
 
 ---
 
-![](images/comp/orders.svg) `$n$`: dimensione istanza
+![](/images/comp/orders.svg) `$n$`: dimensione istanza
 # 💡️ Classi di complessità
 
 - *Costante* : numero op. non dipende da `$n$`
@@ -412,7 +412,7 @@ def merge_sort(v: list, beg, end: int):
 
 ---
 
-![](images/comp/orders.svg)
+![](/images/comp/orders.svg)
 # 💡️ Complessità esponenziale
 
 - *Esponenziale* : `$k^n$`
@@ -426,7 +426,7 @@ def merge_sort(v: list, beg, end: int):
 
 ---
 
-![](images/comp/knapsack.svg)
+![](/images/comp/knapsack.svg)
 # ⭐ Problemi P e NP
 
 - Problemi **P** : $\exists$ algoritmo *deterministico polinomiale*
@@ -439,7 +439,7 @@ def merge_sort(v: list, beg, end: int):
 
 ---
 
-![](images/comp/challenges.jpg)
+![](/images/comp/challenges.jpg)
 # ⭐ Millennium problem
 
 - Sappiamo che *`$P \subseteq NP$`* <br> (DTM: caso particolare di NTM)
@@ -452,7 +452,7 @@ def merge_sort(v: list, beg, end: int):
 
 ---
 
-![](images/comp/classes.svg)
+![](/images/comp/classes.svg)
 # ⭐ Problemi NP-completi
 
 - Ogni problema NP può essere ricondotto a un problema **NP-completo** con algoritmo deterministico *polinomiale*

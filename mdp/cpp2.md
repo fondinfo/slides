@@ -1,4 +1,4 @@
-![](images/dev/cpp.svg)
+![](/images/dev/cpp.svg)
 # Linguaggio C++
 ## Classi e oggetti
 

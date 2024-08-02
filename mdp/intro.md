@@ -1,11 +1,11 @@
 
-![](images/dev/theory-practice.png)
+![](/images/dev/theory-practice.png)
 # Presentazione del corso
 ## Informatica e lab di programmazione<br> Michele Tomaiuolo @ Ingegneria UniPR
 
 ---
 
-![large](images/sys/globe.jpg)
+![large](/images/sys/globe.jpg)
 # ➊ Introduzione all'informatica
 
 - Logica
@@ -17,7 +17,7 @@
 
 ---
 
-![large](images/misc/space-invaders-school.png)
+![large](/images/misc/space-invaders-school.png)
 # ➋ Introduzione alla programmazione
 
 - Algoritmi in *Python 3*
@@ -33,7 +33,7 @@ Applicazioni testuali e con grafica
 
 ---
 
-![](images/dev/geek-girl.svg)
+![](/images/dev/geek-girl.svg)
 # ➌ Esercitazioni in laboratorio
 
 - Brevi *esercizi*, in Python
@@ -49,7 +49,7 @@ Applicazioni testuali e con grafica
 
 ---
 
-![](images/dev/lab.jpg)
+![](/images/dev/lab.jpg)
 # ℹ️ Istruzioni per i laboratori
 
 - Esercitazioni in lab ogni lunedì
@@ -61,7 +61,7 @@ Applicazioni testuali e con grafica
 
 ---
 
-![large](images/misc/videogames.png)
+![large](/images/misc/videogames.png)
 # ℹ️ Istruzioni per i progetti
 
 - Più avanti, un paio di progetti a casa
@@ -88,7 +88,7 @@ Applicazioni testuali e con grafica
 
 ---
 
-![](images/misc/quiz.png)
+![](/images/misc/quiz.png)
 # 🎓 Modalità d'esame
 
 - *➊* Prova sull'*Introduzione all'informatica* (quiz)
@@ -104,7 +104,7 @@ Applicazioni testuali e con grafica
 
 ---
 
-![](images/fun/books-stack.png)
+![](/images/fun/books-stack.png)
 # 📚 Testi di riferimento
 
 - *Informatica e Laboratorio di Programmazione (A.A. 2019-2020)*, McGraw-Hill 2019. ISBN 978-1307457001 (~26€, ~300pp., nelle librerie universitarie, su Amazon ecc.)
@@ -122,7 +122,7 @@ Applicazioni testuali e con grafica
 
 ---
 
-![small](images/dev/python-logo.svg)
+![small](/images/dev/python-logo.svg)
 # 💾 Strumenti software
 
 - Strumenti open source, multi-piattaforma

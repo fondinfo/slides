@@ -1,11 +1,11 @@
 
-![](images/repr/binary-hacker.jpg)
+![](/images/repr/binary-hacker.jpg)
 # Codifica dell'informazione
 ## Introduzione all'informatica <br> Michele Tomaiuolo @ Ingegneria UniPR
 
 ---
 
-![](images/repr/analog-clock.png) ![](images/repr/digital-clock.png)
+![](/images/repr/analog-clock.png) ![](/images/repr/digital-clock.png)
 # 💡️ Analogico e digitale
 
 - Una grandezza (fisica o astratta) può essere rappresentata in due forme
@@ -37,7 +37,7 @@
 
 ---
 
-![](images/repr/child-fingers.png)
+![](/images/repr/child-fingers.png)
 # 💡️ Codice posizionale
 
 - Un numero naturale può essere rappresentato con una notazione posizionale
@@ -66,12 +66,12 @@ $$`
 ---
 
 
-![](images/repr/binary-tunnel.jpg)
+![](/images/repr/binary-tunnel.jpg)
 # Numeri binari
 
 ---
 
-![](images/repr/sum-binary.jpg)
+![](/images/repr/sum-binary.jpg)
 # 💡️ Codice binario
 
 - Base 2; c: `$0-1$`
@@ -109,7 +109,7 @@ $$`
 
 ---
 
-![](images/repr/binary-fingers.svg) … 819
+![](/images/repr/binary-fingers.svg) … 819
 # 🧪 Numeri naturali
 
 - Rappresentare un numero naturale `$N$` in forma binaria
@@ -123,14 +123,14 @@ $$`
 
 # 🧪 Esadecimale (Hex)
 
-![large](images/repr/hex-numbers.svg)
+![large](/images/repr/hex-numbers.svg)
 
 ---
 
-![](images/repr/hex-table.svg)
+![](/images/repr/hex-table.svg)
 # 🧪 Bin ↔ Hex
 
-![small](images/repr/bin-hex.png)
+![small](/images/repr/bin-hex.png)
 
 - Gruppo di 4 bit: 16 configurazioni diverse
     - *Disposizioni con ripetizione*: `$2^4 = 16$`
@@ -226,7 +226,7 @@ txt = hex(32)  # "0x20"
 
 ---
 
-![](images/repr/sign-magn.svg)
+![](/images/repr/sign-magn.svg)
 # 💡️ Numeri interi
 
 - Occorre rappresentare anche i numeri negativi
@@ -239,7 +239,7 @@ txt = hex(32)  # "0x20"
 
 ---
 
-![](images/repr/twos-compl.svg)
+![](/images/repr/twos-compl.svg)
 # ⭐ Complemento a due
 
 - Alternativa, rappr. *diversa da modulo e segno!*
@@ -332,7 +332,7 @@ $$`
     - P.es. `$f$` di 3 bit, valori consecutivi sempre distanziati di 1/8
     - Tra ciascun intero e il successivo, possiamo rappresentare 8 valori
 
-![](images/repr/fixed-point.png)
+![](/images/repr/fixed-point.png)
 
 ---
 
@@ -345,7 +345,7 @@ $$`
 - Precisione variabile lungo l’asse reale; p.es.:
     - `$f \in \{0, \frac{1}{4}, \frac{2}{4}, \frac{3}{4}\}$`, 2 bit <br> `$n \in \{-2, -1, 0, 1\}$`, 2 bit
 
-![large](images/repr/float4.svg)
+![large](/images/repr/float4.svg)
 
 >
 
@@ -361,7 +361,7 @@ $$`
 - **Precisione singola**: *32 bit* (~ `$10^{±38}$`, con 7 cifre decimali)
     - All'esponente si somma `$127$` (`$=2^{8-1} - 1$`)
 
-![large](images/repr/ieee754-32-ex.svg)
+![large](/images/repr/ieee754-32-ex.svg)
 
 >
 
@@ -376,7 +376,7 @@ $$`
 - All’esponente si somma `$15$` (`$=2^{5 − 1} − 1$`)
 - `$-118.625 = -1110110.101_{bin} = -1.110110101_{bin} × 2^6$`
 
-![small](images/repr/ieee754-16-ex.svg)
+![small](/images/repr/ieee754-16-ex.svg)
 
 ---
 
@@ -406,7 +406,7 @@ y >> shift  # y = y / (2 ** shift)
 
 ---
 
-![](images/misc/characters.png)
+![](/images/misc/characters.png)
 # Caratteri e testo
 
 ---
@@ -423,7 +423,7 @@ y >> shift  # y = y / (2 ** shift)
 
 # ⭐ Tabella ASCII di base
 
-![large](images/repr/ascii.svg)
+![large](/images/repr/ascii.svg)
 
 - In ogni riga 16 caratteri con codici consecutivi
 - Codice di un carattere: si contano tutti quelli che lo precedono
@@ -442,7 +442,7 @@ y >> shift  # y = y / (2 ** shift)
 
 ---
 
-![large](images/repr/codepage-437.png)
+![large](/images/repr/codepage-437.png)
 # 💡️ Tabella ASCII estesa
 
 - Caratteri accentati + caratteri per grafici
@@ -457,7 +457,7 @@ y >> shift  # y = y / (2 ** shift)
 
 ---
 
-![](images/repr/hieroglyphics.jpg) ![](images/repr/no-klingon.png)
+![](/images/repr/hieroglyphics.jpg) ![](/images/repr/no-klingon.png)
 # 💡️ Unicode
 
 - Unicode associa un preciso **code-point** (32 bit) a ciascun simbolo
@@ -476,8 +476,8 @@ y >> shift  # y = y / (2 ** shift)
 
 ---
 
-![small](images/repr/unicode.svg)
-![](images/repr/text-len.png)
+![small](/images/repr/unicode.svg)
+![](/images/repr/text-len.png)
 # ⭐ Unicode Transformation Format
 
 - Codifica di un *code-point* in una sequenza di bit
@@ -487,11 +487,11 @@ y >> shift  # y = y / (2 ** shift)
 - *UTF-8* – code-unit di 8-bit, lunghezza 1-4 c.u.
     - Max compatibilità con ASCII
 
-![](images/repr/utf8.jpg)
+![](/images/repr/utf8.jpg)
 
 ---
 
-![](images/repr/utf8-web-growth.svg)
+![](/images/repr/utf8-web-growth.svg)
 # ⭐ UTF-8
 
 - Se bit più alto a `0`, nel *code-point*
@@ -501,7 +501,7 @@ y >> shift  # y = y / (2 ** shift)
     - Byte seguenti cominciano tutti con `10`
 - Bit di payload / lunghezza codifica: `7/8`, `11/16`, `16/24`, `21/32`
 
-![large](images/repr/utf8-examples.png)
+![large](/images/repr/utf8-examples.png)
 
 >
 

@@ -1,4 +1,4 @@
-![](images/dev/cpp.svg)
+![](/images/dev/cpp.svg)
 # C++ internals
 ## Object oriented programming in C++
 
@@ -179,7 +179,7 @@ c.erase(remove_if(c.begin(), c.end(),
 
 ---
 
-![](images/sys/under-hood.png)
+![](/images/sys/under-hood.png)
 # C++: Under the Hood
 
 - *Jan Gray*, March 1994
@@ -255,7 +255,7 @@ int main() {
 
 ---
 
-![](images/oop/cpp-struct-layout-a.png)
+![](/images/oop/cpp-struct-layout-a.png)
 # C++ class layout
 
 - C-like structs
@@ -264,7 +264,7 @@ int main() {
     - Members laid out in their declaration order
     - Implementation defined alignment padding
 - *Note* : C++ structs are like classes
-	- But defaulting to `public`
+    - But defaulting to `public`
 
 ``` cpp
 struct A {  // or class
@@ -275,7 +275,7 @@ struct A {  // or class
 
 ---
 
-![](images/oop/cpp-struct-layout-b.png)
+![](/images/oop/cpp-struct-layout-b.png)
 # More members
 
 ``` cpp
@@ -321,7 +321,7 @@ struct D : C {
 
 ---
 
-![](images/oop/cpp-struct-layout-c.png) ![](images/oop/cpp-struct-layout-d.png)
+![](/images/oop/cpp-struct-layout-c.png) ![](/images/oop/cpp-struct-layout-d.png)
 # Upcast for single inheritance
 
 ``` cpp
@@ -359,7 +359,7 @@ struct MiddleManager : Manager, Worker { ... };
 
 ---
 
-![](images/oop/cpp-struct-layout-e.png) ![](images/oop/cpp-struct-layout-f.png)
+![](/images/oop/cpp-struct-layout-e.png) ![](/images/oop/cpp-struct-layout-f.png)
 # Multiple inheritance layout
 
 ``` cpp
@@ -380,7 +380,7 @@ struct F : C, E {
 
 ---
 
-![](images/oop/diamond-inheritance.svg)
+![](/images/oop/diamond-inheritance.svg)
 # Diamond problem
 
 - What if both `Manager` and `Worker` are derived from `Employee`?
@@ -415,7 +415,7 @@ struct MiddleManager : Manager, Worker { ... };
 
 ---
 
-![large](images/oop/cpp-struct-layout-g.png) ![large](images/oop/cpp-struct-layout-h.png) ![large](images/oop/cpp-struct-layout-i.png)
+![large](/images/oop/cpp-struct-layout-g.png) ![large](/images/oop/cpp-struct-layout-h.png) ![large](/images/oop/cpp-struct-layout-i.png)
 # Virtual base table pointer
 
 ``` cpp
@@ -437,7 +437,7 @@ struct I : G, H {
 
 ---
 
-![](images/oop/cpp-struct-layout-c.png) ![](images/oop/cpp-struct-layout-d.png) ![](images/oop/cpp-struct-layout-e.png) ![](images/oop/cpp-struct-layout-f.png)
+![](/images/oop/cpp-struct-layout-c.png) ![](/images/oop/cpp-struct-layout-d.png) ![](/images/oop/cpp-struct-layout-e.png) ![](/images/oop/cpp-struct-layout-f.png)
 # Data member access
 
 - No inheritance, like C lang
@@ -466,7 +466,7 @@ pf->f1; // *(pf + dFf1)
 
 ---
 
-![large](images/oop/cpp-struct-layout-g.png) ![large](images/oop/cpp-struct-layout-h.png) ![large](images/oop/cpp-struct-layout-i.png)
+![large](/images/oop/cpp-struct-layout-g.png) ![large](/images/oop/cpp-struct-layout-h.png) ![large](/images/oop/cpp-struct-layout-i.png)
 # Access to virtual base
 
 - Virtual inheritance, access to virtual base is comparatively expensive
@@ -529,7 +529,7 @@ Plain or static downcasting from a virtual base is *prohibited*
 
 ---
 
-![large](images/oop/cpp-struct-layout-p.png)
+![large](/images/oop/cpp-struct-layout-p.png)
 # Member functions
 
 - Virtual member functions incur an instance size hit
@@ -559,7 +559,7 @@ void P::pf() {  // void P::pf([P *const this])
 
 ---
 
-![large](images/oop/cpp-struct-layout-q.png)
+![large](/images/oop/cpp-struct-layout-q.png)
 # Overriding methods
 
 - A derived class can override, or replace, an inherited function definition
@@ -610,7 +610,7 @@ pq->pvf();  // pq->Q::pvf();  // Q::pvf(pq);
 
 ---
 
-![large](images/oop/cpp-struct-layout-r.png) ![large](images/oop/cpp-struct-layout-s.png)
+![large](/images/oop/cpp-struct-layout-r.png) ![large](/images/oop/cpp-struct-layout-s.png)
 # Multiple inheritance of virtual f.s
 
 ``` cpp
@@ -628,7 +628,7 @@ struct S : P, R {
 ```
 
 - If class inherits them from multiple bases, each with virtual functions
-	- → More than one `vfptr`
+    - → More than one `vfptr`
 
 ---
 

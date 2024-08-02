@@ -1,4 +1,4 @@
-![](images/dev/geek-girl.svg)
+![](/images/dev/geek-girl.svg)
 # Esercizi 2022
 ## Introduzione alla programmazione
 
@@ -8,7 +8,7 @@
 
 ---
 
-![](images/misc/handshake.svg)
+![](/images/misc/handshake.svg)
 # 1.1 Hello, admin!
 
 - Chiedere il nome all'utente
@@ -17,7 +17,7 @@
 
 ---
 
-![](images/misc/tigro.png)
+![](/images/misc/tigro.png)
 # 1.2 Anno della tigre
 
 - Chiedere all'utente il suo anno di nascita
@@ -30,7 +30,7 @@ Sappiamo che il segno si ripete ogni 12 anni
 
 ---
 
-![](images/misc/random-circles.svg)
+![](/images/misc/random-circles.svg)
 # 1.3 Cerchi casuali
 
 - Chiedere all'utente un numero `n`
@@ -45,7 +45,7 @@ Cominciare a disegnare un solo cerchio, in posizione casuale
 
 ---
 
-![](images/misc/shadows.png)
+![](/images/misc/shadows.png)
 # 1.4 Rettangoli con ombra
 
 - Chiedere all'utente un numero `n`
@@ -59,7 +59,7 @@ Fare in modo che i rettangoli e le ombre siano tutti all'interno nel canvas
 
 ---
 
-![](images/misc/green-squares.png)
+![](/images/misc/green-squares.png)
 # 1.5 Sequenza di quadrati
 
 - Chiedere all'utente un numero `n`
@@ -76,7 +76,7 @@ Determinare automaticamente le variazioni migliori per lato e colore, prima di i
 
 ---
 
-![](images/misc/impossible-triangle.jpg)
+![](/images/misc/impossible-triangle.jpg)
 # 1.6 Triangolo
 
 - Chiedere all'utente le lunghezze dei tre lati
@@ -90,7 +90,7 @@ Determinare automaticamente le variazioni migliori per lato e colore, prima di i
 
 ---
 
-![large](images/misc/gold-price.svg)
+![large](/images/misc/gold-price.svg)
 # 1.7 Media dei dispari
 
 - Leggere, attraverso un ciclo, una sequenza di numeri naturali
@@ -99,7 +99,7 @@ Determinare automaticamente le variazioni migliori per lato e colore, prima di i
 
 ---
 
-![large](images/misc/random-walk.svg)
+![large](/images/misc/random-walk.svg)
 # 1.8 Passeggiata casuale
 
 - Chiedere all'utente un numero `n` (`<100`)
@@ -120,7 +120,7 @@ Non occorre disegnare
 
 ---
 
-![large](images/misc/random-walk.png)
+![large](/images/misc/random-walk.png)
 # 1.9 Passeggiata a crocette
 
 - Riprendere l'esercizio precedente
@@ -136,7 +136,7 @@ Non occorre disegnare
 
 ---
 
-![](images/misc/thermometer.png)
+![](/images/misc/thermometer.png)
 # 2.1 Funzione, Fahrenheit
 
 - Definire una funzione `cels_to_fahr`
@@ -180,7 +180,7 @@ Poi racchiudere tutto in un ciclo for esterno
 
 ---
 
-![](images/misc/xmas-triangle.svg)
+![](/images/misc/xmas-triangle.svg)
 # 2.3 Triangolo di cerchi colorati
 
 - Chiedere all'utente un numero `n`
@@ -190,7 +190,7 @@ Poi racchiudere tutto in un ciclo for esterno
 
 ---
 
-![](images/oop/anim-rotate.png)
+![](/images/oop/anim-rotate.png)
 # 2.4 Pallina lungo i bordi
 
 - Partire dall'esempio della funzione di animazione orizzontale
@@ -202,7 +202,7 @@ Poi racchiudere tutto in un ciclo for esterno
 
 ---
 
-![](images/misc/pac-man.png)
+![](/images/misc/pac-man.png)
 # 2.5 Effetto Pac-Man
 
 - Mostrare l'animazione di una pallina, senza rimbalzi
@@ -213,7 +213,7 @@ Poi racchiudere tutto in un ciclo for esterno
 
 ---
 
-![](images/misc/college-student.jpg)
+![](/images/misc/college-student.jpg)
 # 2.6 Voto stimato
 
 - Scrivere una funzione `estimate_mark`
@@ -232,7 +232,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/characters.png)
+![](/images/misc/characters.png)
 # 2.7 Gruppi di lettere
 
 - Definire una funzione
@@ -246,7 +246,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/classical-watch.jpg)
+![](/images/misc/classical-watch.jpg)
 # 2.8 Coordinate polari
 
 - Usare la funzione `from_polar`
@@ -265,7 +265,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/solar-system.png)
+![](/images/misc/solar-system.png)
 # 2.9 Animazione circolare
 
 - Visualizzare un cerchio giallo in un punto casuale
@@ -287,7 +287,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/dev/parallelepiped.png) x² = a² + b² + c²
+![](/images/dev/parallelepiped.png) x² = a² + b² + c²
 # 3.1 Funzione per diagonale
 
 - Definire una funzione (senza classi)
@@ -301,7 +301,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/dev/parallelepiped.png) x² = a² + b² + c²
+![](/images/dev/parallelepiped.png) x² = a² + b² + c²
 # 3.2 Parallelepipedo
 
 - Classe che modella un parallelepipedo rettangolo
@@ -316,7 +316,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/oop/anim-rotate.png)
+![](/images/oop/anim-rotate.png)
 # 3.3 Pallina con svolta
 
 - Partire dalla classe `Ball` vista a lezione
@@ -328,7 +328,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/repr/color-mixing.svg)
+![](/images/repr/color-mixing.svg)
 # 3.4 Palline colorate
 
 - Partire dalla classe `Ball` vista a lezione
@@ -343,7 +343,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/xmas-tree.svg)
+![](/images/misc/xmas-tree.svg)
 # 3.5 Albero di cerchi colorati
 
 - Chiedere all'utente un numero `n`
@@ -378,7 +378,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/pengo.png)
+![](/images/misc/pengo.png)
 # 3.8 Pengo, SnoBee [P1]
 
 - Creare una classe `SnoBee` (modificando `Ball`)
@@ -398,7 +398,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/pengo.png)
+![](/images/misc/pengo.png)
 # 3.9 Pengo, sprite [P1]
 
 - Aggiungere alla classe `SnoBee` un metodo `sprite`
@@ -407,7 +407,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 >
 
-[Sprites](images/sprites/pengo.png)
+[Sprites](/images/sprites/pengo.png)
 
 ---
 
@@ -415,7 +415,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/solids.png)
+![](/images/misc/solids.png)
 # 4.1 Funzioni per cilindro
 
 - Funzione per calcolare la superficie laterale di un cilindro
@@ -430,7 +430,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/solids.png)
+![](/images/misc/solids.png)
 # 4.2 Classe dei cilindri
 
 - Definire una classe dei cilindri
@@ -445,7 +445,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/random-radius.svg)
+![](/images/misc/random-radius.svg)
 # 4.3 Cerchi concentrici casuali
 
 - Disegnare un cerchio di raggio 200 e colore casuale
@@ -472,7 +472,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/oop/personal-data.png)
+![](/images/oop/personal-data.png)
 # 4.5 Classe delle persone
 
 - Definire una classe delle persone
@@ -489,7 +489,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/oop/personal-data.png)
+![](/images/oop/personal-data.png)
 # 4.6 Lista di persone
 
 - Usare la classe delle persone (es. 4.5)
@@ -504,7 +504,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/solar-system.png)
+![](/images/misc/solar-system.png)
 # 4.7 Classe dei pianeti
 
 - Oggetto che ruota attorno a un centro di rotazione
@@ -517,7 +517,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/pengo.png)
+![](/images/misc/pengo.png)
 # 4.8 Pengo, tasti [P1]
 
 - Classe per personaggio Pengo
@@ -534,7 +534,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/pengo.png)
+![](/images/misc/pengo.png)
 # 4.9 Pengo, passi [P1]
 
 - Durante il movimento dei personaggi, mostrarne i passi
@@ -547,7 +547,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/oop/bounce.png)
+![](/images/oop/bounce.png)
 # 5.1 Modificare Turtle
 
 - Partire dall'esempio “*bounce*”
@@ -559,7 +559,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/oop/bounce.png)
+![](/images/oop/bounce.png)
 # 5.2 Modificare Ghost
 
 - Partire dall'esempio “*bounce*”
@@ -572,7 +572,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/oop/bounce.png)
+![](/images/oop/bounce.png)
 # 5.3 Modificare Ball
 
 - Partire dall'esempio “*bounce*”
@@ -581,7 +581,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/college-student.jpg)
+![](/images/misc/college-student.jpg)
 # 5.4 Classe degli esami
 
 - Classe `Exam` per rappresentare gli esami sostenuti
@@ -595,7 +595,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/college-student.jpg)
+![](/images/misc/college-student.jpg)
 # 5.5 Lista degli esami
 
 - Creare una lista di oggetti di tipo `Exam`
@@ -610,7 +610,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/pengo.png)
+![](/images/misc/pengo.png)
 # 5.6 Pengo come Actor [P1]
 
 - Creare una classe `Pengo`
@@ -621,7 +621,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/pengo.png)
+![](/images/misc/pengo.png)
 # 5.7 SnoBee come Actor [P1]
 
 - Creare una classe `SnoBee`
@@ -632,7 +632,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/pengo.png)
+![](/images/misc/pengo.png)
 # 5.8 Pengo muore [P1]
 
 - `Pengo` muore se urta `SnoBee`
@@ -640,7 +640,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/pengo.png)
+![](/images/misc/pengo.png)
 # 5.9 Ghiaccio [P1]
 
 - Blocco di ghiaccio come personaggio
@@ -655,7 +655,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/troll-key.png)
+![](/images/misc/troll-key.png)
 # 6.1 Maiuscole tra asterischi
 
 - Scrivere una funzione che:
@@ -668,7 +668,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/numbers.png)
+![](/images/misc/numbers.png)
 # 6.2 Conteggio di valori
 
 - Chiedere all'utente un valore minimo e un valore massimo
@@ -683,7 +683,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/fun/matryoshka.png)
+![](/images/fun/matryoshka.png)
 # 6.3 Funzione ricorsiva
 
 - Definire una funzione ricorsiva
@@ -697,7 +697,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/fun/htree.png)
+![](/images/fun/htree.png)
 # 6.4 Albero di H
 
 - Disegnare ricorsivamente un *H-Tree*
@@ -711,7 +711,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/fun/htree.png)
+![](/images/fun/htree.png)
 # 6.5 Albero di H
 
 - Modificare l'esercizio precedente
@@ -721,7 +721,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/pengo.png)
+![](/images/misc/pengo.png)
 # 6.6 Spinta del ghiaccio [P1]
 
 - Un blocco di ghiaccio viene spinto da Pengo
@@ -732,7 +732,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/pengo.png)
+![](/images/misc/pengo.png)
 # 6.7 Termine della partita [P1]
 
 - Partita vinta se uccisi tutti gli SnoBee
@@ -748,7 +748,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/minesweeper.png)
+![](/images/misc/minesweeper.png)
 # 7.1 Mine nel campo minato [P2]
 
 - Chiedere all'utente valori per `w`, `h`, `n`
@@ -767,7 +767,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/minesweeper.png)
+![](/images/misc/minesweeper.png)
 # 7.2 Conteggio mine [P2]
 
 - Riprendere la matrice dell'esercizio 7.1
@@ -789,7 +789,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/triangles2.png)
+![](/images/misc/triangles2.png)
 # 7.4 Triangoli ricorsivi
 
 - Definire una funzione di disegno ricorsiva
@@ -802,7 +802,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/pengo.png)
+![](/images/misc/pengo.png)
 # 7.5 Pengo - Sgretolamento [P1]
 
 - Ghiaccio si sgretola
@@ -811,7 +811,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/pengo.png)
+![](/images/misc/pengo.png)
 # 7.6 Pengo - Test [P1]
 
 - Testare le funzionalità del gioco Pengo
@@ -822,7 +822,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/misc/pengo.png)
+![](/images/misc/pengo.png)
 # 7.7 Pengo - Aspetti opzionali [P1]
 
 - Secondo Pengo, comandato da tasti diversi
@@ -837,7 +837,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](images/fun/list-monster.png)
+![](/images/fun/list-monster.png)
 # 8.1 Massimo, con ricorsione
 
 - Definire una funzione ricorsiva `max_char`
@@ -870,7 +870,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](images/misc/gold-price.svg)
+![](/images/misc/gold-price.svg)
 # 8.3 Valori sopra e sotto la media
 
 - Leggere da file una sequenza di numeri
@@ -885,7 +885,7 @@ Aggiungere ciascun valore a una lista inizialmente vuota, con `append`
 
 ---
 
-![](images/qt/fifteen-puzzle.jpg)
+![](/images/qt/fifteen-puzzle.jpg)
 # 8.4 Quindici con lista di liste
 
 - Modificare l'esempio del gioco Fifteen
@@ -899,7 +899,7 @@ Aggiungere ciascun valore a una lista inizialmente vuota, con `append`
 
 ---
 
-![](images/repr/unicode.svg)
+![](/images/repr/unicode.svg)
 # 8.5 Codifica UTF-8
 
 - Chiedere all'utente un carattere, `char`
@@ -921,7 +921,7 @@ Dispense: [Hex e bin](https://github.com/tomamic/fondinfo/wiki/T02-Codifica#hex-
 
 ---
 
-![](images/misc/minesweeper.png)
+![](/images/misc/minesweeper.png)
 # 8.6 Gioco Minesweeper [P2]
 
 - Creare una sottoclasse di `BoardGame`
@@ -938,7 +938,7 @@ Aggiungere `10` o `20`, per flag o cella scoperta
 
 ---
 
-![](images/misc/handwriting.jpg)
+![](/images/misc/handwriting.jpg)
 # 8.7 Bella copia [P1, P2]
 
 - **Codice leggibile**
@@ -958,7 +958,7 @@ Aggiungere `10` o `20`, per flag o cella scoperta
 
 ---
 
-![](images/fun/matryoshka.png)
+![](/images/fun/matryoshka.png)
 # 9.1 Stringhe in liste annidate
 
 - Definire una funzione *ricorsiva*
@@ -979,7 +979,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](images/misc/dice.png)
+![](/images/misc/dice.png)
 # 9.2 Scrittura di risultati casuali
 
 - Simulare `n` lanci di una coppia di dadi
@@ -990,7 +990,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](images/misc/dice.png)
+![](/images/misc/dice.png)
 # 9.3 Analisi di risultati casuali
 
 - Leggere i dati dal file generato nell'esercizio 9.2
@@ -1028,7 +1028,7 @@ Si può mescolare una lista semplice, con soli valori da 1 a 26 <br> Poi inserir
 
 ---
 
-![](images/fun/circlex4.png)
+![](/images/fun/circlex4.png)
 # 9.5 Cerchi speciali
 
 - Funzione che disegna un *cerchio speciale*
@@ -1047,7 +1047,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](images/misc/letters.png)
+![](/images/misc/letters.png)
 # 9.6 Gioco dell'alfabeto
 
 - Creare una sottoclasse di `BoardGame`
@@ -1064,7 +1064,7 @@ Può essere utile un campo `expected`, che memorizza e incrementa il valore atte
 
 ---
 
-![](images/repr/file-system.svg)
+![](/images/repr/file-system.svg)
 # 9.7 Profondità albero
 
 - Partire dall'albero di documenti e cartelle
@@ -1079,7 +1079,7 @@ Può essere utile un campo `expected`, che memorizza e incrementa il valore atte
 
 ---
 
-![](images/misc/minesweeper.png)
+![](/images/misc/minesweeper.png)
 # 9.8 Campo minato, ricorsione [P2]
 
 - Quando si scopre una casella senza mine attorno
@@ -1096,7 +1096,7 @@ sys.setrecursionlimit(100_000)
 
 ---
 
-![](images/misc/minesweeper.png)
+![](/images/misc/minesweeper.png)
 # 9.9 Campo minato, bandierine [P2]
 
 - Utente può posizionare bandierine
@@ -1111,7 +1111,7 @@ sys.setrecursionlimit(100_000)
 
 ---
 
-![](images/fun/matryoshka.png)
+![](/images/fun/matryoshka.png)
 # 10.1 Presenza in liste annidate
 
 - Definire una funzione *ricorsiva* `contains`
@@ -1149,7 +1149,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](images/fun/circlex2.png)
+![](/images/fun/circlex2.png)
 # 10.3 Cerchi allineati
 
 - Funzione che disegna un *cerchio speciale*
@@ -1207,7 +1207,7 @@ Tramite `read`, possibilmente, marcarla con un puntino
 
 ---
 
-![](images/misc/brackets.svg)
+![](/images/misc/brackets.svg)
 # 10.6 File, parentesi
 
 - Leggere un file di testo, riga per riga
@@ -1234,7 +1234,7 @@ In alternativa, usare una regex
 
 ---
 
-![](images/repr/file-system.svg)
+![](/images/repr/file-system.svg)
 # 10.7 Documento più grande
 
 - Partire dall'albero di *documenti e cartelle*

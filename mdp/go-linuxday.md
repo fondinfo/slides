@@ -1,10 +1,10 @@
-![](images/dev/golang.svg)
+![](/images/dev/golang.svg)
 # Il linguaggio Go
 ## Introduzione al linguaggio con lo sviluppo di giochi 2D <br> Parma, Linux Day 2019
 
 ---
 
-![](images/dev/gopher.svg)
+![](/images/dev/gopher.svg)
 # Dal C al Cloud
 
 - Avvio in Google ~2007, radici nel *C*
@@ -37,7 +37,7 @@
 
 ---
 
-![](images/algo/helloworld.png)
+![](/images/algo/helloworld.png)
 # Hello, browser!
 
 - Avvio da funzione **`main`** in modulo `main`
@@ -64,7 +64,7 @@ go run hello.go
 
 ---
 
-![](images/repr/additive-color.svg)
+![](/images/repr/additive-color.svg)
 # Strutture per grafica
 
 - Strutture e funzioni definite nel modulo `g2d`
@@ -89,7 +89,7 @@ myBlue := Color{10, 10, 200}  // each component in 0..255
 
 ---
 
-![large](images/oop/raster-coord.png)
+![large](/images/oop/raster-coord.png)
 # Disegno nel browser
 
 ``` go
@@ -115,7 +115,7 @@ MainLoop()
 
 ---
 
-![](images/algo/if-else.svg)
+![](/images/algo/if-else.svg)
 # ⏩ Selezione: if ... else
 
 - Corpo di `if` o `else` tra graffe
@@ -141,7 +141,7 @@ FillCircle(Point{200, 200}, 25)
 
 ---
 
-![](images/misc/red-squares.svg)
+![](/images/misc/red-squares.svg)
 # ⏩ Iterazione: for
 
 - Versione più semplice: sostituisce `while`, assente
@@ -160,7 +160,7 @@ for i < 5 {
 
 ---
 
-![](images/misc/red-squares.svg)
+![](/images/misc/red-squares.svg)
 # ⏩ Sequenza di quadrati
 
 ``` go
@@ -177,7 +177,7 @@ for i := 0; i < 5; i++ {
 
 ---
 
-![](images/misc/color-grid.png) ![](images/oop/raster-tile.png)
+![](/images/misc/color-grid.png) ![](/images/oop/raster-tile.png)
 # ⏩ Griglia di colori
 
 ``` go
@@ -195,7 +195,7 @@ for y := 0; y < rows; y++ {
 
 ---
 
-![](images/fun/function.png)
+![](/images/fun/function.png)
 # ⏩ Definizione di funzioni
 
 - **`func`** per definire una funzione
@@ -255,7 +255,7 @@ func main() {
 
 ---
 
-![](images/oop/anim-bounce.png)
+![](/images/oop/anim-bounce.png)
 # ⏩ Funzione per rimbalzi
 
 - Le funzioni forniscono limitata astrazione
@@ -282,7 +282,7 @@ func moveBall(x, y, dx, dy int) (int, int, int, int) {
 
 ---
 
-![](images/oop/pointer.png)
+![](/images/oop/pointer.png)
 # ⏩ Puntatori
 
 - Ogni dato in memoria ha un indirizzo
@@ -305,7 +305,7 @@ Come in *C*, ma *senza* “aritmetica”
 
 ---
 
-![](images/oop/basic-object.svg)
+![](/images/oop/basic-object.svg)
 # Oggetto
 
 - Rappresenta un *oggetto fisico* o un *concetto* del dominio
@@ -316,7 +316,7 @@ Come in *C*, ma *senza* “aritmetica”
 
 ---
 
-![](images/oop/cookie-cutter.png)
+![](/images/oop/cookie-cutter.png)
 # Tipi e oggetti
 
 - Ogni *oggetto* ha un tipo *`struct`* di origine, ~ *classe*
@@ -327,7 +327,7 @@ Come in *C*, ma *senza* “aritmetica”
 
 ---
 
-![](images/oop/ball-object.svg) ![](images/oop/ball-uml.svg) Class diagram UML
+![](/images/oop/ball-object.svg) ![](/images/oop/ball-uml.svg) Class diagram UML
 # Definizione del tipo
 
 - **Incapsulamento** dei dati
@@ -349,7 +349,7 @@ func NewBall(pos Point) *Ball {
 
 ---
 
-![](images/oop/bob-builder.jpg)
+![](/images/oop/bob-builder.jpg)
 # Costruzione oggetti
 
 - **`NewBall`**: funzione *costruttore*
@@ -416,7 +416,7 @@ func main() {
 
 ---
 
-![](images/fun/shopping-list.png)
+![](/images/fun/shopping-list.png)
 # Slice
 
 - Sequenza di elementi, dello stesso **tipo**
@@ -438,7 +438,7 @@ resultsByMonth := make([]int, 12)  // 12 times 0
 
 ---
 
-![](images/fun/wile-coyote.png)
+![](/images/fun/wile-coyote.png)
 # Accesso agli elementi
 
 - **Attenzione a usare indici validi!**
@@ -461,7 +461,7 @@ Println(groceries)                      // guess!
 
 ---
 
-![](images/fun/shopping-list.jpg)
+![](/images/fun/shopping-list.jpg)
 # Range loop su liste
 
 ``` go
@@ -500,7 +500,7 @@ for _, x := range "Hello, 🌐!" {
 
 ---
 
-![](images/fun/month-list.svg)
+![](/images/fun/month-list.svg)
 # ⏩ Porzioni di lista
 
 - Selezione degli elementi tra...
@@ -525,7 +525,7 @@ Funzioni `strings.Join` e `strings.Split`
 
 ---
 
-![](images/oop/ball-arena.svg)
+![](/images/oop/ball-arena.svg)
 # Composizione
 
 - Associazione **has-a**, **part-of** tra oggetti
@@ -552,7 +552,7 @@ func main() {
 
 ---
 
-![large](images/oop/carnivora.png)
+![large](/images/oop/carnivora.png)
 # 🌱️ Relazione is-a
 
 - **Classificazione**, es. in biologia
@@ -568,7 +568,7 @@ func main() {
 
 ---
 
-![](images/oop/animals.png)
+![](/images/oop/animals.png)
 # Fattoria parlante
 
 - Noi definiremo una **interfaccia** come astrazione di base
@@ -584,7 +584,7 @@ type Animal interface {
 
 ---
 
-![](images/oop/polymorphism.png)
+![](/images/oop/polymorphism.png)
 # Duck typing
 
 - Basta che i *tipi concreti* implementino i metodi dell'interfaccia!
@@ -605,7 +605,7 @@ func (c *Cat) Say() {
 
 ---
 
-![](images/oop/peppa.png)
+![](/images/oop/peppa.png)
 # Lista di oggetti
 
 ``` py
@@ -632,7 +632,7 @@ I am George Pig. I say: OINK!
 
 ---
 
-![](images/oop/actors.svg)
+![](/images/oop/actors.svg)
 # Interfaccia dei personaggi
 
 - `Actor`: *interfaccia*
@@ -687,7 +687,7 @@ func (g *Ghost) Move() {
 
 ---
 
-![](images/oop/actor.svg)
+![](/images/oop/actor.svg)
 # ⏩ Sostituzione
 
 ``` go
@@ -733,7 +733,7 @@ func (g *Ghost) Move() {
 
 ---
 
-![](images/oop/collision.svg) ![](images/oop/reflection.png)
+![](/images/oop/collision.svg) ![](/images/oop/reflection.png)
 # Collisioni
 
 - Molti algoritmi di *collision detection*
@@ -802,7 +802,7 @@ func main() {
 
 ---
 
-![](images/oop/bounce.png)
+![](/images/oop/bounce.png)
 # Controllo da tastiera
 
 ``` go

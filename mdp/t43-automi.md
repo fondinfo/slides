@@ -1,10 +1,10 @@
-![](images/comp/walle-eve.png)
+![](/images/comp/walle-eve.png)
 # Automi
 ## Introduzione all'informatica <br> Michele Tomaiuolo @ Ingegneria UniPR
 
 ---
 
-![](images/comp/executor.svg) ![](images/comp/automata-theory.svg) ![](images/hist/1942-human-computers.jpg)
+![](/images/comp/executor.svg) ![](/images/comp/automata-theory.svg) ![](/images/hist/1942-human-computers.jpg)
 # 💡️ Automi e calcolo
 
 - **Automa**: *macchina astratta*
@@ -21,7 +21,7 @@
 
 ---
 
-![](images/comp/c3po.png) ... 6M di linguaggi
+![](/images/comp/c3po.png) ... 6M di linguaggi
 # ⭐ Riconoscimento di linguaggi
 
 - Problema dell'*appartenenza*, o *membership*
@@ -41,14 +41,14 @@
 
 ---
 
-![large](images/comp/pacman.svg) Stati del fantasma nel Pac-Man
+![large](/images/comp/pacman.svg) Stati del fantasma nel Pac-Man
 # 💡️ Giochi come FSM
 
 - Stato interno di ogni personaggio
 - Comportamenti diversi in stati diversi
 - Eventi determinano transizioni
 
-![small](images/comp/apple-fsm-jump.png)
+![small](/images/comp/apple-fsm-jump.png)
 
 >
 
@@ -58,7 +58,7 @@
 
 # 💡️ Stati della GUI
 
-![large](images/comp/apple-fsm-gui.png)
+![large](/images/comp/apple-fsm-gui.png)
 
 ---
 
@@ -81,7 +81,7 @@
 
 ---
 
-![](images/comp/fsm4.svg) Stringhe con <br> `a` in numero pari e <br> `b` in numero pari
+![](/images/comp/fsm4.svg) Stringhe con <br> `a` in numero pari e <br> `b` in numero pari
 # 🧪 Esempio di FSM
 
 - Rappresentazione della funzione di transizione
@@ -102,7 +102,7 @@ $q_3$         | $q_2$ | $q_1$
 
 ---
 
-![](images/comp/fsm4.svg) <br> `$S \to aA | bB | \varepsilon \\ A \to aS | bC \\ B \to aC | bS \\ C \to aB | bA$`
+![](/images/comp/fsm4.svg) <br> `$S \to aA | bB | \varepsilon \\ A \to aS | bC \\ B \to aC | bS \\ C \to aB | bA$`
 # 💡️ Linguaggio riconosciuto da FSM
 
 - F. transiz. estesa a stringhe: `$\delta: Q \times \Sigma^\star \to Q$`
@@ -118,7 +118,7 @@ $q_3$         | $q_2$ | $q_1$
 
 ---
 
-![](images/comp/fsm-trap.svg)
+![](/images/comp/fsm-trap.svg)
 # Stato trappola
 
 - Se la sequenza di input è `$x := ababa…$`
@@ -131,7 +131,7 @@ $q_3$         | $q_2$ | $q_1$
 
 ---
 
-![large](images/comp/nfa-compute.svg)
+![large](/images/comp/nfa-compute.svg)
 # 💡️ FSM non deterministica
 
 - `$M := <\Sigma, Q, \delta, q_0, F>$`
@@ -145,10 +145,10 @@ $q_3$         | $q_2$ | $q_1$
 
 ---
 
-![large](images/comp/nfa-tree.svg)
+![large](/images/comp/nfa-tree.svg)
 # 💡️ Computazione <br> non deterministica
 
-![small](images/comp/nfa.svg)
+![small](/images/comp/nfa.svg)
 
 - Talvolta un simbolo può attivare più transizioni
 - In tal caso, l'automa sviluppa *tutti* i possibili rami di computazione
@@ -156,7 +156,7 @@ $q_3$         | $q_2$ | $q_1$
 
 ---
 
-![](images/comp/nfsm.svg) ![](images/comp/nfsm-eq.svg) Accetta stringhe <br> terminanti con b
+![](/images/comp/nfsm.svg) ![](/images/comp/nfsm-eq.svg) Accetta stringhe <br> terminanti con b
 # 🧪 Esempio di NFSM
 
 - `$M := <\{a, b\}, \{q_0, q_1\}, \delta, q_0, \{q_1\}>$`
@@ -203,7 +203,7 @@ $\delta'$        | $a$        | $b$
 
 ---
 
-![](images/comp/pda.svg)
+![](/images/comp/pda.svg)
 # ⭐ Automa a pila (PDA)
 
 - Pushdown Autómaton (PDA)
@@ -232,7 +232,7 @@ $\delta'$        | $a$        | $b$
 
 ---
 
-![](images/comp/pda3.svg)
+![](/images/comp/pda3.svg)
 # 🧪 Esempio di PDA
 
 - PDA che riconosce `$L:=\{a^n b^n, n \geq 1\}$`
@@ -254,7 +254,7 @@ $q_2$ |         |          |          |       |                   |
 
 ---
 
-![](images/comp/nfa-compute.svg)
+![](/images/comp/nfa-compute.svg)
 # ⭐ PDA non deterministico (NPDA)
 
 - `$A := <\Sigma, \Gamma, z_0, Q, q_0, F, \delta_n>$`
@@ -272,7 +272,7 @@ $q_2$ |         |          |          |       |                   |
 
 ---
 
-![](images/hist/turing.jpg)
+![](/images/hist/turing.jpg)
 # 💡️ Macchina di Turing (TM)
 
 - Automa con testina di scrittura/lettura su nastro bidirezionale “illimitato”
@@ -291,7 +291,7 @@ $q_2$ |         |          |          |       |                   |
 
 ---
 
-![](images/comp/tm.png)
+![](/images/comp/tm.png)
 # 💡️ TM deterministica
 
 - `$M := <\Sigma, Q, q_0, F, \delta>$`
@@ -305,7 +305,7 @@ $q_2$ |         |          |          |       |                   |
 
 ---
 
-![large](images/comp/tm-aaabbbccc.svg)
+![large](/images/comp/tm-aaabbbccc.svg)
 # 🧪 TM per aⁿbⁿcⁿ
 
 - ① Marca la `$a$` con `$X$`
@@ -326,11 +326,11 @@ $q_2$ |         |          |          |       |                   |
 
 # 🧪 Diagramma per aⁿbⁿcⁿ
 
-![large](images/comp/tm-anbncn.png)
+![large](/images/comp/tm-anbncn.png)
 
 ---
 
-![](images/comp/nfa-compute.svg)
+![](/images/comp/nfa-compute.svg)
 # ⭐ TM non deterministica (NTM)
 
 - `$M := <\Sigma, Q, q_0, F, \delta_n>$`
@@ -353,7 +353,7 @@ $q_2$ |         |          |          |       |                   |
 - Il nastro è limitato alle sole celle contenti l'input
 - LBA riconoscono tutti e soli i *linguaggi contestuali*, di tipo 1
 
-![](images/comp/lba.svg)
+![](/images/comp/lba.svg)
 
 ---
 
@@ -380,7 +380,7 @@ $q_2$ |         |          |          |       |                   |
     - Dato lo stesso input, UTM produce lo stesso output di `$M$`
     - Per ogni simbolo letto in `$x$` (input di `$M$`), scorre la lista di regole, per scegliere la giusta transizione
 
-![](images/comp/utm.svg)
+![](/images/comp/utm.svg)
 
 ---
 
@@ -388,7 +388,7 @@ $q_2$ |         |          |          |       |                   |
 
 ---
 
-![](images/hist/church.jpg)
+![](/images/hist/church.jpg)
 # 💡️ Tesi di Church-Turing
 
 - $\forall$ problema “effettivamente” calcolabile, $\exists$ TM per calcolarlo
@@ -402,7 +402,7 @@ $q_2$ |         |          |          |       |                   |
 
 ---
 
-![](images/comp/pinocchio-paradox.png)
+![](/images/comp/pinocchio-paradox.png)
 # 💡️ Paradossi classici
 
 - Paradosso *del mentitore*

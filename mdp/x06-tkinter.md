@@ -1,4 +1,4 @@
-![](images/oop/tk-logo.svg) ![](images/oop/pygame-logo.png)
+![](/images/oop/tk-logo.svg) ![](/images/oop/pygame-logo.png)
 # Gui con Tkinter
 ## Introduzione alla programmazione
 
@@ -8,7 +8,7 @@
 
 ---
 
-![](images/oop/pygame-logo.png) ![](images/oop/pygame-loop.png)
+![](/images/oop/pygame-logo.png) ![](/images/oop/pygame-loop.png)
 # 🥷 Grafica con PyGame
 
 - Libreria per giochi 2D
@@ -24,7 +24,7 @@
 
 ---
 
-![](images/oop/pygame-logo.png) ![](images/oop/raster-coord.png) → [pygame.org/docs]<http://pygame.org/docs>
+![](/images/oop/pygame-logo.png) ![](/images/oop/raster-coord.png) → [pygame.org/docs]<http://pygame.org/docs>
 # 🥷  Disegno con PyGame
 
 ``` python
@@ -93,7 +93,7 @@ pygame.quit()                     # Close the window
 
 ---
 
-![](images/oop/bounce.png)
+![](/images/oop/bounce.png)
 # 🥷  Rimbalzi in PyGame
 
 ``` python
@@ -172,7 +172,7 @@ pick_up_sound.play()  # play(-1) to loop, then stop()
 
 ---
 
-![](images/oop/tk-notepad-1.png)
+![](/images/oop/tk-notepad-1.png)
 # Hello Notepad
 
 ``` Python
@@ -188,7 +188,7 @@ window.mainloop()
 
 ---
 
-![](images/oop/tk-notepad-2.png)
+![](/images/oop/tk-notepad-2.png)
 # Aggiungere un bottone
 
 ``` Python
@@ -279,7 +279,7 @@ class Notepad(Tk):
 
 ---
 
-![](images/oop/tk-notepad-3.png)
+![](/images/oop/tk-notepad-3.png)
 # Disposizione widget
 
 - Tk usa il meccanismo dei *geometry manager* per disporre i widget
@@ -320,7 +320,7 @@ class Notepad(Tk):
 
 ---
 
-![](images/oop/tk-fifteen-gui.png)
+![](/images/oop/tk-fifteen-gui.png)
 # Layout a griglia
 
 - Divide in una griglia lo spazio disponibile e dispone i widget nelle celle
@@ -329,7 +329,7 @@ class Notepad(Tk):
 
 ---
 
-![](images/qt/puzzle.png)
+![](/images/qt/puzzle.png)
 # BoardGameGui – Costruzione gui
 
 ``` Python
@@ -351,7 +351,7 @@ class BoardGameGui(Tk):
 
 ---
 
-![](images/qt/puzzle-solved.png)
+![](/images/qt/puzzle-solved.png)
 # BoardGameGui – Aggiornamento bottoni
 
 ``` Python
