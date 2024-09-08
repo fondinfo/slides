@@ -7,7 +7,6 @@
 - [Oggetti](slides/p31-oggetti.html) - [Relazioni](/slides/p32-relazioni.html)
 - [Sequenze](/slides/p41-sequenze.html) - [Matrici](/slides/p42-matrici.html)
 - [Ricorsione](/slides/p51-ricorsione.html)
-- [Slide in PDF (2x2, non aggiornate)](https://www.dropbox.com/s/h9ffglpx53275z2/programmazione-2x2.pdf?dl=1)
 
 ## Teoria
 
@@ -16,7 +15,6 @@
 - [Calcolatori](/slides/t31-calcolatori.html)
 - [Regex](/slides/t41-regex.html) - [Grammatiche](/slides/t42-grammatiche.html) - [Automi](/slides/t43-automi.html)
 - [Complessità](/slides/t51-complessita.html)
-- [Slide in PDF (2x2, non aggiornate)](https://www.dropbox.com/s/qlyzeet068hjw05/informatica-2x2.pdf?dl=1)
 
 ## Approfondimento
 
