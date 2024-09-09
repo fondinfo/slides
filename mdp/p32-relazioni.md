@@ -228,17 +228,14 @@ def tick():
 class Turtle(Actor): # ...
     def move(self, arena: Arena):
         keys = arena.current_keys()
-        self._dx = self._dy = 0
         if "ArrowUp" in keys:
-            self._dy = -self._speed
+            self._y -= self._speed
         elif "ArrowDown" in keys:
-            self._dy = self._speed
+            self._y += self._speed
         if "ArrowLeft" in keys:
-            self._dx = -self._speed
+            self._x -= self._speed
         elif "ArrowRight" in keys:
-            self._dx = self._speed
-        self._x += self._dx
-        self._y += self._dy
+            self._x += self._speed
 ```
 
 >
