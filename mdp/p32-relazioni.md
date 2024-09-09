@@ -63,7 +63,7 @@ class Animal:
 
 ---
 
-![large](/images/oop/polymorphism.png)
+![large](/images/oop/farm.svg)
 # 🧪 Classi concrete
 
 ``` py
