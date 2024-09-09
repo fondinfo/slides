@@ -1,4 +1,4 @@
-![](/images/oop/bricks.svg)
+![](/images/oop/lego-blocks.png)
 # Relazioni
 ## Introduzione alla programmazione
 
