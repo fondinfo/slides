@@ -329,8 +329,62 @@ with open("some_file.txt", "r") as f:
     first_line = f.readline()
     second_line = f.readline()
     remaining_text = f.read()
-    # both strings contain '\n' at the end
+    # read lines contain '\n' at the end
 ```
+
+---
+
+# 🧪 Lettura semplice CSV
+
+``` py
+def read_csv(filename: str) -> tuple[list[int], int, int]:
+    data, rows = [], 0
+    with open(filename) as f:
+        for line in f:
+            row = [int(v) for v in line.split(",")]
+            data += row  # or, data.append(row)
+            rows += 1
+    return data, len(data) // (rows or 1), rows
+```
+
+---
+
+# 🧪 Modulo csv
+
+``` py
+import csv
+matrix = []
+with open("some.csv") as f:
+    reader = csv.reader(f)
+    for row in reader:
+        matrix.append(row)
+print(matrix)
+
+with open("some.csv", "w") as f:
+    writer = csv.writer(f)
+    for row in matrix
+        writer.writerow(row)
+```
+
+- [Modulo `csv`](https://docs.python.org/3/library/csv.html) per file più complessi (testo tra virgolette ecc.)
+- Lettura di default: ogni riga, `list[str]`
+- Scrittura di default: virgolette aggiunte solo se necessario
+
+---
+
+# 🧪 Top100 da IMDB
+
+- Colonne
+    - `rank (0), name (1), year (2), rating (3), genre (4), certificate (5), run_time (6), tagline (7), budget (8), box_office (9), casts (10), directors (11), writers (12)`
+- Obiettivi
+    - Elencare i generi in ordine decrescente rispetto al numero di film
+    - Elencare le 10 coppie regista-attore con il maggior numero di collaborazioni
+    - Elencare gli attori che hanno partecipato a tutti i film di “Star Wars” qui presenti
+
+>
+
+<https://fondinfo.github.io/data/movies.csv> <br>
+<https://fondinfo.github.io/play/?c10_movies.py>
 
 ---
 
