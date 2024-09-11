@@ -199,6 +199,50 @@ $\delta'$        | $a$        | $b$
 
 ---
 
+# Dizionario delle transizioni
+
+- Tupla per indicizzare transizioni di FSM (macchina a stati finiti)
+- Tupla con attuale stato e attuale simbolo di input
+- Valore associato alla chiave : nuovo stato
+
+``` py
+transition = {("Q0", "a"): "Q1", ("Q0", "b"): "Q2",
+              ("Q1", "a"): "Q0", ("Q1", "b"): "Q3",
+              ("Q2", "a"): "Q3", ("Q2", "b"): "Q0",
+              ("Q3", "a"): "Q2", ("Q3", "b"): "Q1"}
+```
+
+- Ciclo di funzionamento
+
+``` py
+new_state = transition.get((state, symbol), None)
+```
+
+---
+
+# Macchina non deterministica
+
+- NFSM, non deterministica, si trova in un *insieme* di stati
+- Graffe esterne : *dizionario* delle transizioni
+    - Chiave : tupla di attuali stato e simbolo
+- Graffe interne : nuovo *insieme* di stati
+
+``` py
+states = {"Q0"}
+transition = {("Q0", "a"): {"Q0"},
+              ("Q0", "b"): {"Q0", "Q1"}}
+```
+
+- Funzionamento : `new_states` *unione* di tutti i nuovi stati
+
+``` py
+new_states = set()
+for state in states:
+    new_states |= transition.get((state, symbol), set())
+```
+
+---
+
 # Automa a pila (PDA)
 
 ---
