@@ -258,6 +258,8 @@ def main():
         line = input("x? ")
 ```
 
+<https://fondinfo.github.io/play/?c06_linmodel.py>
+
 ---
 
 ![](/images/misc/hiccup.png)
