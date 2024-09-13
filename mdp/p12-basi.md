@@ -590,7 +590,8 @@ Hello, Adam!
     - `r` razionale compreso tra 0 e 200
 - Se `r` è valido
     - Visualizzare il cerchio, al centro del canvas
-    - Mostrare il valore dell'area e della circonferenza
+    - Appena sopra al cerchio, scrivere il valore della sua area
+    - Appena sopra al cerchio, scrivere il valore della sua circonferenza
 - Se invece `r` è fuori range
     - Mostrare un messaggio d'errore
 
