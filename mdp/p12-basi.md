@@ -591,7 +591,7 @@ Hello, Adam!
 - Se `r` è valido
     - Visualizzare il cerchio, al centro del canvas
     - Appena sopra al cerchio, scrivere il valore della sua area
-    - Appena sopra al cerchio, scrivere il valore della sua circonferenza
+    - Appena sotto al cerchio, scrivere il valore della sua circonferenza
 - Se invece `r` è fuori range
     - Mostrare un messaggio d'errore
 
