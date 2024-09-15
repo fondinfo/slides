@@ -1264,15 +1264,16 @@ array([5, 3, 2, 4, 1, 0]])
     - `"<"` little endian, `">"` big endian
 
 ``` py
-a = np.array([1, 2, 3, 4], dtype="<i2")
-a  # array([1, 2, 3, 4], dtype=int16)
-a.data.tobytes()  # b'\x01\x00\x02\x00\x03\x00\x04\x00'
-a.dtype = ">i2"
-a  # array([256, 512, 768, 1024], dtype=int16)
-a.dtype = "f2, 2i1"
-a  # array([(6.e-08, [2, 0]), (2.e-07, [4, 0])],
-   #       dtype=[('f0', '<f2'), ('f1', 'i1', (2,))])
-   # aka: field named f0 holds a float16, field f1 holds two int8s
+>>> a = np.array([4.25, -5.75], dtype=">f2")
+>>> a
+array([ 4.25, -5.75], dtype=float16)
+>>> a.data.tobytes().hex(" ")
+"44 40 c5 c0"
+>>> a.dtype = "i1"
+>>> a
+array([ 68,  64, -59, -64], dtype=int8)
+>>> a.data.tobytes().hex(" ")
+"44 40 c5 c0"
 ```
 
 ---
