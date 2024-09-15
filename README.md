@@ -19,6 +19,7 @@
 ## Approfondimento
 
 - [Sviluppo](/slides/p33-sviluppo.html) - [Collaudo](p34-collaudo.html)
+- [Analisi dei dati in Python](/slides/scipy.html)
 - [Backtracking](/slides/p52-backtrack.html) - [Minimax](/slides/p53-minimax.html)
 
 
