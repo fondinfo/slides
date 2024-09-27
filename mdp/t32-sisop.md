@@ -1,10 +1,10 @@
-![](images/sys/hatred-pc.png)
+![](/images/sys/hatred-pc.png)
 # Sistemi operativi
 ## Introduzione all'informatica
 
 ---
 
-![](images/sys/broken-pc.png)
+![](/images/sys/broken-pc.png)
 # Sistema operativo
 
 - Avviato automaticamente all'accensione
@@ -17,7 +17,7 @@
 
 # Sistema operativo a cipolla
 
-![large](images/sys/onion.svg)
+![large](/images/sys/onion.svg)
 
 ---
 
@@ -35,7 +35,7 @@
 
 ---
 
-![large](images/sys/process-lifecycle.svg)
+![large](/images/sys/process-lifecycle.svg)
 # Scheduling
 
 - CPU singola: non reale parallelismo (in un dato istante, un solo processo in esecuzione)
@@ -47,7 +47,7 @@
 
 ---
 
-![](images/sys/threads.svg)
+![](/images/sys/threads.svg)
 # Thread di esecuzione
 
 - Più piccola unità di istruzioni che può essere schedulata dal S.O.
@@ -58,7 +58,7 @@
 
 ---
 
-![](images/sys/deadlock.svg) Deadlock
+![](/images/sys/deadlock.svg) Deadlock
 # Parallelismo e concorrenza
 
 - Parallelismo
@@ -77,7 +77,7 @@
     - Gestione della gerarchia di memoria primaria/secondaria
     - Libera programma (e programmatore) da dim memoria fisica
 
-![large](images/sys/mem-architecture.svg)
+![large](/images/sys/mem-architecture.svg)
 
 ---
 
@@ -121,7 +121,7 @@
 
 ---
 
-![](images/repr/file-system.svg)
+![](/images/repr/file-system.svg)
 # Altre funzionalità
 
 - **File system**: organizzazione logica dei dati in strutture ad albero
