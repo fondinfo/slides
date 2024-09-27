@@ -12,7 +12,7 @@
 
 - [Logica](/slides/t11-logica.html)
 - [Codifica](/slides/t21-codifica.html) - [Multimedia](/slides/t22-multimedia.html)
-- [Calcolatori](/slides/t31-calcolatori.html)
+- [Calcolatori](/slides/t31-calcolatori.html) - [Sistemi operativi](/slides/t32-sisop.html)
 - [Regex](/slides/t41-regex.html) - [Grammatiche](/slides/t42-grammatiche.html) - [Automi](/slides/t43-automi.html)
 - [Complessità](/slides/t51-complessita.html)
 
