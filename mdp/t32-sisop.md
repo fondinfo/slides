@@ -108,6 +108,7 @@
 
 ---
 
+![](/images/games/indexup.svg)
 # Interruzione
 
 - Necessario un meccanismo per:
