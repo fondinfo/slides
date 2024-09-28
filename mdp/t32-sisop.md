@@ -238,7 +238,7 @@
 
 - `chdir, chmod, chown, getcwd, listdir, mkdir, rename, remove, rmdir`
 - `walk` — Percorrere con un `for` un intero ramo del file system
-    - Sequenza di triple: percorso cartella attuale, lista dei file, lista delle cartelle
+    - Sequenza di triple: percorso cartella attuale, lista delle cartelle, lista dei file
 - `popen, kill` — Lanciare o terminare un processo
 
 >
