@@ -156,7 +156,8 @@
 - `touch $file$` — Creare un file vuoto, o aggiornare il *timestamp*
 - `chown $user$ $file$` — Assegnare un file a un utente
 - `chmod $mode$ $file$` — Impostare la modalità di accesso a un file
-- `chmod +x $file$` — Renderlo eseguibile
+    - `chmod -w $file$` — File non modificabile
+    - `chmod +x $file$` — File eseguibile
 
 ---
 
