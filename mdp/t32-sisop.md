@@ -95,6 +95,7 @@
 
 ---
 
+![](/images/sys/peripherals.svg)
 # Gestione periferiche
 
 - Procedure I/O ad alto livello per interazione tra programmi e periferiche
