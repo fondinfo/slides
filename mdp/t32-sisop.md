@@ -4,7 +4,7 @@
 
 ---
 
-![](/images/sys/broken-pc.png)
+![](/images/sys/opsys.svg)
 # Sistema operativo
 
 - Avviato automaticamente all'accensione
