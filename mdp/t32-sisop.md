@@ -237,8 +237,10 @@
 # Modulo os di Python
 
 - `chdir, chmod, chown, getcwd, listdir, mkdir, rename, remove, rmdir`
-- `walk` — Percorrere con un `for` un intero ramo del file system
-    - Sequenza di triple: percorso cartella attuale, lista delle cartelle, lista dei file
+- `walk` — Percorrere con un `for` un intero ramo del file system <br> Sequenza di triple
+    - Percorso cartella attuale
+    - Lista delle cartelle
+    - Lista dei file
 - `popen, kill` — Lanciare o terminare un processo
 
 >
