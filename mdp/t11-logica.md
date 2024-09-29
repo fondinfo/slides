@@ -300,7 +300,7 @@ big_enough = radius > 50  # rhs expression holds the value, already
 - `$P \implies Q$` è falsa solo in un caso: `$P$` vera e `$Q$` falsa
     - `$\lnot (P \implies Q) \equiv (P \land \lnot Q)$`
     - `$P \implies Q \equiv \lnot (P \land \lnot Q) \equiv$` *[De Morgan]* <br> `$\lnot P \lor \lnot ( \lnot Q) \equiv $` *[Doppia negazione]* <br> `$\lnot P \lor Q$` (implicazione vera quando: `$P$` falsa, o `$Q$` vera)
-- L'implicazione **non** soddisfa la proprietà commutativa:
+- L'implicazione **non** soddisfa la proprietà *commutativa*:
     - `$(P \implies Q) \neq (Q \implies P)$`
 
 ---
