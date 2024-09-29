@@ -246,8 +246,6 @@ big_enough = radius > 50  # rhs expression holds the value, already
 >
 
 (*) Paradosso: non si può stabilire se la frase è vera o falsa
-<br>
-⭐ Tarsia @ UniPI: <http://people.dm.unipi.it/tarsia/dida1011/logins05.pdf>
 
 ---
 
