@@ -599,3 +599,5 @@ Alcuni predicati sono definiti a partire da un dato `$k$`, anzichè da 1
 >
 
 <https://www.beniculturali.it/mibac/multimedia/MiBAC/documents/1228312182183_F1_Logica.pdf>
+<br>
+Domande 20, 22, 24, 27
