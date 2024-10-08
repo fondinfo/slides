@@ -22,4 +22,4 @@
 - [Analisi dei dati in Python](/slides/scipy.html)
 - [Backtracking](/slides/p52-backtrack.html) - [Minimax](/slides/p53-minimax.html)
 
-
+*(CTRL+P per salvare le slide in PDF)*
