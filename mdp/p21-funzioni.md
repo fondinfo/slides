@@ -218,7 +218,7 @@ q, r = result  # ❗ sequence unpacking
 
 # 🧪 Return multipli
 
-- Una funzione può presetare più istruzioni return
+- Una funzione può presentare più istruzioni return
 - Alla prima incontrata, l'esecuzione termina e il controllo torna al codice chiamante
 - Violazione accettabile della programmazione strutturata
 
