@@ -301,27 +301,6 @@ a, b = b, a
 
 ---
 
-![](/images/fun/shopping-list.png)
-# 🧪 Ciclo di lettura da file
-
-- Apertura file in lettura con **`open`**
-- Blocco **`with`**: all'uscita chiude sempre il file
-- File *iterabile* riga per riga con un ciclo **`for`**
-    - *Similmente* a lista di stringhe
-
-``` py
-with open("shopping_list.txt") as groceries_file:
-    for line in groceries_file:
-        # process line
-        # line = line.strip()
-        print(line, ":", len(line))
-```
-
-- ⚠️ Ciascuna riga è di tipo `str`, terminante con `"\n"`
-    - `strip()` toglie spaziature iniziali e finali
-
----
-
 ![](/images/fun/rollinz.jpg)
 # 🥷 Insieme
 
