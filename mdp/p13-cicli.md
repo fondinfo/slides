@@ -404,7 +404,7 @@ print(largest)
 ```
 
 💡 Le funzioni `max` e `min` accettano come parametro una sequenza
-
+<br><br>
 ❓ Come adattare al ciclo con sentinella?
 
 ---
