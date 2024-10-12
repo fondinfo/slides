@@ -403,6 +403,8 @@ for v in [3, 7, 5, 6]:
 print(largest)
 ```
 
+💡 Le funzioni `max` e `min` accettano come parametro una sequenza
+
 ❓ Come adattare al ciclo con sentinella?
 
 ---

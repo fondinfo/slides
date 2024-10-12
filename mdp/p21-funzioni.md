@@ -218,12 +218,12 @@ q, r = result  # ❗ sequence unpacking
 
 # 🧪 Return multipli
 
-- Una funzione può presentare più istruzioni return
+- Una funzione può presentare più istruzioni `return`
 - Alla prima incontrata, l'esecuzione termina e il controllo torna al codice chiamante
 - Violazione accettabile della programmazione strutturata
 
 ``` py
-def exceeds(data: list, limit) -> bool:
+def exceeds(data: list[float], limit: float) -> bool:
     for v in data:
         if v > limit:
             return True
