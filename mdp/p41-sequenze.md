@@ -288,7 +288,7 @@ print(counters)
 
 ``` py
 # Tuple packing
-pt = 5, 6, "red"
+pt = (5, 6, "red")
 pt[0]  # 5
 pt[1]  # 6
 pt[2]  # "red"
