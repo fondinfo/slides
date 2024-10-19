@@ -524,7 +524,7 @@ for v in filter(pos, vals):
 - Esiste un `if` speciale, come espressione
 
 ``` py
-val = "boom" if 5 % 2 == 0 else "bang"`
+val = "boom" if 5 % 2 == 0 else "bang"
 ```
 
 - Da v3.8: *assegnamento* `:=` speciale, come espressione
