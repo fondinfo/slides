@@ -538,7 +538,7 @@ De Morgan | `$(A \cap B)' = A' \cup B'$` | `$\lnot (P \land Q) \equiv \lnot P \l
 
 - Sia `$P(n)$` un predicato definito su `$ℕ$`, tale che:
     - **(1)** `$P(1)$` è vero
-    - **(2)** `$\forall n$`, supponendo `$P(n)$` vero, segue che anche `$P(n+1)$` è vero
+    - **(2)** `$\forall n$`, supponendo `$P(n)$` vero, <br> segue che anche `$P(n+1)$` è vero
 - Allora `$P(n)$` risulta vero `$\forall n$`
 
 Premesse | Conclusione
