@@ -533,7 +533,7 @@ De Morgan | `$(A \cap B)' = A' \cup B'$` | `$\lnot (P \land Q) \equiv \lnot P \l
 
 ---
 
-![large](/images/repr/dominoes.png)
+![large](/images/comp/domino.svg)
 # ⭐ Principio di induzione
 
 - Sia `$P(n)$` un predicato definito su `$ℕ$`, tale che:
