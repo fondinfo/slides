@@ -158,7 +158,7 @@ def main():
 
 >
 
-<https://fondinfo.github.io/pyodide/?c08_fibonacci.py>
+<https://fondinfo.github.io/play/?c08_fibonacci.py>
 
 ---
 
