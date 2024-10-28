@@ -81,6 +81,8 @@ $$`
 - **Bit**: singolo elemento di una sequenza binaria
 - **Nibble**: sequenza di *4 bit*
 - **Byte**: sequenza di *8 bit*
+- *MSB* (Most significant bit): bit più a sinistra nella sequenza
+- *LSB* (Least significant bit): bit più a destra nella sequenza
 
 >
 
@@ -233,7 +235,7 @@ txt = hex(32)  # "0x20"
     - Necessario riservare un bit per il segno
     - Ovvero, si dimezza il massimo modulo ammesso
 - **Modulo e segno**
-    - Il primo bit indica il segno
+    - Il primo bit (MSB) indica il segno
     - 0 positivo, 1 negativo
     - I restanti bit rappresentano il modulo
 
@@ -247,8 +249,9 @@ txt = hex(32)  # "0x20"
     - **➊** Partire dal suo opposto positivo
     - **➋** Complementare il numero <br> (gli 1 diventano 0 e viceversa)
     - **➌** Sommare 1
-- Anche così, il primo bit indica il segno
+- Anche così, il primo bit (MSB) indica il segno
     - 0 positivo, 1 negativo
+    - MSB pesa come $-(2^{N-1})$; altri bit pesano in positivo
 - ⚠️ *Attenzione*: bisogna conoscere codifica e num bit
     - Esempi seguenti: ogni intero con segno memorizzato in un singolo *byte*
 
@@ -268,6 +271,8 @@ txt = hex(32)  # "0x20"
 -----------------
 1 1 0 1 1 1 0 1
 ```
+
+- $-2^7 + 2^6 + 2^4 + 2^3 + 2^2 + 2^0 =$ <br> $-128 + 64 + 16 + 8 + 4 + 1 = -35$
 
 `¬`: complemento semplice, bit a bit
 

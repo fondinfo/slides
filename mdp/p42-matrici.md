@@ -126,7 +126,6 @@ class Fifteen(BoardGame):
         # init board with sorted tiles: [1 2 ... 14 15 0]
         self._bd = list(range(1, w * h)) + [0]
         self._x0, self._y0 = w - 1, h - 1  # blank
-        self._won = True
         self._w, self._h = w, h
 
         # then, random walk of the blank tile, until most tiles change
@@ -152,9 +151,8 @@ class Fifteen(BoardGame):
             bd[y0 * w + x0] = bd[y * w + x]  # swap tiles
             bd[y * w + x] = 0
             self._x0, self._y0 = x, y  # blank
-            self._won = self._sorted()  # hint: use `all`, instead
 
-    def _sorted(self) -> bool:
+    def finished(self) -> bool:
         for i in range(self._w * self._h - 1):
             if self._bd[i] != i + 1:
                 return False
@@ -173,11 +171,8 @@ class Fifteen(BoardGame):
             return str(bd[y*w + x])
         return ""
 
-    def finished(self) -> bool:
-        return self._won
-
     def status(self) -> str:
-        if self._won:
+        if self.finished():
             return "Puzzle solved!"
         return "Playing"
 ```
