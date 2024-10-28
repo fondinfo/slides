@@ -123,11 +123,12 @@ def console_play(game: BoardGame):
 ``` py
 class Fifteen(BoardGame):
     def __init__(self, w: int, h: int):
-        self._w, self._h = w, h
-        # init game board with sorted tiles: [1 2 ... 14 15 0]
+        # init board with sorted tiles: [1 2 ... 14 15 0]
         self._bd = list(range(1, w * h)) + [0]
-        self._won = True
         self._x0, self._y0 = w - 1, h - 1  # blank
+        self._won = True
+        self._w, self._h = w, h
+
         # then, random walk of the blank tile, until most tiles change
         while w * h > 1 and self._bd[-1] != 1:
             dx, dy = choice([(0, -1), (1, 0), (0, 1), (-1, 0)])
@@ -145,19 +146,19 @@ class Fifteen(BoardGame):
 ``` py
 class Fifteen(BoardGame):
     #...
-    def _sorted(self) -> bool:
-        for i in range(self._w * self._h - 1):
-            if self._bd[i] != i + 1:
-                return False
-        return True
-
     def play(self, x: int, y: int, action: str):
         w, h, bd, x0, y0 = self._w, self._h, self._bd, self._x0, self._y0
         if 0 <= x < w and 0 <= y < h and abs(x-x0) + abs(y-y0) == 1:
             bd[y0 * w + x0] = bd[y * w + x]  # swap tiles
             bd[y * w + x] = 0
             self._x0, self._y0 = x, y  # blank
-            self._won = self._sorted()  # use `all`, instead
+            self._won = self._sorted()  # hint: use `all`, instead
+
+    def _sorted(self) -> bool:
+        for i in range(self._w * self._h - 1):
+            if self._bd[i] != i + 1:
+                return False
+        return True
 
 ---
 
