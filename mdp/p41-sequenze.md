@@ -302,7 +302,7 @@ a, b = b, a
 ---
 
 ![](/images/fun/rollinz.jpg)
-# 🥷 Insieme
+# ⭐ Insieme
 
 - Collezione non ordinata e *senza ripetizioni*
     - Senza chiavi o indici
@@ -327,7 +327,7 @@ empty_set = set()  # ⚠️ {} is an empty dict
 ---
 
 ![](/images/fun/dictionary.png)
-# 🥷 Dizionario
+# ⭐ Dizionario
 
 - Chiamato anche *mappa* o *array associativo*
 - Raccolta di coppie **chiave**-**valore**
@@ -355,7 +355,7 @@ Vedi: [get](https://docs.python.org/3/library/stdtypes.html#dict.get),
 ---
 
 `$\begin{pmatrix}5 & 0 & 0 & 0 \\ 0 & 8 & 0 & 0 \\ 0 & 0 & 3 & 0 \\ 0 & 6 & 0 & 0\end{pmatrix}$`
-# 🥷 Matrice sparsa
+# 🧪 Matrice sparsa
 
 - Matrice con molte celle “vuote”
 - Oppure chiavi sparse, non numeriche
