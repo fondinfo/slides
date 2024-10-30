@@ -16,7 +16,7 @@
             "I", "J", "K", "L"]
 >>> cols, rows = 4, 3
 >>> x, y = 1, 2
->>> data[x + y*cols]
+>>> data[x + y * cols]
 "J"
 ```
 - Viceversa: `x, y = i % cols, i // cols`
@@ -33,15 +33,15 @@
 ``` py
 for y in range(rows):
     for x in range(cols):
-        print(data[x + y*cols], end="\t")
+        print(data[x + y * cols], end="\t")
     print()
 ```
 
 - Inizializzare matrice, come lista singola: *list repetition*
-- Elementi tutti a `"-"` (o altro valore…)
+- Elementi tutti a `0` (o altro valore…)
 
 ``` py
-matrix = ["-"] * (rows*cols)
+matrix = [0] * (rows * cols)
 ```
 
 ---
@@ -61,7 +61,7 @@ cols, rows = 4, 3
 for x in range(cols):
     total = 0
     for y in range(rows):
-        val = matrix[x + y*cols]   # 2D -> 1D
+        val = matrix[x + y * cols]   # 2D -> 1D
         total += val
     print("Col #", x, "sums to", total)
 ```
@@ -148,7 +148,7 @@ class Fifteen(BoardGame):
     #...
     def play(self, x: int, y: int, action: str):
         w, h, bd, x0, y0 = self._w, self._h, self._bd, self._x0, self._y0
-        if 0 <= x < w and 0 <= y < h and abs(x-x0) + abs(y-y0) == 1:
+        if 0 <= x < w and 0 <= y < h and abs(x - x0) + abs(y - y0) == 1:
             bd[y0 * w + x0] = bd[y * w + x]  # swap tiles
             bd[y * w + x] = 0
             self._x0, self._y0 = x, y  # blank
@@ -168,8 +168,8 @@ class Fifteen(BoardGame):
     #...
     def read(self, x: int, y: int) -> str:
         w, h, bd = self._w, self._h, self._bd
-        if 0 <= x < w and 0 <= y < h and bd[y * w + x]:
-            return str(bd[y*w + x])
+        if 0 <= x < w and 0 <= y < h and bd[x + y * w]:
+            return str(bd[x + y * w])
         return ""
 
     def status(self) -> str:
@@ -239,15 +239,15 @@ for x in range(cols):
     - [Python FAQ: multidimensional list](https://docs.python.org/3/faq/programming.html#faq-multidimensional-list)
 
 ``` py
-unidim = ["-"] * (rows*cols)  # suggested way
+unidim = [0] * (rows * cols)  # suggested way
 
-multidim = [["-" for x in range(cols)] for y in range(rows)]
+multidim = [[0 for x in range(cols)] for y in range(rows)]
 
 # multidim = []
 # for y in range(rows):
 #     new_row = []
 #     for x in range(cols):
-#         new_row.append("-")
+#         new_row.append(0)
 #     multidim.append(new_row)
 ```
 
