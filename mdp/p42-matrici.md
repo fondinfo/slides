@@ -83,7 +83,8 @@ class BoardGame:
     def read(self, x: int, y: int) -> str: abstract()
     def finished(self) -> bool: abstract()
     def status(self) -> str: abstract()
-    def size(self) -> tuple[int, int]: abstract()
+    def cols(self) -> int: abstract()
+    def rows(self) -> int: abstract()
 ```
 
 >
