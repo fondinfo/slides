@@ -344,7 +344,7 @@ class Position:
 
 <http://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking.html>
 <br>
-<https://fondinfo.github.io/play/?exs/p53_cindy.py>
+<https://github.com/tomamic/backtracking/blob/main/cindy.py>
 
 ---
 
