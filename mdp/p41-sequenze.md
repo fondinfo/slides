@@ -642,7 +642,7 @@ True
 
 >
 
-<https://fondinfo.github.io/play/?c08_histogram.py>
+<https://fondinfo.github.io/play/?exs/c08_histogram.py>
 
 ---
 
@@ -659,7 +659,26 @@ True
 
 Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 <br>
-<https://fondinfo.github.io/play/?c08_dice.py>
+<https://fondinfo.github.io/play/?exs/c08_dice.py>
+
+---
+
+# Riempimento
+
+- Definire funzione \verb|fill| con due parametri
+    - Lista di numeri interi
+    - Indice intero $i$, una posizione nella lista
+- Riempie con valori 1 le celle che contengono inizialmente 0, attorno all'indice dato
+    - Elemento con indice $i$ ≠ 0: termina subito
+    - Elemento con indice $i$ = 0: impostato a 1, riempimento a destra e sinistra
+    - Arrivati a elemento ≠ 0: riempimento si blocca
+- Es.: apice indica posizione $i$ nella lista: avvio del riempimento
+
+``` txt
+   0022000000002000
+            ^
+-> 0022111111112000
+```
 
 ---
 
@@ -684,78 +703,56 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 
 ---
 
-![](http://fondinfo.github.io/images/misc/pac-man.png)
-# Mappe per Pac-Man
+![](https://fondinfo.github.io/images/misc/clamp.svg)
+# Clamp di lista
 
-- Classe `PacMan` da `Turtle` dell'es. `bounce`
-    - Dimensione `PacMan`: 16×16 pixel
-- I muri sono indicati in una mappa
-    - Lista di stringhe (righe)
-    - Ogni carattere della mappa: blocchetto di 8×8 pixel
-- Impedire il passaggio sui muri
-    - Controllo prima del movimento
-- Ignorare comandi da tastiera che inviano su muro
+- Definire la funzione \verb|clamp| con tre parametri
+    - Una lista di numeri
+    - Un limite minimo $a$
+    - Un limite massimo $b$
+- Modifica numeri nella lista
+    - Se minori di $a$, li sostituisce con $a$
+    - Se maggiori di $b$ li sostituisce con $b$
 
->
-
-<https://fondinfo.github.io/play/?c08_pacman.py>
-
----
-
-![](http://fondinfo.github.io/images/misc/resistors.png) `$$R_{ser} = \sum_i R_i$$` `$$\frac{1}{R_{par}} = \sum_i \frac{1}{R_i}$$`
-# Resistenze da file
-
-- Leggere da un file una sequenza di valori di resistenze elettriche
-- Ogni riga contiene un valore
-- Alla fine, visualizzare la resistenza equivalente, sia nel caso di resistenze disposte in serie, che in parallelo
-
->
-
-<https://fondinfo.github.io/play/?c03_resistors.py>
+``` py
+data = [3, 4, 6, 7, 3, 5, 6, 12, 4]
+clamp(data, 5, 10)
+# data = [5, 5, 6, 7, 5, 5, 6, 10, 5]
+```
 
 ---
 
-![](http://fondinfo.github.io/images/misc/gold-price.svg)
-# Sequenza di valori
+![](https://fondinfo.github.io/images/misc/shuffle.svg)
+# Shuffle
 
-- Chiedere all'utente il nome di un file
-- Ciascuna riga del file contiene un valore `float`
-- Cercare il valore minimo e quello massimo nel file
-- Visualizzare i due valori
-
----
-
-![](http://fondinfo.github.io/images/comp/fsm4.svg)
-# FSM
-
-- Simulare il comportamento della FSM in figura
-- Usare un dizionario per indicizzare le transizioni
+- Definire una funzione `shuffle
+    - Parametro: una lista di valori
+    - Mescola *in-place* gli elementi della lista
+- Per ogni indice $i$ della lista
+    - Genera un indice $j$ casuale, valido
+    - Scambia di posto elementi in $i$ e $j$
 
 >
 
-<https://fondinfo.github.io/play/?c19_fsm.py>
+Naturalmente, *senza* usare la funzione `random.shuffle`
 
 ---
 
-![](http://fondinfo.github.io/images/comp/nfsm.svg)
-# NFSM
+# Occorrenze
 
-- Simulare il comportamento della FSM in figura
-- Usare un dizionario per indicizzare le transizioni
+- Data una stringa contenente una sequenza di parole
+    - Separate tra loro da uno spazio
+- Contare le occorrenze di ogni parola della sequenza
 
 >
 
-<https://fondinfo.github.io/play/?c19_nfsm.py>
+Utilizzare un dizionario
 
 ---
 
-![](http://fondinfo.github.io/images/comp/pda3.svg)
-# PDA
+# Parole comuni
 
-- Simulare il comportamento del PDA mostrato in figura
-- Usare un dizionario per indicizzare le transizioni
-- Opzionalmente, ridefinire l'automa per riconoscere stringhe di `$L := \{a^n b^{2n}\}$`
+- Date due stringhe $s1$ e $s2$ contenenti sequenze di parole
+    - Separate tra loro da uno spazio
+- Trovare l'insieme delle parole appartenenti a entrambe le stringhe
 
->
-
-<https://fondinfo.github.io/play/?c19_pda.py>
