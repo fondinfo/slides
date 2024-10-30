@@ -8,7 +8,7 @@
 # ⭐ Matrice in lista singola
 
 - Righe concatenate in una lista singola
-- Un solo indice: `i = x + y*cols`
+- Un solo indice: `i = x + y * cols`
 
 ``` py
 >>> data = ["A", "B", "C", "D",
