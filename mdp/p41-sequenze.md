@@ -752,7 +752,7 @@ Utilizzare un dizionario
 
 # Parole comuni
 
-- Date due stringhe $s1$ e $s2$ contenenti sequenze di parole
+- Date due stringhe `s1` e `s2` contenenti sequenze di parole
     - Separate tra loro da uno spazio
 - Trovare l'insieme delle parole appartenenti a entrambe le stringhe
 
