@@ -1,10 +1,10 @@
-![](/images/fun/function.png)
+![](http://fondinfo.github.io/images/fun/function.png)
 # Funzioni
 ## Introduzione alla programmazione
 
 ---
 
-![](/images/fun/function.png)
+![](http://fondinfo.github.io/images/fun/function.png)
 # ⭐ Definizione di funzione
 
 - *Operatore*, applicato a *operandi*, per ottenere un *risultato*
@@ -46,7 +46,7 @@ print("3rd side:", side3)
 
 ---
 
-![](/images/fun/fun-hypotenuse.svg)
+![](http://fondinfo.github.io/images/fun/fun-hypotenuse.svg)
 # 💡 Funzione principale
 
 - Preferibile, per limitare le **variabili globali**
@@ -72,7 +72,7 @@ main()  # remove, if importing the module elsewhere
 
 ---
 
-![](/images/fun/fun-inc.svg)
+![](http://fondinfo.github.io/images/fun/fun-inc.svg)
 # ⭐ Parametri di una funzione
 
 - **Parametri formali**: nomi usati nella *definizione*
@@ -94,7 +94,7 @@ main()
 
 ---
 
-![](/images/oop/anim-right.png)
+![](http://fondinfo.github.io/images/oop/anim-right.png)
 # ⭐ Animazione
 
 ``` py
@@ -197,7 +197,7 @@ print(triangle_perimeter(4, 2, 1))
 
 ---
 
-![](/images/hist/mcnulty.png) Kay McNulty <br> Subroutine per ENIAC
+![](http://fondinfo.github.io/images/hist/mcnulty.png) Kay McNulty <br> Subroutine per ENIAC
 # 🧪 Risultato in tupla
 
 ``` py
@@ -232,7 +232,7 @@ def exceeds(data: list[float], limit: float) -> bool:
 
 ---
 
-![](/images/oop/anim-bounce.png)
+![](http://fondinfo.github.io/images/oop/anim-bounce.png)
 # 🧪 Funzione per rimbalzi
 
 - Le funzioni forniscono limitata astrazione
@@ -298,7 +298,7 @@ Ad esempio, con `x = 3` e `y = 4` i due risultati sono `-2` e `4`
 
 ---
 
-![](/images/fun/sin-cos-tan-1.svg) ![](/images/fun/sin-cos-tan-2.svg)
+![](http://fondinfo.github.io/images/fun/sin-cos-tan-1.svg) ![](http://fondinfo.github.io/images/fun/sin-cos-tan-2.svg)
 # 🧪 Coordinate polari
 
 - Noti ipotenusa e angolo di un triangolo rettangolo
@@ -318,7 +318,7 @@ Ad esempio, con `x = 3` e `y = 4` i due risultati sono `-2` e `4`
 
 ---
 
-![](/images/fun/move-around.svg)
+![](http://fondinfo.github.io/images/fun/move-around.svg)
 # 🧪 Raggi sul canvas
 
 - Spostamento `$(r, \theta)$` rispetto a `$(x_0, y_0)$`
@@ -342,7 +342,7 @@ def draw_rays(x0: int, y0: int, r: int):
 
 ---
 
-![](/images/fun/move-around.svg)
+![](http://fondinfo.github.io/images/fun/move-around.svg)
 # Funzioni su coord polari
 
 - Funzioni più generali, astrazione migliore
@@ -373,7 +373,7 @@ def move_around(start: Point, length: float, angle: float) -> Point:
 
 ---
 
-![](/images/misc/ellipse.svg)
+![](http://fondinfo.github.io/images/misc/ellipse.svg)
 # Area di un'ellisse
 
 - Definire una *funzione* `ellipse_area` che:
@@ -386,7 +386,7 @@ def move_around(start: Point, length: float, angle: float) -> Point:
 
 ---
 
-![](/images/misc/random-circles.svg)
+![](http://fondinfo.github.io/images/misc/random-circles.svg)
 # Cerchi al click
 
 - Definire una funzione `tick`
@@ -400,7 +400,7 @@ def move_around(start: Point, length: float, angle: float) -> Point:
 
 ---
 
-![](/images/misc/frogger.png)
+![](http://fondinfo.github.io/images/misc/frogger.png)
 # Movimento orizzontale
 
 - Mostrare una tartaruga che si muove in orizzontale
@@ -421,7 +421,7 @@ g2d.draw_image("sprites.png", (x, y), (0, 20), (20, 20))
 
 ---
 
-![](/images/misc/space-invaders-school.png)
+![](http://fondinfo.github.io/images/misc/space-invaders-school.png)
 # Alieno
 
 - Mostrare un alieno che si muove a serpentina
@@ -440,7 +440,7 @@ g2d.draw_image("sprites.png", (x, y), (20, 0), (20, 20))
 
 ---
 
-![](/images/misc/bouncing-ball.jpg)
+![](http://fondinfo.github.io/images/misc/bouncing-ball.jpg)
 # Rimbalzi con gravità
 
 - Usando la funzione `tick` e variabili globali, mostrare una pallina che si muove e rimbalza sui bordi
@@ -450,7 +450,7 @@ g2d.draw_image("sprites.png", (x, y), (20, 0), (20, 20))
 
 ---
 
-![](/images/misc/frogger.png)
+![](http://fondinfo.github.io/images/misc/frogger.png)
 # Movimento per 5 fotogrammi
 
 - Mostrare una pallina che si muove in verticale
@@ -466,7 +466,7 @@ Incrementare (o decrementare) un contatore a ogni chiamata a `tick`
 
 ---
 
-![](/images/fun/polygon.svg) ![](/images/fun/move-around.svg)
+![](http://fondinfo.github.io/images/fun/polygon.svg) ![](http://fondinfo.github.io/images/fun/move-around.svg)
 # Disegno di un poligono
 
 - Definire una funzione `draw_polygon`
@@ -476,7 +476,7 @@ Incrementare (o decrementare) un contatore a ogni chiamata a `tick`
 
 ---
 
-![](/images/misc/classical-watch.jpg) ![](/images/fun/move-around.svg)
+![](http://fondinfo.github.io/images/misc/classical-watch.jpg) ![](http://fondinfo.github.io/images/fun/move-around.svg)
 # 🥷 Orologio classico
 
 - Definire una funzione `draw_clock`
@@ -485,7 +485,7 @@ Incrementare (o decrementare) un contatore a ogni chiamata a `tick`
 
 ---
 
-![](/images/misc/spiral-circles.svg)
+![](http://fondinfo.github.io/images/misc/spiral-circles.svg)
 # 🥷 Percorso a spirale
 
 - Mostrare un cerchio in movimento

@@ -1,4 +1,4 @@
-![](/images/algo/rubik-cube.png)
+![](http://fondinfo.github.io/images/algo/rubik-cube.png)
 # Cicli
 ## Introduzione alla programmazione
 
@@ -34,11 +34,11 @@ True
 
 # Tabella ASCII
 
-![large](/images/repr/ascii-large.svg)
+![large](http://fondinfo.github.io/images/repr/ascii-large.svg)
 
 ---
 
-![](/images/misc/characters.png)
+![](http://fondinfo.github.io/images/misc/characters.png)
 # Cicli su stringhe
 
 - Il ciclo `for` scorre i valori di qualsiasi *sequenza*
@@ -66,7 +66,7 @@ for c in line:
 
 ---
 
-![](/images/algo/words.svg)
+![](http://fondinfo.github.io/images/algo/words.svg)
 # 🧪 Ordine tra due stringhe
 
 - L'utente fornisce due stringhe → 3 alternative
@@ -88,7 +88,7 @@ else:
 
 ---
 
-![](/images/algo/words.svg)
+![](http://fondinfo.github.io/images/algo/words.svg)
 # 🧪 Senza elif
 
 - Se la prima stringa non precede la seconda…
@@ -111,7 +111,7 @@ else:
 
 ---
 
-![](/images/algo/calc.svg)
+![](http://fondinfo.github.io/images/algo/calc.svg)
 # 🧪 Operazioni aritmetiche
 
 ``` py
@@ -181,7 +181,7 @@ print(msg)
 
 ---
 
-![](/images/algo/linearity.svg)
+![](http://fondinfo.github.io/images/algo/linearity.svg)
 # 💡 Linearità
 
 - In un ciclo `for i in range(n)…`
@@ -198,7 +198,7 @@ $$v = m \cdot i + q$$
 
 ---
 
-![](/images/misc/red-squares.svg)
+![](http://fondinfo.github.io/images/misc/red-squares.svg)
 # 🧪 Sequenza di n quadrati
 
 - Disegnare una sequenza di $n$ quadrati
@@ -222,7 +222,7 @@ for i in range(n):
 
 ---
 
-![](/images/fun/times-table.svg)
+![](http://fondinfo.github.io/images/fun/times-table.svg)
 # Cicli e annidamento
 
 - Stampare la tavola pitagorica
@@ -250,7 +250,7 @@ for y in range(1, 11):
 
 ---
 
-![](/images/misc/color-grid.svg) ![](/images/repr/raster-tile.svg)
+![](http://fondinfo.github.io/images/misc/color-grid.svg) ![](http://fondinfo.github.io/images/repr/raster-tile.svg)
 # Griglia di colori
 
 - Mostrare una griglia `rows×cols` di rettangoli
@@ -278,7 +278,7 @@ for y in range(rows):
 
 ---
 
-![](/images/misc/rock-cubes.png)
+![](http://fondinfo.github.io/images/misc/rock-cubes.png)
 # Sentinella
 
 - Acquisire valori di input, in ciclo
@@ -338,7 +338,7 @@ print("Number of processed values:", count)
 
 ---
 
-![](/images/algo/sentinel.svg)
+![](http://fondinfo.github.io/images/algo/sentinel.svg)
 # Totale parziale
 
 - Sommare tutti i valori in input, fino a sentinella
@@ -363,7 +363,7 @@ print("Sum of all values:", total)
 
 ---
 
-![](/images/algo/sum1n.svg)
+![](http://fondinfo.github.io/images/algo/sum1n.svg)
 # 🧪 Somma di Gauss
 
 - Sommare tutti i naturali da $1$ a $n$, dato
@@ -433,7 +433,7 @@ while val != "":
 
 ---
 
-![](/images/misc/green-col.svg)
+![](http://fondinfo.github.io/images/misc/green-col.svg)
 # Quadrati in colonna
 
 - Chiedere all'utente un numero `n`
@@ -447,7 +447,7 @@ while val != "":
 
 ---
 
-![](/images/misc/blue-row.svg)
+![](http://fondinfo.github.io/images/misc/blue-row.svg)
 # Cerchi in riga
 
 - Chiedere all'utente un numero $n$
@@ -461,7 +461,7 @@ while val != "":
 
 ---
 
-![](/images/misc/red-circles.svg)
+![](http://fondinfo.github.io/images/misc/red-circles.svg)
 # Cerchi concentrici
 
 - Chiedere all'utente un numero $n$
@@ -472,7 +472,7 @@ while val != "":
 
 ---
 
-![](/images/misc/red-squares.svg)
+![](http://fondinfo.github.io/images/misc/red-squares.svg)
 # Quadrati in diagonale
 
 - Chiedere all'utente un numero `n`
@@ -491,7 +491,7 @@ In $L$ ci dovranno stare esattamente $n+1$ semilati ($l/2$)
 
 ---
 
-![](/images/misc/resistors.png)
+![](http://fondinfo.github.io/images/misc/resistors.png)
 `$R_s = \Sigma R_i$` <br>
 `$\frac{1}{R_p} = \Sigma \frac{1}{R_i}$`
 
@@ -520,7 +520,7 @@ Preferibile `for` o `while`?
 
 ---
 
-![](/images/misc/perfect-squares.svg)
+![](http://fondinfo.github.io/images/misc/perfect-squares.svg)
 # Quadrato perfetto
 
 - Chiedere all'utente un numero intero
@@ -534,7 +534,7 @@ Naturalmente, senza usare `math.sqrt`
 
 ---
 
-![](/images/misc/bingo-balls.png)
+![](http://fondinfo.github.io/images/misc/bingo-balls.png)
 # Numero segreto
 
 - Generare all'inizio del programma un numero “segreto” a caso tra 1 e 90
@@ -543,7 +543,7 @@ Naturalmente, senza usare `math.sqrt`
 
 ---
 
-![](/images/misc/monster.png)
+![](http://fondinfo.github.io/images/misc/monster.png)
 # 🥷 La stanza del mostro
 
 - Il giocatore si muove su una scacchiera di 5x5 celle, partendo da un angolo

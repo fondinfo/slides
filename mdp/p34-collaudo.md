@@ -1,4 +1,4 @@
-![](/images/dev/bug-feature.png)
+![](http://fondinfo.github.io/images/dev/bug-feature.png)
 # Sviluppo del software
 ## Introduzione alla programmazione
 
@@ -15,7 +15,7 @@
 
 ---
 
-![large](/images/dev/v-model.png)
+![large](http://fondinfo.github.io/images/dev/v-model.png)
 # ⭐ Classificazione dei test
 
 - Tipi di test
@@ -76,7 +76,7 @@
 
 ---
 
-![large](/images/dev/flow-chart.png)
+![large](http://fondinfo.github.io/images/dev/flow-chart.png)
 # 🛠️ Diagramma di flusso
 
 ``` py
@@ -97,7 +97,7 @@ def f():
 
 ---
 
-![large](/images/dev/flow-graph.png)
+![large](http://fondinfo.github.io/images/dev/flow-graph.png)
 # ⭐ Grafo di flusso
 
 - Da diagramma di flusso, piccola astrazione
@@ -310,7 +310,7 @@ class ParamBallTest(unittest.TestCase):
 
 ---
 
-![](/images/oop/strawman.png)
+![](http://fondinfo.github.io/images/oop/strawman.png)
 # 🧪 Oggetto fantoccio
 
 - *Unit test* : testare *un solo oggetto* alla volta

@@ -1,4 +1,4 @@
-![](/images/algo/rubik-cube.png)
+![](http://fondinfo.github.io/images/algo/rubik-cube.png)
 # Basi
 ## Introduzione alla programmazione
 
@@ -8,7 +8,7 @@
 
 ---
 
-![](/images/hist/polya.jpg)
+![](http://fondinfo.github.io/images/hist/polya.jpg)
 # 💡️ Problem solving
 
 - George Polya, [“How to solve it”](https://www.dropbox.com/s/86ua0v7mbr6tkgm/Polya_How-to-solve-it.pdf?dl=1), 1945
@@ -18,7 +18,7 @@
 
 ---
 
-![](/images/dev/problem-solving.svg) ![](/images/algo/space-diagonal.svg)
+![](http://fondinfo.github.io/images/dev/problem-solving.svg) ![](http://fondinfo.github.io/images/algo/space-diagonal.svg)
 # 💡 Analisi del problema
 
 - **➊ See.** Capire il problema
@@ -33,7 +33,7 @@ Ad esempio, per il calcolo della diagonale di un parallelepipedo, <br> una buona
 
 ---
 
-![](/images/dev/problem-solving.svg)
+![](http://fondinfo.github.io/images/dev/problem-solving.svg)
 # 💡 Dal problema alla soluzione
 
 - **➋ Plan.** Elaborare un progetto
@@ -49,7 +49,7 @@ Ad esempio, per il calcolo della diagonale di un parallelepipedo, <br> una buona
 
 ---
 
-![](/images/dev/problem-solving.svg) ![](/images/hist/david-michelangelo.jpg) David di Michelangelo
+![](http://fondinfo.github.io/images/dev/problem-solving.svg) ![](http://fondinfo.github.io/images/hist/david-michelangelo.jpg) David di Michelangelo
 # 💡 … E ritorno
 
 - **➍ Check.** Controllare la soluzione
@@ -66,7 +66,7 @@ Una soluzione più breve e chiara si ottiene dopo più iterazioni
 
 ---
 
-![large](/images/algo/origami.svg) Gli origami sono algoritmi
+![large](http://fondinfo.github.io/images/algo/origami.svg) Gli origami sono algoritmi
 # 💡️ Elementi di un algoritmo
 
 - 🤖️ *Algoritmo*: procedimento che risolve un determinato problema attraverso un numero finito di passi elementari (al-Khwarizmi, ~800)
@@ -81,7 +81,7 @@ Una soluzione più breve e chiara si ottiene dopo più iterazioni
 
 ---
 
-![](/images/algo/spaghetti-flowchart.svg)
+![](http://fondinfo.github.io/images/algo/spaghetti-flowchart.svg)
 # 💡️ Diagramma di flusso
 
 - **Flow-chart**: *grafo orientato*, nodi + archi
@@ -93,14 +93,14 @@ Una soluzione più breve e chiara si ottiene dopo più iterazioni
     - Operazioni aritmetico-logiche
     - Controllo del flusso di esecuzione
 
-![small](/images/algo/nodes.svg)
+![small](http://fondinfo.github.io/images/algo/nodes.svg)
 
 ---
 
-![](/images/algo/recipe.png)
+![](http://fondinfo.github.io/images/algo/recipe.png)
 # ⭐️ Programmazione strutturata
 
-![](/images/algo/structures.svg)
+![](http://fondinfo.github.io/images/algo/structures.svg)
 
 > Si può implementare qualunque algoritmo con queste sole strutture *(Böhm-Jacopini, 1966)*
 
@@ -116,7 +116,7 @@ Una soluzione più breve e chiara si ottiene dopo più iterazioni
 
 # 🧪 Programmazione a blocchi
 
-![](/images/algo/blockly.png)
+![](http://fondinfo.github.io/images/algo/blockly.png)
 
 >
 

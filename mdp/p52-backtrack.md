@@ -1,10 +1,10 @@
-![](/images/misc/tic-tac-toe.svg)
+![](http://fondinfo.github.io/images/misc/tic-tac-toe.svg)
 # Backtracking
 ## Introduzione alla programmazione
 
 ---
 
-![](/images/fun/8-queens.svg)
+![](http://fondinfo.github.io/images/fun/8-queens.svg)
 # Constraint Satisfaction Problem
 
 - Problema di *soddisfacimento di vincoli* (CSP), caratterizzato da:
@@ -17,7 +17,7 @@
 
 ---
 
-![](/images/fun/generate-and-test.png)
+![](http://fondinfo.github.io/images/fun/generate-and-test.png)
 # Generate & Test
 
 - Tecnica per risolvere problemi di soddisfacimento di vincoli
@@ -35,7 +35,7 @@
 
 ---
 
-![](/images/fun/8-queens.svg) ![](/images/fun/k-comb.svg)
+![](http://fondinfo.github.io/images/fun/8-queens.svg) ![](http://fondinfo.github.io/images/fun/k-comb.svg)
 # 8 regine: G&T
 
 - *Generate*
@@ -54,7 +54,7 @@ Esempio del più generale problema delle `N` regine su una scacchiera `N×N`
 
 ---
 
-![](/images/fun/queens-sol.svg)
+![](http://fondinfo.github.io/images/fun/queens-sol.svg)
 # 8 regine: G&T ridotto
 
 - Dai vincoli si evince che *ogni riga*
@@ -71,7 +71,7 @@ Esempio del più generale problema delle `N` regine su una scacchiera `N×N`
 
 ---
 
-![large](/images/fun/backtracking.png)
+![large](http://fondinfo.github.io/images/fun/backtracking.png)
 # Standard backtracking
 
 - Scarta subito gli assegnamenti che non soddisfano i vincoli
@@ -87,11 +87,11 @@ Esempio del più generale problema delle `N` regine su una scacchiera `N×N`
 
 # N regine, backtracking
 
-![large](/images/fun/queens.svg)
+![large](http://fondinfo.github.io/images/fun/queens.svg)
 
 ---
 
-![](/images/fun/queens-sol.svg)
+![](http://fondinfo.github.io/images/fun/queens-sol.svg)
 # N regine, verifica
 
 ``` py
@@ -137,7 +137,7 @@ def place_queens(board: list, y=0) -> bool:
 
 ---
 
-![](/images/misc/artificial-intelligence.png)
+![](http://fondinfo.github.io/images/misc/artificial-intelligence.png)
 # Giochi e IA
 
 ---
@@ -151,7 +151,7 @@ def place_queens(board: list, y=0) -> bool:
 
 ---
 
-![](/images/comp/chess.jpg)
+![](http://fondinfo.github.io/images/comp/chess.jpg)
 # Conoscenza perfetta
 
 - Per la IA, interessanti i giochi con le seguenti due caratteristiche
@@ -192,7 +192,7 @@ def place_queens(board: list, y=0) -> bool:
 
 ---
 
-![](/images/misc/tic-tac-toe.svg)
+![](http://fondinfo.github.io/images/misc/tic-tac-toe.svg)
 # Gioco del tris
 
 - “*Tic-tac-toe*”, “*Noughts and crosses*”, “*Xs and Os*”
@@ -242,7 +242,7 @@ $$`
 
 ---
 
-![small](/images/comp/tictactoe-x.png) ![small](/images/comp/tictactoe-o.png)
+![small](http://fondinfo.github.io/images/comp/tictactoe-x.png) ![small](http://fondinfo.github.io/images/comp/tictactoe-o.png)
 # Soluzione 2
 
 - **Regole di decisione**, con priorità
@@ -265,7 +265,7 @@ Per comodità di somma: 2 = vuoto, 3 = X, 5 = O
 
 ---
 
-![](/images/comp/tictactoe-tree.png)
+![](http://fondinfo.github.io/images/comp/tictactoe-tree.png)
 # Soluzione 3
 
 - **Esplorazione albero delle mosse**
@@ -298,7 +298,7 @@ class Position:
 
 ---
 
-![small](/images/comp/tictactoe-x.png) ![small](/images/comp/tictactoe-o.png)
+![small](http://fondinfo.github.io/images/comp/tictactoe-x.png) ![small](http://fondinfo.github.io/images/comp/tictactoe-o.png)
 # Valutazione soluzione 2
 
 - *Vantaggi*
@@ -312,7 +312,7 @@ class Position:
 
 ---
 
-![](/images/comp/tictactoe-tree.png)
+![](http://fondinfo.github.io/images/comp/tictactoe-tree.png)
 # Valutazione soluzione 3
 
 - *Vantaggi*
@@ -329,7 +329,7 @@ class Position:
 
 ---
 
-![](/images/misc/cindy1.png) ![](/images/misc/cindy2.png)
+![](http://fondinfo.github.io/images/misc/cindy1.png) ![](http://fondinfo.github.io/images/misc/cindy2.png)
 # Puzzle di Cindy
 
 - Piano di gioco: `2n+1` celle allineate
@@ -348,7 +348,7 @@ class Position:
 
 ---
 
-![](/images/fun/queens-sol.svg)
+![](http://fondinfo.github.io/images/fun/queens-sol.svg)
 # Soluzioni delle 8 regine
 
 - Trovare tutte le soluzioni possibili, con il *backtracking*
@@ -364,7 +364,7 @@ class Position:
 
 ---
 
-![](/images/fun/knights.svg)
+![](http://fondinfo.github.io/images/fun/knights.svg)
 # Dominio dei cavalli
 
 - Sistemare sulla scacchiera dei cavalli

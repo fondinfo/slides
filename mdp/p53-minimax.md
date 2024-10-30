@@ -1,4 +1,4 @@
-![](/images/misc/tic-tac-toe.svg)
+![](http://fondinfo.github.io/images/misc/tic-tac-toe.svg)
 # Minimax
 ## Introduzione alla programmazione
 
@@ -26,7 +26,7 @@
 
 ---
 
-![large](/images/fun/tictactoe-minimax.png)
+![large](http://fondinfo.github.io/images/fun/tictactoe-minimax.png)
 # Esplorazione completa
 
 - Ogni nodo è etichettato con *+1* o *-1*
@@ -39,7 +39,7 @@
 
 ---
 
-![large](/images/comp/minimax1.png)
+![large](http://fondinfo.github.io/images/comp/minimax1.png)
 # Strategie di Min e Max
 
 - L'algoritmo *Minimax* attraversa l'albero completo del gioco
@@ -52,7 +52,7 @@
 
 ---
 
-![large](/images/comp/minimax3.png)
+![large](http://fondinfo.github.io/images/comp/minimax3.png)
 # Utilità non binaria
 
 - In alcuni casi, il risultato non è binario
@@ -63,7 +63,7 @@
 
 ---
 
-![large](/images/comp/minimax4.png)
+![large](http://fondinfo.github.io/images/comp/minimax4.png)
 # Ricorsione
 
 - L'algoritmo *Minimax* calcola la scelta ottima per un dato stato del gioco
@@ -287,7 +287,7 @@ function negamax(node, depth, color) is
 
 ---
 
-![large](/images/comp/alphabeta-prune.png)
+![large](http://fondinfo.github.io/images/comp/alphabeta-prune.png)
 # Nodi non effettivamente utili
 
 - Consideriamo un nodo `$n$` nell'albero
@@ -379,25 +379,25 @@ function negamax(node, depth, color) is
 
 # Ricerca con potatura 1/4
 
-![large](/images/comp/alphabeta1.png)
+![large](http://fondinfo.github.io/images/comp/alphabeta1.png)
 
 ---
 
 # Ricerca con potatura 2/4
 
-![large](/images/comp/alphabeta2.png)
+![large](http://fondinfo.github.io/images/comp/alphabeta2.png)
 
 ---
 
 # Ricerca con potatura 3/4
 
-![large](/images/comp/alphabeta3.png)
+![large](http://fondinfo.github.io/images/comp/alphabeta3.png)
 
 ---
 
 # Ricerca con potatura 4/4
 
-![large](/images/comp/alphabeta4.png)
+![large](http://fondinfo.github.io/images/comp/alphabeta4.png)
 
 ---
 
