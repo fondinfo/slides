@@ -640,10 +640,6 @@ True
     - Lunghezza orizzontale di ciascuna barra proporzionale al valore corrispondente
     - La barra più lunga occupa tutto lo spazio disponibile in orizzontale
 
->
-
-<https://fondinfo.github.io/play/?exs/c08_histogram.py>
-
 ---
 
 ![](http://fondinfo.github.io/images/misc/dice.png)
@@ -658,14 +654,12 @@ True
 >
 
 Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
-<br>
-<https://fondinfo.github.io/play/?exs/c08_dice.py>
 
 ---
 
 # Riempimento
 
-- Definire funzione \verb|fill| con due parametri
+- Definire funzione `fill` con due parametri
     - Lista di numeri interi
     - Indice intero $i$, una posizione nella lista
 - Riempie con valori 1 le celle che contengono inizialmente 0, attorno all'indice dato
@@ -697,16 +691,12 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
     - Quello più piccolo in assoluto è tra quei due
     - Rimuovere il valore scelto, dalla sua lista
 
->
-
-<https://fondinfo.github.io/play/?c08_merge.py>
-
 ---
 
 ![](https://fondinfo.github.io/images/misc/clamp.svg)
 # Clamp di lista
 
-- Definire la funzione \verb|clamp| con tre parametri
+- Definire la funzione `clamp` con tre parametri
     - Una lista di numeri
     - Un limite minimo $a$
     - Un limite massimo $b$
@@ -725,7 +715,7 @@ clamp(data, 5, 10)
 ![](https://fondinfo.github.io/images/misc/shuffle.svg)
 # Shuffle
 
-- Definire una funzione `shuffle
+- Definire una funzione `shuffle`
     - Parametro: una lista di valori
     - Mescola *in-place* gli elementi della lista
 - Per ogni indice $i$ della lista
@@ -755,4 +745,3 @@ Utilizzare un dizionario
 - Date due stringhe `s1` e `s2` contenenti sequenze di parole
     - Separate tra loro da uno spazio
 - Trovare l'insieme delle parole appartenenti a entrambe le stringhe
-
