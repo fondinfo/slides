@@ -515,7 +515,7 @@ In ogni posizione, calcolare il carattere da visualizzare: `x * ROWS + y`...
 - Verificare la funzione con alcune matrici di test
 - Fornire due implementazioni
     - Matrice in lista semplice
-    - Matrice in lista di liste 
+    - Matrice in lista di liste
 
 ---
 
@@ -540,14 +540,14 @@ In generale: `(x', y') = (x⋅cos(θ) - y⋅sin(θ), x⋅sin(θ) + y⋅cos(θ))`
 
 ---
 
-![large](http://fondinfo.github.io/images/misc/lightsout.svg)
+![large](http://fondinfo.github.io/images/games/lightsout.svg)
 # Lights out
 
 - Gioco basato su una griglia di luci
 - All'avvio alcune luci casuali sono accese
 - Se si clicca su una luce
     - Questa cambia stato
-    - Assieme alle 4 luci adiacenti (`←→↑↓`)
+    - Assieme alle 4 luci adiacenti (**✣**)
 - L'obiettivo è di spegnere tutte le luci
     - Possibilmente col numero minimo di mosse
 
@@ -564,7 +564,7 @@ In generale: `(x', y') = (x⋅cos(θ) - y⋅sin(θ), x⋅sin(θ) + y⋅cos(θ))`
 - Nascosti casualmente un certo numero di orchi e un certo numero di tesori
     - Tutti in posizioni diverse
 - Cella in $(0, 0)$ lasciata come posizione iniziale del giocatore
-- A ogni mossa, il giocatore si sposta in una delle 4 celle adiacenti
+- A ogni mossa, il giocatore si sposta in una delle 4 celle adiacenti (**✣**)
     - Senza uscire dalla matrice
 - Se scopre un orco, ha perso
 - Se scopre tutti i tesori, ha vinto
