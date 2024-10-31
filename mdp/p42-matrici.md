@@ -594,10 +594,6 @@ Gli alfieri si muovono di un numero qualsiasi di passi in diagonale
 - Ogni riga contiene un valore
 - Alla fine, visualizzare la resistenza equivalente, sia nel caso di resistenze disposte in serie, che in parallelo
 
->
-
-<https://fondinfo.github.io/play/?c03_resistors.py>
-
 ---
 
 ![](http://fondinfo.github.io/images/misc/histogram.svg)
@@ -660,6 +656,3 @@ Non estrarre un nuovo valore da uno stream, se quello precedente non è ancora s
     - Controllo prima del movimento
 - Ignorare comandi da tastiera che inviano su muro
 
->
-
-<https://fondinfo.github.io/play/?c08_pacman.py>
