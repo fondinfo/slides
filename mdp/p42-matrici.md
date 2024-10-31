@@ -587,7 +587,7 @@ Gli alfieri si muovono di un numero qualsiasi di passi in diagonale
 
 ---
 
-![](images/misc/resistors.png) `$$R_{ser} = \sum_i R_i$$` `$$\frac{1}{R_{par}} = \sum_i \frac{1}{R_i}$$`
+![](http://fondinfo.github.io/images/misc/resistors.png) `$$R_{ser} = \sum_i R_i$$` `$$\frac{1}{R_{par}} = \sum_i \frac{1}{R_i}$$`
 # Resistenze da file
 
 - Leggere da un file una sequenza di valori di resistenze elettriche
@@ -600,7 +600,7 @@ Gli alfieri si muovono di un numero qualsiasi di passi in diagonale
 
 ---
 
-![](images/misc/histogram.svg)
+![](http://fondinfo.github.io/images/misc/histogram.svg)
 # Sequenza di valori
 
 - Chiedere all'utente il nome di un file
@@ -648,7 +648,7 @@ Non estrarre un nuovo valore da uno stream, se quello precedente non è ancora s
 
 ---
 
-![](images/misc/pac-man.png)
+![](http://fondinfo.github.io/images/misc/pac-man.png)
 # Mappe per Pac-Man
 
 - Classe `PacMan` da `Turtle` dell'es. `bounce`
