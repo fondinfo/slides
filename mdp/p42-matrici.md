@@ -477,44 +477,6 @@ Angle: 135; Sin: 0.71
 
 ---
 
-![](http://fondinfo.github.io/images/misc/merge-sign.png)
-# Fusione
-
-- Due file di testo contengono sequenze di numeri
-    - Un valore per ogni riga
-    - In ciascun file, i valori sono già ordinati
-- Scrivere in output i valori di entrambi i file
-    - Sequenza di output tutta in ordine
-
->
-
-Ciclicamente, confrontare la coppia dei primi valori (ciascuno proveniente da uno dei due stream)
-<br>
-Scrivere il minore dei due sul file di uscita
-<br>
-Non estrarre un nuovo valore da uno stream, se quello precedente non è ancora stato scritto in output
-
----
-
-# File CSV
-
-- Leggere una matrice di interi da un file testuale CSV
-    - *Comma Sep. Values*: valori riga per riga, separati da virgola
-
-``` text
-5,7,2,11
-1,3,12,9
-4,6,10,8
-```
-
-- Memorizzare i dati in una lista semplice
-    - Contare: num. righe del file, num. valori in una riga
-- Elevare a quadrato valori su diagonale, da basso destra
-    - Nell'esempio: `8`, `12`, `7` (celle dove `cols-x == rows-y`)
-- Salvare in CSV la matrice modificata
-
----
-
 # Incolonnamento dati
 
 - Visualizzare due tabelle con i caratteri ASCII
@@ -537,21 +499,6 @@ In ogni posizione, calcolare il carattere da visualizzare: `x * ROWS + y`...
 
 ---
 
-![](http://fondinfo.github.io/images/hist/scytale.png)
-# Scitala spartana
-
-- Leggere un intero file di testo
-- Inserire in una matrice i primi W×H caratteri
-    - W colonne × H righe, valori prefissati
-    - Riempire una riga della matrice dopo l'altra
-    - Da destra a sinistra, una riga alla volta (→, ↓)
-- Scrivere il contenuto della matrice su console
-    - Scrivere una colonna della matrice dopo l'altra
-    - Prima riga su console = prima colonna della matrice...
-    - Dall'alto verso il basso, una colonna alla volta (↓, →)
-
----
-
 ![](http://fondinfo.github.io/images/fun/neighborhood4.png)
 # Funzione di smooth
 
@@ -566,6 +513,9 @@ In ogni posizione, calcolare il carattere da visualizzare: `x * ROWS + y`...
     - Sommare e contare solo i valori disponibili
     - 4 valori ai bordi, 3 valori agli angoli
 - Verificare la funzione con alcune matrici di test
+- Fornire due implementazioni
+    - Matrice in lista semplice
+    - Matrice in lista di liste 
 
 ---
 
@@ -604,3 +554,31 @@ In generale: `(x', y') = (x⋅cos(θ) - y⋅sin(θ), x⋅sin(θ) + y⋅cos(θ))`
 >
 
 <https://en.wikipedia.org/wiki/Lights_Out_(game)>
+
+---
+
+![](http://fondinfo.github.io/images/misc/lightsout.svg)
+# La stanza del mostro
+
+- Gioco `BoardGame` su matrice $w×h$
+- Nascosti casualmente un certo numero di orchi e un certo numero di tesori
+    - Tutti in posizioni diverse
+- Cella in $(0, 0)$ lasciata come posizione iniziale del giocatore
+- A ogni mossa, il giocatore si sposta in una delle 4 celle adiacenti
+    - Senza uscire dalla matrice
+- Se scopre un orco, ha perso
+- Se scopre tutti i tesori, ha vinto
+
+---
+
+# Alfieri
+
+- Su scacchiera $8×8$ (o in generale $w×h$) vengono posizionati casualmente $n$ alfieri
+    - In modo che non si sovrappongano
+    - Parametri chiesti all'utente all'avvio
+- Visualizzare a console la scacchiera con gli alfieri
+- Evidenziando anche tutte le celle ``sicure'', in cui nessun alfiere può arrivare
+
+>
+
+Gli alfieri si muovono di un numero qualsiasi di passi in diagonale
