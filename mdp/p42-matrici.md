@@ -519,7 +519,7 @@ In ogni posizione, calcolare il carattere da visualizzare: `x * ROWS + y`...
 
 ---
 
-![](http://fondinfo.github.io/images/misc/spiral.png)
+![](http://fondinfo.github.io/images/repr/matrix-spiral.svg)
 # Spirale
 
 - Scrivere una funzione per riempire di numeri crescenti una matrice quadrata (o rettangolare)
@@ -540,7 +540,7 @@ In generale: `(x', y') = (x⋅cos(θ) - y⋅sin(θ), x⋅sin(θ) + y⋅cos(θ))`
 
 ---
 
-![large](http://fondinfo.github.io/images/games/lightsout.svg)
+![](http://fondinfo.github.io/images/games/lightsout.svg)
 # Lights out
 
 - Gioco basato su una griglia di luci
@@ -557,7 +557,7 @@ In generale: `(x', y') = (x⋅cos(θ) - y⋅sin(θ), x⋅sin(θ) + y⋅cos(θ))`
 
 ---
 
-![](http://fondinfo.github.io/images/misc/lightsout.svg)
+![](http://fondinfo.github.io/images/games/ogre.svg)
 # La stanza del mostro
 
 - Gioco `BoardGame` su matrice $w×h$
@@ -573,11 +573,13 @@ In generale: `(x', y') = (x⋅cos(θ) - y⋅sin(θ), x⋅sin(θ) + y⋅cos(θ))`
 
 # Alfieri
 
-- Su scacchiera $8×8$ (o in generale $w×h$) vengono posizionati casualmente $n$ alfieri
+- Su scacchiera $8×8$ (o in generale $w×h$)
+    - Posizionati casualmente $n$ alfieri
     - In modo che non si sovrappongano
     - Parametri chiesti all'utente all'avvio
 - Visualizzare a console la scacchiera con gli alfieri
-- Evidenziando anche tutte le celle ``sicure'', in cui nessun alfiere può arrivare
+- Evidenziando anche tutte le celle *sicure*
+    - Celle in cui nessun alfiere può arrivare
 
 >
 
