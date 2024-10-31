@@ -499,7 +499,7 @@ In ogni posizione, calcolare il carattere da visualizzare: `x * ROWS + y`...
 
 ---
 
-![](http://fondinfo.github.io/images/fun/neighborhood4.png)
+![](http://fondinfo.github.io/images/repr/neighborhood4.svg)
 # Funzione di smooth
 
 - Scrivere una funzione `smooth`
