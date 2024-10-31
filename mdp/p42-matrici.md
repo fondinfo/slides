@@ -584,3 +584,82 @@ In generale: `(x', y') = (x⋅cos(θ) - y⋅sin(θ), x⋅sin(θ) + y⋅cos(θ))`
 >
 
 Gli alfieri si muovono di un numero qualsiasi di passi in diagonale
+
+---
+
+![](images/misc/resistors.png) `$$R_{ser} = \sum_i R_i$$` `$$\frac{1}{R_{par}} = \sum_i \frac{1}{R_i}$$`
+# Resistenze da file
+
+- Leggere da un file una sequenza di valori di resistenze elettriche
+- Ogni riga contiene un valore
+- Alla fine, visualizzare la resistenza equivalente, sia nel caso di resistenze disposte in serie, che in parallelo
+
+>
+
+<https://fondinfo.github.io/play/?c03_resistors.py>
+
+---
+
+![](images/misc/histogram.svg)
+# Sequenza di valori
+
+- Chiedere all'utente il nome di un file
+- Ciascuna riga del file contiene un valore `float`
+- Cercare il valore minimo e quello massimo nel file
+- Visualizzare i due valori
+
+---
+
+![](http://fondinfo.github.io/images/misc/merge-sign.png)
+# Fusione
+
+- Due file di testo contengono sequenze di numeri
+    - Un valore per ogni riga
+    - In ciascun file, i valori sono già ordinati
+- Scrivere in output i valori di entrambi i file
+    - Sequenza di output tutta in ordine
+
+>
+
+Ciclicamente, confrontare la coppia dei primi valori (ciascuno proveniente da uno dei due stream)
+<br>
+Scrivere il minore dei due sul file di uscita
+<br>
+Non estrarre un nuovo valore da uno stream, se quello precedente non è ancora stato scritto in output
+
+---
+
+# Diagonale in CSV
+
+- Leggere una matrice di interi da un file testuale CSV
+    - *Comma Sep. Values*: valori riga per riga, separati da virgola
+
+``` text
+5,7,2,11
+1,3,12,9
+4,6,10,8
+```
+
+- Memorizzare i dati in una lista semplice
+    - Contare: num. righe del file, num. valori in una riga
+- Elevare a quadrato valori su diagonale, da basso destra
+    - Nell'esempio: `8`, `12`, `7` (celle dove `cols-x == rows-y`)
+- Salvare in CSV la matrice modificata
+
+---
+
+![](images/misc/pac-man.png)
+# Mappe per Pac-Man
+
+- Classe `PacMan` da `Turtle` dell'es. `bounce`
+    - Dimensione `PacMan`: 16×16 pixel
+- I muri sono indicati in una mappa
+    - Lista di stringhe (righe)
+    - Ogni carattere della mappa: blocchetto di 8×8 pixel
+- Impedire il passaggio sui muri
+    - Controllo prima del movimento
+- Ignorare comandi da tastiera che inviano su muro
+
+>
+
+<https://fondinfo.github.io/play/?c08_pacman.py>
