@@ -346,6 +346,8 @@ def read_csv(filename: str) -> tuple[list[int], int, int]:
     return data, len(data) // (rows or 1), rows
 ```
 
+- [Modulo `csv`](https://docs.python.org/3/library/csv.html) per file più complessi (testo tra virgolette ecc.)
+
 ---
 
 # 🧪 Modulo csv
@@ -355,6 +357,7 @@ import csv
 matrix = []
 with open("some.csv") as f:
     reader = csv.reader(f)
+    column_names = next(reader)  # 1st row
     for row in reader:
         matrix.append(row)
 print(matrix)
@@ -365,7 +368,6 @@ with open("some.csv", "w") as f:
         writer.writerow(row)
 ```
 
-- [Modulo `csv`](https://docs.python.org/3/library/csv.html) per file più complessi (testo tra virgolette ecc.)
 - Lettura di default: ogni riga, `list[str]`
 - Scrittura di default: virgolette aggiunte solo se necessario
 
