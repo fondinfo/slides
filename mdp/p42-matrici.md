@@ -346,11 +346,11 @@ def read_csv(filename: str) -> tuple[list[int], int, int]:
     return data, len(data) // (rows or 1), rows
 ```
 
-- [Modulo `csv`](https://docs.python.org/3/library/csv.html) per file più complessi (testo tra virgolette ecc.)
-
 ---
 
 # 🧪 Modulo csv
+
+- [Modulo `csv`](https://docs.python.org/3/library/csv.html) per file più complessi (testo tra virgolette ecc.)
 
 ``` py
 import csv
@@ -358,18 +358,15 @@ matrix = []
 with open("some.csv") as f:
     reader = csv.reader(f)
     column_names = next(reader)  # 1st row
-    for row in reader:
+    for row in reader:  # each row is a `list[str]`
         matrix.append(row)
 print(matrix)
 
 with open("some.csv", "w") as f:
     writer = csv.writer(f)
     for row in matrix
-        writer.writerow(row)
+        writer.writerow(row)  # quotes are added, where needed
 ```
-
-- Lettura di default: ogni riga, `list[str]`
-- Scrittura di default: virgolette aggiunte solo se necessario
 
 ---
 
