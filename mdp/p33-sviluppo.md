@@ -269,7 +269,7 @@ except ZeroDivisionError:
 
 ---
 
-![large](http://fondinfo.github.io/images/dev/v-model.png)
+![large](http://fondinfo.github.io/images/dev/v-model.svg)
 # 🌱 Verifica e validazione
 
 - Mostrare che il sistema...
