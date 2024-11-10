@@ -236,27 +236,6 @@ if __name__ == '__main__':
 
 ---
 
-# 🧪 Esecuzione dei test
-
-- Meccanismi per definire i test da eseguire e organizzare i risultati
-- Esecuzione di test dalla linea di comando
-    - Inclusione dei test di un modulo, di una classe, o metodi di test specifici
-    - Semplice forma di *test discovery*, per moduli “`test*.py`”
-
-``` sh
-python -m unittest test_module1 test_module2
-python -m unittest *test.py
-python -m unittest test_module.TestClass
-python -m unittest test_module.TestClass.test_method
-python -m unittest discover
-```
-
-- Annotazione `@unittest.skip("reason for skipping")`
-    - Indica al framework di ignorare un certo metodo di test
-    - Messaggio per documentare la decisione
-
----
-
 # 🧪 Test parametrizzati
 
 - Ripetere un test con diversi parametri
@@ -383,6 +362,27 @@ class SimpleBallTest(unittest.TestCase):
         self.b2 = Ball((40, 80))
         self.b3 = Ball((120, 20))
 ```
+
+---
+
+# 🧪 Esecuzione dei test
+
+- Meccanismi per definire i test da eseguire e organizzare i risultati
+- Esecuzione di test dalla linea di comando
+    - Inclusione dei test di un modulo, di una classe, o metodi di test specifici
+    - Semplice forma di *test discovery*, per moduli “`test*.py`”
+
+``` sh
+python -m unittest test_module1 test_module2
+python -m unittest *test.py
+python -m unittest test_module.TestClass
+python -m unittest test_module.TestClass.test_method
+python -m unittest discover
+```
+
+- Annotazione `@unittest.skip("reason for skipping")`
+    - Indica al framework di ignorare un certo metodo di test
+    - Messaggio per documentare la decisione
 
 ---
 
