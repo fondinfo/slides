@@ -118,6 +118,7 @@ def f():
 
 ---
 
+![](http://fondinfo.github.io/images/dev/black-box.svg)
 # ⭐ Black box testing
 
 - Sistema = scatola nera; si verificano le corrispondenze di input e output
