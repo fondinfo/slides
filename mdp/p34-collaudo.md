@@ -229,7 +229,7 @@ class SimpleTest(TestCase):
         b.move()
         self.assertTrue(b.pos() == (MAX_X - 4, MAX_Y - 4))
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
 ```
 
