@@ -15,7 +15,7 @@
 
 ---
 
-![large](http://fondinfo.github.io/images/dev/v-model.png)
+![large](http://fondinfo.github.io/images/dev/v-model.svg)
 # ⭐ Classificazione dei test
 
 - Tipi di test
