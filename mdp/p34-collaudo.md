@@ -121,9 +121,11 @@ def f():
 ![large](http://fondinfo.github.io/images/dev/black-box.svg)
 # ⭐ Black box testing
 
-- Sistema = scatola nera; si verificano le corrispondenze di input e output
-    - White-box testing: impossibile per grandi sistemi
-    - Test case scelti in base alle specifiche dei requisiti
+- White-box testing:
+    - Impossibile per grandi sistemi
+- ⇒ Sistema = scatola nera
+    - Test case da specifiche dei requisiti
+    - Verifica di corrispondenze tra input e output
 - Desiderata: trovare errori...
     - *Funzionali* : risultati corretti, per dati input di un metodo?
     - *Interfaccia* : dati passati correttamente tra i metodi?
@@ -216,15 +218,16 @@ def swap_elements(v: list, i: int, j: int):
 
 ``` py
 import unittest
-from p05_bounce import Ball
+from c06_ball import Ball, ARENA_W, ARENA_H, BALL_W, BALL_H
 
-class SimpleBallTest(unittest.TestCase):
+MAX_X, MAX_Y = ARENA_W - BALL_W, ARENA_H - BALL_H
 
-    def test_corner(self):  # …
-        ball = Ball((460, 340))  # dx = 4, dy = 4
-        ball.move(arena)  # dx = -4, dy = -4
-        ball.move(arena)
-        self.assertEqual(ball.pos(), (452, 332))
+class SimpleTest(TestCase):
+
+    def test_corner(self):
+        b = Ball(MAX_X, MAX_Y)  # dx = 4, dy = 4
+        b.move()
+        self.assertTrue(b.pos() == (MAX_X - 4, MAX_Y - 4))
 
 if __name__ == '__main__':
     unittest.main()
@@ -255,16 +258,17 @@ if __name__ == '__main__':
 ``` py
 class ParamBallTest(unittest.TestCase):
 
-    def test_move(self): # …
-        test_values = ( (40, 80, 44, 84),
-                        (40, 215, 44, 219),
-                        (40, 340, 44, 336),
-                        (295, 80, 299, 84),
-                        (460, 80, 456, 84) )
+    def test_move(self):
+        test_values = [ (40, 80, 44, 84),
+                        (40, MAX_Y - 4, 44, MAX_Y),
+                        (40, MAX_Y, 44, MAX_Y - 4),
+                        (MAX_X - 4, 80, MAX_X, 84),
+                        (MAX_X, 80, MAX_X - 4, 84) ]
+
         for param in test_values:
             x0, y0, x1, y1 = param
             b = Ball(x0, y0)
-            b.move(arena)
+            b.move()
             self.assertTrue(b.pos() == (x1, y1))
 ```
 
@@ -278,7 +282,11 @@ class ParamBallTest(unittest.TestCase):
 class ParamBallTest(unittest.TestCase):
 
     def test_move(self):
-        test_values = ()  # same values...
+        test_values = [ (40, 80, 44, 84),
+                        (40, MAX_Y - 4, 44, MAX_Y),
+                        (40, MAX_Y, 44, MAX_Y - 4),
+                        (MAX_X - 4, 80, MAX_X, 84),
+                        (MAX_X, 80, MAX_X - 4, 84) ]
 
         for param in test_values:
             with self.subTest(param=param):
