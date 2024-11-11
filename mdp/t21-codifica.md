@@ -433,21 +433,18 @@ y >> shift  # y = y / (2 ** shift)
 # Uguaglianza tra float
 
 - Approssimazione discreta dei reali
-    - ⚠️ Attenzione ai confronti di uguaglianza
+- ⚠️ Attenzione ai confronti di uguaglianza
 
 ``` py
 >>> 0.2 + 0.1 == 0.3
 False
 ```
 
-- Seno e coseno : cateti di triangolo rettangolo, ipotenusa unitaria
-    - Seguente confronto fallisce ~¼ delle volte
-
 ``` py
-import math
+from math import radians, sin, cos
 for i in range(360):
-    a = math.radians(i)
-    print(math.sin(a) ** 2 + math.cos(a) ** 2 == 1)
+    a = radians(i)
+    print(sin(a) ** 2 + cos(a) ** 2 == 1)  # fails ¼ of times
 ```
 
 - *Soluzioni* : confronti di *prossimità*
