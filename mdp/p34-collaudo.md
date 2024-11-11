@@ -235,7 +235,7 @@ if __name__ == '__main__':
 
 >
 
-<https://fondinfo.github.io/play/?c21_bouncetest.py>
+<https://fondinfo.github.io/play/?c21_simpletest.py>
 
 ---
 
