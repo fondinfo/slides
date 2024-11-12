@@ -430,7 +430,7 @@ y >> shift  # y = y / (2 ** shift)
 
 ---
 
-# Uguaglianza tra float
+# Uguaglianza e prossimità
 
 - Approssimazione discreta dei reali
 - ⚠️ Attenzione ai confronti di uguaglianza
@@ -441,13 +441,12 @@ False
 ```
 
 ``` py
-from math import radians, sin, cos
 for i in range(360):
-    a = radians(i)
-    print(sin(a) ** 2 + cos(a) ** 2 == 1)  # fails ¼ of times
+    a = math.radians(i)
+    print(math.sin(a) ** 2 + math.cos(a) ** 2 == 1)  # fails ~¼ of times
 ```
 
-- *Soluzioni* : confronti di *prossimità*
+- *Soluzioni* : confronti di *prossimità* — 👉 [`isclose`](https://docs.python.org/3/library/math.html#math.isclose)
 
 ```
 >>> abs(x - y) <= 10 ** -9
