@@ -213,6 +213,8 @@ function minimax( node, depth, maximizingPlayer ) is
 # Codice Negamax
 
 ``` code
+(* color ∈ {-1, 1} *)
+
 function negamax(node, depth, color) is
     if depth = 0 or node is a terminal node then
         return color × the heuristic value of node
@@ -368,12 +370,12 @@ function negamax(node, depth, color) is
 
 # Utilità e soglie
 
-- La ricerca alpha-beta aggiorna i valori di $\alpha$ e $\beta$ a ogni nodo
+- La ricerca alpha-beta aggiorna i valori di `$\alpha$` e `$\beta$` a ogni nodo
 - Pota i rami
 - Cioè, termina le chiamate ricorsive
 - Quando determina che il valore dell'attuale nodo
-- Sia peggiore di quello di $\alpha$, per *Max*, o...
-- Sia peggiore di quello di $\beta$, per *Min*
+- Sia peggiore di quello di `$\alpha$`, per *Max*, o...
+- Sia peggiore di quello di `$\beta$`, per *Min*
 
 ---
 
