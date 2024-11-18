@@ -410,7 +410,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](http://fondinfo.github.io/images/fun/anagram.svg)
+![](http://fondinfo.github.io/images/fun/elvis-lives.svg)
 # Anagrammi
 
 - Generare tutti gli anagrammi (permutazioni) di una stringa
@@ -426,7 +426,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 ---
 
-![](http://fondinfo.github.io/images/fun/hanoi-tower.png)
+![](http://fondinfo.github.io/images/fun/hanoi-tower.png) ![](http://fondinfo.github.io/images/fun/hanoi.svg)
 # Torre di Hanoi
 
 - Tre paletti + N dischi di diametro decrescente
