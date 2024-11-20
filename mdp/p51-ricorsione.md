@@ -520,3 +520,18 @@ print(prod2.prefix())
 - Mostrare il valore dell'espressione, usando `eval`
 - Mostrare la rappresentazione infissa, usando `infix`
     - Aggiungere un metodo `infix` a **Expression**
+
+---
+
+# Stringhe in liste annidate
+
+- Creare un albero di stringhe
+    - Struttura a liste annidate
+
+``` py
+tree = [["spam"], [["egg", "sausage"], [], "spam"]]
+```
+
+- Scrivere una funzione che trova la stringa più lunga
+    - In albero, passato come parametro
+    - In caso di lista vuota, restituire `""`
