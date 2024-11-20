@@ -308,8 +308,6 @@ Stringa palindroma: se ha lunghezza 0 o 1, oppure...
 Prima lettera == ultima lettera e...
 <br>
 Stringa rimanente (senza prima e ultima lettera) palindroma
-<br>
-<https://fondinfo.github.io/play/?c11_palindrome.py>
 
 ---
 
@@ -327,10 +325,6 @@ Stringa rimanente (senza prima e ultima lettera) palindroma
     - Liv. `2`: `1` riquadro grande e `3` più? piccoli
     - Liv. `3`: `1+3+9` riquadri, ecc.
 
->
-
-<https://fondinfo.github.io/play/?c11_sierpinski.py>
-
 ---
 
 ![](http://fondinfo.github.io/images/fun/fractal-tree.png)
@@ -346,10 +340,6 @@ Stringa rimanente (senza prima e ultima lettera) palindroma
     - 1° ramo, con rotazione di -30°
     - 2° ramo, con rotazione di +30°
     - Lunghezza dei rami ridotta a 4/5 del parametro
-
->
-
-<https://fondinfo.github.io/play/?c11_drawtree.py>
 
 ---
 
@@ -367,8 +357,6 @@ Provare a usare sia l'iterazione che la ricorsione
 Euclide: MCD(a, b) = a, se b = 0;
 <br>
 MCD(a, b) = MCD(b, a mod b), se b > 0
-<br>
-<https://fondinfo.github.io/play/?c11_gcd.py>
 
 ---
 
@@ -385,8 +373,6 @@ MCD(a, b) = MCD(b, a mod b), se b > 0
 >
 
 <https://en.wikipedia.org/wiki/Bisection_method>
-<br>
-<https://fondinfo.github.io/play/?c11_bisection.py>
 
 ---
 
@@ -405,8 +391,6 @@ MCD(a, b) = MCD(b, a mod b), se b > 0
 >
 
 Saranno accettate esclusivamente le soluzioni ricorsive
-<br>
-<https://fondinfo.github.io/play/?c11_words.py>
 
 ---
 
@@ -419,10 +403,6 @@ Saranno accettate esclusivamente le soluzioni ricorsive
     - Stringa vuota: solo se stessa
     - Altrimenti: per ogni carattere...
     - Concatenarlo con tutte le permutazioni dei rimanenti caratteri (*ricorsione*)
-
->
-
-<https://fondinfo.github.io/play/?c11_anagram.py>
 
 ---
 
@@ -444,8 +424,6 @@ N dischi: spostarne N-1 sul piolo né origine né dest.,
 spostare l'ultimo disco sul piolo giusto,
 <br>
 spostare ancora gli altri N-1 dischi.
-<br><br>
-<https://fondinfo.github.io/play/?c11_hanoi.py>
 
 ---
 
@@ -463,8 +441,6 @@ spostare ancora gli altri N-1 dischi.
 >
 
 Supporre che i “token” siano tutti separati da spazio e che gli operatori abbiano tutti cardinalità fissa
-<br>
-<https://fondinfo.github.io/play/?c12_polish.py>
 
 ---
 
@@ -477,10 +453,6 @@ Supporre che i “token” siano tutti separati da spazio e che gli operatori ab
 - Creare una gerarchia delle tre classi: `Node`, `Document`, `Folder`
 - Nel corpo principale del programma, istanziare e organizzare vari nodi (senza input dell'utente)
     - Ricreare con gli oggetti la struttura raffigurata a fianco
-
->
-
-<https://fondinfo.github.io/play/?c12_folders.py>
 
 ---
 
@@ -499,10 +471,6 @@ Supporre che i “token” siano tutti separati da spazio e che gli operatori ab
     - Mostra il nome di documenti e cartelle
     - Indenta opportunamente i nodi, rispetto alla cartella che li contiene
 
->
-
-<https://fondinfo.github.io/play/?c12_folders.py>
-
 ---
 
 ![](http://fondinfo.github.io/images/comp/expression.svg)
@@ -518,10 +486,6 @@ Supporre che i “token” siano tutti separati da spazio e che gli operatori ab
 - Istanziare (senza fare *parsing*!) oggetti per rappresentare questa espressione:
     - `5 * (3 * 2 + 4)`
 - Calcolare il valore finale, chiamando `eval` sul nodo radice
-
->
-
-<https://fondinfo.github.io/play/?c12_expr.py>
 
 ---
 
@@ -544,8 +508,6 @@ print(prod2.prefix())
 >
 
 <https://it.wikipedia.org/wiki/Notazione_polacca>
-<br>
-<https://fondinfo.github.io/play/?c12_expr.py>
 
 ---
 
@@ -558,7 +520,3 @@ print(prod2.prefix())
 - Mostrare il valore dell'espressione, usando `eval`
 - Mostrare la rappresentazione infissa, usando `infix`
     - Aggiungere un metodo `infix` a **Expression**
-
->
-
-<https://fondinfo.github.io/play/?c12_parse.py>
