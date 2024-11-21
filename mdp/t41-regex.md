@@ -95,7 +95,7 @@
 - *Unione*
     - `$L_1 \cup L_2 := \{x \in \Sigma^\star : x \in L_1 \lor x \in L_2\}$`
 - *Intersezione*
-    - `$L_1 \cap L_1 := \{x \in \Sigma^\star : x \in L_1 \land x \in L_2\}$`
+    - `$L_1 \cap L_2 := \{x \in \Sigma^\star : x \in L_1 \land x \in L_2\}$`
 - *Complementazione* : ``
     - `$L^c := \{x \in \Sigma^\star : x \notin L\}$`
 

@@ -104,7 +104,7 @@ Vedremo che `$P_3$` rende la grammatica di tipo 0, RE
 # 🧪 Alberi di derivazione (sintattici)
 
 - Esempio di grammatica **ambigua** per notazione **infissa**: <br> due interpretazioni valide per `2 + 3 * 3`
-    - `$V_t := \{0, 1, 2... 9, +, *, (, )\},  V_n := \{E\}$`
+    - `$V_t := \{0, 1, 2... 9, +, *, (, )\},  V_n := \{E, N, D\}$`
     - `$E \to E + E | E * E | ( E ) | N$`
     - `$N \to D N | D \\ D \to 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9$`
 
