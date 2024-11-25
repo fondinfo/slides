@@ -98,7 +98,7 @@ $q_3$         | $q_2$ | $q_1$
 
 >
 
-<https://tomamic.github.io/pyodide//?t43_fsm.py>
+<https://fondinfo.github.io/pyodide//?c19_fsm.py>
 
 ---
 
@@ -177,7 +177,7 @@ $\delta'$        | $a$        | $b$
 
 >
 
-<https://tomamic.github.io/pyodide//?t43_nfsm.py>
+<https://fondinfo.github.io/play/?c19_nfsm.py>
 
 ---
 
@@ -294,7 +294,7 @@ $q_2$ |         |          |          |       |                   |
 
 >
 
-<https://tomamic.github.io/pyodide//?t43_pda.py>
+<https://fondinfo.github.io/play/?c19_pda.py>
 
 ---
 
