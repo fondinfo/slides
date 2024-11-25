@@ -98,7 +98,7 @@ $q_3$         | $q_2$ | $q_1$
 
 >
 
-<https://fondinfo.github.io/pyodide//?c19_fsm.py>
+<https://fondinfo.github.io/pyodide/?c19_fsm.py>
 
 ---
 
