@@ -1,11 +1,11 @@
 
-![](/images/comp/attack.svg)
+![](http://fondinfo.github.io/images/comp/attack.svg)
 # Regex
 ## Introduzione all'informatica <br> Michele Tomaiuolo @ Ingegneria UniPR
 
 ---
 
-![](/images/comp/tangible.jpg)
+![](http://fondinfo.github.io/images/comp/tangible.jpg)
 # 💡️ Linguaggi formali
 
 - Presenti in tutte le applicazioni
@@ -38,7 +38,7 @@
 
 ---
 
-![](/images/comp/roman-nums-clock.jpg) ![large](/images/comp/roman-nums-table.png)
+![](http://fondinfo.github.io/images/comp/roman-nums-clock.jpg) ![large](http://fondinfo.github.io/images/comp/roman-nums-table.png)
 # 🧪 Numeri romani
 
 - Alfabeto
@@ -147,7 +147,7 @@
 
 # 💡️ Save the day with regex
 
-![large](/images/comp/regex-xkcd.png)
+![large](http://fondinfo.github.io/images/comp/regex-xkcd.png)
 
 ---
 
@@ -160,7 +160,7 @@
 - Ripetizioni (0+, 1+, 0-1): `goo*al`, `go+al`, `goo?al`
 - Sottoespressione: `(left right )*halt`
 
-![](/images/comp/perl-problems.png)
+![](http://fondinfo.github.io/images/comp/perl-problems.png)
 
 ---
 
@@ -212,7 +212,7 @@
 
 ---
 
-![large](/images/comp/codice-fiscale.png)
+![large](http://fondinfo.github.io/images/comp/codice-fiscale.png)
 # 🧪 Regex in HTML
 
 ``` html

@@ -1,10 +1,10 @@
-![](/images/sys/hatred-pc.png)
+![](http://fondinfo.github.io/images/sys/hatred-pc.png)
 # Sistemi operativi
 ## Introduzione all'informatica
 
 ---
 
-![](/images/sys/opsys.svg)
+![](http://fondinfo.github.io/images/sys/opsys.svg)
 # Sistema operativo
 
 - Avviato automaticamente all'accensione
@@ -17,7 +17,7 @@
 
 # Sistema operativo a cipolla
 
-![large](/images/sys/onion.svg)
+![large](http://fondinfo.github.io/images/sys/onion.svg)
 
 ---
 
@@ -35,7 +35,7 @@
 
 ---
 
-![large](/images/sys/process-lifecycle.svg)
+![large](http://fondinfo.github.io/images/sys/process-lifecycle.svg)
 # Scheduling
 
 - CPU singola: non reale parallelismo (in un dato istante, un solo processo in esecuzione)
@@ -47,7 +47,7 @@
 
 ---
 
-![](/images/sys/threads.svg)
+![](http://fondinfo.github.io/images/sys/threads.svg)
 # Thread di esecuzione
 
 - Più piccola unità di istruzioni che può essere schedulata dal S.O.
@@ -58,7 +58,7 @@
 
 ---
 
-![](/images/sys/deadlock.svg) Deadlock
+![](http://fondinfo.github.io/images/sys/deadlock.svg) Deadlock
 # Parallelismo e concorrenza
 
 - Parallelismo
@@ -77,7 +77,7 @@
     - Gestione della gerarchia di memoria primaria/secondaria
     - Libera programma (e programmatore) da dim memoria fisica
 
-![large](/images/sys/mem-architecture.svg)
+![large](http://fondinfo.github.io/images/sys/mem-architecture.svg)
 
 ---
 
@@ -95,7 +95,7 @@
 
 ---
 
-![](/images/sys/peripherals.svg)
+![](http://fondinfo.github.io/images/sys/peripherals.svg)
 # Gestione periferiche
 
 - Procedure I/O ad alto livello per interazione tra programmi e periferiche
@@ -109,7 +109,7 @@
 
 ---
 
-![](/images/games/indexup.svg)
+![](http://fondinfo.github.io/images/games/indexup.svg)
 # Interruzione
 
 - Necessario un meccanismo per:
@@ -123,7 +123,7 @@
 
 ---
 
-![](/images/repr/file-system.svg)
+![](http://fondinfo.github.io/images/repr/file-system.svg)
 # Altre funzionalità
 
 - **File system**: organizzazione logica dei dati in strutture ad albero

@@ -1,15 +1,15 @@
-![](/images/fun/hanoi-tower.png)
+![](http://fondinfo.github.io/images/fun/hanoi-tower.png)
 # Logica matematica
 ## Introduzione all'informatica <br> Michele Tomaiuolo @ Ingegneria UniPR
 
 ---
 
-![](/images/repr/hair-logic.svg)
+![](http://fondinfo.github.io/images/repr/hair-logic.svg)
 # Algebra di Boole
 
 ---
 
-![](/images/hist/boole.jpg) George Boole, 1815-1864
+![](http://fondinfo.github.io/images/hist/boole.jpg) George Boole, 1815-1864
 # 💡️ Algebra di Boole
 
 - L’algebra di Boole è un formalismo che opera su variabili (dette *variabili booleane*)
@@ -249,7 +249,7 @@ big_enough = radius > 50  # rhs expression holds the value, already
 
 ---
 
-![](/images/repr/logical-problem.png)
+![](http://fondinfo.github.io/images/repr/logical-problem.png)
 # 💡️ Connettivi logici
 
 - In logica, operatori booleani per *legare* proposizioni in forma più complessa
@@ -489,7 +489,7 @@ Premesse | Conclusione
 
 ---
 
-![](/images/hist/plato-aristotle.jpg) Platone e Aristotele <br> ~350 a.C.
+![](http://fondinfo.github.io/images/hist/plato-aristotle.jpg) Platone e Aristotele <br> ~350 a.C.
 # 🧪 Sillogismi aristotelici
 
 - Modus ponens con quantificatori
@@ -533,7 +533,7 @@ De Morgan | `$(A \cap B)' = A' \cup B'$` | `$\lnot (P \land Q) \equiv \lnot P \l
 
 ---
 
-![large](/images/comp/domino.svg)
+![large](http://fondinfo.github.io/images/comp/domino.svg)
 # ⭐ Principio di induzione
 
 - Sia `$P(n)$` un predicato definito su `$ℕ$`, tale che:
@@ -565,7 +565,7 @@ Alcuni predicati sono definiti a partire da un dato `$k$`, anzichè da 1
 
 ---
 
-![](/images/fun/hanoi-strategy-1.png)
+![](http://fondinfo.github.io/images/fun/hanoi-strategy-1.png)
 # 🧪 Esempio, Torre di Hanoi
 
 - *Regola 1*: Spostare solo un disco alla volta
@@ -583,7 +583,7 @@ Alcuni predicati sono definiti a partire da un dato `$k$`, anzichè da 1
 
 ---
 
-![](/images/repr/homer-genius.png)
+![](http://fondinfo.github.io/images/repr/homer-genius.png)
 # ⚠️ Sillogismi errati e quiz
 
 - *Premessa maggiore*: “Tutti i geni sono distratti”
