@@ -286,7 +286,7 @@ def insertion_sort(v: list, beg, end, mid=1):
 
 ---
 
-![large](http://fondinfo.github.io/images/comp/quick-sort-pivot.svg) ![large](http://fondinfo.github.io/images/comp/quick-sort.png)
+![large](http://fondinfo.github.io/images/comp/quick-sort.svg) ![large](http://fondinfo.github.io/images/comp/quick-sort.png)
 # 🧪 Quick Sort
 
 ``` py
