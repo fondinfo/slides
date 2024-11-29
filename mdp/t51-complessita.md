@@ -310,7 +310,7 @@ def quick_sort(v: list, beg, end):
 
 ---
 
-![large](http://fondinfo.github.io/images/comp/quick-sort-best.png)
+![large](http://fondinfo.github.io/images/comp/quick-sort-best.svg)
 # ⭐ Quick Sort caso migliore
 
 - ➊ Si sceglie un valore `pivot` (ultimo?)
@@ -326,7 +326,7 @@ def quick_sort(v: list, beg, end):
 
 ---
 
-![large](http://fondinfo.github.io/images/comp/quick-sort-worst.png)
+![large](http://fondinfo.github.io/images/comp/quick-sort-worst.svg)
 # ⭐ Quick Sort caso peggiore
 
 - Complessità *caso peggiore* : **`$O(n^2)$`**
