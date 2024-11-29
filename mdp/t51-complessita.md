@@ -337,7 +337,7 @@ def quick_sort(v: list, beg, end):
 
 ---
 
-![large](http://fondinfo.github.io/images/comp/merge.svg)
+![](http://fondinfo.github.io/images/comp/merge.svg)
 # 🧪 Merge, con appoggio
 
 - Merge tra liste *ordinate* : costo **lineare**
