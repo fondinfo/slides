@@ -93,7 +93,7 @@ Palette (RGBQUAD)
 
 # 🧪 Es. Redbrick.BMP
 
-![large](http://fondinfo.github.io/images/repr/redbrick-dump.png)
+![large](http://fondinfo.github.io/images/repr/redbrick-dump.svg)
 
 - Ogni riga occupa sempre un multiplo di 4 byte (con *padding*)
 - Dimensione file: `$54 + 4\cdot colors + ⌈w\cdot bpp / 32⌉\cdot 4\cdot h$` byte
