@@ -223,7 +223,7 @@ for y, row in enumerate(reversed(image)):
 
 >
 
-<http://tomamic.github.io/data/svg-example.html>
+<http://fondinfo.github.io/data/svg-example.html>
 
 ---
 
@@ -265,7 +265,7 @@ for y, row in enumerate(reversed(image)):
 
 <http://soundfile.sapp.org/doc/WaveFormat/>
 <br>
-<http://tomamic.github.io/data/tada.wav>
+<http://fondinfo.github.io/data/tada.wav>
 
 ---
 
@@ -331,7 +331,7 @@ for y, row in enumerate(reversed(image)):
 
 >
 
-<http://tomamic.github.io/data/html-example.html>
+<http://fondinfo.github.io/data/html-example.html>
 
 ---
 
