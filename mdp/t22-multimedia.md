@@ -87,26 +87,34 @@ Palette (RGBQUAD)
 4   Blue, Green, Red, Riservato
 ```
 
-- Normale header: $54$ byte – Ogni colore in palette: $4$ byte
-
 ---
 
+![small](http://fondinfo.github.io/images/repr/redbrick-grid.png)
+[http://fondinfo.github.io/ <br> data/redbrick.bmp](http://fondinfo.github.io/data/redbrick.bmp)
 # 🧪 Es. Redbrick.BMP
 
 ![](http://fondinfo.github.io/images/repr/redbrick-dump.svg)
 
->
-
-<http://tomamic.github.io/data/redbrick.bmp>
-
 ---
 
+![small](http://fondinfo.github.io/images/repr/redbrick-grid.png)
+![small](http://fondinfo.github.io/images/repr/redbrick-palette.svg)
 # 🧪 Es. Redbrick.BMP
 
-![large](http://fondinfo.github.io/images/repr/redbrick-scan.png)
+```
+row 0, scanline 31  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+row 1, scanline 30  00 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00
+row 2, scanline 29  11 11 01 19 11 01 10 10 09 09 01 09 11 11 01 90
+...
+row 31, scanline 0  99 99 99 99 99 99 99 99 99 99 99 99 99 99 99 90
+```
 
+- Normale header: $54$ byte
+- Ogni colore in palette: $4$ byte
 - Ogni riga occupa sempre un multiplo di 4 byte (con *padding*)
-- Dimensione file: `$54 + 4\cdot colors + ⌈w\cdot bpp / 32⌉\cdot 4\cdot h$` byte
+- Dimensione file, in byte
+
+$$54 + 4\cdot colors + ⌈w\cdot bpp / 32⌉\cdot 4\cdot h$$
 
 ---
 
