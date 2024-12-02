@@ -93,7 +93,7 @@ Palette (RGBQUAD)
 
 # 🧪 Es. Redbrick.BMP
 
-![large](http://fondinfo.github.io/images/repr/redbrick-dump.svg)
+![](http://fondinfo.github.io/images/repr/redbrick-dump.svg)
 
 >
 
