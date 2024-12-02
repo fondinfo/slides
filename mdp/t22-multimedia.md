@@ -277,7 +277,7 @@ for y, row in enumerate(reversed(image)):
 
 # 🧪 Esempio di file WAV
 
-![large](http://fondinfo.github.io/images/repr/wav-bytes.png)
+![large](http://fondinfo.github.io/images/repr/wav-bytes.svg)
 
 ---
 
