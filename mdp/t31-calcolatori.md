@@ -145,9 +145,9 @@ Grace Hopper, Margaret Hamilton — Donne in corsi CS: 37%, 1983 → 18%, 2013
 - Al termine della fase di *fetch*, IR contiene l'istruzione da eseguire
     - **Codice operativo + operandi**
     - *Linguaggio macchina*: il significato dipende dalla CPU
-- Nell'esempio: **`4`** `010$_{hex}$` = **`0100`** `0000 0001 0000$_{bin}$`
-    - Codice operativo = **`0100$_{bin}$`**
-    - Es. Leggi una parola dal registro delle periferiche...
+- Nell'esempio: **`5`** `012$_{hex}$` = **`0101`** `0000 0001 0010$_{bin}$`
+    - Codice operativo = **`0101$_{bin}$`**
+    - Es. Leggi una parola dal registro accumulatore...
     - E memorizzala in un indirizzo di memoria (operando)
 
 ---
