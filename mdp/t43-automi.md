@@ -68,8 +68,8 @@
 - `$M := <\Sigma, Q, \delta, q_0, F>$`
 - `$\Sigma := \{\sigma_1,\dots,\sigma_m\}$`: alfabeto di input
 - `$Q := \{q_0, \dots, q_n\}$`: insieme finito non vuoto di stati
-- `$F \subseteq Q$`: insieme di stati finali
 - `$q_0 \in Q$`: stato iniziale
+- `$F \subseteq Q$`: insieme di stati finali accettanti
 - `$\delta: Q \times \Sigma \to Q$`: funzione di transizione
     - In base allo *stato* attuale…
     - e al simbolo di *input* attuale…
@@ -268,7 +268,7 @@ for state in states:
 - `$\Gamma := \{z_0, \dots, z_m\}$`: simboli della pila
 - `$z_0 \in \Gamma$`: simbolo di pila iniziale
 - `$Q := \{q_0, \dots, q_k\}$`: insieme finito non vuoto di stati
-- `$q_0 \in Q$`: stato iniziale; `$F \subseteq Q$`: insieme di stati finali
+- `$q_0 \in Q$`: stato iniziale; `$F \subseteq Q$`: stati finali accettanti
 - `$\delta: Q \times \Sigma \times \Gamma \to Q \times \Gamma^\star$`: funzione di transizione
     - In base a stato, simbolo di input, simbolo in cima a pila …
     - Determina stato successivo e simboli inseriti nella pila
@@ -343,7 +343,7 @@ $q_2$ |         |          |          |       |                   |
     - Con *blank*, **`$\$$`**
 - `$Q := \{q_0, \dots, q_m\}$`: insieme finito di stati
 - `$q_0 \in Q$`: stato iniziale
-- `$F \subseteq Q$`: insieme di stati finali
+- `$F \subseteq Q$`: stati finali accettanti
 - `$\delta: Q \times \Sigma → Q \times \Sigma \times \{L, R, N\}$`: f. di transizione
     - Determina la configurazione successiva: <br> stato; simbolo scritto su nastro; spostamento della testina
 
@@ -413,7 +413,7 @@ $q_2$ |         |          |          |       |                   |
     - `$D_m\#x$`: input
     - (`$D_m$`: descrizione della f. di transizione di `$M$`)
 - `$\iff M$` realizza la computazione: `$(q_0, x) \to^\star (\alpha, q_h, \beta)$`
-    - `$q_0$`, stato iniziale; `$q_h$`, stato finale; `$x$`, input
+    - `$q_0$`, stato iniziale; `$q_h$`, stato accettante; `$x$`, input
 - Regole di transizione di `$M$` → Sequenza di quintuple
     - `$D_m := d_1\#\#d_2\#\# \dots \#\#d_n$`
     - `$q_i\#\sigma_j\#q_h\#\sigma_k\#t_l \iff \delta(q_i, \sigma_j) = (q_h, σ_k, t_l)$`
