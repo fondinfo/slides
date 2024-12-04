@@ -59,20 +59,6 @@
 
 ---
 
-# 💡️ Concatenazione di stringhe
-
-- Operazione di concatenazione: `$\cdot$`
-    - Propr. associativa: `$(x \cdot y) \cdot z = x \cdot (y \cdot z)$`
-    - Non commutativa: `$x \cdot y \neq y \cdot x$`
-    - `$\Sigma^\star$` chiuso rispetto a `$\cdot$`: `$\Sigma^\star \times \Sigma^\star \to \Sigma^\star$`
-- Potenza
-    - `$x^n := x \cdot x \cdot x \cdot x \cdots$` (`$n$` volte)
-- Elemento neutro `$ε$`
-    - Stringa vuota, `$\forall x \in \Sigma^\star, ε \cdot x = x \cdot ε = x$`
-- `$<\Sigma^\star, \cdot, ε>$`: monoide
-
----
-
 # 💡️ Definizione di linguaggi
 
 - Approccio **algebrico** : *espressioni regolari*
@@ -98,6 +84,20 @@
     - `$L_1 \cap L_2 := \{x \in \Sigma^\star : x \in L_1 \land x \in L_2\}$`
 - *Complementazione* : ``
     - `$L^c := \{x \in \Sigma^\star : x \notin L\}$`
+
+---
+
+# 💡️ Concatenazione di stringhe
+
+- Operazione di concatenazione: `$\cdot$`
+    - Propr. associativa: `$(x \cdot y) \cdot z = x \cdot (y \cdot z)$`
+    - Non commutativa: `$x \cdot y \neq y \cdot x$`
+    - `$\Sigma^\star$` chiuso rispetto a `$\cdot$`: `$\Sigma^\star \times \Sigma^\star \to \Sigma^\star$`
+- Potenza
+    - `$x^n := x \cdot x \cdot x \cdot x \cdots$` (`$n$` volte)
+- Elemento neutro `$ε$`
+    - Stringa vuota, `$\forall x \in \Sigma^\star, ε \cdot x = x \cdot ε = x$`
+- `$<\Sigma^\star, \cdot, ε>$`: monoide
 
 ---
 
