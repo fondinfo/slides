@@ -352,7 +352,7 @@ for y, row in enumerate(reversed(image)):
 <ul>
   <li>Primo elemento di una lista non ordinata.</li>
   <li>Secondo elemento, <b>in grassetto</b>.</li>
-<ul>
+</ul>
 
 <div class="remark" id="r01">
   Struttura generica di livello blocco, con un
