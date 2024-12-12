@@ -33,8 +33,8 @@
 ``` py
 for y in range(rows):
     for x in range(cols):
-        print(data[x + y * cols], end="\t")
-    print()
+        end_ = "\n" if x == cols - 1 else "\t"
+        print(data[x + y * cols], end=end_)
 ```
 
 - Inizializzare matrice, come lista singola: *list repetition*
@@ -97,11 +97,10 @@ class BoardGame:
 
 ``` py
 def print_game(game: BoardGame):
-    cols, rows = game.size()
-    for y in range(rows):
-        for x in range(cols):
-            print(game.read(x, y), end="\t")
-        print()
+    for y in range(game.rows()):
+        for x in range(game.cols()):
+            end_ = "\n" if x == game.cols() - 1 else "\t"
+            print(game.read(x, y), end=end_)
     print(game.status())
 
 def console_play(game: BoardGame):
