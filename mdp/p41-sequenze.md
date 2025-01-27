@@ -206,7 +206,8 @@ txt = "|".join(days)  # "tue|thu|sat"
 days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
 ```
 
-- Senza parametri, `split` separa in base a sequenze di caratteri bianchi (`" ", "\n", "\t"`…)
+- Senza parametri, `split` separa in base a sequenze di caratteri bianchi
+    - `" ", "\n", "\t"`…
 
 ---
 
