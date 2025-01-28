@@ -321,9 +321,10 @@ with open("shopping_list.txt") as groceries_file:
     - Il “*nastro*” del file avanza sotto la “*testina di lettura*”
 - Alla fine del file, viene letta una stringa vuota
     - Valore *sentinella*
+- Per migliore compatibilità, impostare l'encoding `utf-8`
 
 ``` py
-with open("some_file.txt", "r") as f:
+with open("some_file.txt", "r", encoding="utf-8") as f:
     first_line = f.readline()
     second_line = f.readline()
     remaining_text = f.read()
