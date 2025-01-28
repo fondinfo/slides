@@ -328,7 +328,7 @@ with open("some_file.txt", "r", encoding="utf-8") as f:
     first_line = f.readline()
     second_line = f.readline()
     remaining_text = f.read()
-    # read lines contain '\n' at the end
+    # read lines contain "\n" at the end
 ```
 
 ---
