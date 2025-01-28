@@ -278,7 +278,7 @@ multidim = [[0 for x in range(cols)] for y in range(rows)]
 # ⭐ Scrittura su file
 
 - Funzione **`open`** per accedere a un file (di testo)
-    - Modalità *scrittura* o *lettura*: `"w"`, o `"r"`
+    - Modalità *scrittura* o *lettura*: `"w"`, o `"r"` (default)
 - Blocco **`with`**: alla fine *chiude* il file
     - Anche in caso di errore
     - File di nuovo disponibile per altre app.
@@ -324,7 +324,7 @@ with open("shopping_list.txt") as groceries_file:
 - Per migliore compatibilità, impostare l'encoding `utf-8`
 
 ``` py
-with open("some_file.txt", "r", encoding="utf-8") as f:
+with open("some_file.txt", encoding="utf-8") as f:
     first_line = f.readline()
     second_line = f.readline()
     remaining_text = f.read()
