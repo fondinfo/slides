@@ -827,13 +827,13 @@ Try to use `map`
 ``` py
 import csv
 matrix = []
-with open("some.csv", newline="") as f:
+with open("some.csv") as f:
     reader = csv.reader(f)
     for row in reader:
         matrix.append(row)
 print(matrix)
 
-with open("some.csv", "w", newline="") as f:
+with open("some.csv", "w") as f:
     writer = csv.writer(f)
     for row in matrix
         writer.writerow(row)
