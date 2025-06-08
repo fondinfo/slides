@@ -483,6 +483,36 @@ def tick():
 
 ---
 
+# Modello quadratico
+
+- Creare una classe per rappresentare un modello quadratico a una variabile
+    - Del tipo: $y = a \cdot x^2 + b \cdot x + c$
+    - Inizializzare i coefficienti nel costruttore
+- Definire poi un metodo `predict`, che fornisce l'output $y$ del modello
+    - In corrispondenza di un certo valore di $x$
+    - $x$ passato come parametro
+
+>
+
+Partire dall'esempio di modello lineare
+
+---
+
+# Modello a due variabili
+
+- Creare una classe per rappresentare un modello lineare a due variabili
+    - Del tipo: $z = a \cdot x + b \cdot y + c$
+    - Inizializzare i coefficienti nel costruttore
+- Definire poi un metodo `predict`, che fornisce l'output $z$ del modello
+    - In corrispondenza di un certo valore di $x$ e un certo valore di $y$
+    - $x$ e $y$ passati come parametri
+
+>
+
+Partire dall'esempio di modello lineare
+
+---
+
 ![](http://fondinfo.github.io/images/misc/frogger.png)
 # Animazione di un veicolo
 
