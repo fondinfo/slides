@@ -1,0 +1,31 @@
+# Altri esercizi
+## Introduzione alla programmazione
+
+---
+
+![](http://fondinfo.github.io/images/misc/perfect-squares.svg)
+# Quadrato perfetto
+
+- Chiedere all'utente un numero intero
+- Dire se il numero è un quadrato perfetto
+    - La sua radice quadrata è un numero naturale?
+- In questo caso, comunicare anche la sua radice perfetta
+
+>
+
+Naturalmente, senza usare `math.sqrt`
+
+---
+
+![](http://fondinfo.github.io/images/misc/green-col.svg)
+# Quadrati in colonna
+
+- Chiedere all'utente un numero `n`
+- In un canvas $L\times L$, con $L=500$ predefinito
+- Disegnare una colonna verticale di `n` quadrati
+    - Tutti di uguale dimensione
+    - Sfruttare tutta l'altezza del canvas
+- Il colore varia gradualmente dal nero fino al verde saturo
+    - Dall'alto verso il basso
+- Opzionalmente, lasciare un pixel vuoto tra un quadrato e l'altro
+

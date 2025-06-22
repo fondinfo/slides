@@ -597,6 +597,16 @@ Hello, Adam!
 
 ---
 
+![](http://fondinfo.github.io/images/games/dragon.svg)
+# L'anno del drago
+
+- Il programma chiede all'utente il suo anno di nascita
+- Poi comunica se quell'anno era sotto il segno del drago, oppure no
+- Sappiamo che, secondo la tradizione cinese, il 2024 è l'anno del drago
+- Sappiamo inoltre che il segno si ripete ogni 12 anni
+
+---
+
 ![large](http://fondinfo.github.io/images/algo/holy-grail.jpg)
 # The Bridge of Death
 

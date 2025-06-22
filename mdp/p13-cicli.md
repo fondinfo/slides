@@ -433,17 +433,19 @@ while val != "":
 
 ---
 
-![](http://fondinfo.github.io/images/misc/green-col.svg)
-# Quadrati in colonna
+# Somma di potenze di 2
 
-- Chiedere all'utente un numero `n`
-- In un canvas $L\times L$, con $L=500$ predefinito
-- Disegnare una colonna verticale di `n` quadrati
-    - Tutti di uguale dimensione
-    - Sfruttare tutta l'altezza del canvas
-- Il colore varia gradualmente dal nero fino al verde saturo
-    - Dall'alto verso il basso
-- Opzionalmente, lasciare un pixel vuoto tra un quadrato e l'altro
+- Chiedere all'utente un numero $n$
+- Sommare le prime $n$ potenze di 2
+    - $2^0 + 2^1 + ... + 2^{n-1}$
+- Tenere il conto di un *totale parziale*
+- Verificare risultato con questa formula (sempre di Gauss)
+
+`$$\sum_{k=0}^{n-1} 2^k = 2^n - 1$$`
+
+>
+
+Preferibile `for` o `while`?
 
 ---
 
@@ -457,7 +459,6 @@ while val != "":
     - Coprono tutta la larghezza del canvas
 - Il colore varia gradualmente dal nero fino al blu saturo
     - Da sinistra verso destra
-
 
 ---
 
@@ -491,6 +492,31 @@ In $L$ ci dovranno stare esattamente $n+1$ semilati ($l/2$)
 
 ---
 
+# Distanza dagli angoli
+
+- Chiedere all'utente due numeri $w$ e $h$ (num. colonne e righe)
+- Mostrare due tabelle, ∀ cella $(x, y)$ calcolare distanza di Manhattan
+    1. Rispetto all'angolo in alto a sinistra $(x_0, y_0) = (0, 0)$
+    2. Rispetto all'angolo in basso a sinistra: $(x_0, y_0) = (0, h - 1)$
+
+``` txt
+0 1 2 3
+1 2 3 4
+2 3 4 5
+3 4 5 6
+
+3 4 5 6
+2 3 4 5
+1 2 3 4
+0 1 2 3
+```
+
+>
+
+Distanza di Manhattan: di quante celle bisogna spostarsi in orizzontale e verticale, $|\Delta x| + |\Delta y|$
+
+---
+
 ![](http://fondinfo.github.io/images/misc/resistors.png)
 `$R_s = \Sigma R_i$` <br>
 `$\frac{1}{R_p} = \Sigma \frac{1}{R_i}$`
@@ -500,37 +526,6 @@ In $L$ ci dovranno stare esattamente $n+1$ semilati ($l/2$)
 - Leggere, attraverso un ciclo, una sequenza di valori di resistenze elettriche
 - La sequenza termina quando l'utente immette il valore 0
 - Alla fine, visualizzare la resistenza equivalente, sia nel caso di resistenze disposte in serie, che in parallelo
-
----
-
-
-# Somma di potenze di 2
-
-- Chiedere all'utente un numero $n$
-- Sommare le prime $n$ potenze di 2
-    - $2^0 + 2^1 + ... + 2^{n-1}$
-- Tenere il conto di un *totale parziale*
-- Verificare risultato con questa formula (sempre di Gauss)
-
-`$$\sum_{k=0}^{n-1} 2^k = 2^n - 1$$`
-
->
-
-Preferibile `for` o `while`?
-
----
-
-![](http://fondinfo.github.io/images/misc/perfect-squares.svg)
-# Quadrato perfetto
-
-- Chiedere all'utente un numero intero
-- Dire se il numero è un quadrato perfetto
-    - La sua radice quadrata è un numero naturale?
-- In questo caso, comunicare anche la sua radice perfetta
-
->
-
-Naturalmente, senza usare `math.sqrt`
 
 ---
 
@@ -544,7 +539,7 @@ Naturalmente, senza usare `math.sqrt`
 ---
 
 ![](http://fondinfo.github.io/images/misc/monster.png)
-# 🥷 La stanza del mostro
+# La stanza del mostro
 
 - Il giocatore si muove su una scacchiera di 5x5 celle, partendo da un angolo
     - Le righe e le colonne sono numerate da 0 a 4
@@ -560,3 +555,15 @@ Naturalmente, senza usare `math.sqrt`
 Basta memorizzare tre coppie di coordinate cartesiane
 <br>
 Non è richiesto l'uso della grafica
+
+---
+
+![](http://fondinfo.github.io/images/games/climbing.svg)
+# Free climbing
+
+- Gara tra due arrampicatori, in forma testuale
+- Ripetutamente, generare due numeri casuali
+    - Ciascun numero $∈ [-1, 3]$
+    - Balzo in alto (o piccola discesa) di ciascun giocatore
+    - Il livello di un giocatore non diventa mai $< 0$
+- Vince chi arriva prima in cima (una costante `TOP`)
