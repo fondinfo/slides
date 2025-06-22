@@ -507,7 +507,7 @@ Non usare `math.sqrt` e simili — Risolvere con una iterazione
 ---
 
 ![](http://fondinfo.github.io/images/misc/frogger.png)
-# Movimento orizzontale
+# Veicolo in orizzontale
 
 - Mostrare una tartaruga che si muove in orizzontale
     - Var. `dx`: spostamento a ogni frame
