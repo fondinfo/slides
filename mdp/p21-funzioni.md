@@ -426,7 +426,7 @@ Partire dalla formula `fahr = cels * 1.8 + 32`
 - Risultato: due valori
     - Quante lettere del testo sono comprese nel gruppo *A-M*
     - Quante lettere del testo sono comprese nel gruppo *N-Z*
-- La funzione \verb|count_groups| non distingue fra lettere maiuscole e minuscole.
+- La funzione `count_groups` non distingue fra lettere maiuscole e minuscole
 - Chiamare la funzione `count_groups` con un testo fornito dall'utente e mostrare i risultati
 
 ---
