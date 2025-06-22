@@ -373,6 +373,25 @@ def move_around(start: Point, length: float, angle: float) -> Point:
 
 ---
 
+![](/images/misc/thermometer.png)
+# 2.1 Funzione, Fahrenheit
+
+- Definire una funzione `cels_to_fahr`
+    - Parametro: temperatura Celsius, in `float`
+    - Risultato: temperatura Fahrenheit, in `float`
+- Invocare la funzione dalla shell interattiva
+- Definire poi una funzione `main`
+    - *Procedura, senza parametri e senza risultato*
+    - Chiedere all'utente la temperatura Celsius
+    - Poi chiamare `cels_to_fahr`
+    - Infine mostrare all'utente il risultato
+
+>
+
+Partire dalla formula `fahr = cels * 1.8 + 32`
+
+---
+
 ![](http://fondinfo.github.io/images/misc/ellipse.svg)
 # Area di un'ellisse
 
@@ -383,6 +402,93 @@ def move_around(start: Point, length: float, angle: float) -> Point:
     - Chiede all'utente due valori
     - Invoca la funzione `ellipse_area` con questi parametri
     - Stampa il risultato ottenuto
+
+---
+
+![](http://fondinfo.github.io/images/misc/triangle-notations.svg)
+# Perimetro di un triangolo
+
+- Definire una *funzione* `triangle_perimeter` che:
+    - Riceve come *parametri* i tre lati di un triangolo:<br>`a`, `b`, `c`
+    - Restituisce come risultato il perimetro di un trinagolo
+    - Se i tre lati non formano un triangolo, genera un `ValueError` <br> (se uno dei lati è maggiore della somma degli altri due)
+- Definire una *funzione* `main` che, ciclicamente:
+    - Chiede all'utente tre valori
+    - Mostra il risultato di `triangle_perimeter` con questi parametri
+    - Chiede all'utente se vuole elaborare altri dati, o terminare
+
+---
+
+# Gruppi di lettere
+
+- Definire una funzione `count_groups`
+    - Parametro testuale (`str`)
+- Risultato: due valori
+    - Quante lettere del testo sono comprese nel gruppo *A-M*
+    - Quante lettere del testo sono comprese nel gruppo *N-Z*
+- La funzione \verb|count_groups| non distingue fra lettere maiuscole e minuscole.
+- Chiamare la funzione `count_groups` con un testo fornito dall'utente e mostrare i risultati
+
+---
+
+![](http://fondinfo.github.io/images/fun/comb-lock.svg)
+# Parole di tre lettere
+
+- Scrivere una funzione con un parametro di tipo `str`
+    - La stringa rappresente un alfabeto di caratteri validi
+- Genera la lista di tutte le parole
+    - Di lunghezza esattamente uguale a 3
+    - Composte con quei soli caratteri
+- Se l'alfabeto contiene lettere ripetute, sollevare un `ValueError`
+
+---
+
+![](http://fondinfo.github.io/images/misc/perfect-squares.svg)
+# Quadrato perfetto
+
+- Scrivere una funzione `perfect_square`
+    - Parametro: un numero
+    - Verifica se si tratta di un *quadrato perfetto*
+    - La sua radice quadrata è un numero naturale?
+- Risultato: booleano, seguito da un numero 
+    - Radice perfetta del numero, se esiste
+- Funzione `main` per eseguire `perfect_square`
+    - Su un numero fornito dall'utente
+    - Mostrare il risultato
+
+>
+
+Non usare `math.sqrt` e simili — Risolvere con una iterazione
+
+---
+
+# Divisori comuni
+
+- Definire una funzione `common_divisors`
+    - Prende due numeri naturali come parametri
+    - Restituisce una lista con tutti i divisori comuni ai due numeri
+- Funzione `main` per eseguire `common_divisors`
+    - Su numeri fornito dall'utente
+    - Mostrare il risultato
+    
+---
+
+![](http://fondinfo.github.io/images/fun/polygon.svg) ![](http://fondinfo.github.io/images/fun/move-around.svg)
+# Disegno di un poligono
+
+- Definire una funzione `draw_polygon`
+    - Parametri: numero dei lati, centro e raggio del cerchio circoscritto
+    - Trovare i vertici attorno al centro con `move_around`
+    - Unire i vertici per disegnare il poligono
+
+---
+
+![](http://fondinfo.github.io/images/misc/classical-watch.jpg) ![](http://fondinfo.github.io/images/fun/move-around.svg)
+# 🥷 Orologio classico
+
+- Definire una funzione `draw_clock`
+    - Disegnare 12 tacche a raggiera, come in un orologio classico
+    - Miglioramento: disegnare anche le tacche dei minuti, più piccole
 
 ---
 
@@ -463,25 +569,6 @@ g2d.draw_image("sprites.png", (x, y), (20, 0), (20, 20))
 >
 
 Incrementare (o decrementare) un contatore a ogni chiamata a `tick`
-
----
-
-![](http://fondinfo.github.io/images/fun/polygon.svg) ![](http://fondinfo.github.io/images/fun/move-around.svg)
-# Disegno di un poligono
-
-- Definire una funzione `draw_polygon`
-    - Parametri: numero dei lati, centro e raggio del cerchio circoscritto
-    - Trovare i vertici attorno al centro con `move_around`
-    - Unire i vertici per disegnare il poligono
-
----
-
-![](http://fondinfo.github.io/images/misc/classical-watch.jpg) ![](http://fondinfo.github.io/images/fun/move-around.svg)
-# 🥷 Orologio classico
-
-- Definire una funzione `draw_clock`
-    - Disegnare 12 tacche a raggiera, come in un orologio classico
-    - Miglioramento: disegnare anche le tacche dei minuti, più piccole
 
 ---
 
