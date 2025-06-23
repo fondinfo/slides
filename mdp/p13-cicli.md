@@ -564,6 +564,6 @@ Non è richiesto l'uso della grafica
 - Gara tra due arrampicatori, in forma testuale
 - Ripetutamente, generare due numeri casuali
     - Ciascun numero $∈ [-1, 3]$
-    - Balzo in alto (o piccola discesa) di ciascun giocatore
-    - Il livello di un giocatore non diventa mai $< 0$
+    - Balzo in alto (o piccola discesa) di ciascun concorrente
+    - Il livello di un concorrente non diventa mai $< 0$
 - Vince chi arriva prima in cima (una costante `TOP`)

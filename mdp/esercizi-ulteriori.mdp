@@ -29,3 +29,17 @@ Naturalmente, senza usare `math.sqrt`
     - Dall'alto verso il basso
 - Opzionalmente, lasciare un pixel vuoto tra un quadrato e l'altro
 
+---
+
+
+![](http://fondinfo.github.io/images/misc/spiral-circles.svg)
+# 🥷 Percorso a spirale
+
+- Mostrare un cerchio in movimento
+- Percorso a spirale, in $N$ passi
+    - Il cerchio ruota attorno al centro del canvas
+    - A distanza crescente dal centro del canvas
+    - Raggio del cerchio: crescente
+    - Colore: dal rosso al blu
+- Usare un contatore; se eccede il limite $N$, torna a 0
+

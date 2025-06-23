@@ -369,7 +369,7 @@ def move_around(start: Point, length: float, angle: float) -> Point:
 
 ---
 
-# 🏊 Esercizi
+# 🏊 Esercizi su funzioni
 
 ---
 
@@ -450,7 +450,7 @@ Partire dalla formula `fahr = cels * 1.8 + 32`
     - Parametro: un numero
     - Verifica se si tratta di un *quadrato perfetto*
     - La sua radice quadrata è un numero naturale?
-- Risultato: booleano, seguito da un numero 
+- Risultato: booleano, seguito da un numero
     - Radice perfetta del numero, se esiste
 - Funzione `main` per eseguire `perfect_square`
     - Su un numero fornito dall'utente
@@ -470,7 +470,7 @@ Non usare `math.sqrt` e simili — Risolvere con una iterazione
 - Funzione `main` per eseguire `common_divisors`
     - Su numeri fornito dall'utente
     - Mostrare il risultato
-    
+
 ---
 
 ![](http://fondinfo.github.io/images/fun/polygon.svg) ![](http://fondinfo.github.io/images/fun/move-around.svg)
@@ -489,6 +489,10 @@ Non usare `math.sqrt` e simili — Risolvere con una iterazione
 - Definire una funzione `draw_clock`
     - Disegnare 12 tacche a raggiera, come in un orologio classico
     - Miglioramento: disegnare anche le tacche dei minuti, più piccole
+
+---
+
+# 🏊 Esercizi su animazioni
 
 ---
 
@@ -572,13 +576,25 @@ Incrementare (o decrementare) un contatore a ogni chiamata a `tick`
 
 ---
 
-![](http://fondinfo.github.io/images/misc/spiral-circles.svg)
-# 🥷 Percorso a spirale
+![](http://fondinfo.github.io/images/fun/polygon.svg) ![](http://fondinfo.github.io/images/fun/move-around.svg)
+# Poligono in rotazione
 
-- Mostrare un cerchio in movimento
-- Percorso a spirale, in $N$ passi
-    - Il cerchio ruota attorno al centro del canvas
-    - A distanza crescente dal centro del canvas
-    - Raggio del cerchio: crescente
-    - Colore: dal rosso al blu
-- Usare un contatore; se eccede il limite $N$, torna a 0
+- Chiede all'utente un numero $n$
+- Mostrare un poligono regolare di $n$ lati in rotazione al centro del canvas
+- Suggerimento
+    - Riusare la funzione `draw_polygon`, già richiesta in un esercizio sulle funzioni
+    - Rotazione, variando ultimo parametro della funzione (angolo del primo vertice)
+
+---
+
+![](http://fondinfo.github.io/images/games/climbing.svg)
+# Free climbing
+
+- Gara tra due arrampicatori, in forma grafica
+- Due concorrenti, partono dal fondo del canvas
+- Vince chi arriva prima in cima al canvas
+- Nella funzione periodica `tick` generare due numeri casuali
+    - Ciascun numero $∈ [-1, 3]$
+    - Balzo in alto (o piccola discesa) di ciascun concorrente
+    - Posizioni dei concorrenti sempre dentro i limiti del canvas
+- Disegnare un cerchio o una immagine nella posizione di ogni concorrente
