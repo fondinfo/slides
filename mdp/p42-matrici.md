@@ -252,6 +252,27 @@ multidim = [[0 for x in range(cols)] for y in range(rows)]
 
 ---
 
+# 🧪 Liste appiattite e annidate
+
+- Da struttura appiattita `data` a struttura annidata `matrix`
+    - In comprehension, righe prese come *slice* dalla lista semplice
+    - Slice tutte di dimensione `w` (che deve essere nota)
+
+``` py
+matrix = [data[i * w : i * w + w] for i in range(h)]
+```
+
+- Da struttura annidata `matrix` a struttura appiattita `data`
+    - Comprehension con due `for`
+    - Scorrere la struttura riga per riga
+    - Scorrere gli elementi di ogni riga
+
+``` py
+data = [v for row in matrix for v in row]
+```
+
+---
+
 # Flussi di dati
 
 ---
