@@ -68,6 +68,96 @@ for x in range(cols):
 
 ---
 
+# Lista di liste
+
+---
+
+# 🧪 Matrice in lista di liste
+
+- Possibile rappresentazione di una *matrice*: lista di liste
+- ⚠️ Spesso, la gestione è più complessa
+    - In generale, preferibile una lista semplice
+- Accesso agli elementi: due indici (`y` e `x`)
+    - ⚠️ *Primo indice* seleziona la riga: `y`
+    - *Secondo indice* seleziona la colonna: `x`
+
+``` py
+>>> a = [["A", "B", "C", "D"],
+         ["E", "F", "G", "H"],
+         ["I", "L", "M", "N"]]
+>>> a[2]
+["I", "L", "M", "N"]
+>>> a[2][1]  # x, y = 1, 2
+"L"
+```
+
+---
+
+# 🧪 Operazioni su liste di liste
+
+- Somma, colonna per colonna
+- Dalla lista di liste, si possono ricavare `rows` e `cols` 👍
+
+``` py
+matrix = [[2, 4, 3, 8],
+          [9, 3, 2, 7],
+          [5, 6, 9, 1]]
+rows = len(matrix)
+cols = len(matrix[0])
+
+for x in range(cols):
+    total = 0
+    for y in range(rows):
+        val = matrix[y][x]
+        total += val
+    print("Col #", x, "sums to", total)
+```
+
+---
+
+# 🔬 Creare matrice rows x cols
+
+- Inizializzare matrice, come lista singola: *list repetition*
+- Inizializzare una lista di liste: due *comprehension* annidate ⚠️
+    - Attenzione anche alle operazioni di copia ⚠️
+    - [Python FAQ: multidimensional list](https://docs.python.org/3/faq/programming.html#faq-multidimensional-list)
+
+``` py
+unidim = [0] * (rows * cols)  # suggested way
+
+multidim = [[0 for x in range(cols)] for y in range(rows)]
+
+# multidim = []
+# for y in range(rows):
+#     new_row = []
+#     for x in range(cols):
+#         new_row.append(0)
+#     multidim.append(new_row)
+```
+
+---
+
+# 🧪 Liste appiattite e annidate
+
+- Da struttura appiattita `data` a struttura annidata `matrix`
+    - In comprehension, righe prese come *slice* dalla lista semplice
+    - Slice tutte di dimensione `w` (che deve essere nota)
+
+``` py
+matrix = [data[i * w : i * w + w] for i in range(h)]
+```
+
+- Da struttura annidata `matrix` a struttura appiattita `data`
+    - Comprehension con due `for`
+    - Scorrere la struttura riga per riga
+    - Scorrere gli elementi di ogni riga
+
+``` py
+data = [v for row in matrix for v in row]
+```
+
+---
+
 # Giochi su matrice
 
 ---
@@ -180,96 +270,6 @@ class Fifteen(BoardGame):
 >
 
 <https://fondinfo.github.io/play/?c09_fifteen.py>
-
----
-
-# Lista di liste
-
----
-
-# 🧪 Matrice in lista di liste
-
-- Possibile rappresentazione di una *matrice*: lista di liste
-- ⚠️ Spesso, la gestione è più complessa
-    - In generale, preferibile una lista semplice
-- Accesso agli elementi: due indici (`y` e `x`)
-    - ⚠️ *Primo indice* seleziona la riga: `y`
-    - *Secondo indice* seleziona la colonna: `x`
-
-``` py
->>> a = [["A", "B", "C", "D"],
-         ["E", "F", "G", "H"],
-         ["I", "L", "M", "N"]]
->>> a[2]
-["I", "L", "M", "N"]
->>> a[2][1]  # x, y = 1, 2
-"L"
-```
-
----
-
-# 🧪 Operazioni su liste di liste
-
-- Somma, colonna per colonna
-- Dalla lista di liste, si possono ricavare `rows` e `cols` 👍
-
-``` py
-matrix = [[2, 4, 3, 8],
-          [9, 3, 2, 7],
-          [5, 6, 9, 1]]
-rows = len(matrix)
-cols = len(matrix[0])
-
-for x in range(cols):
-    total = 0
-    for y in range(rows):
-        val = matrix[y][x]
-        total += val
-    print("Col #", x, "sums to", total)
-```
-
----
-
-# 🔬 Creare matrice rows x cols
-
-- Inizializzare matrice, come lista singola: *list repetition*
-- Inizializzare una lista di liste: due *comprehension* annidate ⚠️
-    - Attenzione anche alle operazioni di copia ⚠️
-    - [Python FAQ: multidimensional list](https://docs.python.org/3/faq/programming.html#faq-multidimensional-list)
-
-``` py
-unidim = [0] * (rows * cols)  # suggested way
-
-multidim = [[0 for x in range(cols)] for y in range(rows)]
-
-# multidim = []
-# for y in range(rows):
-#     new_row = []
-#     for x in range(cols):
-#         new_row.append(0)
-#     multidim.append(new_row)
-```
-
----
-
-# 🧪 Liste appiattite e annidate
-
-- Da struttura appiattita `data` a struttura annidata `matrix`
-    - In comprehension, righe prese come *slice* dalla lista semplice
-    - Slice tutte di dimensione `w` (che deve essere nota)
-
-``` py
-matrix = [data[i * w : i * w + w] for i in range(h)]
-```
-
-- Da struttura annidata `matrix` a struttura appiattita `data`
-    - Comprehension con due `for`
-    - Scorrere la struttura riga per riga
-    - Scorrere gli elementi di ogni riga
-
-``` py
-data = [v for row in matrix for v in row]
-```
 
 ---
 
@@ -525,7 +525,6 @@ In ogni posizione, calcolare il carattere da visualizzare: `x * ROWS + y`...
 - Scrivere una funzione `smooth`
     - Parametro: matrice iniziale, di float
     - Risultato: nuova matrice con *smooth*
-    - Matrici rappresentate come liste di liste
 - **Smooth**: per ogni cella in matrice iniziale
     - Il risultato è la *media* dell'intorno
     - 5 valori: cella stessa e 4 adiacenti
