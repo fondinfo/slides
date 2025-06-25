@@ -223,12 +223,15 @@ q, r = result  # ❗ sequence unpacking
 - Violazione accettabile della programmazione strutturata
 
 ``` py
-def exceeds(data: list[float], limit: float) -> bool:
+def exceeds(data: list[int], limit: int) -> bool:
     for v in data:
         if v > limit:
             return True
     return False
 ```
+
+- Viceversa, se non s'incontra `return` con risultato esplicito…
+- Risultato implicito `None`: “*nessun valore*”
 
 ---
 
