@@ -482,14 +482,15 @@ vals = sorted([2, 4, -1, -5], key=abs)  # [-1, 2, 4, -5]
 - Funzione `itemgetter` in modulo `operator`
     - Parametri: uno o più indici interi
     - Risultato: funzione che estrae i valori corrispondenti
-    - Utile spesso con liste di tuple
+    - Utile per ordinare liste di tuple, liste di liste ecc.
 
 ``` py
 from operator import itemgetter
-vals = "Monthy Python's Flying Circus".split()
-# ["Monthy", "Python's", "Flying", "Circus"]
-vals.sort(key=itemgetter(2))  # "n" < "r" < "t" < "y"
-# ["Monthy", "Circus", "Python's", "Flying"]
+records = [("Joe", 150), ("Rob", 310), ("Alb", 600), ("Din", 250)]
+r1  = sorted(records, key=itemgetter(0))
+# [("Alb", 600), ("Din", 250), ("Joe", 150), ("Rob", 310)]
+r2 = sorted(records, key=itemgetter(1), reverse=True)
+# [("Alb", 600), ("Rob", 310), ("Din", 250), ("Joe", 150)]
 ```
 
 ---
