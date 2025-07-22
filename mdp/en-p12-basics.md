@@ -25,7 +25,7 @@
     - Integer division, remainder, power: `//, %, **`
 - Descriptive comments, after `#`: not evaluated
 
-§ py
+``` py
 >>> 7 / 2
 3.5
 >>> 7 // 2  # floor division: ⌊7/2⌋, try also -7 // 2
@@ -34,7 +34,7 @@
 1
 >>> 2 ** 1000  # no limits (but memory)
 107150860718626[...]837205668069376
-§
+```
 
 ---
 
@@ -54,7 +54,7 @@ T   | T   | T         | T        | F
     - Chained comparisons, `and` implied
 - Value **`None`**, unique of type `NoneType`: *nothing*
 
-§ py
+``` py
 >>> 4 == 5
 False
 >>> 4 != 5 and not False
@@ -63,7 +63,7 @@ True
 True
 >>> 3 < 5 and 5 < 7  # idem
 True
-§
+```
 
 ---
 
@@ -77,14 +77,14 @@ True
 - **⚠️ Do not confuse**
     - *Equality* comparison: operator **`==`**
 
-§ py
+``` py
 >>> pi = 3.14  # assignment
 >>> radius = 2.5
 >>> area = pi * (radius ** 2)
 >>> area
 19.625
 >>> radius = radius + 1  # guess radius… and area!
-§
+```
 
 ---
 
@@ -100,14 +100,14 @@ True
     - But must be *initialized* before use
 - *Reassignment*: new value to an existing var
 
-§ py
+``` py
 >>> x = None           # no actual value, yet…
 >>> x = 100            # variables: all_lower_case
 >>> next_position = x  # use explicative names!
 >>> DELTA_X = 5        # constants: ALL_UPPER_CASE
 >>> x += DELTA_X       # shortcut for: `x = x + DELTA_X`
 >>> a, b = 5, 8        # multiple assignments
-§
+```
 
 ---
 
@@ -119,7 +119,7 @@ True
 - Membership test (substring): `in` operator
 - Length: `len` *function*
 
-§ py
+``` py
 >>> str1 = "Monty Python's "
 >>> str2 = 'Flying Circus'
 >>> result = str1 + str2
@@ -129,7 +129,7 @@ True
 True
 >>> len(result)
 28
-§
+```
 
 ---
 
@@ -140,7 +140,7 @@ True
 - Parameters in *parentheses*, separated by *comma*
 - Typically, result assigned to a variable
 
-§ py
+``` py
 >>> max(3, 5)
 5
 >>> m = min(6, 4)
@@ -152,7 +152,7 @@ TypeError: can only concatenate str (not "int") to str
 8
 >>> "5" + str(3)
 "53"
-§
+```
 
 ---
 
@@ -166,14 +166,14 @@ TypeError: can only concatenate str (not "int") to str
     - Typically, result assigned to a variable
 - [Methods of `str` objects]([https://docs.python.org/3/library/stdtypes.html#string-methods](https://docs.python.org/3/library/stdtypes.html#string-methods)): `upper`, `lower`, `count`…
 
-§ py
+``` py
 >>> txt = "Monty Python"
 >>> shout = txt.upper()  # new string returned, `txt` unchanged
 >>> shout
 "MONTY PYTHON"
 >>> txt.count("y")
 2
-§
+```
 
 ---
 
@@ -185,7 +185,7 @@ TypeError: can only concatenate str (not "int") to str
 - Addition, removal: `append, remove`
 - Length: `len` – Membership test: `in`
 
-§ py
+``` py
 >>> groceries = ["spam", "egg", "beans"]
 >>> groceries.append("sausage")  # add "sausage" at the end
 >>> len(groceries)  # size has grown
@@ -197,7 +197,7 @@ True
 3
 >>> groceries
 ["spam", "beans", "sausage"]
-§
+```
 
 ---
 
@@ -211,12 +211,12 @@ True
 - **`print`** writes a series of values on a line
     - Inserts space between values (parameters)
 
-§ py
+``` py
 >>> knight = input("What is your name? ")
 What is your name? Lancelot
 >>> print("Right. Off you go,", knight, ".")
 Right. Off you go, Lancelot .
-§
+```
 
 ---
 
@@ -227,7 +227,7 @@ Right. Off you go, Lancelot .
 - Execute, by clicking the ▶️ button
     - Or from the command line: `python sum3.py`
 
-§ py
+``` py
 a = float(input("Insert 1st val: "))
 b = float(input("Insert 2nd val: "))
 c = float(input("Insert 3rd val: "))
@@ -235,7 +235,7 @@ c = float(input("Insert 3rd val: "))
 total = a + b + c
 
 print("The sum is", total)
-§
+```
 
 - **⚠️ Type awareness**
     - ❓ What happens, without conversion to `float`?
@@ -278,18 +278,18 @@ print("The sum is", total)
     - *Dimension*: `(width, height)`
     - *Color*: `(red, green, blue)` <br> Each component in the range `0..255`
 
-§ py
+``` py
 center_pt = (320, 240)  # packing
 window_size = (640, 480)
 bluette_color = (47, 102, 207)
 x, y = center_pt  # sequence unpacking
-§
+```
 
 ---
 
 # 🧪 Rectangles and circles
 
-§ py
+``` py
 import g2d
 
 g2d.init_canvas((600, 400))  # width, height
@@ -301,14 +301,14 @@ g2d.set_color((0, 0, 255))
 g2d.draw_circle((400, 300), 20)  # center, radius
 
 g2d.main_loop()  # manage the window/canvas
-§
+```
 
 ---
 
 ![]([http://fondinfo.github.io/images/repr/draw.svg](http://fondinfo.github.io/images/repr/draw.svg))
 # 🧪 Lines and texts
 
-§ py
+``` py
 import g2d
 
 g2d.init_canvas((600, 400))
@@ -322,7 +322,7 @@ g2d.set_color((255, 0, 0))
 g2d.draw_text("Hello", (150, 100), 40)  # text, center, font-size
 
 g2d.main_loop()
-§
+```
 
 >
 
@@ -336,7 +336,7 @@ g2d.main_loop()
 - `g2d.alert`: *message* display, single `str` parameter
 - `g2d.confirm`: *confirmation* request, `bool` result
 
-§ py
+``` py
 import g2d
 
 g2d.init_canvas((600, 400))
@@ -345,7 +345,7 @@ name = g2d.prompt("What's your name?")
 g2d.alert("Hello, " + name + "!")
 
 g2d.main_loop()
-§
+```
 
 - [**g2d documentation**](https://github.com/fondinfo/fondinfo#g2d)
 
@@ -358,16 +358,16 @@ g2d.main_loop()
     - Does not require installation
     - `sqrt, log, sin, pi, e, inf`…
 
-§ py
+``` py
 import math  # use namespace `math` as prefix
 y = math.sqrt(4)
 print(y)  # 2.0
-§
+```
 
-§ py
+``` py
 from math import sqrt  # no prefix for `sqrt`
 print(sqrt(4))
-§
+```
 
 - `import` at the beginning, to highlight dependencies
     - **`import …`**: entire module *namespace*
@@ -382,7 +382,7 @@ print(sqrt(4))
     - Does not require installation
     - `randint, randrange, random, choice, shuffle`…
 
-§ py
+``` py
 from random import randint, randrange, choice
 
 die1 = randint(1, 6)  # like rolling a die
@@ -391,7 +391,7 @@ die2 = randint(1, 6)  # like rolling a die
 one_of_three = randrange(3)  # 0, 1, or 2
 
 prime = choice([2, 3, 5, 7, 11, 13])  # one from a sequence
-§
+```
 
 ---
 
@@ -409,7 +409,7 @@ prime = choice([2, 3, 5, 7, 11, 13])  # one from a sequence
 
 > Readability counts *(The Zen of Python)*
 
-§ py
+``` py
 r = int(g2d.prompt("Radius? [50-99]"))
 
 if 50 <= r and r <= 99:
@@ -418,7 +418,7 @@ if 50 <= r and r <= 99:
 
 g2d.set_color((255, 255, 0))
 g2d.draw_circle((200, 200), 25)
-§
+```
 
 ---
 
@@ -428,7 +428,7 @@ g2d.draw_circle((200, 200), 25)
 - `else` clause: optional
     - Executed if the condition is not met
 
-§ py
+``` py
 r = int(g2d.prompt("Radius? [50-99]"))
 
 if 50 <= r <= 99:  # i.e.: 50 <= r and r <= 99
@@ -439,7 +439,7 @@ else:
 
 g2d.set_color((255, 255, 0))
 g2d.draw_circle((200, 200), 25)
-§
+```
 
 >
 
@@ -456,7 +456,7 @@ g2d.draw_circle((200, 200), 25)
 - Ex. Rolling *two dice* → 3 alternatives
     - 1st die wins, 2nd die wins, or it's a tie
 
-§ py
+``` py
 from random import randint
 a, b = randint(1, 6), randint(1, 6)  # roll 2 dice
 if a > b:
@@ -465,7 +465,7 @@ elif a < b:
     print("The second die wins.")
 else:
     print("The dice are equal. It's a tie.")
-§
+```
 
 ---
 
@@ -476,7 +476,7 @@ else:
     - *Preliminary* check
     - Possible that the body is never executed
 
-§ py
+``` py
 r = int(g2d.prompt("Radius? [50-99]"))
 
 while r < 50 or r > 99:
@@ -485,7 +485,7 @@ while r < 50 or r > 99:
 
 g2d.set_color((0, 0, 255))
 g2d.draw_circle((200, 200), r)
-§
+```
 
 >
 
@@ -502,18 +502,18 @@ g2d.draw_circle((200, 200), r)
 - Iteration variable
     - At each iteration, new value from sequence
 
-§ py
+``` py
 values = [2, 3, 5, 7, 11]
 for val in values:  # list
     print(val ** 3)  # 8 27 125 343 1331
-§
+```
 
-§ py
+``` py
 for r in (200, 175, 150):  # tuple
     color = (randrange(256), randrange(256), randrange(256))
     g2d.set_color(color)
     g2d.draw_circle((200, 200), r)
-§
+```
 
 ---
 
@@ -524,22 +524,22 @@ for r in (200, 175, 150):  # tuple
     - If lower bound ≠ 0, two parameters needed
 - *`reversed`*: reversed sequence
 
-§ py
+``` py
 for i in range(5):  # 0, 1, 2, 3, 4
     print(i)
-§
+```
 
-§ py
+``` py
 for i in reversed(range(5)):  # 4, 3, 2, 1, 0
     print(i)
-§
+```
 
 ---
 
 ![]([http://fondinfo.github.io/images/misc/red-squares.svg](http://fondinfo.github.io/images/misc/red-squares.svg))
 # 🧪 Sequence of squares
 
-§ py
+``` py
 import g2d
 
 g2d.init_canvas((500, 500))
@@ -552,7 +552,7 @@ for i in range(4):  # 0, 1, 2, 3
     g2d.draw_rect((pos, pos), (200, 200))
 
 g2d.main_loop()
-§
+```
 
 - ❓ What happens if we use `reversed` in the `for` loop?
 
@@ -573,10 +573,10 @@ g2d.main_loop()
 - Ask the user for their name
 - Insert this name into a greeting message, e.g.:
 
-§ txt
+``` txt
 What's your name? Adam
 Hello, Adam!
-§
+```
 
 - If the user's name is “`admin`”…
     - Also show the special message “`At your command`”
