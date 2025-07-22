@@ -71,7 +71,7 @@ True
 # ⭐ Assignment
 
 - A **variable** is used to remember a useful result
-- *Assignment*: operator **`=`**
+- *Assignment* : operator **`=`**
     - On the left a *name*
     - On the right an expression (→ *value*)
 - **⚠️ Do not confuse**
