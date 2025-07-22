@@ -1,6 +1,6 @@
 ![](http://fondinfo.github.io/images/algo/rubik-cube.png)
 # Basics
-## Introduction to Programming
+## Introduction to programming
 
 ---
 
@@ -11,11 +11,11 @@
 
 >
 
-[https://xkcd.com/353/](https://xkcd.com/353/)
+<https://xkcd.com/353/>
 
 ---
 
-# 🧪 Interactive shell
+# 🧪 Interactive Shell
 
 - Install [Thonny](https://thonny.org/) or use the online [Playground](https://fondinfo.github.io/play/)
     - At the bottom, interactive *REPL* (Read-Eval-Print Loop) interface
@@ -33,7 +33,7 @@
 >>> 7 % 2  # reminder positive, try also -7 % 2
 1
 >>> 2 ** 1000  # no limits (but memory)
-107150860718626[...]837205668069376
+107150860718626[…]837205668069376
 ```
 
 ---
@@ -51,7 +51,7 @@ T   | T   | T         | T        | F
     - Logical operators: `and, or, not` (→ [Logic](t11-logica.html))
 - Comparisons: `==, !=, <, <=, >, >=`
     - Only between homogeneous values; boolean result
-    - Chained comparisons, `and` implied
+    - Chainable comparisons, `and` implicit
 - Value **`None`**, unique of type `NoneType`: *nothing*
 
 ``` py
@@ -71,7 +71,7 @@ True
 # ⭐ Assignment
 
 - A **variable** is used to remember a useful result
-- *Assignment* : operator **`=`**
+- *Assignment*: operator **`=`**
     - On the left a *name*
     - On the right an expression (→ *value*)
 - **⚠️ Do not confuse**
@@ -88,7 +88,7 @@ True
 
 ---
 
-![]([http://fondinfo.github.io/images/algo/var-label.svg](http://fondinfo.github.io/images/algo/var-label.svg))
+![](http://fondinfo.github.io/images/algo/var-label.svg)
 # 🔬 Variable
 
 - **Name** associated with a certain **value**
@@ -96,8 +96,8 @@ True
 - Object assigned to multiple variables
     - Not copied, but receives multiple labels
 - The **type** depends on the currently assigned value
-    - A var doesn't need to be *declared*
-    - But must be *initialized* before use
+    - A var does not have to be *declared*
+    - But it must be *initialized* before use
 - *Reassignment*: new value to an existing var
 
 ``` py
@@ -111,10 +111,10 @@ True
 
 ---
 
-# 🧪 Text strings
+# 🧪 Text Strings
 
 - Type **`str`** for character sequences
-- Enclosed in double, or single quotes
+- Enclosed in double or single quotes
 - Concatenation: `+` operator
 - Membership test (substring): `in` operator
 - Length: `len` *function*
@@ -133,12 +133,12 @@ True
 
 ---
 
-# ⭐ Built-in functions
+# ⭐ Built-in Functions
 
 - [Built-in](https://docs.python.org/3/library/functions.html) functions: `max, min, abs, len, round`…
 - Type conversion functions (*cast*): `int, float, str`…
-- Parameters in *parentheses*, separated by *comma*
-- Typically, result assigned to a variable
+- Parameters between *parentheses*, separated by *comma*
+- Typically, result assigned to variable
 
 ``` py
 >>> max(3, 5)
@@ -163,8 +163,8 @@ TypeError: can only concatenate str (not "int") to str
 - Activating an object's method
     - Object and method separated by “`.`”
     - Then parameters in parentheses
-    - Typically, result assigned to a variable
-- [Methods of `str` objects]([https://docs.python.org/3/library/stdtypes.html#string-methods](https://docs.python.org/3/library/stdtypes.html#string-methods)): `upper`, `lower`, `count`…
+    - Typically, result assigned to variable
+- [Methods of `str` objects](https://docs.python.org/3/library/stdtypes.html#string-methods): `upper`, `lower`, `count`…
 
 ``` py
 >>> txt = "Monty Python"
@@ -177,12 +177,12 @@ TypeError: can only concatenate str (not "int") to str
 
 ---
 
-![]([http://fondinfo.github.io/images/fun/shopping-list.png](http://fondinfo.github.io/images/fun/shopping-list.png)) [Spam…](https://www.youtube.com/watch?v=Gxtsa-OvQLA)
+![](http://fondinfo.github.io/images/fun/shopping-list.png) [Spam…](https://www.youtube.com/watch?v=Gxtsa-OvQLA)
 # ⭐ List
 
 - **Mutable** sequence of *homogeneous* values
-- Elements in *square brackets*, separated by *commas*
-- Addition, removal: `append, remove`
+- Elements between *square brackets*, separated by *commas*
+- Add, remove: `append, remove`
 - Length: `len` – Membership test: `in`
 
 ``` py
@@ -203,11 +203,11 @@ True
 
 ![large](http://fondinfo.github.io/images/algo/holy-grail.jpg) [The Bridge of Death](https://www.youtube.com/watch?v=Xel0c6mpqPA)
 
-# 🧪 Read and write
+# 🧪 Read and Write
 
 - **`input`** reads a line of *text*, entered by the user, into a *variable*
     - First shows a message
-    - Result is of type `str`
+    - Result of type `str`
 - **`print`** writes a series of values on a line
     - Inserts space between values (parameters)
 
@@ -220,11 +220,11 @@ Right. Off you go, Lancelot .
 
 ---
 
-![]([http://fondinfo.github.io/images/algo/sum3.svg](http://fondinfo.github.io/images/algo/sum3.svg))
+![](http://fondinfo.github.io/images/algo/sum3.svg)
 # 🧪 Sum of three numbers
 
 - Save the following program as “`sum3.py`”
-- Execute, by clicking the ▶️ button
+- Run, by clicking the ▶️ button
     - Or from the command line: `python sum3.py`
 
 ``` py
@@ -237,12 +237,12 @@ total = a + b + c
 print("The sum is", total)
 ```
 
-- **⚠️ Type awareness**
-    - ❓ What happens, without conversion to `float`?
+- **⚠️ Attention to types**
+    - ❓ What happens without conversion to `float`?
 
 >
 
-[https://fondinfo.github.io/play/?c02_sum3.py](https://fondinfo.github.io/play/?c02_sum3.py)
+<https://fondinfo.github.io/play/?c02_sum3.py>
 
 ---
 
@@ -261,8 +261,8 @@ print("The sum is", total)
     - Defines drawing functions
 - In the [playground](https://fondinfo.github.io/play/?c02_draw.py), integrated version
 - *Local execution*
-    - Copy the `g2d.py` file from the [fondinfo repository](https://github.com/fondinfo/fondinfo/archive/master.zip) to your working folder
-- [**g2d documentation**](https://github.com/fondinfo/fondinfo#g2d)
+    - Copy the `g2d.py` file from the [fondinfo repository](https://github.com/fondinfo/fondinfo/archive/master.zip) into your working folder
+- [**g2d Documentation**](https://github.com/fondinfo/fondinfo#g2d)
 
 ---
 
@@ -287,7 +287,7 @@ x, y = center_pt  # sequence unpacking
 
 ---
 
-# 🧪 Rectangles and circles
+# 🧪 Rectangles and Circles
 
 ``` py
 import g2d
@@ -305,8 +305,8 @@ g2d.main_loop()  # manage the window/canvas
 
 ---
 
-![]([http://fondinfo.github.io/images/repr/draw.svg](http://fondinfo.github.io/images/repr/draw.svg))
-# 🧪 Lines and texts
+![](http://fondinfo.github.io/images/repr/draw.svg)
+# 🧪 Lines and Text
 
 ``` py
 import g2d
@@ -326,13 +326,13 @@ g2d.main_loop()
 
 >
 
-[https://fondinfo.github.io/play/?c02_draw.py](https://fondinfo.github.io/play/?c02_draw.py)
+<https://fondinfo.github.io/play/?c02_draw.py>
 
 ---
 
-# 🧪 Dialog windows
+# 🧪 Dialog Boxes
 
-- `g2d.prompt`: *input* request, in window, `str` result
+- `g2d.prompt`: *input* request, in a window, `str` result
 - `g2d.alert`: *message* display, single `str` parameter
 - `g2d.confirm`: *confirmation* request, `bool` result
 
@@ -347,15 +347,15 @@ g2d.alert("Hello, " + name + "!")
 g2d.main_loop()
 ```
 
-- [**g2d documentation**](https://github.com/fondinfo/fondinfo#g2d)
+- [**g2d Documentation**](https://github.com/fondinfo/fondinfo#g2d)
 
 ---
 
-![]([http://fondinfo.github.io/images/algo/calculator.svg](http://fondinfo.github.io/images/algo/calculator.svg)) [☞ `math`]([https://docs.python.org/3/library/math.html](https://docs.python.org/3/library/math.html))
+![](http://fondinfo.github.io/images/algo/calculator.svg) [☞ `math`](https://docs.python.org/3/library/math.html)
 # 🧪 Battery included 🔋
 
-- [`math`]([https://docs.python.org/3/library/math.html](https://docs.python.org/3/library/math.html)) module in *Python Standard Library*
-    - Does not require installation
+- [`math`](https://docs.python.org/3/library/math.html) module in *Python Standard Library*
+    - No installation required
     - `sqrt, log, sin, pi, e, inf`…
 
 ``` py
@@ -371,15 +371,15 @@ print(sqrt(4))
 
 - `import` at the beginning, to highlight dependencies
     - **`import …`**: entire module *namespace*
-    - **`from … import …`**: only certain names
+    - **`from … import …`**: only some names
 
 ---
 
-![]([http://fondinfo.github.io/images/algo/red-dice.svg](http://fondinfo.github.io/images/algo/red-dice.svg)) [☞ `random`]([https://docs.python.org/3/library/random.html](https://docs.python.org/3/library/random.html))
+![](http://fondinfo.github.io/images/algo/red-dice.svg) [☞ `random`](https://docs.python.org/3/library/random.html)
 # 🧪 Random 🎲
 
-- [`random`]([https://docs.python.org/3/library/random.html](https://docs.python.org/3/library/random.html)) module in *Python Standard Library*
-    - Does not require installation
+- [`random`](https://docs.python.org/3/library/random.html) module in *Python Standard Library*
+    - No installation required
     - `randint, randrange, random, choice, shuffle`…
 
 ``` py
@@ -395,17 +395,17 @@ prime = choice([2, 3, 5, 7, 11, 13])  # one from a sequence
 
 ---
 
-# ⭐ Control structures
+# ⭐ Control Structures
 
 ---
 
-![]([http://fondinfo.github.io/images/algo/if.svg](http://fondinfo.github.io/images/algo/if.svg))
+![](http://fondinfo.github.io/images/algo/if.svg)
 # ⭐ Selection: if
 
-- Body of `if` or `else`: **indentation**
-    - Required by *syntax*, not optional
+- `if` or `else` body: **indentation**
+    - Required for *syntax*, not optional
     - Can contain any statement
-    - Even other nested `if` or `while` blocks!
+    - Also other nested `if` or `while` blocks!
 
 > Readability counts *(The Zen of Python)*
 
@@ -422,11 +422,11 @@ g2d.draw_circle((200, 200), 25)
 
 ---
 
-![]([http://fondinfo.github.io/images/algo/if-else.svg](http://fondinfo.github.io/images/algo/if-else.svg))
+![](http://fondinfo.github.io/images/algo/if-else.svg)
 # ⭐ Selection: else
 
 - `else` clause: optional
-    - Executed if the condition is not met
+    - Executed if and only if the condition is not met
 
 ``` py
 r = int(g2d.prompt("Radius? [50-99]"))
@@ -443,18 +443,18 @@ g2d.draw_circle((200, 200), 25)
 
 >
 
-[https://fondinfo.github.io/play/?c02_ifelse.py](https://fondinfo.github.io/play/?c02_ifelse.py)
+<https://fondinfo.github.io/play/?c02_ifelse.py>
 
 ---
 
-![]([http://fondinfo.github.io/images/algo/dice.svg](http://fondinfo.github.io/images/algo/dice.svg))
+![](http://fondinfo.github.io/images/algo/dice.svg)
 # ⭐ Selection: elif
 
 - `elif`: contraction of `else if`
     - Selection among *multiple* alternatives
     - If no condition is true, `else` is executed
 - Ex. Rolling *two dice* → 3 alternatives
-    - 1st die wins, 2nd die wins, or it's a tie
+    - 1st die wins, 2nd die wins, or a tie
 
 ``` py
 from random import randint
@@ -469,7 +469,7 @@ else:
 
 ---
 
-![]([http://fondinfo.github.io/images/algo/while.svg](http://fondinfo.github.io/images/algo/while.svg))
+![](http://fondinfo.github.io/images/algo/while.svg)
 # ⭐ Iteration: while
 
 - *Looping* condition
@@ -517,11 +517,11 @@ for r in (200, 175, 150):  # tuple
 
 ---
 
-# ⭐ Value range
+# ⭐ Value Range
 
-- **`range`**: right-open value interval
-    - Bounds: lower *inclusive* (0), upper *exclusive*
-    - If lower bound ≠ 0, two parameters needed
+- **`range`**: right-open value range
+    - Extremes: lower *included* (0), upper *excluded*
+    - If lower extreme ≠ 0, two parameters are needed
 - *`reversed`*: reversed sequence
 
 ``` py
@@ -536,8 +536,8 @@ for i in reversed(range(5)):  # 4, 3, 2, 1, 0
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/red-squares.svg](http://fondinfo.github.io/images/misc/red-squares.svg))
-# 🧪 Sequence of squares
+![](http://fondinfo.github.io/images/misc/red-squares.svg)
+# 🧪 Sequence of Squares
 
 ``` py
 import g2d
@@ -558,7 +558,7 @@ g2d.main_loop()
 
 >
 
-[https://fondinfo.github.io/play/?c02_squares.py](https://fondinfo.github.io/play/?c02_squares.py)
+<https://fondinfo.github.io/play/?c02_squares.py>
 
 ---
 
@@ -566,12 +566,12 @@ g2d.main_loop()
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/handshake.svg](http://fondinfo.github.io/images/misc/handshake.svg))
+![](http://fondinfo.github.io/images/misc/handshake.svg)
 # Hello, admin!
 
 - Write a program in a file `hello.py`
 - Ask the user for their name
-- Insert this name into a greeting message, e.g.:
+- Insert the name into a greeting message, e.g.:
 
 ``` txt
 What's your name? Adam
@@ -583,25 +583,25 @@ Hello, Adam!
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/greek-pi.png](http://fondinfo.github.io/images/misc/greek-pi.png))
+![](http://fondinfo.github.io/images/misc/greek-pi.png)
 # Circle
 
 - Ask the user for the radius `r` of a circle
-    - `r` a rational number between 0 and 200
+    - `r` rational number between 0 and 200
 - If `r` is valid
-    - Display the circle, centered on the canvas
-    - Just above the circle, write its area
-    - Just below the circle, write its circumference
+    - Display the circle, in the center of the canvas
+    - Just above the circle, write the value of its area
+    - Just below the circle, write the value of its circumference
 - If `r` is out of range
     - Show an error message
 
 ---
 
-![]([http://fondinfo.github.io/images/games/dragon.svg](http://fondinfo.github.io/images/games/dragon.svg))
-# The year of the dragon
+![](http://fondinfo.github.io/images/games/dragon.svg)
+# The Year of the Dragon
 
 - The program asks the user for their birth year
-- Then it communicates whether that year was under the sign of the dragon or not
+- Then it communicates whether that year was under the sign of the dragon, or not
 - We know that, according to Chinese tradition, 2024 is the year of the dragon
 - We also know that the sign repeats every 12 years
 
@@ -625,26 +625,26 @@ First version: ask and check only the name
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/calendar-cols.jpg](http://fondinfo.github.io/images/misc/calendar-cols.jpg))
-# Age calculation
+![](http://fondinfo.github.io/images/misc/calendar-cols.jpg)
+# Age Calculation
 
 - Ask the user for their birth date
     - Year, month, and day
 - Ask the user for today's date
     - Year, month, and day
 - Communicate the exact current age
-    - Number of birthdays already had
+    - Number of birthdays already passed
 
 >
 
 In the current year, has the user already had their birthday?
 <br>
-Compound boolean expression with `and`, `or`, `not`…
+Boolean expression composed with `and`, `or`, `not`…
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/three-brothers.png](http://fondinfo.github.io/images/misc/three-brothers.png))
-# Min and Max
+![](http://fondinfo.github.io/images/misc/three-brothers.png)
+# Minimum and Maximum
 
 - Generate and print three random integers: `a`, `b`, `c`
 - Each between 1 and 6
@@ -652,16 +652,16 @@ Compound boolean expression with `and`, `or`, `not`…
 
 >
 
-First, check if `a` is smaller than the other two
+First check if `a` is smaller than the other two
 <br>
-Otherwise, check if `b` is smaller than `c`
+Otherwise check if `b` is smaller than `c`
 <br>
 Otherwise…
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/random-squares.svg](http://fondinfo.github.io/images/misc/random-squares.svg))
-# Random squares
+![](http://fondinfo.github.io/images/misc/random-squares.svg)
+# Random Squares
 
 - Ask the user for a number `n`
 - Draw `n` squares
@@ -671,12 +671,12 @@ Otherwise…
 
 >
 
-Start by drawing a single grey square in a random position
+Start by drawing only one gray square, in a random position
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/diagonal-squares.svg](http://fondinfo.github.io/images/misc/diagonal-squares.svg))
-# Diagonal squares
+![](http://fondinfo.github.io/images/misc/diagonal-squares.svg)
+# Diagonal Squares
 
 - Ask the user for a number `n`
 - On a 500×500 canvas, draw `n` squares
@@ -689,21 +689,21 @@ Start by drawing a single grey square in a random position
 
 
 ![large](http://fondinfo.github.io/images/misc/segments-1.svg)
-# Random segments
+# Random Segments
 
 - Ask the user for the number of segments to draw
 - Draw the segments
     - All with the same color, black
-    - Each with both endpoints in a random position
+    - Each with both ends in a random position
     - But entirely contained within the canvas
 
 ---
 
 ![large](http://fondinfo.github.io/images/misc/segments-2.svg)
-# Broken line
+# Polyline
 
 - Ask the user for the number of segments to draw
-- Draw the segments as a broken line, in black
-    - Start from a random point and connect it with a subsequent random point
-    - Continue connecting the last point with a new random point
+- Draw the segments as a polyline, in black
+    - Start from a random point and connect it to a subsequent random point
+    - Continue connecting the last point to a new random point
 - The line must be entirely contained within the canvas
