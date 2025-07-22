@@ -1,597 +1,709 @@
-![](http://fondinfo.github.io/images/oop/balls.png)
-# Objects
+![](http://fondinfo.github.io/images/algo/rubik-cube.png)
+# Basics
 ## Introduction to Programming
 
 ---
 
-![](http://fondinfo.github.io/images/dev/abstraction.png)
-# 💡️ Abstract Thinking
+![large](http://fondinfo.github.io/images/dev/python-cases.png) Web, data science, machine learning, scripting, teaching, games, hardware, multiplatform…
+# 💡️ Python is fun!
 
-- **Abstraction**, from “*ab trahere*” = to draw away ✂️
-    - Disregarding inessential, accidental details
-    - Reasoning on a concept or *model*, rather than on reality
-    - E.g. maps do not represent every stone or leaf
-- → *Generalization*
-    - Attributing common characteristics, of the concept, to all instances
-- Fundamental for describing and implementing *complex software systems*
-    - Abstraction levels, to encapsulate details 📦
-    - Generic, reusable structures and algorithms ♻️
+![](http://fondinfo.github.io/images/algo/antigravity.png)
 
 >
 
-https://it.wikipedia.org/wiki/Astrazione_(filosofia)
-<br>
-https://thevaluable.dev/abstraction-type-software-example/
+[https://xkcd.com/353/](https://xkcd.com/353/)
 
 ---
 
-# 💡️ The map is not the territory
+# 🧪 Interactive shell
 
-![large](http://fondinfo.github.io/images/dev/map-levels.png)
+- Install [Thonny](https://thonny.org/) or use the online [Playground](https://fondinfo.github.io/play/)
+    - At the bottom, interactive *REPL* (Read-Eval-Print Loop) interface
+- **Data type**: set of *values* + allowed *operations*
+- Numeric types: **`int`** or **`float`**, for integers or rational numbers
+    - Basic operations: `+, -, *, /`
+    - Integer division, remainder, power: `//, %, **`
+- Descriptive comments, after `#`: not evaluated
 
----
-
-![](http://fondinfo.github.io/images/oop/basic-object.svg)
-# 💡️ Object
-
-- Represents a *physical object* or a *concept* from the domain
-- Stores its internal **state** in *private fields*
-    - *Encapsulation (black box)*
-- Offers a set of **services**, as *public methods*
-    - Implements an *abstract data type (ADT)*
-
----
-
-![](http://fondinfo.github.io/images/oop/cookie-cutter.png)
-# 💡️ Classes and objects
-
-- Every *object* has an original **class**
-    - The class gives the same initial form (fields and methods) to all its objects
-- But every *object* has its own **identity**
-    - State and memory location distinct from those of other objects
-    - Both instances of different classes and of the same class
+§ py
+>>> 7 / 2
+3.5
+>>> 7 // 2  # floor division: ⌊7/2⌋, try also -7 // 2
+3
+>>> 7 % 2  # reminder positive, try also -7 % 2
+1
+>>> 2 ** 1000  # no limits (but memory)
+107150860718626[...]837205668069376
+§
 
 ---
 
-![](http://fondinfo.github.io/images/oop/ball-object.svg) ![](http://fondinfo.github.io/images/oop/ball-uml.svg) Class diagram UML
-# ⭐ Class Definition
+`a` | `b` | `a and b` | `a or b` | `not a`
+----|-----|-----------|----------|--------
+F   | F   | F         | F        | T
+F   | T   | F         | T        | T
+T   | F   | F         | T        | F
+T   | T   | T         | T        | F
 
-- **Encapsulation** of data: *naming convention*
-    - Prefix `_` for *private field* names
+# 🧪 Boolean values and None
 
-> We're all consenting adults here. *(GvR)*
+- Type **`bool`**, for boolean values: `True, False`
+    - Logical operators: `and, or, not` (→ [Logic](t11-logica.html))
+- Comparisons: `==, !=, <, <=, >, >=`
+    - Only between homogeneous values; boolean result
+    - Chained comparisons, `and` implied
+- Value **`None`**, unique of type `NoneType`: *nothing*
 
-``` py
-class Ball:  # …
-    def __init__(self, x0: int, y0: int):
-        self._x = x0
-        self._y = y0
-        self._dx, self._dy = 4, 4
-````
+§ py
+>>> 4 == 5
+False
+>>> 4 != 5 and not False
+True
+>>> 3 < 5 < 7
+True
+>>> 3 < 5 and 5 < 7  # idem
+True
+§
 
-  - We define all fields necessary for the ball
-      - Complete representation of its state
-      - ⇒ `self._x, self._y, self._dx, self._dy`
+---
 
------
+![large](http://fondinfo.github.io/images/algo/assign.svg)
+# ⭐ Assignment
 
-# ⭐ Object Construction
+- A **variable** is used to remember a useful result
+- *Assignment*: operator **`=`**
+    - On the left a *name*
+    - On the right an expression (→ *value*)
+- **⚠️ Do not confuse**
+    - *Equality* comparison: operator **`==`**
 
-  - **`__init__`** : *constructor* method
-      - Automatically executed when an object is created
-      - *Instantiation is initialization*
-  - **`self`** : first parameter of all methods
-      - Represents the *object* on which the operation is performed
-      - Allows methods to access fields
-      - No explicit value needs to be passed
-  - Other parameters, after `self` : we decide them
-      - We don't want to create all balls in the same position
-      - ⇒ Parameters `x0, y0`
+§ py
+>>> pi = 3.14  # assignment
+>>> radius = 2.5
+>>> area = pi * (radius ** 2)
+>>> area
+19.625
+>>> radius = radius + 1  # guess radius… and area!
+§
 
-<!-- end list -->
+---
 
-```py
-ball = Ball(40, 80)  # Allocation and initialization
-```
+![]([http://fondinfo.github.io/images/algo/var-label.svg](http://fondinfo.github.io/images/algo/var-label.svg))
+# 🔬 Variable
 
------
+- **Name** associated with a certain **value**
+    - 🏷️ *Label* → *object*
+- Object assigned to multiple variables
+    - Not copied, but receives multiple labels
+- The **type** depends on the currently assigned value
+    - A var doesn't need to be *declared*
+    - But must be *initialized* before use
+- *Reassignment*: new value to an existing var
+
+§ py
+>>> x = None           # no actual value, yet…
+>>> x = 100            # variables: all_lower_case
+>>> next_position = x  # use explicative names!
+>>> DELTA_X = 5        # constants: ALL_UPPER_CASE
+>>> x += DELTA_X       # shortcut for: `x = x + DELTA_X`
+>>> a, b = 5, 8        # multiple assignments
+§
+
+---
+
+# 🧪 Text strings
+
+- Type **`str`** for character sequences
+- Enclosed in double, or single quotes
+- Concatenation: `+` operator
+- Membership test (substring): `in` operator
+- Length: `len` *function*
+
+§ py
+>>> str1 = "Monty Python's "
+>>> str2 = 'Flying Circus'
+>>> result = str1 + str2
+>>> result
+"Monty Python's Flying Circus"
+>>> "Py" in result
+True
+>>> len(result)
+28
+§
+
+---
+
+# ⭐ Built-in functions
+
+- [Built-in](https://docs.python.org/3/library/functions.html) functions: `max, min, abs, len, round`…
+- Type conversion functions (*cast*): `int, float, str`…
+- Parameters in *parentheses*, separated by *comma*
+- Typically, result assigned to a variable
+
+§ py
+>>> max(3, 5)
+5
+>>> m = min(6, 4)
+>>> m
+4
+>>> "5" + 3
+TypeError: can only concatenate str (not "int") to str
+>>> int("5") + 3
+8
+>>> "5" + str(3)
+"53"
+§
+
+---
 
 # ⭐ Methods
 
-  - Expose *services* to other objects
-  - *Getter* methods : do not modify state
-
-<!-- end list -->
-
-```py
-ARENA_W,ARENA_H, BALL_W,BALL_H = 480,360, 20,20
-
-class Ball:  # …
-    def move(self):
-        if not 0 <= self._x + self._dx <= ARENA_W - BALL_W:
-            self._dx = -self._dx
-        if not 0 <= self._y + self._dy <= ARENA_H - BALL_H:
-            self._dy = -self._dy
-        self._x += self._dx
-        self._y += self._dy
-
-    def pos(self) -> (int, int):  # getter
-        return self._x, self._y
-```
-
------
-
-# ⭐ Using Objects
-
-```py
-# Create two objects, instances of Ball class
-b1 = Ball(140, 180)
-b2 = Ball(180, 140)
-
-b1.move()
-b2.move()
-
-print("b1 @", b1.pos())
-print("b2 @", b2.pos())
-```
-
-  - In its *private fields*, each object stores its entire state
-      - We use fields instead of global variables
-      - `self._x, self._y, self._dx, self._dy`
-
->
-
-[https://fondinfo.github.io/play/?c06\_ball.py](https://fondinfo.github.io/play/?c06_ball.py)
-
------
-
-# 🔬 The first parameter, self
-
-  - The first parameter of every method is called `self` (by convention)
-  - The value of `self` is assigned *automatically*
-  - It represents the *object* on which the method is invoked
-  - In Python, a method call is interpreted as follows:
-
-<!-- end list -->
-
-```py
-b1 = Ball(140, 180)
-b1.move()
-```
-
-```py
-# ⚠️ Python internals, DON'T do this!
-b1 = object.__new__(Ball)
-Ball.__init__(b1, 140, 180)
-Ball.move(b1)
-```
-
------
-
-# 🧪 Animation of two balls
-
-```py
-b1 = Ball(140, 180)
-b2 = Ball(180, 140)
-
-def tick():
-    g2d.clear_canvas()
-    g2d.draw_image("ball.png", b1.pos())
-    g2d.draw_image("ball.png", b2.pos())
-    b1.move()
-    b2.move()
-
-def main():
-    g2d.init_canvas((ARENA_W, ARENA_H))
-    g2d.main_loop(tick)
-```
-
->
-
-[https://fondinfo.github.io/play/?c06\_ball.py](https://fondinfo.github.io/play/?c06_ball.py)
-
------
-
-# 🧪 Methods with parameters
-
-  - Method for multiple consecutive moves
-  - `n`: method parameter
-      - Not a characteristic of the ball
-      - But a choice of the object user
-  - For the call, an effective parameter is needed
-
-<!-- end list -->
-
-```py
-class Ball:
-    # …
-    def multiple_move(self, n: int):
-        for i in range(n):
-            self.move()
-
-b1 = Ball(40, 40)
-b1.multiple_move(3)
-b1.multiple_move(2)
-```
-
------
-
-# 💡️ Local variables, parameters, fields
-
-  - *Fields*: store the characteristic data of an instance
-      - Each ball has its position `(self._x, self._y)` \<br\> and its speed `(self._dx, self._dy)`
-  - *Parameters*: pass other values to a method
-      - If some necessary data is not in the fields
-  - *Local variables*: store partial results
-      - Generated during method processing
-      - Names deleted after method exit
-  - *Global variables*: defined outside all functions
-      - Use only if strictly necessary
-      - Better to have a few more parameters for functions
-
------
-
-# 🧪 Linear Model
-
-```py
-class LinearModel:
-    def __init__(self, slope: float,
-                 intercept: float):
-        self._a = slope
-        self._b = intercept
-
-    def predict(self, x: float) -> float:
-        return self._a * x + self._b
-```
-
------
-
-# 🧪 Using the model
-
-```py
-def main():
-    slope = float(input("Slope? "))
-    intercept = float(input("Intercept? "))
-    model = LinearModel(slope, intercept)
-
-    line = input("x? ")
-    while line != "":
-        x = float(line)
-        y = model.predict(x)
-        print("y:", y)
-        line = input("x? ")
-```
-
-[https://fondinfo.github.io/play/?c06\_linmodel.py](https://fondinfo.github.io/play/?c06_linmodel.py)
-
------
-
-# 🧪 D\&D Character
-
-  - Let's consider a fantasy character
-  - Has a distinctive name
-  - Starts the game with a random number of "hit points"
-
-<!-- end list -->
-
-```py
-class Fighter:
-    def __init__(self, name: str):
-        self._name = name
-        self._hp = randint(15, 30)  # hit points
-
-    def describe(self) -> str:
-        return f"I'm {self._name}. I have {self._hp} hit points."
-```
-
------
-
-# 🧪 Managing Points
-
-  - When hit, the character loses some points
-  - When healed, it recovers some
-  - The character dies when it runs out of hit points
-  - Cannot be healed anymore
-
-<!-- end list -->
-
-```py
-class Fighter: # …
-    def hit(self, damage: int) -> None:
-        self._hp = max(self._hp - damage, 0)
-
-    def heal(self, cure: int) -> None:
-        if self.alive():
-            self._hp = min(self._hp + cure, 30)
-
-    def alive(self) -> bool:
-        return self._hp > 0
-```
-
------
-
-# Character Usage
-
-  - The constructor only requires the name
-  - We inflict three random hits and one random cure
-
-<!-- end list -->
-
-```py
-c = Fighter("Hero")
-print(c.describe())
-
-for _ in range(3):
-    c.hit(randint(5, 10))
-    print(c.describe())
-
-c.heal(randint(5, 10))
-print(c.describe())
-
-print(c.alive())
-```
-
-[https://fondinfo.github.io/play/?c06\_dnd.py](https://fondinfo.github.io/play/?c06_dnd.py)
-
------
-
+- In Python all values are *objects*
+    - Different types → different operations, like *methods*
+- Activating an object's method
+    - Object and method separated by “`.`”
+    - Then parameters in parentheses
+    - Typically, result assigned to a variable
+- [Methods of `str` objects]([https://docs.python.org/3/library/stdtypes.html#string-methods](https://docs.python.org/3/library/stdtypes.html#string-methods)): `upper`, `lower`, `count`…
+
+§ py
+>>> txt = "Monty Python"
+>>> shout = txt.upper()  # new string returned, `txt` unchanged
+>>> shout
+"MONTY PYTHON"
+>>> txt.count("y")
+2
+§
+
+---
+
+![]([http://fondinfo.github.io/images/fun/shopping-list.png](http://fondinfo.github.io/images/fun/shopping-list.png)) [Spam…](https://www.youtube.com/watch?v=Gxtsa-OvQLA)
 # ⭐ List
 
-  - *Mutable* sequence of *homogeneous* values
+- **Mutable** sequence of *homogeneous* values
+- Elements in *square brackets*, separated by *commas*
+- Addition, removal: `append, remove`
+- Length: `len` – Membership test: `in`
 
-<!-- end list -->
+§ py
+>>> groceries = ["spam", "egg", "beans"]
+>>> groceries.append("sausage")  # add "sausage" at the end
+>>> len(groceries)  # size has grown
+4
+>>> "egg" in groceries  # membership test
+True
+>>> groceries.remove("egg")  # remove "egg"
+>>> len(groceries)  # size has shrunk
+3
+>>> groceries
+["spam", "beans", "sausage"]
+§
 
-```py
-groceries = ["spam", "eggs", "beans"]
-groceries.append("sausage")  # add "sausage" at the end
-print(len(groceries))  # 4
-groceries.remove("eggs")  # remove "eggs"
-print(len(groceries))  # 3
+---
 
-for product in groceries:
-    print(product.capitalize())
-```
+![large](http://fondinfo.github.io/images/algo/holy-grail.jpg) [The Bridge of Death](https://www.youtube.com/watch?v=Xel0c6mpqPA)
 
-  - `for` statement for looping over sequences of values
-  - Each string is an object, of class `str`
-  - `capitalize` is a method of the `str` class
+# 🧪 Read and write
 
------
+- **`input`** reads a line of *text*, entered by the user, into a *variable*
+    - First shows a message
+    - Result is of type `str`
+- **`print`** writes a series of values on a line
+    - Inserts space between values (parameters)
 
-# 🧪 List of objects
+§ py
+>>> knight = input("What is your name? ")
+What is your name? Lancelot
+>>> print("Right. Off you go,", knight, ".")
+Right. Off you go, Lancelot .
+§
 
-  - A list can contain any data type
-  - Useful for managing numerous balls
-  - `move` call in a `for` loop
+---
 
-<!-- end list -->
+![]([http://fondinfo.github.io/images/algo/sum3.svg](http://fondinfo.github.io/images/algo/sum3.svg))
+# 🧪 Sum of three numbers
 
-```py
-from p04_ball import Ball, ARENA_W, ARENA_H
+- Save the following program as “`sum3.py`”
+- Execute, by clicking the ▶️ button
+    - Or from the command line: `python sum3.py`
 
-def tick():
-    g2d.clear_canvas()  # BG
-    for b in balls:
-        b.move()
-        g2d.draw_image("ball.png", b.pos())  # FG
+§ py
+a = float(input("Insert 1st val: "))
+b = float(input("Insert 2nd val: "))
+c = float(input("Insert 3rd val: "))
 
-balls = [Ball(40, 80), Ball(80, 40), Ball(120, 120)]
-g2d.init_canvas((ARENA_W, ARENA_H))
-g2d.main_loop(tick)
-```
+total = a + b + c
 
-[https://fondinfo.github.io/play/?c06\_balls.py](https://fondinfo.github.io/play/?c06_balls.py)
+print("The sum is", total)
+§
 
------
+- **⚠️ Type awareness**
+    - ❓ What happens, without conversion to `float`?
 
-# Creating the list
+>
 
-```py
-balls = [Ball(40, 80), Ball(80, 40), Ball(120, 120)]
-```
+[https://fondinfo.github.io/play/?c02_sum3.py](https://fondinfo.github.io/play/?c02_sum3.py)
 
-```py
-b1 = Ball(40, 80)
-b2 = Ball(80, 40)
-b3 = Ball(120, 120)
-balls = [b1, b2, b3]
-```
+---
 
-```py
-balls = []
-balls.append(Ball(40, 80))
-balls.append(Ball(80, 40))
-balls.append(Ball(120, 120))
-```
+# Modules
 
-[https://fondinfo.github.io/play/?c06\_balls.py](https://fondinfo.github.io/play/?c06_balls.py)
+---
 
------
+![large](http://fondinfo.github.io/images/repr/raster-coords.svg) ![large](http://fondinfo.github.io/images/repr/color-mixing.svg)
+# ⭐ Drawing on canvas
 
-# Ghost Character
+- **Raster coordinates**
+    - Origin at top-left
+- **Additive color synthesis**
+    - Primaries: *Red, Green, Blue*
+- We will use an *ad-hoc* module: `g2d`
+    - Defines drawing functions
+- In the [playground](https://fondinfo.github.io/play/?c02_draw.py), integrated version
+- *Local execution*
+    - Copy the `g2d.py` file from the [fondinfo repository](https://github.com/fondinfo/fondinfo/archive/master.zip) to your working folder
+- [**g2d documentation**](https://github.com/fondinfo/fondinfo#g2d)
 
-  - Every now and then it disappears or reappears (changing *sprite*)
+---
 
-<!-- end list -->
+![large](http://fondinfo.github.io/images/repr/pixel-grid.png)
+# ⭐ Tuple
 
-```py
-class Ghost:  # …
-    def __init__(self):
-        self._w, self._h = 20, 20
-        self._x, self._y = ARENA_W // 2, ARENA_H // 2
-        self._visible = True
+- **Immutable** sequence of values
+    - Even of *different types*
+- Often in parentheses
+    - To separate it from other code
+- Also useful for graphics:
+    - *Position*: `(x, y)`
+    - *Dimension*: `(width, height)`
+    - *Color*: `(red, green, blue)` <br> Each component in the range `0..255`
 
-    def sprite(self):
-        if self._visible:
-            return 20, 0
-        return 20, 20
-```
+§ py
+center_pt = (320, 240)  # packing
+window_size = (640, 480)
+bluette_color = (47, 102, 207)
+x, y = center_pt  # sequence unpacking
+§
 
-  - `sprite` method: where the desired *sprite* is located
-      - Within the overall image
+---
 
------
+# 🧪 Rectangles and circles
 
-# Random Direction
+§ py
+import g2d
 
-  - With each move, it chooses a completely random direction
-      - Local variables `dx`, `dy`, *not fields*
+g2d.init_canvas((600, 400))  # width, height
 
-<!-- end list -->
+g2d.set_color((255, 255, 0))  # red + green = yellow
+g2d.draw_rect((150, 100), (250, 200))  # left-top, size
 
-```py
-class Ghost:  # …
-    def move(self):
-        dx = choice([-4, 0, 4])
-        dy = choice([-4, 0, 4])
-        self._x = (self._x + dx) % ARENA_W
-        self._y = (self._y + dy) % ARENA_H
+g2d.set_color((0, 0, 255))
+g2d.draw_circle((400, 300), 20)  # center, radius
 
-        if randrange(100) == 0:
-            self._visible = not self._visible
-```
+g2d.main_loop()  # manage the window/canvas
+§
 
-  - ❓ Why is the remainder of the division `%` taken?
-  - ❓ How to limit the choice to only the 4 main directions ↔↕?
+---
 
------
+![]([http://fondinfo.github.io/images/repr/draw.svg](http://fondinfo.github.io/images/repr/draw.svg))
+# 🧪 Lines and texts
 
-# Sprite Selection
+§ py
+import g2d
 
-```py
-ghosts = []
-for _ in range(5):
-    ghosts.append(Ghost())
+g2d.init_canvas((600, 400))
 
-def tick():
-    g2d.clear_canvas()
-    for g in ghosts:
-        # Draw a clip from a larger image
-        g2d.draw_image("sprites.png", g.pos(), g.sprite(), g.size())
-        g.move()
-```
+# draw_rect, draw_circle…
 
-[https://fondinfo.github.io/play/?c06\_ghost.py](https://fondinfo.github.io/play/?c06_ghost.py)
+g2d.set_color((0, 255, 0))
+g2d.draw_line((150, 100), (400, 300))   # pt1, pt2
 
-  - `g2d.draw_image` draws a portion of an image
-      - Inefficient to load many separate images
+g2d.set_color((255, 0, 0))
+g2d.draw_text("Hello", (150, 100), 40)  # text, center, font-size
 
------
+g2d.main_loop()
+§
+
+>
+
+[https://fondinfo.github.io/play/?c02_draw.py](https://fondinfo.github.io/play/?c02_draw.py)
+
+---
+
+# 🧪 Dialog windows
+
+- `g2d.prompt`: *input* request, in window, `str` result
+- `g2d.alert`: *message* display, single `str` parameter
+- `g2d.confirm`: *confirmation* request, `bool` result
+
+§ py
+import g2d
+
+g2d.init_canvas((600, 400))
+
+name = g2d.prompt("What's your name?")
+g2d.alert("Hello, " + name + "!")
+
+g2d.main_loop()
+§
+
+- [**g2d documentation**](https://github.com/fondinfo/fondinfo#g2d)
+
+---
+
+![]([http://fondinfo.github.io/images/algo/calculator.svg](http://fondinfo.github.io/images/algo/calculator.svg)) [☞ `math`]([https://docs.python.org/3/library/math.html](https://docs.python.org/3/library/math.html))
+# 🧪 Battery included 🔋
+
+- [`math`]([https://docs.python.org/3/library/math.html](https://docs.python.org/3/library/math.html)) module in *Python Standard Library*
+    - Does not require installation
+    - `sqrt, log, sin, pi, e, inf`…
+
+§ py
+import math  # use namespace `math` as prefix
+y = math.sqrt(4)
+print(y)  # 2.0
+§
+
+§ py
+from math import sqrt  # no prefix for `sqrt`
+print(sqrt(4))
+§
+
+- `import` at the beginning, to highlight dependencies
+    - **`import …`**: entire module *namespace*
+    - **`from … import …`**: only certain names
+
+---
+
+![]([http://fondinfo.github.io/images/algo/red-dice.svg](http://fondinfo.github.io/images/algo/red-dice.svg)) [☞ `random`]([https://docs.python.org/3/library/random.html](https://docs.python.org/3/library/random.html))
+# 🧪 Random 🎲
+
+- [`random`]([https://docs.python.org/3/library/random.html](https://docs.python.org/3/library/random.html)) module in *Python Standard Library*
+    - Does not require installation
+    - `randint, randrange, random, choice, shuffle`…
+
+§ py
+from random import randint, randrange, choice
+
+die1 = randint(1, 6)  # like rolling a die
+die2 = randint(1, 6)  # like rolling a die
+
+one_of_three = randrange(3)  # 0, 1, or 2
+
+prime = choice([2, 3, 5, 7, 11, 13])  # one from a sequence
+§
+
+---
+
+# ⭐ Control structures
+
+---
+
+![]([http://fondinfo.github.io/images/algo/if.svg](http://fondinfo.github.io/images/algo/if.svg))
+# ⭐ Selection: if
+
+- Body of `if` or `else`: **indentation**
+    - Required by *syntax*, not optional
+    - Can contain any statement
+    - Even other nested `if` or `while` blocks!
+
+> Readability counts *(The Zen of Python)*
+
+§ py
+r = int(g2d.prompt("Radius? [50-99]"))
+
+if 50 <= r and r <= 99:
+    g2d.set_color((0, 0, 255))
+    g2d.draw_circle((200, 200), r)
+
+g2d.set_color((255, 255, 0))
+g2d.draw_circle((200, 200), 25)
+§
+
+---
+
+![]([http://fondinfo.github.io/images/algo/if-else.svg](http://fondinfo.github.io/images/algo/if-else.svg))
+# ⭐ Selection: else
+
+- `else` clause: optional
+    - Executed if the condition is not met
+
+§ py
+r = int(g2d.prompt("Radius? [50-99]"))
+
+if 50 <= r <= 99:  # i.e.: 50 <= r and r <= 99
+    g2d.set_color((0, 0, 255))
+    g2d.draw_circle((200, 200), r)
+else:
+    g2d.alert("Out of range!")
+
+g2d.set_color((255, 255, 0))
+g2d.draw_circle((200, 200), 25)
+§
+
+>
+
+[https://fondinfo.github.io/play/?c02_ifelse.py](https://fondinfo.github.io/play/?c02_ifelse.py)
+
+---
+
+![]([http://fondinfo.github.io/images/algo/dice.svg](http://fondinfo.github.io/images/algo/dice.svg))
+# ⭐ Selection: elif
+
+- `elif`: contraction of `else if`
+    - Selection among *multiple* alternatives
+    - If no condition is true, `else` is executed
+- Ex. Rolling *two dice* → 3 alternatives
+    - 1st die wins, 2nd die wins, or it's a tie
+
+§ py
+from random import randint
+a, b = randint(1, 6), randint(1, 6)  # roll 2 dice
+if a > b:
+    print("The first die wins.")
+elif a < b:
+    print("The second die wins.")
+else:
+    print("The dice are equal. It's a tie.")
+§
+
+---
+
+![]([http://fondinfo.github.io/images/algo/while.svg](http://fondinfo.github.io/images/algo/while.svg))
+# ⭐ Iteration: while
+
+- *Looping* condition
+    - *Preliminary* check
+    - Possible that the body is never executed
+
+§ py
+r = int(g2d.prompt("Radius? [50-99]"))
+
+while r < 50 or r > 99:
+    g2d.alert("Out of range!")
+    r = int(g2d.prompt("Radius? [50-99]"))
+
+g2d.set_color((0, 0, 255))
+g2d.draw_circle((200, 200), r)
+§
+
+>
+
+<https://fondinfo.github.io/play/?c02_while.py>
+
+---
+
+![](http://fondinfo.github.io/images/misc/rock-cubes.png)
+# ⭐ Iteration: for
+
+- Operates only on **sequences and iterables**
+    - `list, tuple, str, range`…
+    - Num. iterations = sequence length
+- Iteration variable
+    - At each iteration, new value from sequence
+
+§ py
+values = [2, 3, 5, 7, 11]
+for val in values:  # list
+    print(val ** 3)  # 8 27 125 343 1331
+§
+
+§ py
+for r in (200, 175, 150):  # tuple
+    color = (randrange(256), randrange(256), randrange(256))
+    g2d.set_color(color)
+    g2d.draw_circle((200, 200), r)
+§
+
+---
+
+# ⭐ Value range
+
+- **`range`**: right-open value interval
+    - Bounds: lower *inclusive* (0), upper *exclusive*
+    - If lower bound ≠ 0, two parameters needed
+- *`reversed`*: reversed sequence
+
+§ py
+for i in range(5):  # 0, 1, 2, 3, 4
+    print(i)
+§
+
+§ py
+for i in reversed(range(5)):  # 4, 3, 2, 1, 0
+    print(i)
+§
+
+---
+
+![]([http://fondinfo.github.io/images/misc/red-squares.svg](http://fondinfo.github.io/images/misc/red-squares.svg))
+# 🧪 Sequence of squares
+
+§ py
+import g2d
+
+g2d.init_canvas((500, 500))
+
+for i in range(4):  # 0, 1, 2, 3
+    red = i * 85    # proportional to i
+    g2d.set_color((red, 0, 0))
+
+    pos = i * 100   # proportional to i
+    g2d.draw_rect((pos, pos), (200, 200))
+
+g2d.main_loop()
+§
+
+- ❓ What happens if we use `reversed` in the `for` loop?
+
+>
+
+[https://fondinfo.github.io/play/?c02_squares.py](https://fondinfo.github.io/play/?c02_squares.py)
+
+---
 
 # 🏊 Exercises
 
------
+---
 
-# Ellipse Class
+![]([http://fondinfo.github.io/images/misc/handshake.svg](http://fondinfo.github.io/images/misc/handshake.svg))
+# Hello, admin!
 
-  - Class that models an ellipse
-  - Private fields (constructor parameters)
-      - Semiaxes: `a, b`
-  - Public methods to get...
-      - Area: `$A = \pi \cdot a \cdot b$`
-      - Focus: `$c = \sqrt{|a^2 - b^2|}$`
-  - In the main body of the program...
-      - Create an object with user-provided data
-      - Display the area and focal distance of the ellipse
+- Write a program in a file `hello.py`
+- Ask the user for their name
+- Insert this name into a greeting message, e.g.:
 
------
+§ txt
+What's your name? Adam
+Hello, Adam!
+§
 
-# Quadratic Model
+- If the user's name is “`admin`”…
+    - Also show the special message “`At your command`”
 
-  - Create a class to represent a quadratic model with one variable
-      - Of the type: $y = a \\cdot x^2 + b \\cdot x + c$
-      - Initialize coefficients in the constructor
-  - Then define a `predict` method, which provides the output $y$ of the model
-      - Corresponding to a certain value of $x$
-      - $x$ passed as a parameter
+---
+
+![]([http://fondinfo.github.io/images/misc/greek-pi.png](http://fondinfo.github.io/images/misc/greek-pi.png))
+# Circle
+
+- Ask the user for the radius `r` of a circle
+    - `r` a rational number between 0 and 200
+- If `r` is valid
+    - Display the circle, centered on the canvas
+    - Just above the circle, write its area
+    - Just below the circle, write its circumference
+- If `r` is out of range
+    - Show an error message
+
+---
+
+![]([http://fondinfo.github.io/images/games/dragon.svg](http://fondinfo.github.io/images/games/dragon.svg))
+# The year of the dragon
+
+- The program asks the user for their birth year
+- Then it communicates whether that year was under the sign of the dragon or not
+- We know that, according to Chinese tradition, 2024 is the year of the dragon
+- We also know that the sign repeats every 12 years
+
+---
+
+![large](http://fondinfo.github.io/images/algo/holy-grail.jpg)
+# The Bridge of Death
+
+- Ask the user three questions:
+    - `"What is your name?"`
+    - `"What is your quest?"`
+    - `"What is your favorite color?"`
+- If the answers are `"Lancelot"`, `"Holy Grail"`, and `"Blue"`, print:
+    - `"Right. Off you go."`
+- Otherwise, print:
+    - `"Down into the Gorge of Eternal Peril!"`
 
 >
 
-Start from the linear model example
+First version: ask and check only the name
 
------
+---
 
-# Two-Variable Model
+![]([http://fondinfo.github.io/images/misc/calendar-cols.jpg](http://fondinfo.github.io/images/misc/calendar-cols.jpg))
+# Age calculation
 
-  - Create a class to represent a linear model with two variables
-      - Of the type: $z = a \\cdot x + b \\cdot y + c$
-      - Initialize coefficients in the constructor
-  - Then define a `predict` method, which provides the output $z$ of the model
-      - Corresponding to certain values of $x$ and $y$
-      - $x$ and $y$ passed as parameters
+- Ask the user for their birth date
+    - Year, month, and day
+- Ask the user for today's date
+    - Year, month, and day
+- Communicate the exact current age
+    - Number of birthdays already had
 
 >
 
-Start from the linear model example
+In the current year, has the user already had their birthday?
+<br>
+Compound boolean expression with `and`, `or`, `not`…
 
------
+---
 
-# Vehicle Animation
+![]([http://fondinfo.github.io/images/misc/three-brothers.png](http://fondinfo.github.io/images/misc/three-brothers.png))
+# Min and Max
 
-  - Create a `Vehicle` class
-      - Start from the `Ball` class seen in the lesson
-      - However, movement is only horizontal
-  - If the vehicle goes 100px beyond the right edge...
-      - It reappears 100px before the left edge
-  - If the vehicle goes 100px beyond the left edge...
-      - It reappears 100px after the right edge
-  - Animate two vehicles
-      - One moving to the right (→)
-      - The other to the left (←)
-      - Represent each vehicle with a rectangle
+- Generate and print three random integers: `a`, `b`, `c`
+- Each between 1 and 6
+- Determine and show which is the smallest of the three
 
------
+>
 
-# Alien Animation
+First, check if `a` is smaller than the other two
+<br>
+Otherwise, check if `b` is smaller than `c`
+<br>
+Otherwise…
 
-  - Create an `Alien` class
-      - Start from the `Ball` class seen in the lesson
-      - However, basic movement is only horizontal
-  - When it reaches the edge, the character:
-      - Moves a few pixels downwards
-      - Then changes horizontal direction
-  - Ensure that, in each frame, the movement is only horizontal, or only vertical, but *not* diagonal
+---
 
------
+![]([http://fondinfo.github.io/images/misc/random-squares.svg](http://fondinfo.github.io/images/misc/random-squares.svg))
+# Random squares
 
-# Ghost with Counter
+- Ask the user for a number `n`
+- Draw `n` squares
+    - All with a side of 100 pixels
+    - Each in a random position
+    - Each with a random color
 
-  - Start from the `Ghost` class seen in the lesson
-  - The ghost is normally still
-  - Randomly, with probability $\\frac{1}{100}$, it starts moving
-      - Chooses a random direction \<br\> (horizontal, vertical, or diagonal)
-      - Maintains the same direction for 10 frames
-      - Then stops again
-  - While the ghost is moving, it is semi-transparent
-      - Otherwise, it is visible
-  - Add fields for counter and direction to the ghost
+>
 
------
+Start by drawing a single grey square in a random position
 
-# View Scrolling
+---
 
-  - Set a large space for character movements (`ARENA_W, ARENA_H`)
-  - Create a smaller drawing canvas (`VIEW_W, VIEW_H`)
-      - Only a portion of the arena is shown
-  - Allow the user to move the *view* on the arena
-      - Using arrow keys
+![]([http://fondinfo.github.io/images/misc/diagonal-squares.svg](http://fondinfo.github.io/images/misc/diagonal-squares.svg))
+# Diagonal squares
 
------
+- Ask the user for a number `n`
+- On a 500×500 canvas, draw `n` squares
+    - All with a side of 50 pixels
+    - Arranged along the diagonal, so they always share a vertex
+    - Each with a random color
+- Optionally, determine the side so that it occupies the entire diagonal
 
-# 🥷 Object Spiral
+---
 
-  - Show a moving circle
-  - Spiral path, in $N$ steps
-      - The circle rotates around the center of the canvas
-      - At increasing distance from the center of the canvas
-      - Circle radius: increasing
-      - Color: from red to blue
-  - Implement a class for the circle
-      - `move` method for a single-step movement
-      - *Getter* methods for position, radius, and color
-      - Counter field; if it exceeds the limit $N$, it returns to 0
 
-<!-- end list -->
+![large](http://fondinfo.github.io/images/misc/segments-1.svg)
+# Random segments
 
-```
-```
+- Ask the user for the number of segments to draw
+- Draw the segments
+    - All with the same color, black
+    - Each with both endpoints in a random position
+    - But entirely contained within the canvas
+
+---
+
+![large](http://fondinfo.github.io/images/misc/segments-2.svg)
+# Broken line
+
+- Ask the user for the number of segments to draw
+- Draw the segments as a broken line, in black
+    - Start from a random point and connect it with a subsequent random point
+    - Continue connecting the last point with a new random point
+- The line must be entirely contained within the canvas

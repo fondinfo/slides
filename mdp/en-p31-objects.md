@@ -7,14 +7,14 @@
 ![](http://fondinfo.github.io/images/dev/abstraction.png)
 # 💡️ Abstract Thinking
 
-- **Abstraction**, from “*ab trahere*” = to draw away ✂️
+- **Abstraction**, from "*ab trahere*" = to pull away ✂️
     - Disregarding inessential, accidental details
-    - Reasoning on a concept or *model*, rather than on reality
-    - E.g. maps do not represent every stone or leaf
+    - Reasoning on a concept or *model*, instead of on reality
+    - E.g., maps do not represent every stone or leaf
 - → *Generalization*
-    - Attributing common characteristics, of the concept, to all instances
-- Fundamental for describing and implementing *complex software systems*
-    - Abstraction levels, to encapsulate details 📦
+    - Attributing common characteristics of the concept to all instances
+- Fundamental for describing and realizing *complex software systems*
+    - Levels of abstraction, to encapsulate details 📦
     - Generic, reusable structures and algorithms ♻️
 
 >
@@ -45,7 +45,7 @@ https://thevaluable.dev/abstraction-type-software-example/
 ![](http://fondinfo.github.io/images/oop/cookie-cutter.png)
 # 💡️ Classes and objects
 
-- Every *object* has an original **class**
+- Every *object* has an **origin class**
     - The class gives the same initial form (fields and methods) to all its objects
 - But every *object* has its own **identity**
     - State and memory location distinct from those of other objects
@@ -53,11 +53,11 @@ https://thevaluable.dev/abstraction-type-software-example/
 
 ---
 
-![](http://fondinfo.github.io/images/oop/ball-object.svg) ![](http://fondinfo.github.io/images/oop/ball-uml.svg) Class diagram UML
+![](http://fondinfo.github.io/images/oop/ball-object.svg) ![]([http://fondinfo.github.io/images/oop/ball-uml.svg](http://fondinfo.github.io/images/oop/ball-uml.svg)) UML Class diagram
 # ⭐ Class Definition
 
-- **Encapsulation** of data: *naming convention*
-    - Prefix `_` for *private field* names
+- Data **Encapsulation**: *naming convention*
+    - `_` prefix for *private field* names
 
 > We're all consenting adults here. *(GvR)*
 
@@ -67,43 +67,41 @@ class Ball:  # …
         self._x = x0
         self._y = y0
         self._dx, self._dy = 4, 4
-````
+```
 
-  - We define all fields necessary for the ball
-      - Complete representation of its state
-      - ⇒ `self._x, self._y, self._dx, self._dy`
+- We define all the fields necessary for the ball
+    - Complete representation of its state
+    - ⇒ `self._x, self._y, self._dx, self._dy`
 
------
+---
 
+![]([http://fondinfo.github.io/images/oop/bob-builder.jpg](http://fondinfo.github.io/images/oop/bob-builder.jpg))
 # ⭐ Object Construction
 
-  - **`__init__`** : *constructor* method
-      - Automatically executed when an object is created
-      - *Instantiation is initialization*
-  - **`self`** : first parameter of all methods
-      - Represents the *object* on which the operation is performed
-      - Allows methods to access fields
-      - No explicit value needs to be passed
-  - Other parameters, after `self` : we decide them
-      - We don't want to create all balls in the same position
-      - ⇒ Parameters `x0, y0`
+- **`__init__`** : *constructor* method
+    - Automatically executed upon object creation
+    - *Instantiation is initialization*
+- **`self`** : first parameter of all methods
+    - Represents the *object* on which to perform the operation
+    - Allows methods to access fields
+    - No explicit value needs to be passed
+- Other parameters, after `self` : we decide them
+    - We don't want to create all balls in the same position
+    - ⇒ Parameters `x0, y0`
 
-<!-- end list -->
-
-```py
+``` py
 ball = Ball(40, 80)  # Allocation and initialization
 ```
 
------
+---
 
+![]([http://fondinfo.github.io/images/oop/anim-bounce.png](http://fondinfo.github.io/images/oop/anim-bounce.png))
 # ⭐ Methods
 
-  - Expose *services* to other objects
-  - *Getter* methods : do not modify state
+- Expose *services* to other objects
+- *Getter* methods : do not modify state
 
-<!-- end list -->
-
-```py
+``` py
 ARENA_W,ARENA_H, BALL_W,BALL_H = 480,360, 20,20
 
 class Ball:  # …
@@ -119,11 +117,12 @@ class Ball:  # …
         return self._x, self._y
 ```
 
------
+---
 
+![]([http://fondinfo.github.io/images/oop/balls.png](http://fondinfo.github.io/images/oop/balls.png))
 # ⭐ Using Objects
 
-```py
+``` py
 # Create two objects, instances of Ball class
 b1 = Ball(140, 180)
 b2 = Ball(180, 140)
@@ -135,42 +134,40 @@ print("b1 @", b1.pos())
 print("b2 @", b2.pos())
 ```
 
-  - In its *private fields*, each object stores its entire state
-      - We use fields instead of global variables
-      - `self._x, self._y, self._dx, self._dy`
+- In its *private fields*, each object stores all its state
+    - We use fields instead of global variables
+    - `self._x, self._y, self._dx, self._dy`
 
 >
 
-[https://fondinfo.github.io/play/?c06\_ball.py](https://fondinfo.github.io/play/?c06_ball.py)
+[https://fondinfo.github.io/play/?c06_ball.py](https://fondinfo.github.io/play/?c06_ball.py)
 
------
+---
 
 # 🔬 The first parameter, self
 
-  - The first parameter of every method is called `self` (by convention)
-  - The value of `self` is assigned *automatically*
-  - It represents the *object* on which the method is invoked
-  - In Python, a method call is interpreted as follows:
+- The first parameter of every method is called `self` (by convention)
+- The value of `self` is *automatically* assigned
+- It represents the *object* on which the method is invoked
+- In Python, a method call is interpreted as follows:
 
-<!-- end list -->
-
-```py
+``` py
 b1 = Ball(140, 180)
 b1.move()
 ```
 
-```py
+``` py
 # ⚠️ Python internals, DON'T do this!
 b1 = object.__new__(Ball)
 Ball.__init__(b1, 140, 180)
 Ball.move(b1)
 ```
 
------
+---
 
 # 🧪 Animation of two balls
 
-```py
+``` py
 b1 = Ball(140, 180)
 b2 = Ball(180, 140)
 
@@ -188,21 +185,19 @@ def main():
 
 >
 
-[https://fondinfo.github.io/play/?c06\_ball.py](https://fondinfo.github.io/play/?c06_ball.py)
+[https://fondinfo.github.io/play/?c06_ball.py](https://fondinfo.github.io/play/?c06_ball.py)
 
------
+---
 
 # 🧪 Methods with parameters
 
-  - Method for multiple consecutive moves
-  - `n`: method parameter
-      - Not a characteristic of the ball
-      - But a choice of the object user
-  - For the call, an effective parameter is needed
+- Method for multiple consecutive movements
+- `n`: method parameter
+    - Not a characteristic of the ball
+    - But a choice of who uses the object
+- The call requires an actual parameter
 
-<!-- end list -->
-
-```py
+``` py
 class Ball:
     # …
     def multiple_move(self, n: int):
@@ -214,26 +209,27 @@ b1.multiple_move(3)
 b1.multiple_move(2)
 ```
 
------
+---
 
 # 💡️ Local variables, parameters, fields
 
-  - *Fields*: store the characteristic data of an instance
-      - Each ball has its position `(self._x, self._y)` \<br\> and its speed `(self._dx, self._dy)`
-  - *Parameters*: pass other values to a method
-      - If some necessary data is not in the fields
-  - *Local variables*: store partial results
-      - Generated during method processing
-      - Names deleted after method exit
-  - *Global variables*: defined outside all functions
-      - Use only if strictly necessary
-      - Better to have a few more parameters for functions
+- *Fields*: store the characteristic data of an instance
+    - Each ball has its position `(self._x, self._y)` <br> and its velocity `(self._dx, self._dy)`
+- *Parameters*: pass other values to a method
+    - If some necessary data is not in the fields
+- *Local variables*: store partial results
+    - Generated during method processing
+    - Names deleted after method exit
+- *Global variables*: defined outside all functions
+    - Use only if strictly necessary
+    - Better to have a few more parameters for functions
 
------
+---
 
+![](http://fondinfo.github.io/images/misc/slope.svg)
 # 🧪 Linear Model
 
-```py
+``` py
 class LinearModel:
     def __init__(self, slope: float,
                  intercept: float):
@@ -244,11 +240,11 @@ class LinearModel:
         return self._a * x + self._b
 ```
 
------
+---
 
 # 🧪 Using the model
 
-```py
+``` py
 def main():
     slope = float(input("Slope? "))
     intercept = float(input("Intercept? "))
@@ -262,19 +258,18 @@ def main():
         line = input("x? ")
 ```
 
-[https://fondinfo.github.io/play/?c06\_linmodel.py](https://fondinfo.github.io/play/?c06_linmodel.py)
+<https://fondinfo.github.io/play/?c06_linmodel.py>
 
------
+---
 
-# 🧪 D\&D Character
+![](http://fondinfo.github.io/images/misc/hiccup.png)
+# 🧪 D&D Character
 
-  - Let's consider a fantasy character
-  - Has a distinctive name
-  - Starts the game with a random number of "hit points"
+- Let's consider a fantasy character
+- Has a distinctive name
+- Starts the game with a random number of "hit points"
 
-<!-- end list -->
-
-```py
+``` py
 class Fighter:
     def __init__(self, name: str):
         self._name = name
@@ -284,18 +279,16 @@ class Fighter:
         return f"I'm {self._name}. I have {self._hp} hit points."
 ```
 
------
+---
 
-# 🧪 Managing Points
+# 🧪 Managing points
 
-  - When hit, the character loses some points
-  - When healed, it recovers some
-  - The character dies when it runs out of hit points
-  - Cannot be healed anymore
+- When hit, the character loses some points
+- When healed, they regain some
+- The character dies when they run out of hit points
+- Cannot be healed anymore
 
-<!-- end list -->
-
-```py
+``` py
 class Fighter: # …
     def hit(self, damage: int) -> None:
         self._hp = max(self._hp - damage, 0)
@@ -308,16 +301,14 @@ class Fighter: # …
         return self._hp > 0
 ```
 
------
+---
 
-# Character Usage
+# Using the character
 
-  - The constructor only requires the name
-  - We inflict three random hits and one random cure
+- The constructor only requires the name
+- We inflict three random hits and one random cure
 
-<!-- end list -->
-
-```py
+``` py
 c = Fighter("Hero")
 print(c.describe())
 
@@ -331,17 +322,16 @@ print(c.describe())
 print(c.alive())
 ```
 
-[https://fondinfo.github.io/play/?c06\_dnd.py](https://fondinfo.github.io/play/?c06_dnd.py)
+<https://fondinfo.github.io/play/?c06_dnd.py>
 
------
+---
 
+![](http://fondinfo.github.io/images/fun/shopping-list.png)
 # ⭐ List
 
-  - *Mutable* sequence of *homogeneous* values
+- *Mutable* sequence of *homogeneous* values
 
-<!-- end list -->
-
-```py
+``` py
 groceries = ["spam", "eggs", "beans"]
 groceries.append("sausage")  # add "sausage" at the end
 print(len(groceries))  # 4
@@ -352,21 +342,19 @@ for product in groceries:
     print(product.capitalize())
 ```
 
-  - `for` statement for looping over sequences of values
-  - Each string is an object, of class `str`
-  - `capitalize` is a method of the `str` class
+- `for` statement for looping over sequences of values
+- Each string is an object, of class `str`
+- `capitalize` is a method of the `str` class
 
------
+---
 
 # 🧪 List of objects
 
-  - A list can contain any data type
-  - Useful for managing numerous balls
-  - `move` call in a `for` loop
+- A list can contain any type of data
+- Useful for managing numerous balls
+- `move` call in a `for` loop
 
-<!-- end list -->
-
-```py
+``` py
 from p04_ball import Ball, ARENA_W, ARENA_H
 
 def tick():
@@ -380,41 +368,40 @@ g2d.init_canvas((ARENA_W, ARENA_H))
 g2d.main_loop(tick)
 ```
 
-[https://fondinfo.github.io/play/?c06\_balls.py](https://fondinfo.github.io/play/?c06_balls.py)
+[https://fondinfo.github.io/play/?c06_balls.py](https://fondinfo.github.io/play/?c06_balls.py)
 
------
+---
 
 # Creating the list
 
-```py
+``` py
 balls = [Ball(40, 80), Ball(80, 40), Ball(120, 120)]
 ```
 
-```py
+``` py
 b1 = Ball(40, 80)
 b2 = Ball(80, 40)
 b3 = Ball(120, 120)
 balls = [b1, b2, b3]
 ```
 
-```py
+``` py
 balls = []
 balls.append(Ball(40, 80))
 balls.append(Ball(80, 40))
 balls.append(Ball(120, 120))
 ```
 
-[https://fondinfo.github.io/play/?c06\_balls.py](https://fondinfo.github.io/play/?c06_balls.py)
+<https://fondinfo.github.io/play/?c06_balls.py>
 
------
+---
 
+![](https://raw.githubusercontent.com/fondinfo/fondinfo/master/sprites.png)
 # Ghost Character
 
-  - Every now and then it disappears or reappears (changing *sprite*)
+- Every now and then it disappears or reappears (changing *sprite*)
 
-<!-- end list -->
-
-```py
+``` py
 class Ghost:  # …
     def __init__(self):
         self._w, self._h = 20, 20
@@ -427,19 +414,17 @@ class Ghost:  # …
         return 20, 20
 ```
 
-  - `sprite` method: where the desired *sprite* is located
-      - Within the overall image
+- `sprite` method: where the desired *sprite* is located
+    - Within the overall image
 
------
+---
 
-# Random Direction
+# Random direction
 
-  - With each move, it chooses a completely random direction
-      - Local variables `dx`, `dy`, *not fields*
+- With each move, it chooses a completely random direction
+    - Local variables `dx`, `dy`, *not fields*
 
-<!-- end list -->
-
-```py
+``` py
 class Ghost:  # …
     def move(self):
         dx = choice([-4, 0, 4])
@@ -451,14 +436,14 @@ class Ghost:  # …
             self._visible = not self._visible
 ```
 
-  - ❓ Why is the remainder of the division `%` taken?
-  - ❓ How to limit the choice to only the 4 main directions ↔↕?
+- ❓ Why is the modulo operator `%` used?
+- ❓ How to limit the choice to only the 4 main directions ↔↕?
 
------
+---
 
-# Sprite Selection
+# Choosing the sprite
 
-```py
+``` py
 ghosts = []
 for _ in range(5):
     ghosts.append(Ghost())
@@ -471,127 +456,129 @@ def tick():
         g.move()
 ```
 
-[https://fondinfo.github.io/play/?c06\_ghost.py](https://fondinfo.github.io/play/?c06_ghost.py)
+[https://fondinfo.github.io/play/?c06_ghost.py](https://fondinfo.github.io/play/?c06_ghost.py)
 
-  - `g2d.draw_image` draws a portion of an image
-      - Inefficient to load many separate images
+- `g2d.draw_image` draws a portion of an image
+    - Inefficient to load many separate images
 
------
+---
 
 # 🏊 Exercises
 
------
+---
 
+
+![]([http://fondinfo.github.io/images/misc/ellipse.svg](http://fondinfo.github.io/images/misc/ellipse.svg))
 # Ellipse Class
 
-  - Class that models an ellipse
-  - Private fields (constructor parameters)
-      - Semiaxes: `a, b`
-  - Public methods to get...
-      - Area: `$A = \pi \cdot a \cdot b$`
-      - Focus: `$c = \sqrt{|a^2 - b^2|}$`
-  - In the main body of the program...
-      - Create an object with user-provided data
-      - Display the area and focal distance of the ellipse
+- Class that models an ellipse
+- Private fields (constructor parameters)
+    - Semiaxes: `a, b`
+- Public methods to get...
+    - Area: `$A = \pi \cdot a \cdot b$`
+    - Focus: `$c = \sqrt{|a^2 - b^2|}$`
+- In the main program body...
+    - Create an object with user-provided data
+    - Display the area and focal distance of the ellipse
 
------
+---
 
 # Quadratic Model
 
-  - Create a class to represent a quadratic model with one variable
-      - Of the type: $y = a \\cdot x^2 + b \\cdot x + c$
-      - Initialize coefficients in the constructor
-  - Then define a `predict` method, which provides the output $y$ of the model
-      - Corresponding to a certain value of $x$
-      - $x$ passed as a parameter
+- Create a class to represent a single-variable quadratic model
+    - Of the type: $y = a \cdot x^2 + b \cdot x + c$
+    - Initialize coefficients in the constructor
+- Then define a `predict` method, which provides the output $y$ of the model
+    - Corresponding to a certain value of $x$
+    - $x$ passed as a parameter
 
 >
 
 Start from the linear model example
 
------
+---
 
-# Two-Variable Model
+# Two-variable Model
 
-  - Create a class to represent a linear model with two variables
-      - Of the type: $z = a \\cdot x + b \\cdot y + c$
-      - Initialize coefficients in the constructor
-  - Then define a `predict` method, which provides the output $z$ of the model
-      - Corresponding to certain values of $x$ and $y$
-      - $x$ and $y$ passed as parameters
+- Create a class to represent a linear model with two variables
+    - Of the type: $z = a \cdot x + b \cdot y + c$
+    - Initialize coefficients in the constructor
+- Then define a `predict` method, which provides the output $z$ of the model
+    - Corresponding to certain values of $x$ and $y$
+    - $x$ and $y$ passed as parameters
 
 >
 
 Start from the linear model example
 
------
+---
 
+![]([http://fondinfo.github.io/images/misc/frogger.png](http://fondinfo.github.io/images/misc/frogger.png))
 # Vehicle Animation
 
-  - Create a `Vehicle` class
-      - Start from the `Ball` class seen in the lesson
-      - However, movement is only horizontal
-  - If the vehicle goes 100px beyond the right edge...
-      - It reappears 100px before the left edge
-  - If the vehicle goes 100px beyond the left edge...
-      - It reappears 100px after the right edge
-  - Animate two vehicles
-      - One moving to the right (→)
-      - The other to the left (←)
-      - Represent each vehicle with a rectangle
+- Create a `Vehicle` class
+    - Start from the `Ball` class seen in the lesson
+    - However, movement is only horizontal
+- If the vehicle passes 100px beyond the right edge...
+    - It reappears 100px before the left edge
+- If the vehicle passes 100px beyond the left edge...
+    - It reappears 100px after the right edge
+- Animate two vehicles
+    - One moving to the right (→)
+    - The other to the left (←)
+    - Represent each vehicle with a rectangle
 
------
+---
 
+![]([http://fondinfo.github.io/images/misc/space-invaders-school.png](http://fondinfo.github.io/images/misc/space-invaders-school.png))
 # Alien Animation
 
-  - Create an `Alien` class
-      - Start from the `Ball` class seen in the lesson
-      - However, basic movement is only horizontal
-  - When it reaches the edge, the character:
-      - Moves a few pixels downwards
-      - Then changes horizontal direction
-  - Ensure that, in each frame, the movement is only horizontal, or only vertical, but *not* diagonal
+- Create an `Alien` class
+    - Start from the `Ball` class seen in the lesson
+    - However, basic movement is only horizontal
+- Upon reaching the edge, the character:
+    - Moves a few pixels downwards
+    - Then changes horizontal direction
+- Ensure that, in each frame, the movement is only horizontal, or only vertical, but *not* diagonal
 
------
+---
 
-# Ghost with Counter
+![]([https://raw.githubusercontent.com/fondinfo/fondinfo/master/sprites.png](https://raw.githubusercontent.com/fondinfo/fondinfo/master/sprites.png))
+# Ghost with Count
 
-  - Start from the `Ghost` class seen in the lesson
-  - The ghost is normally still
-  - Randomly, with probability $\\frac{1}{100}$, it starts moving
-      - Chooses a random direction \<br\> (horizontal, vertical, or diagonal)
-      - Maintains the same direction for 10 frames
-      - Then stops again
-  - While the ghost is moving, it is semi-transparent
-      - Otherwise, it is visible
-  - Add fields for counter and direction to the ghost
+- Start from the `Ghost` class seen in the lesson
+- The ghost is normally stationary
+- Randomly, with probability $\frac{1}{100}$, it starts moving
+    - Chooses a random direction <br> (horizontal, vertical, or diagonal)
+    - Maintains the same direction for 10 frames
+    - Then stops again
+- While the ghost is moving, it is semi-transparent
+    - Otherwise, it is visible
+- Add counter and direction fields to the ghost
 
------
+---
 
+![]([http://fondinfo.github.io/images/games/viewport.svg](http://fondinfo.github.io/images/games/viewport.svg))
 # View Scrolling
 
-  - Set a large space for character movements (`ARENA_W, ARENA_H`)
-  - Create a smaller drawing canvas (`VIEW_W, VIEW_H`)
-      - Only a portion of the arena is shown
-  - Allow the user to move the *view* on the arena
-      - Using arrow keys
+- Set a large space for character movements (`ARENA_W, ARENA_H`)
+- Create a smaller drawing canvas (`VIEW_W, VIEW_H`)
+    - Only a portion of the arena is shown
+- Allow the user to move the *view* on the arena
+    - Using arrow keys
 
------
+---
 
+![]([http://fondinfo.github.io/images/misc/spiral-circles.svg](http://fondinfo.github.io/images/misc/spiral-circles.svg))
 # 🥷 Object Spiral
 
-  - Show a moving circle
-  - Spiral path, in $N$ steps
-      - The circle rotates around the center of the canvas
-      - At increasing distance from the center of the canvas
-      - Circle radius: increasing
-      - Color: from red to blue
-  - Implement a class for the circle
-      - `move` method for a single-step movement
-      - *Getter* methods for position, radius, and color
-      - Counter field; if it exceeds the limit $N$, it returns to 0
-
-<!-- end list -->
-
-```
-```
+- Show a moving circle
+- Spiral path, in $N$ steps
+    - The circle rotates around the center of the canvas
+    - At increasing distance from the center of the canvas
+    - Circle radius: increasing
+    - Color: from red to blue
+- Create a class for the circle
+    - `move` method for one-step movement
+    - *Getter* methods for position, radius, and color
+    - Counter field; if it exceeds limit $N$, it returns to 0
