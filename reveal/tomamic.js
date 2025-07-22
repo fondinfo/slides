@@ -7,7 +7,7 @@
     await import('../plugin/highlight/highlight.js');
     await import('../plugin/math/math.js');
 
-    var name = location.href.split('?').pop().split('/').pop().replace(/\.[^\.]+$/, '');
+    var name = location.href.replace(/\.[^\.]+$/, '').split('?').pop().split('/').pop();
     var ico = '<link rel="icon" href="/images/logo.svg" />';
     var css = '<link rel="stylesheet" href="reveal/tomamic.css" />';
     var tar = '<base target="_blank" />';  /* open all links in a new tab. */
