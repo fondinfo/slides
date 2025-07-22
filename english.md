@@ -8,18 +8,18 @@
 - [Sequences](/slides/en-p41-sequences.html) - [Matrices](/slides/en-p42-matrices.html)
 - [Recursion](/slides/en-p51-recursion.html)
 
-## Teoria
+## Theory
 
-- [Logica](/slides/t11-logica.html)
-- [Codifica](/slides/t21-codifica.html) - [Multimedia](/slides/t22-multimedia.html)
-- [Calcolatori](/slides/t31-calcolatori.html) - [Sistemi operativi](/slides/t32-sisop.html)
-- [Regex](/slides/t41-regex.html) - [Grammatiche](/slides/t42-grammatiche.html) - [Automi](/slides/t43-automi.html)
-- [Complessità](/slides/t51-complessita.html)
+- [Logics](/slides/en-t11-logics.html)
+- [Encoding](/slides/en-t21-encoding.html) - [Multimedia](/slides/en-t22-multimedia.html)
+- [Computers](/slides/en-t31-computers.html) - [Operating Systems](/slides/en-t32-opsys.html)
+- [Regex](/slides/en-t41-regex.html) - [Grammars](/slides/en-t42-grammars.html) - [Automata](/slides/en-t43-automata.html)
+- [Complexity](/slides/en-t51-complexity.html)
 
-## Approfondimento
+## Further Topics
 
-- [Sviluppo](/slides/p33-sviluppo.html) - [Collaudo](p34-collaudo.html)
-- [Analisi dei dati in Python](/slides/scipy.html)
-- [Backtracking](/slides/p52-backtrack.html) - [Minimax](/slides/p53-minimax.html)
+- [Development](/slides/en-p33-develop.html) - [Testing](en-p34-testing.html)
+- [Data Analisys in Python](/slides/scipy.html)
+- [Backtracking](/slides/en-p52-backtrack.html) - [Minimax](/slides/en-p53-minimax.html)
 
-*(CTRL+P per salvare le slide in PDF)*
+*(CTRL+P to save slides as PDF files)*
