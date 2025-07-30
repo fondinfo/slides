@@ -101,7 +101,7 @@ Applicazioni testuali e con grafica
 
 ---
 
-![](https://fondinfo.github.io/fondinfo-book.jpg)
+![](https://fondinfo.github.io/images/algo/fondinfo-book.jpg)
 # 📚 Testo di riferimento
 
 - M. Tomaiuolo, A. Ferrari: <br> [Introduzione all'informatica con Python](https://www.mheducation.it/9788838613586) <br> McGraw-Hill 2024 (~44€, ~370pp.) <br> ISBN 978-8838613586

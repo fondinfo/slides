@@ -1,4 +1,4 @@
-![](http://fondinfo.github.io/images/algo/rubik-cube.png)
+![](http://fondinfo.github.io/images/dev/python-logo.svg)
 # Basics
 ## Introduction to programming
 

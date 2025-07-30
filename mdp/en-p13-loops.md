@@ -1,4 +1,4 @@
-![](http://fondinfo.github.io/images/algo/rubik-cube.png)
+![](http://fondinfo.github.io/images/misc/red-squares.svg)
 # Loops
 ## Introduction to Programming
 

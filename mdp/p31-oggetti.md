@@ -1,4 +1,4 @@
-![](http://fondinfo.github.io/images/oop/balls.png)
+![](http://fondinfo.github.io/images/oop/basic-object.svg)
 # Oggetti
 ## Introduzione alla programmazione
 

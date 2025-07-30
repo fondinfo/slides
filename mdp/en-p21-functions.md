@@ -1,4 +1,4 @@
-![](http://fondinfo.github.io/images/fun/function.png)
+![](http://fondinfo.github.io/images/fun/juicer.svg)
 # Functions
 ## Introduction to programming
 
@@ -138,6 +138,7 @@ g2d.main_loop(tick)  # call tick 30 times/second
 
 ---
 
+![](http://fondinfo.github.io/images/hist/mcnulty.png) Kay McNulty <br> Subroutine for ENIAC
 # 💡 Function Documentation
 
 - **Annotations**: useful for documenting the type of parameters and result
@@ -197,7 +198,6 @@ print(triangle_perimeter(4, 2, 1))
 
 ---
 
-![](http://fondinfo.github.io/images/hist/mcnulty.png) Kay McNulty <br> Subroutine for ENIAC
 # 🧪 Result in Tuple
 
 ``` py
@@ -276,16 +276,16 @@ def move_ball(x: int, y: int,
 # 💡 Non-Idempotent Functions
 
 - Example of simplification
-    - `p = rq(x) + rq(y) * (rq(x) - rq(x))`
-    - `p = rq(x) + rq(y) * (0)`
-    - `p = rq(x) + 0`
-    - `p = rq(x)`
-- But if `rq` has side effects, it cannot be done!
+    - `p = g(x) + g(y) * (g(x) - g(x))`
+    - `p = g(x) + g(y) * (0)`
+    - `p = g(x) + 0`
+    - `p = g(x)`
+- But if `g` has side effects, it cannot be done!
 
 ``` py
 base_value = 0  # global variable
 
-def rq(x: int) -> int:
+def g(x: int) -> int:
     global base_value
     base_value += 1
     return x + base_value
@@ -377,7 +377,7 @@ def move_around(start: Point, length: float, angle: float) -> Point:
 ---
 
 ![](/images/misc/thermometer.png)
-# 2.1 Function, Fahrenheit
+# Function, Fahrenheit
 
 - Define a function `cels_to_fahr`
     - Parameter: Celsius temperature, as `float`
@@ -487,7 +487,7 @@ Do not use `math.sqrt` and similar — Solve with iteration
 ---
 
 ![](http://fondinfo.github.io/images/misc/classical-watch.jpg) ![](http://fondinfo.github.io/images/fun/move-around.svg)
-# 🥷 Classic Clock
+# Classic Clock
 
 - Define a function `draw_clock`
     - Draw 12 radial marks, like on a classic clock

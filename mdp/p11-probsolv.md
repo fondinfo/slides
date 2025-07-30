@@ -1,5 +1,5 @@
-![](http://fondinfo.github.io/images/algo/rubik-cube.png)
-# Basi
+![](http://fondinfo.github.io/images/algo/bulb.svg)
+# Problem solving
 ## Introduzione alla programmazione
 
 ---

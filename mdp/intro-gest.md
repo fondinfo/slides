@@ -1,7 +1,7 @@
 
 ![](/images/dev/theory-practice.png)
-# Fondamenti di informatica
-## Presentazione del corso
+# Presentazione del corso
+## Fondamenti di informatica
 
 ---
 
