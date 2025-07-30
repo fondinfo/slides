@@ -1,4 +1,4 @@
-![](http://fondinfo.github.io/images/fun/hanoi.svg)
+![](http://fondinfo.github.io/images/fun/hanoi-tower.png)
 # Mathematical Logic
 ## Introduction to Computer Science <br> Michele Tomaiolo @ Engineering UniPR
 
@@ -565,7 +565,7 @@ Some predicates are defined starting from a given `$k$`, rather than from 1
 
 ---
 
-![](http://fondinfo.github.io/images/fun/hanoi-strategy-1.png)
+![](http://fondinfo.github.io/images/fun/hanoi.svg)
 # 🧪 Example, Tower of Hanoi
 
 - *Rule 1*: Move only one disk at a time
