@@ -1,4 +1,4 @@
-![](/images/oop/modules.png)
+![](/images/scipy/bar-chart.svg)
 # Python for data analysis
 ## NumPy, Pandas, PyPlotLib
 
