@@ -184,7 +184,7 @@ main()
 
 >
 
-[https://fondinfo.github.io/play/?c08_reset.py](https://fondinfo.github.io/play/?c08_reset.py)
+<https://fondinfo.github.io/play/?c08_reset.py>
 
 ---
 
@@ -211,7 +211,7 @@ days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/characters.png](http://fondinfo.github.io/images/misc/characters.png))
+![](http://fondinfo.github.io/images/misc/characters.png)
 # 🧪 Loops on strings
 
 - The `for` loop iterates over the values of any sequence
@@ -230,11 +230,11 @@ for c in line:
 
 >
 
-[https://fondinfo.github.io/play/?c03_vowels.py](https://fondinfo.github.io/play/?c03_vowels.py)
+<https://fondinfo.github.io/play/?c03_vowels.py>
 
 ---
 
-![]([http://fondinfo.github.io/images/fun/brackets.svg](http://fondinfo.github.io/images/fun/brackets.svg))
+![](http://fondinfo.github.io/images/fun/brackets.svg)
 # 🧪 Text between markers
 
 - From a text, transcribe only parts enclosed between `<` and `>`
@@ -256,11 +256,11 @@ for c in text:
 
 >
 
-[https://fonsinfo.github.io/pyodide/?c08_brackets.py](https://fonsinfo.github.io/pyodide/?c08_brackets.py)
+<https://fonsinfo.github.io/pyodide/?c08_brackets.py>
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/numbers.png](http://fondinfo.github.io/images/misc/numbers.png))
+![](http://fondinfo.github.io/images/misc/numbers.png)
 # 🧪 List of counters
 
 - Count digits separately in a text
@@ -281,7 +281,7 @@ print(counters)
 
 >
 
-[https://fondinfo.github.io/play/?c08_counters.py](https://fondinfo.github.io/play/?c08_counters.py)
+<https://fondinfo.github.io/play/?c08_counters.py>
 
 ---
 
@@ -325,11 +325,11 @@ empty_set = set()  # ⚠️ {} is an empty dict
 
 >
 
-[https://docs.python.org/3/library/stdtypes.html#set](https://docs.python.org/3/library/stdtypes.html#set)
+<https://docs.python.org/3/library/stdtypes.html#set>
 
 ---
 
-![]([http://fondinfo.github.io/images/fun/dictionary.png](http://fondinfo.github.io/images/fun/dictionary.png))
+![](http://fondinfo.github.io/images/fun/dictionary.png)
 # ⭐ Dictionary
 
 - Also called *map* or *associative array*
@@ -353,7 +353,7 @@ See: [get](https://docs.python.org/3/library/stdtypes.html#dict.get),
 [keys](https://docs.python.org/3/library/stdtypes.html#dict.keys),
 [values](https://docs.python.org/3/library/stdtypes.html#dict.values),
 [items](https://docs.python.org/3/library/stdtypes.html#dict.items) <br>
-[https://docs.python.org/3/library/stdtypes.html#dict](https://docs.python.org/3/library/stdtypes.html#dict)
+<https://docs.python.org/3/library/stdtypes.html#dict>
 
 ---
 
@@ -377,7 +377,7 @@ print(val)
 
 >
 
-[https://docs.python.org/3/library/stdtypes.html#dict](https://docs.python.org/3/library/stdtypes.html#dict)
+<https://docs.python.org/3/library/stdtypes.html#dict>
 
 ---
 
@@ -385,7 +385,7 @@ print(val)
 
 ---
 
-![]([http://fondinfo.github.io/images/dev/computer-ninja.svg](http://fondinfo.github.io/images/dev/computer-ninja.svg))
+![](http://fondinfo.github.io/images/misc/thanos-glove.png)
 # 🥷 List comprehension
 
 - Concise way to create a list, re-processing a given sequence
@@ -578,7 +578,7 @@ while v := input("val? "):  # sentinel, "" is falsy
 
 >
 
-[https://docs.python.org/3/library/stdtypes.html#truth](https://docs.python.org/3/library/stdtypes.html#truth)
+<https://docs.python.org/3/library/stdtypes.html#truth>
 
 ---
 
@@ -635,7 +635,7 @@ True
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/histogram-rot.svg](http://fondinfo.github.io/images/misc/histogram-rot.svg))
+![](http://fondinfo.github.io/images/misc/histogram-rot.svg)
 # Histogram with horizontal bars
 
 - Ask the user for a list of positive values
@@ -646,7 +646,7 @@ True
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/dice.png](http://fondinfo.github.io/images/misc/dice.png))
+![](http://fondinfo.github.io/images/misc/dice.png)
 # Random results
 
 - Simulate `n` rolls of a pair of dice
@@ -680,7 +680,7 @@ To count the various results, use a list of (at least) 11 values
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/merge-sign.png](http://fondinfo.github.io/images/misc/merge-sign.png)) ![]([http://fondinfo.github.io/images/comp/merge.svg](http://fondinfo.github.io/images/comp/merge.svg))
+![](http://fondinfo.github.io/images/misc/merge-sign.png) ![](http://fondinfo.github.io/images/comp/merge.svg)
 # Merge
 
 - Define a `merge` function
@@ -697,7 +697,7 @@ To count the various results, use a list of (at least) 11 values
 
 ---
 
-![]([https://fondinfo.github.io/images/misc/clamp.svg](https://fondinfo.github.io/images/misc/clamp.svg))
+![](https://fondinfo.github.io/images/misc/clamp.svg)
 # List clamp
 
 - Define the `clamp` function with three parameters

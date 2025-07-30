@@ -1,4 +1,4 @@
-![](http://fondinfo.github.io/images/fun/hanoi-tower.png)
+![](http://fondinfo.github.io/images/fun/hanoi.svg)
 # Logica matematica
 ## Introduzione all'informatica <br> Michele Tomaiuolo @ Ingegneria UniPR
 

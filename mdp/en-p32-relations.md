@@ -1,4 +1,4 @@
-![]([http://fondinfo.github.io/images/oop/lego-blocks.png](http://fondinfo.github.io/images/oop/lego-blocks.png))
+![](http://fondinfo.github.io/images/oop/lego-blocks.png)
 # Relationships
 ## Introduction to Programming
 
@@ -10,7 +10,7 @@
 - **has-a**, **part-of** association between objects
     - An *arena* can *contain* several *balls*
 
-§ py
+``` py
 class BallArena:  # ...
     def __init__(self):
         self._balls = []
@@ -24,7 +24,7 @@ arena = BallArena()
 arena.spawn(Ball(40, 80))
 arena.spawn(Ball(80, 40)) # ...
 arena.tick()
-§
+```
 
 ---
 
@@ -51,22 +51,22 @@ arena.tick()
     - All animals make a sound (*interface*)
     - Each animal makes a different sound (*polymorphism*)
 
-§ py
+``` py
 class Animal:
     def speak(self):
         raise NotImplementedError("Abstract method")
-§
+```
 
 >
 
-[https://fondinfo.github.io/play/?c07_animals.py](https://fondinfo.github.io/play/?c07_animals.py)
+<https://fondinfo.github.io/play/?c07_animals.py>
 
 ---
 
 ![large](http://fondinfo.github.io/images/oop/farm.svg)
 # 🧪 Concrete Classes
 
-§ py
+``` py
 class Dog(Animal):
     def __init__(self, name):
         self._name = name
@@ -80,14 +80,14 @@ class Cat(Animal):
     def speak(self):
         print("I am", self._name, "Cat.",
               "I say: MEOW!")
-§
+```
 
 ---
 
 ![large](http://fondinfo.github.io/images/oop/peppa.png)
 # 🧪 List of Objects
 
-§ py
+``` py
 d = Dog("Danny")
 c = Cat("Candy")
 p1 = Pig("Peppa")
@@ -97,18 +97,18 @@ p2 = Pig("George")
 animals = [d, c, p1, p2]
 for a in animals:
     a.speak()
-§
+```
 
-§ text
+``` text
 I am Danny Dog. I say: WOOF!
 I am Candy Cat. I say: MEOW!
 I am Peppa Pig. I say: OINK!
 I am George Pig. I say: OINK!
-§
+```
 
 ---
 
-![]([http://fondinfo.github.io/images/oop/actor.svg](http://fondinfo.github.io/images/oop/actor.svg))
+![](http://fondinfo.github.io/images/oop/actor.svg)
 # ⭐ Character Interface
 
 - `Actor`: *abstract interface*
@@ -119,21 +119,21 @@ I am George Pig. I say: OINK!
     - Implement `Actor` methods, defining specific behaviors
     - Can define additional methods
 
-§ py
+``` py
 class Actor:  # …
     def move(self, arena: Arena):
         raise NotImplementedError("Abstract method")
-§
+```
 
 >
 
-[https://fondinfo.github.io/play/?actor.py](https://fondinfo.github.io/play/?actor.py)
+<https://fondinfo.github.io/play/?actor.py>
 
 ---
 
 # 💡️ Generalization and Reuse
 
-§ py
+``` py
 class Arena:  # …
     def __init__(self, size):
         self._w, self._h = size
@@ -145,7 +145,7 @@ class Arena:  # …
             a.move(self)
     def size(self):
         return self._w, self._h
-§
+```
 
 - Code dependent only on *abstract interfaces*
 - `Arena` reusable by creating new *concrete classes*, which implement `Actor`
@@ -158,7 +158,7 @@ class Arena:  # …
 - Implemented in different forms in *concrete classes*
 - Different actors can move in different ways
 
-§ py
+``` py
 class Ghost(Actor):  # ...
     def move(self, arena: Arena):
         dx = random.choice([-4, 0, 4])
@@ -166,7 +166,7 @@ class Ghost(Actor):  # ...
         arena_w, arena_h = arena.size()
         self._x = (self._x + dx) % arena_w
         self._y = (self._y + dy) % arena_h
-§
+```
 
 >
 
@@ -179,13 +179,13 @@ class Ghost(Actor):  # ...
 ![](http://fondinfo.github.io/images/oop/actors.svg)
 # 💡️ Substitution
 
-§ py
+``` py
 arena = Arena((480, 360))
 arena.spawn(Ball((40, 80)))
 arena.spawn(Ball((80, 40)))
 arena.spawn(Ghost((120, 80)))
 arena.spawn(Turtle((80, 80)))
-§
+```
 
 - Liskov **substitution** principle
     - An object of a *derived class* can always be used in place of one of the *base class*
@@ -194,7 +194,7 @@ arena.spawn(Turtle((80, 80)))
 
 >
 
-[https://en.wikipedia.org/wiki/Liskov_substitution_principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle)
+<https://en.wikipedia.org/wiki/Liskov_substitution_principle>
 
 ---
 
@@ -205,7 +205,7 @@ arena.spawn(Turtle((80, 80)))
 ![](http://fondinfo.github.io/images/oop/bounce.png)
 # 🧪 Bounce Animation
 
-§ py
+``` py
 def tick():
     g2d.clear_canvas()
     for a in arena.actors():
@@ -214,7 +214,7 @@ def tick():
                             a.sprite(), a.size())
 
     arena.tick()  # Game logic, move actors
-§
+```
 
 >
 
@@ -224,7 +224,7 @@ def tick():
 
 # 🧪 Keyboard Control
 
-§ py
+``` py
 class Turtle(Actor): # ...
     def move(self, arena: Arena):
         keys = arena.current_keys()
@@ -236,7 +236,7 @@ class Turtle(Actor): # ...
             self._x -= self._speed
         elif "ArrowRight" in keys:
             self._x += self._speed
-§
+```
 
 >
 
@@ -244,7 +244,7 @@ class Turtle(Actor): # ...
 
 ---
 
-![](http://fondinfo.github.io/images/oop/collision.svg) ![]([http://fondinfo.github.io/images/oop/reflection.png](http://fondinfo.github.io/images/oop/reflection.png))
+![](http://fondinfo.github.io/images/oop/collision.svg) ![](http://fondinfo.github.io/images/oop/reflection.png)
 # 🧪 Collisions
 
 - Many *collision detection* algorithms
@@ -259,14 +259,14 @@ class Turtle(Actor): # ...
 
 # ⭐ Collisions with Balls
 
-§ py
+``` py
 class Turtle(Actor):
     # ...
     def move(self, arena: Arena):
         for other in arena.collisions():
             if isinstance(other, Ball):
                 arena.kill(self)
-§
+```
 
 - `isinstance(obj, cls)`
     - Checks if object `obj` is an instance of class `cls`
@@ -275,7 +275,7 @@ class Turtle(Actor):
 
 ---
 
-![]([http://fondinfo.github.io/images/oop/bounce.png](http://fondinfo.github.io/images/oop/bounce.png))
+![](http://fondinfo.github.io/images/oop/bounce.png)
 # Bounce, game and GUI
 
 - `BounceGame` : subclass of `Arena` to manage the *Bounce* game
@@ -287,7 +287,7 @@ class Turtle(Actor):
 
 > [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
 
-[https://fondinfo.github.io/play/?c07_bouncegame.py](https://fondinfo.github.io/play/?c07_bouncegame.py)
+<https://fondinfo.github.io/play/?c07_bouncegame.py>
 
 ---
 
@@ -295,7 +295,7 @@ class Turtle(Actor):
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/frogger.png](http://fondinfo.github.io/images/misc/frogger.png))
+![](http://fondinfo.github.io/images/misc/frogger.png)
 # Frog in the arena
 
 - Make the `Vehicle` class an `Actor`
@@ -310,7 +310,7 @@ class Turtle(Actor):
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/space-invaders-school.png](http://fondinfo.github.io/images/misc/space-invaders-school.png))
+![](http://fondinfo.github.io/images/misc/space-invaders-school.png)
 # Aliens in the arena
 
 - Make the `Alien` class an `Actor`
@@ -324,7 +324,7 @@ class Turtle(Actor):
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/super-mario.jpg](http://fondinfo.github.io/images/misc/super-mario.jpg))
+![](http://fondinfo.github.io/images/misc/super-mario.jpg)
 # Mario in the arena
 
 - `Mario` class from `Turtle` of ex. `bounce`

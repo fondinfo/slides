@@ -1,4 +1,4 @@
-![](http://fondinfo.github.io/images/fun/hanoi-tower.png)
+![](http://fondinfo.github.io/images/fun/hanoi.svg)
 # Mathematical Logic
 ## Introduction to Computer Science <br> Michele Tomaiolo @ Engineering UniPR
 

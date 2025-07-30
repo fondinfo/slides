@@ -385,7 +385,7 @@ print(val)
 
 ---
 
-![](http://fondinfo.github.io/images/dev/computer-ninja.svg)
+![](http://fondinfo.github.io/images/misc/thanos-glove.png)
 # 🥷 List comprehension
 
 - Modo conciso per creare una lista, rielaborando una data sequenza
