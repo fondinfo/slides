@@ -565,7 +565,7 @@ Alcuni predicati sono definiti a partire da un dato `$k$`, anzichè da 1
 
 ---
 
-![](http://fondinfo.github.io/images/fun/hanoi.svg)
+![large](http://fondinfo.github.io/images/fun/hanoi.svg)
 # 🧪 Esempio, Torre di Hanoi
 
 - *Regola 1*: Spostare solo un disco alla volta

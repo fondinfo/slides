@@ -565,7 +565,7 @@ Some predicates are defined starting from a given `$k$`, rather than from 1
 
 ---
 
-![](http://fondinfo.github.io/images/fun/hanoi.svg)
+![large](http://fondinfo.github.io/images/fun/hanoi.svg)
 # 🧪 Example, Tower of Hanoi
 
 - *Rule 1*: Move only one disk at a time
