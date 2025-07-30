@@ -1,4 +1,4 @@
-![]([http://fondinfo.github.io/images/oop/lego-blocks.png](http://fondinfo.github.io/images/oop/lego-blocks.png))
+![](https://fondinfo.github.io/images/fun/shopping-list.png)
 # Sequences
 ## Introduction to Programming
 
@@ -8,7 +8,7 @@
 
 ---
 
-![]([http://fondinfo.github.io/images/fun/shopping-list.png](http://fondinfo.github.io/images/fun/shopping-list.png))
+![](http://fondinfo.github.io/images/fun/shopping-list.png)
 # ⭐ List
 
 - Mutable sequence of homogeneous elements
@@ -50,7 +50,7 @@ for val in values:
 
 ---
 
-![]([http://fondinfo.github.io/images/fun/wile-coyote.png](http://fondinfo.github.io/images/fun/wile-coyote.png))
+![](http://fondinfo.github.io/images/fun/wile-coyote.png)
 # ⭐ Accessing elements
 
 - **Be careful to use valid indices!**

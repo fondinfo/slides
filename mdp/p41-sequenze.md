@@ -1,4 +1,4 @@
-![](http://fondinfo.github.io/images/oop/lego-blocks.png)
+![](https://fondinfo.github.io/images/fun/shopping-list.png)
 # Sequenze
 ## Introduzione alla programmazione
 
