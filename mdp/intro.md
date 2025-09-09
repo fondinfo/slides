@@ -88,16 +88,17 @@ Applicazioni testuali e con grafica
 ![](https://fondinfo.github.io/images/misc/quiz.png)
 # 🎓 Modalità d'esame
 
-- *➊* Prova sull'*Introduzione all'informatica* (quiz)
-    - A fine corso, oppure...
-    - Appelli usuali
-- *➋* Prova sull'*Introduzione alla programmazione* (lab)
+- *➊* Quiz di teoria e comprensione del codice
+    - A fine corso, con bonus, oppure…
+    - Appelli usuali (sempre ~ 15 domande, 45 minuti)
+- *➋* Prova di programmazione in lab
     - Svolgimento esercitazioni in laboratorio, oppure…
-    - Prova in appelli usuali (~3 ore)
+    - Prova in appelli usuali (~ 3 ore)
 - Le due prove si possono svolgere in tempi diversi e ciascuna resta valida per l'intero anno (fino a ottobre)
-- Il voto finale è determinato:
-    - per 1/4 dalla teoria
-    - per 3/4 dalla programmazione
+- Il *voto finale* è determinato:
+    - Per ⅓ dal quiz di teoria
+    - Per ⅔ dalla prova di programmazione
+    - Bonus 1-2 punti per partecipazione attiva a lezioni
 
 ---
 
