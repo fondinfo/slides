@@ -7,12 +7,11 @@
 
 # Insegnanti
 
-- Cognomi A-G
-    - Claudio Ferrari — <claudio.ferrari2@unipr.it>
-    - Michele Tomaiuolo — <michele.tomaiuolo@unipr.it>
-- Cognomi H-Z
+- Curriculum: Produzione, Sostenibilità
+    - Alberto Ferrari — <alberto.ferrari@unipr.it>
+- Cognomi: Organizzazione
     - Dario Lodi Rizzini — <dario.lodirizzini@unipr.it>
-    - Riccardo Monica ­— <riccardo.monica@unipr.it>
+    - Michele Tomaiuolo — <michele.tomaiuolo@unipr.it>
 
 ---
 
@@ -87,7 +86,7 @@ Applicazioni testuali e con grafica
 - *➋* Prova di programmazione
     - Circa un'ora, stessa giornata
     - Solo dopo aver superato il quiz, con risultato sufficiente
-    - Realizzazione di un programma di elaborazione dati
+    - Realizzazione di programmi di elaborazione dati
 - Il voto finale è determinato in parti uguali dalle due prove
 - Bonus per la partecipazione attiva a lezioni ed esercitazioni
     - Fino a due punti sul voto finale
