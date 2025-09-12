@@ -9,7 +9,7 @@
 
 - Curriculum: Produzione, Sostenibilità
     - Alberto Ferrari — <alberto.ferrari@unipr.it>
-- Cognomi: Organizzazione
+- Curriculum: Organizzazione
     - Dario Lodi Rizzini — <dario.lodirizzini@unipr.it>
     - Michele Tomaiuolo — <michele.tomaiuolo@unipr.it>
 
