@@ -1,4 +1,4 @@
-![](https://fondinfo.github.io/images/games/waving-hand.svg))
+![](https://fondinfo.github.io/images/games/waving-hand.svg)
 # Presentazione del corso
 ## Informatica e lab di programmazione<br> Michele Tomaiuolo @ Ingegneria UniPR
 
