@@ -261,7 +261,7 @@ print("The sum is", total)
     - Definisce funzioni di disegno
 - Nel [playground](https://fondinfo.github.io/play/?c02_draw.py), versione integrata
 - *Esecuzione locale*
-    - Copiare nella cartella di lavoro <br> il file `g2d.py`, dal [repository fondinfo](https://github.com/fondinfo/fondinfo/archive/master.zip)
+    - ⬇️ Salvare nella cartella di lavoro <br> il file [`g2d.py`](https://github.com/fondinfo/fondinfo/blob/master/g2d.py)
 - [**Documentazione g2d**](https://github.com/fondinfo/fondinfo#g2d)
 
 ---

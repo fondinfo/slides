@@ -57,7 +57,7 @@ Applicazioni testuali e con grafica
 - Esercizi da cominciare in lab e continuare a casa, *individualmente*
 - *Verifica* esercitazioni
     - Alla fine di ogni esercitazione, consegna dei programmi secondo le indicazioni del docente
-    - Periodicamente, lavori consegnati sottoposti a *valutazioni intermedie*, non preannunciate
+    - Periodicamente, lavori consegnati sottoposti a *valutazioni intermedie*
 
 ---
 
@@ -109,8 +109,6 @@ Applicazioni testuali e con grafica
 
 - Testo, slide e materiale didattico <br> <https://fondinfo.github.io/>
 
-- [▶️ Playground Python](https://fondinfo.github.io/play), con esempi
-
 - Documentazione Python: [docs.python.org](https://docs.python.org/3/)
 
 ---
@@ -118,9 +116,13 @@ Applicazioni testuali e con grafica
 ![small](https://fondinfo.github.io/images/dev/python-logo.svg)
 # 💾 Strumenti software
 
+- **[▶️ Playground Python](https://fondinfo.github.io/play)**, con esempi
+
 - **Thonny**: <https://www.thonny.org/>
     - Semplice IDE (*Integrated Development Environment*)
     - Open source, multi-piattaforma, *battery included*
+    - ⬇️ Salvare nella cartella di lavoro il file [`g2d.py`](https://github.com/fondinfo/fondinfo/blob/master/g2d.py)
+
 - Opzionalmente
     - [*Termux*](https://fondinfo.github.io/termux/) su Android
     - [*Ubuntu*](http://releases.ubuntu.com/24.04/) in una [VirtualBox](https://www.virtualbox.org/wiki/Downloads), [WikiHow](https://www.wikihow.com/Install-Ubuntu-on-VirtualBox)
