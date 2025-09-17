@@ -1,5 +1,4 @@
-
-![](/images/dev/theory-practice.png)
+![](https://fondinfo.github.io/images/games/waving-hand.svg))
 # Presentazione del corso
 ## Fondamenti di informatica
 
@@ -15,7 +14,7 @@
 
 ---
 
-![large](/images/sys/globe.jpg)
+![large](https://fondinfo.github.io/images/sys/globe.jpg)
 # ➊ Introduzione all'informatica
 
 - Logica
@@ -30,7 +29,7 @@
 
 ---
 
-![large](/images/misc/space-invaders-school.png)
+![large](https://fondinfo.github.io/images/misc/space-invaders-school.png)
 # ➋ Introduzione alla programmazione
 
 - Algoritmi in *Python 3*
@@ -46,7 +45,7 @@ Applicazioni testuali e con grafica
 
 ---
 
-![](/images/dev/geek-girl.svg)
+![](https://fondinfo.github.io/images/dev/geek-girl.svg)
 # ➌ Esercitazioni in aula
 
 - Esercitazioni in aula, in Python
@@ -75,7 +74,7 @@ Applicazioni testuali e con grafica
 
 ---
 
-![](/images/misc/quiz.png)
+![](https://fondinfo.github.io/images/misc/quiz.png)
 # 🎓 Modalità d'esame
 
 - *➊* Prova a quiz
@@ -93,23 +92,27 @@ Applicazioni testuali e con grafica
 
 ---
 
-![](/images/algo/fondinfo-book.jpg)
+![](https://fondinfo.github.io/images/algo/fondinfo-book.jpg)
 # 📚 Testo di riferimento
 
 - M. Tomaiuolo, A. Ferrari: <br> [Introduzione all'informatica con Python](https://www.mheducation.it/9788838613586) <br> McGraw-Hill 2024 (~44€, ~370pp.) <br> ISBN 978-8838613586
 
-- [▶️ Playground Python](https://fondinfo.github.io/play), con esempi
+- Testo, slide e materiale didattico <br> <https://fondinfo.github.io/>
 
 - Documentazione Python: [docs.python.org](https://docs.python.org/3/)
 
 ---
 
-![small](/images/dev/python-logo.svg)
+![small](https://fondinfo.github.io/images/dev/python-logo.svg)
 # 💾 Strumenti software
+
+- **[▶️ Playground Python](https://fondinfo.github.io/play)**, con esempi
 
 - **Thonny**: <https://www.thonny.org/>
     - Semplice IDE (*Integrated Development Environment*)
     - Open source, multi-piattaforma, *battery included*
+    - ⬇️ Salvare nella cartella di lavoro il file [`g2d.py`](https://github.com/fondinfo/fondinfo/blob/master/g2d.py)
+
 - Opzionalmente
     - [*Termux*](https://fondinfo.github.io/termux/) su Android
     - [*Ubuntu*](http://releases.ubuntu.com/24.04/) in una [VirtualBox](https://www.virtualbox.org/wiki/Downloads), [WikiHow](https://www.wikihow.com/Install-Ubuntu-on-VirtualBox)
