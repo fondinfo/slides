@@ -24,4 +24,6 @@
 
 ## [🇬🇧 Slides in English](english.md)
 
+Le slide possono essere liberamente usate e modificate per qualsiasi corso
+
 *(CTRL+P per salvare le slide in PDF)*
