@@ -4,6 +4,29 @@
 
 ---
 
+![](https://fondinfo.github.io/images/games/bomberman.png)
+# Bomberman
+
+- **Ballom**
+	- Muovimento casuale
+- **Bomba**
+	- Ferma per alcuni frame, poi genera fuoco
+- **Fuoco**
+	- Si espande in quattro direzioni
+- **Muri**
+	- Alcuni indistruttibili, altri no
+- **Bomberman**
+	- Guidato dall'utente
+	- Deve evitare fuoco e Ballom
+
+>
+
+<https://archive.org/details/chenall_dyna>
+<br>
+<https://bomberman.fandom.com/wiki/Ballom>
+
+---
+
 ![](https://fondinfo.github.io/images/misc/pengo.png)
 # Pengo
 
