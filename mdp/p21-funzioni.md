@@ -413,7 +413,7 @@ Partire dalla formula `fahr = cels * 1.8 + 32`
 
 - Definire una *funzione* `triangle_perimeter` che:
     - Riceve come *parametri* i tre lati di un triangolo:<br>`a`, `b`, `c`
-    - Restituisce come risultato il perimetro di un trinagolo
+    - Restituisce come risultato il perimetro del triangolo
     - Se i tre lati non formano un triangolo, genera un `ValueError` <br> (se uno dei lati è maggiore della somma degli altri due)
 - Definire una *funzione* `main` che, ciclicamente:
     - Chiede all'utente tre valori
