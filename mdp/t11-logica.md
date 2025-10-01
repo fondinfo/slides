@@ -465,7 +465,7 @@ Premesse | Conclusione
 # 🔬 Proprietà dei quantificatori
 
 - I quantificatori sono sostanzialmente *congiunzioni* o *disgiunzioni* allargate a tutti gli elementi di un dominio
-    - Per semplicità, dominio `$D := {1, 2, 3}$`
+    - Per semplicità, dominio `$D := \{1, 2, 3\}$`
     - `$\forall x \in D, P(x) \equiv P(1) \land P(2) \land P(3)$`
     - `$\exists x \in D : P(x) \equiv P(1) \lor P(2) \lor P(3)$`
 - Due quantificatori dello stesso tipo *possono* essere scambiati di posto senza alterare la verità dell’enunciato
