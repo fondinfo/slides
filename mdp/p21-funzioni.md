@@ -98,7 +98,7 @@ main()
 # ⭐ Animazione
 
 ``` py
-x, y, dx = 50, 50, 4  # sequence unpacking
+x, y, dx = 80, 80, 4  # sequence unpacking
 ARENA_W, ARENA_H = 480, 360
 
 def tick():
