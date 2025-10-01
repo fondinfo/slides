@@ -181,7 +181,7 @@ if __name__ == "__main__":  # file executed directly, or imported?
 
 ---
 
-![](http://fondinfo.github.io/images/fun/triangle-inequality.svg)
+![small](http://fondinfo.github.io/images/fun/triangle-inequality.svg)
 # 💡 Condizioni d'errore
 
 - Precondizioni per attivazione non soddisfatte
