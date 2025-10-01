@@ -1,6 +1,6 @@
 ![](http://fondinfo.github.io/images/misc/videogames.png)
 # Creare un videogioco in Python
-## Stage formativo — 09-13 giugno 2025 <br> Ingegneria dell'Informazione
+## Stage formativo — 08-12 giugno 2026 <br> Ingegneria dell'Informazione
 
 ---
 
@@ -27,9 +27,9 @@
 
 Giorno | Argomento
 -------|----------
-Lun    | Algoritmi e disegno grafico
-Mar    | Funzioni, oggetti e animazioni
-Mer    | Liste e personaggi del gioco
+Lun    | Algoritmi e animazioni
+Mar    | Funzioni, oggetti, personaggi
+Mer    | Polimorfismo, arena di gioco
 Gio    | Interazione tra personaggi
 Ven    | Completamento del gioco
 
