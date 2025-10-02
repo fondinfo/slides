@@ -196,6 +196,10 @@ $$v = m \cdot i + q$$
     - P.es. se $v$ è la posizione di quadrati disegnati in sequenza
     - ⇒ $m$ è la distanza tra due quadrati successivi
 
+>
+
+<https://fondinfo.github.io/play/?c03_linearity.py>
+
 ---
 
 ![](http://fondinfo.github.io/images/misc/red-squares.svg)
