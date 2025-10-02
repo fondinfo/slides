@@ -202,7 +202,7 @@ $$v = m \cdot i + q$$
 
 ---
 
-![](http://fondinfo.github.io/images/misc/red-squares.svg)
+![](http://fondinfo.github.io/images/misc/n-squares.svg)
 # 🧪 Sequenza di n quadrati
 
 - Disegnare una sequenza di $n$ quadrati
