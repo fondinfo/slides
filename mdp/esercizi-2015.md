@@ -184,7 +184,7 @@ Attenzione alla distinzione tra il tipo `str` e il tipo `int`!
 
 ---
 
-![](https://fondinfo.github.io/images/misc/red-circles.svg)
+![](https://fondinfo.github.io/images/draw/red-circles.svg)
 # 2.4 Cerchi concentrici
 
 - Chiedere all'utente il numero di cerchi da disegnare
@@ -203,7 +203,7 @@ Infine, determinare automaticamente, prima del ciclo, le variazioni migliori per
 
 ---
 
-![](https://fondinfo.github.io/images/misc/color-grid.svg) ![](https://fondinfo.github.io/images/oop/raster-tile.png)
+![](https://fondinfo.github.io/images/draw/color-grid.svg) ![](https://fondinfo.github.io/images/oop/raster-tile.png)
 # 2.5 Griglia di colori
 
 - Chidere all'utente dei valori per `rows` e `cols`
@@ -399,7 +399,7 @@ In questo modo, sarà noto il numero di barre verticali e lo spazio disponibile 
 
 ---
 
-![](https://fondinfo.github.io/images/misc/palette-circles.svg)
+![](https://fondinfo.github.io/images/draw/palette-circles.svg)
 # 3.9 Tavolozza di colori
 
 - Leggere da un file una sequenza di colori

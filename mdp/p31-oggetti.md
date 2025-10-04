@@ -569,7 +569,7 @@ Partire dall'esempio di modello lineare
 
 ---
 
-![](http://fondinfo.github.io/images/misc/spiral-circles.svg)
+![](http://fondinfo.github.io/images/draw/spiral-circles.svg)
 # 🥷 Spirale a oggetti
 
 - Mostrare un cerchio in movimento

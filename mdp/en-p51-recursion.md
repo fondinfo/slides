@@ -1,4 +1,4 @@
-![]([http://fondinfo.github.io/images/fun/matryoshka.png](http://fondinfo.github.io/images/fun/matryoshka.png))
+![](http://fondinfo.github.io/images/fun/matryoshka.png)
 # Recursion
 ## Introduction to Programming
 
@@ -9,11 +9,11 @@
 - Many languages allow a function (or procedure) to call itself
 - Direct or indirect recursive call
 
-![]([http://fondinfo.github.io/images/fun/recursion.svg](http://fondinfo.github.io/images/fun/recursion.svg))
+![](http://fondinfo.github.io/images/fun/recursion.svg)
 
 ---
 
-`$$\begin{cases}0! = 1 \\ n! = n \cdot (n-1)!, n>0\end{cases}$$` ![]([http://fondinfo.github.io/images/fun/stack.svg](http://fondinfo.github.io/images/fun/stack.svg))
+`$$\begin{cases}0! = 1 \\ n! = n \cdot (n-1)!, n>0\end{cases}$$` ![](http://fondinfo.github.io/images/fun/stack.svg)
 # ⭐ Factorial, recursion
 
 § py
@@ -32,7 +32,7 @@ def factorial(n: int) -> int:
 
 >
 
-[https://fondinfo.github.io/play/?c11_factorial.py](https://fondinfo.github.io/play/?c11_factorial.py)
+<https://fondinfo.github.io/play/?c11_factorial.py>
 
 ---
 
@@ -49,7 +49,7 @@ def factorial(n: int) -> int:
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/tree.svg](http://fondinfo.github.io/images/misc/tree.svg))
+![](http://fondinfo.github.io/images/misc/tree.svg)
 # ⭐ Binary Tree
 
 - A tree is a data structure, in which each node can have "children" nodes
@@ -315,7 +315,7 @@ class Node:  # …
 
 ---
 
-![]([http://fondinfo.github.io/images/comp/expression.svg](http://fondinfo.github.io/images/comp/expression.svg))
+![](http://fondinfo.github.io/images/comp/expression.svg)
 # Expression evaluation
 
 - Define an abstract base class `Expression`
@@ -330,7 +330,7 @@ class Node:  # …
 
 ---
 
-![]([http://fondinfo.github.io/images/comp/expression.svg](http://fondinfo.github.io/images/comp/expression.svg))
+![](http://fondinfo.github.io/images/comp/expression.svg)
 # Prefix expressions
 
 - Add a `prefix` method to `Expression` (previous ex.)
@@ -348,11 +348,11 @@ print(prod2.prefix())
 
 >
 
-[https://it.wikipedia.org/wiki/Polish_notation](https://it.wikipedia.org/wiki/Polish_notation)
+<https://it.wikipedia.org/wiki/Polish_notation>
 
 ---
 
-![]([http://fondinfo.github.io/images/comp/expression.svg](http://fondinfo.github.io/images/comp/expression.svg))
+![](http://fondinfo.github.io/images/comp/expression.svg)
 # Tree from string
 
 - Analyze a string, provided by the user

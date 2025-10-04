@@ -31,7 +31,7 @@
 
 ---
 
-![](https://fondinfo.github.io/images/misc/random-circles.svg)
+![](https://fondinfo.github.io/images/draw/random-circles.svg)
 # 1.3 Cerchi casuali
 
 - Chiedere all'utente un numero `n`
@@ -46,7 +46,7 @@ Cominciare a disegnare un solo cerchio, in posizione casuale
 
 ---
 
-![](https://fondinfo.github.io/images/misc/shadowed-squares.svg)
+![](https://fondinfo.github.io/images/draw/shadowed-squares.svg)
 # 1.4 Quadrati con ombra
 
 - Chiedere all'utente un numero `n`
@@ -61,7 +61,7 @@ Fare in modo che i quadrati e le ombre siano completamente all'interno nel canva
 
 ---
 
-![](https://fondinfo.github.io/images/misc/shadows.png)
+![](https://fondinfo.github.io/images/draw/shadowed-rects.svg)
 # 1.5 Rettangoli con ombra
 
 - Chiedere all'utente un numero `n`
@@ -114,7 +114,7 @@ Valutare `Δ = b² - 4·a·c`. Non è richiesto il valore delle soluzioni.
 
 ---
 
-![large](https://fondinfo.github.io/images/misc/center-target.svg)
+![large](https://fondinfo.github.io/images/draw/center-target.svg)
 # 1.9 Bersaglio al centro
 
 - Su un canvas 500×500, disegnare vari cerchi casuali

@@ -30,7 +30,7 @@ Un anno è bisestile se il suo numero è divisibile per 4, con l'eccezione degli
 
 ---
 
-![](https://fondinfo.github.io/images/misc/random-circles.svg)
+![](https://fondinfo.github.io/images/draw/random-circles.svg)
 # 1.3 Cerchi casuali
 
 - Chiedere all'utente un numero `n`
@@ -45,7 +45,7 @@ Cominciare a disegnare un solo cerchio grigio, in posizione casuale
 
 ---
 
-![](https://fondinfo.github.io/images/misc/red-circles.svg)
+![](https://fondinfo.github.io/images/draw/red-circles.svg)
 # 1.4 Cerchi concentrici graduali
 
 - Chiedere all'utente il numero di cerchi da disegnare

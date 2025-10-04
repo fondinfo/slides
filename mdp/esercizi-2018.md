@@ -49,7 +49,7 @@ Usare la funzione `sqrt` del modulo `math`
 
 ---
 
-![](https://fondinfo.github.io/images/misc/diagonal-squares.svg)
+![](https://fondinfo.github.io/images/draw/diagonal-squares.svg)
 # 1.4 Quadrati in diagonale
 
 - Chiedere all'utente un numero `n`
@@ -64,7 +64,7 @@ Determinare il lato di ogni quadrato in base alla dimensione del canvas
 
 ---
 
-![](https://fondinfo.github.io/images/misc/green-squares.svg)
+![](https://fondinfo.github.io/images/draw/green-squares.svg)
 # 1.5 Sequenza di quadrati
 
 - Chiedere all'utente un numero `n`
@@ -189,7 +189,7 @@ Nella funzione, usare un ciclo `for` sulla stringa
 
 ---
 
-![](https://fondinfo.github.io/images/misc/xmas-triangle.svg)
+![](https://fondinfo.github.io/images/draw/xmas-triangle.svg)
 # 2.4 Triangolo di cerchi colorati
 
 - Chiedere all'utente un numero `n`
@@ -254,7 +254,7 @@ Il metodo `go` riavvia solo il conteggio, ma non sposta la pallina
 
 ---
 
-![](https://fondinfo.github.io/images/misc/xmas-tree.svg)
+![](https://fondinfo.github.io/images/draw/xmas-tree.svg)
 # 2.9 Albero di cerchi colorati
 
 - Chiedere all'utente un numero `n`

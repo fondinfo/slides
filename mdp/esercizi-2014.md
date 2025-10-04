@@ -188,7 +188,7 @@ Con `s = (a+b+c)/2`, semiperimetro
 
 ---
 
-![](https://fondinfo.github.io/images/misc/green-squares.svg)
+![](https://fondinfo.github.io/images/draw/green-squares.svg)
 # 2.4 Sequenza di quadrati
 
 - Chiedere all'utente il numero di quadrati da disegnare
@@ -240,7 +240,7 @@ Poi invertire il verso delle righe con indice dispari
 
 ---
 
-![](https://fondinfo.github.io/images/misc/spiral-circles.svg)
+![](https://fondinfo.github.io/images/draw/spiral-circles.svg)
 # 2.7 Spirale
 
 - Disegnare una sequenza di cerchi (`n` scelto dall'utente) lungo una spirale
@@ -396,7 +396,7 @@ Segnare in un `bool` se si è incontrato un asterisco iniziale, ma non ancora un
 
 ---
 
-![](https://fondinfo.github.io/images/misc/gray-squares.svg) Quattro grigi, ripetuti 2 volte
+![](https://fondinfo.github.io/images/draw/gray-squares.svg) Quattro grigi, ripetuti 2 volte
 # 3.8 Ripetizioni di grigi
 
 - Chiedere all'utente una sequenza di valori e memorizzarli in una lista
@@ -409,7 +409,7 @@ Segnare in un `bool` se si è incontrato un asterisco iniziale, ma non ancora un
 
 ---
 
-![](https://fondinfo.github.io/images/misc/palette-circles.svg)
+![](https://fondinfo.github.io/images/draw/palette-circles.svg)
 # 3.9 Tavolozza di colori
 
 - Leggere da un file una sequenza di colori

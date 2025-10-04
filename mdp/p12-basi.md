@@ -536,7 +536,7 @@ for i in reversed(range(5)):  # 4, 3, 2, 1, 0
 
 ---
 
-![](http://fondinfo.github.io/images/misc/red-squares.svg)
+![](http://fondinfo.github.io/images/draw/red-squares.svg)
 # 🧪 Sequenza di quadrati
 
 ``` py
@@ -660,7 +660,7 @@ Altrimenti…
 
 ---
 
-![](http://fondinfo.github.io/images/misc/random-squares.svg)
+![](http://fondinfo.github.io/images/draw/random-squares.svg)
 # Quadrati casuali
 
 - Chiedere all'utente un numero `n`
@@ -675,7 +675,7 @@ Cominciare a disegnare un solo quadrato grigio, in posizione casuale
 
 ---
 
-![](http://fondinfo.github.io/images/misc/diagonal-squares.svg)
+![](http://fondinfo.github.io/images/draw/diagonal-squares.svg)
 # Quadrati in diagonale
 
 - Chiedere all'utente un numero `n`
@@ -688,7 +688,7 @@ Cominciare a disegnare un solo quadrato grigio, in posizione casuale
 ---
 
 
-![large](http://fondinfo.github.io/images/misc/segments-1.svg)
+![large](http://fondinfo.github.io/images/draw/segments-1.svg)
 # Segmenti casuali
 
 - Chiedere all'utente il numero di segmenti da disegnare
@@ -699,7 +699,7 @@ Cominciare a disegnare un solo quadrato grigio, in posizione casuale
 
 ---
 
-![large](http://fondinfo.github.io/images/misc/segments-2.svg)
+![large](http://fondinfo.github.io/images/draw/segments-2.svg)
 # Linea spezzata
 
 - Chiedere all'utente il numero di segmenti da disegnare

@@ -37,7 +37,7 @@ Prima versione: chiedere e controllare solo il nome
 
 ---
 
-![](https://fondinfo.github.io/images/misc/random-circles.svg)
+![](https://fondinfo.github.io/images/draw/random-circles.svg)
 # 1.3 Cerchi casuali
 
 - Chiedere all'utente il numero di cerchi da disegnare

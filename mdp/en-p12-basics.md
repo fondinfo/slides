@@ -536,7 +536,7 @@ for i in reversed(range(5)):  # 4, 3, 2, 1, 0
 
 ---
 
-![](http://fondinfo.github.io/images/misc/red-squares.svg)
+![](http://fondinfo.github.io/images/draw/red-squares.svg)
 # 🧪 Sequence of Squares
 
 ``` py
@@ -660,7 +660,7 @@ Otherwise…
 
 ---
 
-![](http://fondinfo.github.io/images/misc/random-squares.svg)
+![](http://fondinfo.github.io/images/draw/random-squares.svg)
 # Random Squares
 
 - Ask the user for a number `n`
@@ -675,7 +675,7 @@ Start by drawing only one gray square, in a random position
 
 ---
 
-![](http://fondinfo.github.io/images/misc/diagonal-squares.svg)
+![](http://fondinfo.github.io/images/draw/diagonal-squares.svg)
 # Diagonal Squares
 
 - Ask the user for a number `n`
@@ -688,7 +688,7 @@ Start by drawing only one gray square, in a random position
 ---
 
 
-![large](http://fondinfo.github.io/images/misc/segments-1.svg)
+![large](http://fondinfo.github.io/images/draw/segments-1.svg)
 # Random Segments
 
 - Ask the user for the number of segments to draw
@@ -699,7 +699,7 @@ Start by drawing only one gray square, in a random position
 
 ---
 
-![large](http://fondinfo.github.io/images/misc/segments-2.svg)
+![large](http://fondinfo.github.io/images/draw/segments-2.svg)
 # Polyline
 
 - Ask the user for the number of segments to draw

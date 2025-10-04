@@ -29,7 +29,7 @@ Prima versione: chiedere e controllare solo il nome
 
 ---
 
-![large](https://fondinfo.github.io/images/misc/three-circles.svg)
+![large](https://fondinfo.github.io/images/draw/three-circles.svg)
 # 1.2 Raggi decrescenti
 
 - Scrivere un programma Python basato su g2d
@@ -42,7 +42,7 @@ Prima versione: chiedere e controllare solo il nome
 
 ---
 
-![large](https://fondinfo.github.io/images/misc/three-circles.svg)
+![large](https://fondinfo.github.io/images/draw/three-circles.svg)
 # 1.3 Cerchi in loop
 
 - Scrivere un programma Python basato su g2d
@@ -69,7 +69,7 @@ Un anno è bisestile se il suo numero è divisibile per 4, con l'eccezione degli
 
 ---
 
-![](https://fondinfo.github.io/images/misc/shadows.png)
+![](https://fondinfo.github.io/images/draw/shadowed-rects.svg)
 # 1.5 Rettangoli con ombra
 
 - Chiedere all'utente un numero `n`
@@ -83,7 +83,7 @@ Fare in modo che i rettangoli e le ombre siano tutti all'interno nel canvas
 
 ---
 
-![large](https://fondinfo.github.io/images/misc/center-target.svg)
+![large](https://fondinfo.github.io/images/draw/center-target.svg)
 # 1.6 Bersaglio al centro
 
 - Disegnare vari cerchi casuali
@@ -144,7 +144,7 @@ Non occorre disegnare
 
 ---
 
-![](https://fondinfo.github.io/images/misc/green-squares.svg)
+![](https://fondinfo.github.io/images/draw/green-squares.svg)
 # 2.1 Sequenza di quadrati
 
 - Chiedere all'utente un numero `n`
@@ -267,7 +267,7 @@ Nella funzione, usare un ciclo `for` sulla stringa
 
 ---
 
-![](https://fondinfo.github.io/images/misc/green-squares.svg) Ribaltare in orizzontale ⇄
+![](https://fondinfo.github.io/images/draw/green-squares.svg) Ribaltare in orizzontale ⇄
 # 2.9 Quadrati allineati a destra
 
 - Ripetere l'esercizio 2.1, però…
@@ -375,7 +375,7 @@ Aggiungere ciascun valore a una lista inizialmente vuota, con `append`
 
 ---
 
-![](https://fondinfo.github.io/images/misc/xmas-triangle.svg)
+![](https://fondinfo.github.io/images/draw/xmas-triangle.svg)
 # 3.7 Triangolo di cerchi colorati
 
 - Chiedere all'utente un numero `n`
@@ -386,7 +386,7 @@ Aggiungere ciascun valore a una lista inizialmente vuota, con `append`
 
 ---
 
-![](https://fondinfo.github.io/images/misc/xmas-tree.svg)
+![](https://fondinfo.github.io/images/draw/xmas-tree.svg)
 # 3.8 Albero di cerchi colorati
 
 - Chiedere all'utente un numero `n`
@@ -459,7 +459,7 @@ from math import e, exp
 
 ---
 
-![](https://fondinfo.github.io/images/misc/circle-grid.svg)
+![](https://fondinfo.github.io/images/draw/circle-grid.svg)
 # 4.3 Griglia di cerchi
 
 - Su canvas 500×500, disegnare griglia `n×n` di cerchi

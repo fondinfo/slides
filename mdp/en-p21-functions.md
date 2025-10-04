@@ -499,7 +499,7 @@ Do not use `math.sqrt` and similar — Solve with iteration
 
 ---
 
-![](http://fondinfo.github.io/images/misc/random-circles.svg)
+![](http://fondinfo.github.io/images/draw/random-circles.svg)
 # Circles on Click
 
 - Define a `tick` function

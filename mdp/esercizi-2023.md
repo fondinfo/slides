@@ -37,7 +37,7 @@
 
 ---
 
-![large](https://fondinfo.github.io/images/misc/segments-1.svg)
+![large](https://fondinfo.github.io/images/draw/segments-1.svg)
 # 1.3 Segmenti casuali
 
 - Chiedere all'utente il numero di segmenti da disegnare
@@ -48,7 +48,7 @@
 
 ---
 
-![large](https://fondinfo.github.io/images/misc/segments-2.svg)
+![large](https://fondinfo.github.io/images/draw/segments-2.svg)
 # 1.4 Linea spezzata
 
 - Chiedere all'utente il numero di segmenti da disegnare
@@ -59,7 +59,7 @@
 
 ---
 
-![large](https://fondinfo.github.io/images/misc/segments-3.svg)
+![large](https://fondinfo.github.io/images/draw/segments-3.svg)
 #  1.5 Toni di grigio
 
 - Chiedere all'utente il numero di segmenti da disegnare
@@ -113,7 +113,7 @@ Usare la funzione `sqrt` del modulo `math`
 
 ---
 
-![large](https://fondinfo.github.io/images/misc/center-target.svg)
+![large](https://fondinfo.github.io/images/draw/center-target.svg)
 # 1.9 Bersaglio al centro
 
 - Disegnare vari cerchi casuali
@@ -206,7 +206,7 @@ Usare due cicli for annidati; cominciare a scrivere il solo ciclo sulla `x`, con
 
 ---
 
-![](https://tomamic.github.io/images/misc/circle-grid.svg)
+![](https://tomamic.github.io/images/draw/circle-grid.svg)
 # 2.5 Griglia di cerchi
 
 - Su canvas quadrato, disegnare griglia `n×n` di cerchi
@@ -441,7 +441,7 @@ $area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}, s = \frac{a+b+c}{2}$
 
 ---
 
-![](https://fondinfo.github.io/images/misc/blue-row.svg)
+![](https://fondinfo.github.io/images/draw/blue-row.svg)
 # 4.3 Cerchi blu
 
 - Chiedere all'utente un numero $n$

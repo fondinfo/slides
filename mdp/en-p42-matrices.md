@@ -1,4 +1,4 @@
-![]([http://fondinfo.github.io/images/misc/tic-tac-toe.svg](http://fondinfo.github.io/images/misc/tic-tac-toe.svg))
+![](http://fondinfo.github.io/images/misc/tic-tac-toe.svg)
 # Matrices
 ## Introduction to Programming
 
@@ -180,7 +180,7 @@ class BoardGame:
 
 >
 
-*BoardGame*: [https://fondinfo.github.io/play/?boardgame.py](https://fondinfo.github.io/play/?boardgame.py)
+*BoardGame*: <https://fondinfo.github.io/play/?boardgame.py>
 
 ---
 
@@ -204,11 +204,11 @@ def console_play(game: BoardGame):
 
 >
 
-*Gui*: [https://fondinfo.github.io/play/?boardgamegui.py](https://fondinfo.github.io/play/?boardgamegui.py)
+*Gui*: <https://fondinfo.github.io/play/?boardgamegui.py>
 
 ---
 
-![]([http://fondinfo.github.io/images/qt/fifteen-puzzle.jpg](http://fondinfo.github.io/images/qt/fifteen-puzzle.jpg))
+![](http://fondinfo.github.io/images/qt/fifteen-puzzle.jpg)
 # 🧪 Fifteen - Constructor
 
 ``` py
@@ -227,7 +227,7 @@ class Fifteen(BoardGame):
 
 >
 
-[https://en.wikipedia.org/wiki/15_puzzle#Solvability](https://en.wikipedia.org/wiki/15_puzzle#Solvability)
+<https://en.wikipedia.org/wiki/15_puzzle#Solvability>
 
 ---
 
@@ -297,7 +297,7 @@ class Fifteen(BoardGame):
 
 ---
 
-![]([http://fondinfo.github.io/images/hist/typewriter.png](http://fondinfo.github.io/images/hist/typewriter.png))
+![](http://fondinfo.github.io/images/hist/typewriter.png)
 # ⭐ Writing to file
 
 - Function **`open`** to access a (text) file
@@ -315,7 +315,7 @@ with open("squares.txt", "w") as squares:
 
 ---
 
-![]([http://fondinfo.github.io/images/fun/shopping-list.png](http://fondinfo.github.io/images/fun/shopping-list.png))
+![](http://fondinfo.github.io/images/fun/shopping-list.png)
 # ⭐ File reading loop
 
 - Open file for reading with **`open`**
@@ -373,7 +373,7 @@ def read_csv(filename: str) -> tuple[list[int], int, int]:
 
 # 🧪 CSV module
 
-- [`csv` module]([https://docs.python.org/3/library/csv.html](https://docs.python.org/3/library/csv.html)) for more complex files (quoted text etc.)
+- [`csv` module](https://docs.python.org/3/library/csv.html) for more complex files (quoted text etc.)
 
 ``` py
 import csv
@@ -404,8 +404,9 @@ with open("some.csv", "w") as f:
 
 >
 
-[https://fondinfo.github.io/data/movies.csv](https://fondinfo.github.io/data/movies.csv) <br>
-[https://fondinfo.github.io/play/?c10_movies.py](https://fondinfo.github.io/play/?c10_movies.py)
+<https://fondinfo.github.io/data/movies.csv>
+<br>
+<https://fondinfo.github.io/play/?c10_movies.py>
 
 ---
 
@@ -429,7 +430,7 @@ print("The square is", x ** 2)
 
 ---
 
-![]([http://fondinfo.github.io/images/fun/tape-pencil.png](http://fondinfo.github.io/images/fun/tape-pencil.png))
+![](http://fondinfo.github.io/images/fun/tape-pencil.png)
 # 🥷 File errors
 
 - For a `try`, various `except` blocks are possible
@@ -521,7 +522,7 @@ In each position, calculate the character to display: `x * ROWS + y`...
 
 ---
 
-![]([http://fondinfo.github.io/images/repr/neighborhood4.svg](http://fondinfo.github.io/images/repr/neighborhood4.svg))
+![](http://fondinfo.github.io/images/repr/neighborhood4.svg)
 # Smooth function
 
 - Write a `smooth` function
@@ -540,7 +541,7 @@ In each position, calculate the character to display: `x * ROWS + y`...
 
 ---
 
-![]([http://fondinfo.github.io/images/repr/matrix-spiral.svg](http://fondinfo.github.io/images/repr/matrix-spiral.svg))
+![](http://fondinfo.github.io/images/repr/matrix-spiral.svg)
 # Spiral
 
 - Write a function to fill a square (or rectangular) matrix with increasing numbers
@@ -561,7 +562,7 @@ In general: `(x', y') = (x⋅cos(θ) - y⋅sin(θ), x⋅sin(θ) + y⋅cos(θ))`
 
 ---
 
-![]([http://fondinfo.github.io/images/games/lightsout.svg](http://fondinfo.github.io/images/games/lightsout.svg))
+![](http://fondinfo.github.io/images/games/lightsout.svg)
 # Lights out
 
 - Game based on a grid of lights
@@ -574,11 +575,11 @@ In general: `(x', y') = (x⋅cos(θ) - y⋅sin(θ), x⋅sin(θ) + y⋅cos(θ))`
 
 >
 
-<[https://en.wikipedia.org/wiki/Lights_Out_(game](https://en.wikipedia.org/wiki/Lights_Out_(game))>
+<https://en.wikipedia.org/wiki/Lights_Out_(game)>
 
 ---
 
-![]([http://fondinfo.github.io/images/games/ogre.svg](http://fondinfo.github.io/images/games/ogre.svg))
+![](http://fondinfo.github.io/images/games/ogre.svg)
 # The monster's room
 
 - `BoardGame` game on a $w×h$ matrix
@@ -608,7 +609,7 @@ Bishops move any number of steps diagonally
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/resistors.png](http://fondinfo.github.io/images/misc/resistors.png)) `$$R_{ser} = \sum_i R_i$$` `$$\frac{1}{R_{par}} = \sum_i \frac{1}{R_i}$$`
+![](http://fondinfo.github.io/images/misc/resistors.png) `$$R_{ser} = \sum_i R_i$$` `$$\frac{1}{R_{par}} = \sum_i \frac{1}{R_i}$$`
 # Resistors from file
 
 - Read a sequence of electrical resistance values from a file
@@ -617,7 +618,7 @@ Bishops move any number of steps diagonally
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/histogram.svg](http://fondinfo.github.io/images/misc/histogram.svg))
+![](http://fondinfo.github.io/images/misc/histogram.svg)
 # Sequence of values
 
 - Ask the user for a file name
@@ -627,7 +628,7 @@ Bishops move any number of steps diagonally
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/merge-sign.png](http://fondinfo.github.io/images/misc/merge-sign.png))
+![](http://fondinfo.github.io/images/misc/merge-sign.png)
 # Merge
 
 - Two text files contain sequences of numbers
@@ -665,7 +666,7 @@ Do not extract a new value from a stream, if the previous one has not yet been w
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/pac-man.png](http://fondinfo.github.io/images/misc/pac-man.png))
+![](http://fondinfo.github.io/images/misc/pac-man.png)
 # Maps for Pac-Man
 
 - `PacMan` class from `Turtle` of `bounce` example

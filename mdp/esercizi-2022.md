@@ -30,7 +30,7 @@ Sappiamo che il segno si ripete ogni 12 anni
 
 ---
 
-![](https://fondinfo.github.io/images/misc/random-circles.svg)
+![](https://fondinfo.github.io/images/draw/random-circles.svg)
 # 1.3 Cerchi casuali
 
 - Chiedere all'utente un numero `n`
@@ -180,7 +180,7 @@ Poi racchiudere tutto in un ciclo for esterno
 
 ---
 
-![](https://fondinfo.github.io/images/misc/xmas-triangle.svg)
+![](https://fondinfo.github.io/images/draw/xmas-triangle.svg)
 # 2.3 Triangolo di cerchi colorati
 
 - Chiedere all'utente un numero `n`
@@ -343,7 +343,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](https://fondinfo.github.io/images/misc/xmas-tree.svg)
+![](https://fondinfo.github.io/images/draw/xmas-tree.svg)
 # 3.5 Albero di cerchi colorati
 
 - Chiedere all'utente un numero `n`
@@ -445,7 +445,7 @@ Se ho studiato 180h, in proporzione mi aspetto circa 24
 
 ---
 
-![](https://fondinfo.github.io/images/misc/random-radius.svg)
+![](https://fondinfo.github.io/images/draw/random-radius.svg)
 # 4.3 Cerchi concentrici casuali
 
 - Disegnare un cerchio di raggio 200 e colore casuale

@@ -500,7 +500,7 @@ Non usare `math.sqrt` e simili — Risolvere con una iterazione
 
 ---
 
-![](http://fondinfo.github.io/images/misc/random-circles.svg)
+![](http://fondinfo.github.io/images/draw/random-circles.svg)
 # Cerchi al click
 
 - Definire una funzione `tick`

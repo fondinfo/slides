@@ -53,7 +53,7 @@ https://thevaluable.dev/abstraction-type-software-example/
 
 ---
 
-![](http://fondinfo.github.io/images/oop/ball-object.svg) ![]([http://fondinfo.github.io/images/oop/ball-uml.svg](http://fondinfo.github.io/images/oop/ball-uml.svg)) UML Class diagram
+![](http://fondinfo.github.io/images/oop/ball-object.svg) ![](http://fondinfo.github.io/images/oop/ball-uml.svg) UML Class diagram
 # ⭐ Class Definition
 
 - Data **Encapsulation**: *naming convention*
@@ -75,7 +75,7 @@ class Ball:  # …
 
 ---
 
-![]([http://fondinfo.github.io/images/oop/bob-builder.jpg](http://fondinfo.github.io/images/oop/bob-builder.jpg))
+![](http://fondinfo.github.io/images/oop/bob-builder.jpg)
 # ⭐ Object Construction
 
 - **`__init__`** : *constructor* method
@@ -95,7 +95,7 @@ ball = Ball(40, 80)  # Allocation and initialization
 
 ---
 
-![]([http://fondinfo.github.io/images/oop/anim-bounce.png](http://fondinfo.github.io/images/oop/anim-bounce.png))
+![](http://fondinfo.github.io/images/oop/anim-bounce.png)
 # ⭐ Methods
 
 - Expose *services* to other objects
@@ -119,7 +119,7 @@ class Ball:  # …
 
 ---
 
-![]([http://fondinfo.github.io/images/oop/balls.png](http://fondinfo.github.io/images/oop/balls.png))
+![](http://fondinfo.github.io/images/oop/balls.png)
 # ⭐ Using Objects
 
 ``` py
@@ -140,7 +140,7 @@ print("b2 @", b2.pos())
 
 >
 
-[https://fondinfo.github.io/play/?c06_ball.py](https://fondinfo.github.io/play/?c06_ball.py)
+<https://fondinfo.github.io/play/?c06_ball.py>
 
 ---
 
@@ -185,7 +185,7 @@ def main():
 
 >
 
-[https://fondinfo.github.io/play/?c06_ball.py](https://fondinfo.github.io/play/?c06_ball.py)
+<https://fondinfo.github.io/play/?c06_ball.py>
 
 ---
 
@@ -368,7 +368,9 @@ g2d.init_canvas((ARENA_W, ARENA_H))
 g2d.main_loop(tick)
 ```
 
-[https://fondinfo.github.io/play/?c06_balls.py](https://fondinfo.github.io/play/?c06_balls.py)
+>
+
+<https://fondinfo.github.io/play/?c06_balls.py>
 
 ---
 
@@ -456,7 +458,7 @@ def tick():
         g.move()
 ```
 
-[https://fondinfo.github.io/play/?c06_ghost.py](https://fondinfo.github.io/play/?c06_ghost.py)
+<https://fondinfo.github.io/play/?c06_ghost.py>
 
 - `g2d.draw_image` draws a portion of an image
     - Inefficient to load many separate images
@@ -468,7 +470,7 @@ def tick():
 ---
 
 
-![]([http://fondinfo.github.io/images/misc/ellipse.svg](http://fondinfo.github.io/images/misc/ellipse.svg))
+![](http://fondinfo.github.io/images/misc/ellipse.svg)
 # Ellipse Class
 
 - Class that models an ellipse
@@ -513,7 +515,7 @@ Start from the linear model example
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/frogger.png](http://fondinfo.github.io/images/misc/frogger.png))
+![](http://fondinfo.github.io/images/misc/frogger.png)
 # Vehicle Animation
 
 - Create a `Vehicle` class
@@ -530,7 +532,7 @@ Start from the linear model example
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/space-invaders-school.png](http://fondinfo.github.io/images/misc/space-invaders-school.png))
+![](http://fondinfo.github.io/images/misc/space-invaders-school.png)
 # Alien Animation
 
 - Create an `Alien` class
@@ -543,7 +545,7 @@ Start from the linear model example
 
 ---
 
-![]([https://raw.githubusercontent.com/fondinfo/fondinfo/master/sprites.png](https://raw.githubusercontent.com/fondinfo/fondinfo/master/sprites.png))
+![](https://raw.githubusercontent.com/fondinfo/fondinfo/master/sprites.png)
 # Ghost with Count
 
 - Start from the `Ghost` class seen in the lesson
@@ -558,7 +560,7 @@ Start from the linear model example
 
 ---
 
-![]([http://fondinfo.github.io/images/games/viewport.svg](http://fondinfo.github.io/images/games/viewport.svg))
+![](http://fondinfo.github.io/images/games/viewport.svg)
 # View Scrolling
 
 - Set a large space for character movements (`ARENA_W, ARENA_H`)
@@ -569,7 +571,7 @@ Start from the linear model example
 
 ---
 
-![]([http://fondinfo.github.io/images/misc/spiral-circles.svg](http://fondinfo.github.io/images/misc/spiral-circles.svg))
+![](http://fondinfo.github.io/images/draw/spiral-circles.svg)
 # 🥷 Object Spiral
 
 - Show a moving circle

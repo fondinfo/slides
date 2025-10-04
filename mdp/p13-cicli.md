@@ -1,4 +1,4 @@
-![](http://fondinfo.github.io/images/misc/red-squares.svg)
+![](http://fondinfo.github.io/images/draw/red-squares.svg)
 # Cicli
 ## Introduzione alla programmazione
 
@@ -202,7 +202,7 @@ $$v = m \cdot i + q$$
 
 ---
 
-![](http://fondinfo.github.io/images/misc/n-squares.svg)
+![](http://fondinfo.github.io/images/draw/n-squares.svg)
 # 🧪 Sequenza di n quadrati
 
 - Disegnare una sequenza di $n$ quadrati
@@ -254,7 +254,7 @@ for y in range(1, 11):
 
 ---
 
-![](http://fondinfo.github.io/images/misc/color-grid.svg) ![](http://fondinfo.github.io/images/repr/raster-tile.svg)
+![](http://fondinfo.github.io/images/draw/color-grid.svg) ![](http://fondinfo.github.io/images/repr/raster-tile.svg)
 # Griglia di colori
 
 - Mostrare una griglia `rows×cols` di rettangoli
@@ -453,7 +453,7 @@ Preferibile `for` o `while`?
 
 ---
 
-![](http://fondinfo.github.io/images/misc/blue-row.svg)
+![](http://fondinfo.github.io/images/draw/blue-row.svg)
 # Cerchi in riga
 
 - Chiedere all'utente un numero $n$
@@ -466,7 +466,7 @@ Preferibile `for` o `while`?
 
 ---
 
-![](http://fondinfo.github.io/images/misc/red-circles.svg)
+![](http://fondinfo.github.io/images/draw/red-circles.svg)
 # Cerchi concentrici
 
 - Chiedere all'utente un numero $n$
@@ -477,7 +477,7 @@ Preferibile `for` o `while`?
 
 ---
 
-![](http://fondinfo.github.io/images/misc/red-squares.svg)
+![](http://fondinfo.github.io/images/draw/red-squares.svg)
 # Quadrati in diagonale
 
 - Chiedere all'utente un numero `n`

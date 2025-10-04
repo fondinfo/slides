@@ -57,7 +57,7 @@ Usare la funzione `sqrt` del modulo `math`
 
 ---
 
-![](https://fondinfo.github.io/images/misc/red-circles.svg)
+![](https://fondinfo.github.io/images/draw/red-circles.svg)
 # 1.4 Cerchi concentrici graduali
 
 - Chiedere all'utente il numero di cerchi da disegnare
@@ -193,7 +193,7 @@ Poi racchiudere tutto in un ciclo for esterno
 
 ---
 
-![](https://fondinfo.github.io/images/misc/xmas-triangle.svg)
+![](https://fondinfo.github.io/images/draw/xmas-triangle.svg)
 # 2.4 Triangolo di cerchi colorati
 
 - Chiedere all'utente un numero `n`
@@ -253,7 +253,7 @@ Poi racchiudere tutto in un ciclo for esterno
 
 ---
 
-![](https://fondinfo.github.io/images/misc/xmas-tree.svg)
+![](https://fondinfo.github.io/images/draw/xmas-tree.svg)
 # 2.9 Albero di cerchi colorati
 
 - Chiedere all'utente un numero `n`
@@ -323,7 +323,7 @@ Usare una lista di 10 elementi per tenere i conteggi
 
 ---
 
-![](https://fondinfo.github.io/images/misc/random-circles.svg)
+![](https://fondinfo.github.io/images/draw/random-circles.svg)
 # 3.5 Tiro al bersaglio
 
 - Definire una classe `TargetShooting`
@@ -977,7 +977,7 @@ Prima versione: chiedere e controllare solo il nome
 
 ---
 
-![](https://fondinfo.github.io/images/misc/red-circles.svg)
+![](https://fondinfo.github.io/images/draw/red-circles.svg)
 # 9.3 Cerchi concentrici graduali (C++)
 
 - Chiedere all'utente il numero di cerchi da disegnare
@@ -1300,7 +1300,7 @@ Stringa rimanente (senza prima e ultima lettera) palindroma
 
 ---
 
-![](https://fondinfo.github.io/images/misc/gray-squares.svg) Quattro grigi, ripetuti 2 volte
+![](https://fondinfo.github.io/images/draw/gray-squares.svg) Quattro grigi, ripetuti 2 volte
 # 11.6 Ripetizioni di grigi
 
 - Chiedere all'utente una sequenza di valori e memorizzarli in una lista
