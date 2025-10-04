@@ -202,7 +202,7 @@ $$v = m \cdot i + q$$
 
 ---
 
-![](http://fondinfo.github.io/images/draw/red-squares.svg)
+![](http://fondinfo.github.io/images/draw/n-squares.svg)
 # 🧪 Sequence of n Squares
 
 - Draw a sequence of $n$ squares
