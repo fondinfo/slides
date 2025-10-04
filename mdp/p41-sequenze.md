@@ -256,7 +256,7 @@ for c in text:
 
 >
 
-<https://fonsinfo.github.io/pyodide/?c08_brackets.py>
+<https://fondinfo.github.io/play/?c08_brackets.py>
 
 ---
 
