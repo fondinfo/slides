@@ -249,7 +249,7 @@ Conteggio alla rovescia, da 30 a 0
 - Continuare l'esercizio 2.7
 - Disegnare un fantasma anzichè una pallina
     - Ritagliare l'immagine da `sprites.png`
-    - [`g2d.draw_image`](https://github.com/tomamic/fondinfo#images-and-sounds)
+    - [`g2d.draw_image`](https://github.com/fondinfo/fondinfo#images-and-sounds)
 - Casualmente, il fantasma cambia sprite
     - Solo in posizioni `x` multiple di 20
     - Probabilità ⅓ di cambiare stato
