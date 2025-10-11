@@ -118,9 +118,9 @@
 
 >
 
-<https://tomamic.github.io/images/sprites/frogger.png>
+<https://fondinfo.github.io/sprites/frogger.png>
 <br>
-<https://tomamic.github.io/images/sprites/frogger-bg.png>
+<https://fondinfo.github.io/sprites/frogger-bg.png>
 
 ---
 

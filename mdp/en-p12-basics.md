@@ -282,7 +282,7 @@ print("The sum is", total)
 center_pt = (320, 240)  # packing
 window_size = (640, 480)
 bluette_color = (47, 102, 207)
-x, y = center_pt  # sequence unpacking
+x, y = center_pt  # sequence unpacking -- also for lists and other iterables
 ```
 
 ---

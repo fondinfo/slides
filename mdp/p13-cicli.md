@@ -177,6 +177,30 @@ print(msg)
 
 ---
 
+# Liste di stringhe
+
+- **`join`** : da lista di stringhe a stringa unica
+- **`split`** : da stringa unica a lista di stringhe
+	- Senza parametri, separa in base a sequenze di caratteri bianchi
+    - `" ", "\n", "\t"`…
+	
+``` py
+>>> "|".join(["tue", "thu", "sat"])
+"tue|thu|sat"
+>>> "mon|wed|fri".split("|")
+["mon", "wed", "fri"]
+```
+
+- Iterabili (tuple, liste ecc.) possono essere spacchettati su più variabili
+
+``` py
+>>> d, m, y = "25/12/1642".split("/")  # three strings
+>>> y
+"1642"
+```
+
+---
+
 # Cicli e linearità
 
 ---

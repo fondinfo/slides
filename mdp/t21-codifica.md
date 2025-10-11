@@ -521,9 +521,9 @@ True
 
 >
 
-<http://tomamic.github.io/data/utf8-demo.txt>
+<http://fondinfo.github.io/data/utf8-demo.txt>
 <br>
-[Altri esempi di file multimediali](https://github.com/tomamic/tomamic.github.io/tree/master/data)
+[Altri esempi di file multimediali](https://fondinfo.github.io/data)
 
 ---
 

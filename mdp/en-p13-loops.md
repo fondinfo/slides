@@ -177,6 +177,30 @@ print(msg)
 
 ---
 
+# Lists of strings
+
+- **`join`** : from list of strings to whole string
+- **`split`** : from whole string to list of strings
+	- Without params, splits according to sequences of white chars
+    - `" ", "\n", "\t"`…
+	
+``` py
+>>> "|".join(["tue", "thu", "sat"])
+"tue|thu|sat"
+>>> "mon|wed|fri".split("|")
+["mon", "wed", "fri"]
+```
+
+- Iterables (tuples, lists, etc.) can be unpacked over multiple variables
+
+``` py
+>>> d, m, y = "25/12/1642".split("/")  # three strings
+>>> y
+"1642"
+```
+
+---
+
 # Loops and Linearity
 
 ---
