@@ -191,7 +191,7 @@ print(msg)
 ["mon", "wed", "fri"]
 ```
 
-- Iterabili (tuple, liste ecc.) possono essere spacchettati su più variabili
+- Una sequenza (tupla, lista ecc.) può essere spacchettata su più variabili
 
 ``` py
 >>> d, m, y = "25/12/1642".split("/")  # three strings

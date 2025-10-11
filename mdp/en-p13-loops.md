@@ -191,7 +191,7 @@ print(msg)
 ["mon", "wed", "fri"]
 ```
 
-- Iterables (tuples, lists, etc.) can be unpacked over multiple variables
+- A sequence (tuple, list, etc.) can be unpacked over multiple variables
 
 ``` py
 >>> d, m, y = "25/12/1642".split("/")  # three strings

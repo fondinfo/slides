@@ -191,7 +191,6 @@ main()
 # 🧪 Stringhe e liste
 
 - **Stringa**: sequenza *immutabile* di caratteri
-- **`join`** e **`split`**: da lista a stringa e viceversa
 
 ``` py
 txt = "Monty Python's Flying Circus"
@@ -199,15 +198,42 @@ txt[3]    # "t"
 txt[-2]   # "u"
 txt[6:12] # "Python"
 txt[-6:]  # "Circus"
+```
 
-days = ["tue", "thu", "sat"]
-txt = "|".join(days)  # "tue|thu|sat"
-
+- **`join`** : da lista di stringhe a stringa unica
+- **`split`** : da stringa unica a lista di stringhe
+	- Senza parametri, separa in base a sequenze di caratteri bianchi
+    - `" ", "\n", "\t"`…
+	
+``` py
+whole = "|".join(["tue", "thu", "sat"])  # "tue|thu|sat"
 days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
 ```
 
-- Senza parametri, `split` separa in base a sequenze di caratteri bianchi
-    - `" ", "\n", "\t"`…
+---
+
+# Spacchettamento
+
+- Qualsiasi sequenza può essere spacchettata su un *numero corrispondente* di variabili
+
+``` py
+>>> a, b, c = [1, 2, 3]
+```
+
+- Assegnamento *con stella* per catturare una sequenza in una lista
+	- Provare a omettere `first`, `second`, o `last`
+
+``` py
+>>> first, second, *middle, last = [0, 1, 2, 3, 4, 5]  # range(6)
+>>> first
+0
+>>> second
+1
+>>> middle
+[2, 3, 4]
+>>> last
+5
+```
 
 ---
 

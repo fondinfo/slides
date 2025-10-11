@@ -191,7 +191,6 @@ main()
 # 🧪 Strings and lists
 
 - **String**: *immutable* sequence of characters
-- **`join`** and **`split`**: from list to string and vice versa
 
 ``` py
 txt = "Monty Python's Flying Circus"
@@ -199,15 +198,42 @@ txt[3]    # "t"
 txt[-2]   # "u"
 txt[6:12] # "Python"
 txt[-6:]  # "Circus"
+```
 
-days = ["tue", "thu", "sat"]
-txt = "|".join(days)  # "tue|thu|sat"
-
+- **`join`** : from list of strings to whole string
+- **`split`** : from whole string to list of strings
+	- Without params, splits according to sequences of white chars
+    - `" ", "\n", "\t"`…
+	
+``` py
+whole = "|".join(["tue", "thu", "sat"])  # "tue|thu|sat"
 days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
 ```
 
-- Without parameters, `split` separates based on sequences of whitespace characters
-    - `" ", "\n", "\t"`…
+---
+
+# Unpacking
+
+- Any sequence can be unpacked into a *corresponding number* of variables 
+
+``` py
+>>> a, b, c = [1, 2, 3]
+```
+
+- *Starred* assignment for capturing a sequence into a list
+	- Try to omit `first`, `second`, or `last`
+
+``` py
+>>> first, second, *middle, last = [0, 1, 2, 3, 4, 5]  # range(6)
+>>> first
+0
+>>> second
+1
+>>> middle
+[2, 3, 4]
+>>> last
+5
+```
 
 ---
 
