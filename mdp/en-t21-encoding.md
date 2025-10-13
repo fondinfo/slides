@@ -411,6 +411,8 @@ $$`
 
 ---
 
+<!-- .slide: data-visibility="hidden" -->
+
 # 🔬 Bitwise Operations in Python
 
 - *Bitwise* operators, applied bit by bit
