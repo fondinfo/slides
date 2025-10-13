@@ -311,6 +311,10 @@ txt = hex(32)  # "0x20"
 1 1 1 0 1 0 0 1
 ```
 
+>
+
+<https://integer.exposed/>
+
 ---
 
 # 💡️ Rational Numbers
@@ -400,6 +404,10 @@ $$`
 - `$-118.625 = -1110110.101_{bin} = -1.110110101_{bin} × 2^6$`
 
 ![small](http://fondinfo.github.io/images/repr/ieee754-16-ex.svg)
+
+>
+
+<https://float.exposed/>
 
 ---
 
