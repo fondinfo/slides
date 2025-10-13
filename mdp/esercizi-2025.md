@@ -276,3 +276,145 @@ Usare una variabile globale booleana, `visible`
     - Ripetere queste operazioni in un ciclo
     - Finchè l'utente non fornisce una riga vuota, che non deve essere elaborata
 
+---
+
+# Esercitazione 3 (2025-10-13)
+
+---
+
+![](https://fondinfo.github.io/images/algo/space-diagonal.svg)
+# 3.1 Parallelepipedo
+
+- Classe che modella un parallelepipedo
+    - Campi privati per *largezza*, *profondità* e *altezza* ($l, w, h$)
+	- Metodo per calcolare il volume
+	- Metodo per calcolare la diagonale
+- Nella funzione `main`
+    - Chiedere all'utente le dimensioni del parallelepipedo
+    - Passare queste dimensioni al costruttore, come parametri
+    - Mostrare volume e diagonale del parallelepipedo creato
+
+>
+
+$ V = l · w · h$
+<br>
+$z^2 = l^2 + w^2; d^2 = z^2 + h^2 = l^2 + w^2 + h^2$
+
+---
+
+![](https://fondinfo.github.io/images/comp/orders.svg)
+# 3.2 Modello esponenziale
+
+- Creare una classe delle curve esponenziali
+    - $y = a\cdot e^{b x} + c$
+    - Coefficienti $a, b, c$ come campi, da inizializzare nel costruttore
+- Metodo `estimate`, con parametro $x$
+    - Risultato: valore della funzione in $x$
+- Nella funzione `main`
+    - Istanziare un *singolo* modello esponenziale con coefficienti forniti dall'utente
+    - Valutare il modello, chiamando `estimate`, in diversi punti $x$ forniti iterativamente dall'utente
+    - Terminare il ciclo quando l'utente fornisce una stringa vuota
+
+```
+from math import e, exp
+```
+
+---
+
+![](https://fondinfo.github.io/images/games/anim-bounce.svg)
+# 3.3 Pallina colorata
+
+- Partire dalla classe `Ball` vista a lezione
+- Aggiungere un campo per il colore
+	- Scelto casualmente nel costruttore
+	- Al momento del rimbalzo, scegliere un nuovo colore casuale
+- Aggiungere un metodo *getter* `color`, per ottenere il colore
+	- Similmente a `pos`
+- Nel `tick`, disegnare un quadrato colorato al posto di ogni pallina
+- Mostrare l'animazione di tre palline (quadrati)
+
+---
+
+![](https://fondinfo.github.io/images/games/anim-right.svg)
+# 3.4 Mai indietro
+
+- Riprendere l'esercizio 2.6
+- Definire una classe `RandomWalker`
+	- Incapsulare il comportamento del personaggio
+	- Arrotondare $x$ e $y$ iniziali a un multiplo di 2, per difetto
+    - Direzione iniziale, verso destra di 2 px
+- Nella scelta della direzione casuale…
+    - Escludere la direzione opposta a quella attuale
+    - Cioè, la pallina non può tornare direttamente indietro
+
+>
+
+Consiglio: usare come bozza iniziale la classe `Ball`
+
+---
+
+![](https://fondinfo.github.io/images/draw/green-squares.svg)
+# 3.5 Sequenza di quadrati
+
+- Chiedere all'utente un numero `n`
+- Su un canvas 500×500, disegnare `n` quadrati
+    - Quadrati con lato decrescente
+    - L'ultimo ha lato `500/n`
+    - Tutti allineati in alto e a sinistra
+- Far variare il colore dei quadrati
+    - Dal nero del quadrato più grande
+    - Fino al verde del quadrato più piccolo
+
+>
+
+Determinare automaticamente le variazioni migliori per lato e colore, prima di iniziare il ciclo
+
+---
+
+![](https://fondinfo.github.io/images/draw/hflip-squares.svg)
+# 3.6 Quadrati allineati a destra
+
+- Ripetere l'esercizio 3.5, però…
+- Allineare i quadrati in alto e a destra (anzichè sinistra)
+- Lasciare attorno al disegno un margine bianco di 10 pixel
+    - Da ogni bordo del canvas
+
+---
+
+![](https://fondinfo.github.io/images/misc/characters.png)
+# 3.7 Codici pari e dispari
+
+- Data una stringa inserita dall'utente
+- Contare le minuscole con codice Unicode dispari
+    - `a, c, e…`
+- Contare le minuscole con codice Unicode pari
+    - `b, d, f…`
+- Es. `"Python"`: 3 minuscole con codice pari, 2 con codice dispari
+
+---
+
+![](https://fondinfo.github.io/images/algo/guard.png)
+# 3.8 Sentinella
+
+- Riprendere l'esercizio precedente
+- Continuare il conteggio su più righe di testo inserite dall'utente
+- Il programma si interrompe quando l'utente inserisce una riga vuota
+- Mostrare i due conteggi complessivi
+    - Minuscole con codice dispari
+    - Minuscole con codice pari
+
+---
+
+![](https://raw.githubusercontent.com/fondinfo/fondinfo/master/sprites.png)
+# 3.9 Oscillazione e sprite
+
+- Riprendere gli esercizi 2.7 e 2.8
+- Definire una classe `OscillatingGhost`
+	- Incapsulare il comportamento del personaggio
+	- Aggiungere campo per visibilità
+- Aggiungere alla classe un metodo *getter* `size`
+	- Restituisce tupla *(w, h)* : larghezza e altezza
+- Aggiungere alla classe un metodo *getter* `sprite`
+	- Restituisce tupla *(x, y)* : posizione dello sprite in `sprites.png`
+- In `tick`, usare questi metodi per disegnare
+
