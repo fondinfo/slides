@@ -368,7 +368,7 @@ def move_around(start: Point, length: float, angle: float) -> Point:
 
 >
 
-<https://fondinfo.github.io/play/?c04_polar.py>
+<https://fondinfo.github.io/play/?polar.py>
 
 ---
 
