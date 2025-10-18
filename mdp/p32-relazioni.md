@@ -328,7 +328,7 @@ class Turtle(Actor):
 - Rendere la classe `Vehicle` un `Actor`
     - [c05_vehicle.py](https://fondinfo.github.io/play/?exs/c05_vehicle.py)
     - Aggiungere il personaggio all'arena
-- Classe `Frog` da `Turtle` dell'es. `bounce`
+- Classe `Frog` da `Turtle` dell'es. “*bounce*”
 - Conteggiare i frame di un salto della rana
     - Es. 4px per 8 frame, poi si ferma
     - Mentre è in salto, non accetta altri comandi
@@ -341,15 +341,18 @@ class Turtle(Actor):
 ![](http://fondinfo.github.io/images/misc/frogger.png)
 # Rana nell'arena
 
-- Rendere la classe `Vehicle` un `Actor`
-    - [c05_vehicle.py](https://fondinfo.github.io/play/?exs/c05_vehicle.py)
+- Rendere la classe `Vehicle` un `Actor` (✶)
     - Aggiungere il personaggio all'arena
-- Classe `Frog` da `Turtle` dell'es. `bounce`
+- Classe `Frog` da `Turtle` dell'es. “*bounce*”
 - Conteggiare i frame di un salto della rana
     - Es. 4px per 8 frame, poi si ferma
     - Mentre è in salto, non accetta altri comandi
 - Se si scontra con un veicolo, la rana muore
     - Oppure torna alla posizione di partenza
+
+>
+
+(✶) <https://fondinfo.github.io/play/?exs/c05_vehicle.py>
 
 ---
 
@@ -369,10 +372,10 @@ class Turtle(Actor):
 ![](http://fondinfo.github.io/images/games/pacman.svg)
 # Pac-Man
 
-- Muri sempre in posizioni multiple di 8
+- Muri sempre in posizioni multiple di $8$
     - In base a lista di coordinate predefinite
 - Protagonista guidato da tastiera
-    - Può svoltare solo in posizioni multiple di 8
+    - Può svoltare solo in posizioni multiple di $8$
     - Poi il movimento continua, anche al rilascio dei tasti
 - Se scelta direzione bloccata da muro…
     - Tasto scartato, mantenuta direzione attuale
@@ -383,12 +386,12 @@ class Turtle(Actor):
 ![](http://fondinfo.github.io/images/misc/super-mario.jpg)
 # Super Mario
 
-- Classe `Mario` da `Turtle` dell'es. `bounce`
+- Classe `Mario` da `Turtle` dell'es. “*bounce*”
 - Considerare l'accelerazione di gravità
-    - A ogni mossa, aggiungere *costante* `g` a `dy` (es. `0.5`)
-    - Permettere a `Mario` di saltare solo quando è sul fondo
+    - A ogni mossa, aggiungere *costante* $g$ a $dy$ (es. $0.5$)
+    - Permettere a *Mario* di saltare solo quando è sul fondo
 - Aggiungere `Wall`, personaggio immobile
-- Quando `Mario` collide con una piattaforma...
+- Quando *Mario* collide con una piattaforma...
     - Si sposta al bordo più vicino della piattaforma
     - Se atterra sul bordo superiore, da lì può saltare
 
@@ -413,6 +416,6 @@ class Turtle(Actor):
 - Continuare esercizi su free climbing da capitoli precedenti
 - Più di due concorrenti, con caratteristiche varie
 - `Climber`: classe astratta con tre differenti sottoclassi
-    - `RiskyClimber`: balzi più lunghi, ma possono *precipitare* fino a punto di partenza, per poi ricominciare
-    - `SteadyClimber`: più costanti nella progressione
+    - `RiskyClimber`: balzi più lunghi, ma può *precipitare* fino a punto di partenza, per poi ricominciare
+    - `SteadyClimber`: più costante nella progressione
     - `MindfulClimber`: momenti di massima velocità; momenti per “pensare”

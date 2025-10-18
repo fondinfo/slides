@@ -298,41 +298,30 @@ class Turtle(Actor):
 ![](http://fondinfo.github.io/images/misc/frogger.png)
 # Frog in the arena
 
-- Make the `Vehicle` class an `Actor`
-    - [c05_vehicle.py](https://fondinfo.github.io/play/?exs/c05_vehicle.py)
+- Make the `Vehicle` class an `Actor` (✶)
     - Add the character to the arena
-- `Frog` class from `Turtle` of ex. `bounce`
+- `Frog` class from `Turtle` of ex. “*bounce*”
 - Count the frames of a frog's jump
     - E.g., 4px for 8 frames, then stops
     - While jumping, does not accept other commands
 - If it collides with a vehicle, the frog dies
     - Or returns to the starting position
 
----
+>
 
-![](http://fondinfo.github.io/images/misc/space-invaders-school.png)
-# Aliens in the arena
-
-- Make the `Alien` class an `Actor`
-    - [c05_alien.py](https://fondinfo.github.io/play/?exs/c05_alien.py)
-    - Add the character to the arena
-- Create a `Bullet` actor
-    - Starts from the bottom and moves upwards
-    - If it goes off-screen, it is removed from the game
-    - If it collides with an alien, both are removed from the game
-- In the `tick` function, randomly generate `Bullet`s
+(✶) <https://fondinfo.github.io/play/?exs/c05_vehicle.py>
 
 ---
 
 ![](http://fondinfo.github.io/images/misc/super-mario.jpg)
 # Mario in the arena
 
-- `Mario` class from `Turtle` of ex. `bounce`
+- `Mario` class from `Turtle` of ex. “*bounce*”
 - Consider gravitational acceleration
-    - With each move, add *constant* `g` to `dy` (e.g., `0.5`)
-    - Allow `Mario` to jump only when on the bottom
+    - With each move, add *constant* $g$ to $dy$ (e.g., $0.5$)
+    - Allow Mario to jump only when on the bottom
 - Add `Wall`, an immobile character
-- When `Mario` collides with a platform...
+- When Mario collides with a platform...
     - Moves to the nearest edge of the platform
     - If it lands on the top edge, it can jump from there
 
