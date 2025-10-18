@@ -357,8 +357,8 @@ Polar = tuple[float, float]  # Pt in polar coords (r, angle)
 
 def from_polar(plr: Polar) -> Point:
     r, angle = plr
-    angle = radians(angle)
-    return (r * cos(angle), r * sin(angle))
+    a = radians(angle)
+    return (r * cos(a), r * sin(a))
 
 def move_around(start: Point, length: float, angle: float) -> Point:
     x0, y0 = start
