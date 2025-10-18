@@ -363,7 +363,7 @@ def from_polar(plr: Polar) -> Point:
 def move_around(start: Point, length: float, angle: float) -> Point:
     x0, y0 = start
     dx, dy = from_polar((length, angle))
-    return x0 + dx, y0 + dy
+    return (x0 + dx, y0 + dy)
 ```
 
 - ❓ Riscrivere `draw_rays`, usando `move_around`
