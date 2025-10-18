@@ -531,7 +531,7 @@ Partire dall'esempio di modello lineare
 ---
 
 ![](http://fondinfo.github.io/images/misc/space-invaders-school.png)
-# Animazione di alieni
+# Animazione di un alieno
 
 - Creare una classe `Alien`
     - Partire dalla classe `Ball` vista a lezione
@@ -558,22 +558,11 @@ Partire dall'esempio di modello lineare
 
 ---
 
-![](http://fondinfo.github.io/images/games/viewport.svg)
-# Scroll della vista
-
-- Impostare uno spazio ampio per i movimenti dei personaggi (`ARENA_W, ARENA_H`)
-- Creare un canvas di disegno più piccolo (`VIEW_W, VIEW_H`)
-    - Viene mostrata solo una porzione dell'arena
-- Permettere all'utente di spostare la *vista* sull'arena
-    - Usando i tasti cursore
-
----
-
 ![](http://fondinfo.github.io/images/draw/spiral-circles.svg)
-# 🥷 Spirale a oggetti
+# Spirale a oggetti
 
 - Mostrare un cerchio in movimento
-- Percorso a spirale, in $N$ passi
+- Percorso a spirale, in $n$ passi
     - Il cerchio ruota attorno al centro del canvas
     - A distanza crescente dal centro del canvas
     - Raggio del cerchio: crescente
@@ -581,4 +570,13 @@ Partire dall'esempio di modello lineare
 - Realizzare una classe per il cerchio
     - Metodo `move` per movimento di un passo
     - Metodi *getter* per posizione, raggio e colore
-    - Campo contatore; se eccede il limite $N$, torna a 0
+    - Campo contatore; se eccede il limite $n$, torna a 0
+
+---
+
+![](http://fondinfo.github.io/images/games/climbing.svg)
+# Free climbing
+
+- Continuare esercizi su free climbing da capitoli precedenti
+- Due concorrenti, oggetti di una classe `Climber`
+    - Fornire metodi necessari alla simulazione

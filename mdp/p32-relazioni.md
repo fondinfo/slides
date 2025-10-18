@@ -295,6 +295,33 @@ class Turtle(Actor):
 
 ---
 
+# Punti e segmenti
+
+- Definire classe `Point` per punto su piano cartesiano
+    - Metodo `distance`: distanza da altro punto ricevuto come parametro
+- Definire classe `LineSegment`
+    - Attributi: due vertici come oggetti `Point`
+    - Metodo `length`: lunghezza del segmento
+- Funzione `main`
+    - L'utente fornisce le coordinate di due punti
+    - Istanziare due punti e un segmento tra i due punti
+    - Calcolare la lunghezza del segmento
+
+---
+
+![](http://fondinfo.github.io/images/misc/triangle-notations.png)
+# Classificazione dei triangoli
+
+- Usare e arricchire classi `Point` e `LineSegment` di es. precedente
+- Date le coordinate di tre punti (*A, B, C*)…
+    - Disegnarli come piccoli cerchi di colore rosso, verde e blu
+    - Poi disegnare in nero i segmenti che li uniscono
+- Verificare se figura è un triangolo non degenere, completamente schiacciato
+    - In caso, distinguere se si tratta di: triangolo equilatero, isoscele o scaleno
+    - Se si tratta di triangolo rettangolo
+
+---
+
 ![](http://fondinfo.github.io/images/misc/frogger.png)
 # Rana nell'arena
 
@@ -310,22 +337,51 @@ class Turtle(Actor):
 
 ---
 
-![](http://fondinfo.github.io/images/misc/space-invaders-school.png)
-# Alieni nell'arena
 
-- Rendere la classe `Alien` un `Actor`
-    - [c05_alien.py](https://fondinfo.github.io/play/?exs/c05_alien.py)
+![](http://fondinfo.github.io/images/misc/frogger.png)
+# Rana nell'arena
+
+- Rendere la classe `Vehicle` un `Actor`
+    - [c05_vehicle.py](https://fondinfo.github.io/play/?exs/c05_vehicle.py)
     - Aggiungere il personaggio all'arena
-- Creare un attore `Bullet`
-    - Parte dal fondo e si muove verso l'alto
-    - Se esce dallo schermo, si rimuove dal gioco
-    - Se si scontra con un alieno, entrambi si rimuovono dal gioco
-- Nella funzione `tick`, generare casualmente dei `Bullet`
+- Classe `Frog` da `Turtle` dell'es. `bounce`
+- Conteggiare i frame di un salto della rana
+    - Es. 4px per 8 frame, poi si ferma
+    - Mentre è in salto, non accetta altri comandi
+- Se si scontra con un veicolo, la rana muore
+    - Oppure torna alla posizione di partenza
+
+---
+
+![](http://fondinfo.github.io/images/games/anim-raft.svg)
+# Rana sui tronchi
+
+- Rana deve attraversare fiume percorso da tronchi
+    - Può saltare sui tronchi
+    - Muore se cade in acqua
+- Tronchi scorrono in orizzontale, verso destra o verso sinistra
+    - Usciti dallo schermo, rientrano in circolo dalla parte opposta
+- La rana scorre assieme al tronco su cui è appoggiata
+- Anche fiume modellato come personaggio (immobile e passivo), per collisioni
+
+---
+
+![](http://fondinfo.github.io/images/games/pacman.svg)
+# Pac-Man
+
+- Muri sempre in posizioni multiple di 8
+    - In base a lista di coordinate predefinite
+- Protagonista guidato da tastiera
+    - Può svoltare solo in posizioni multiple di 8
+    - Poi il movimento continua, anche al rilascio dei tasti
+- Se scelta direzione bloccata da muro…
+    - Tasto scartato, mantenuta direzione attuale
+- Se  movimento finisce contro muro, Pac-Man si ferma
 
 ---
 
 ![](http://fondinfo.github.io/images/misc/super-mario.jpg)
-# Mario nell'arena
+# Super Mario
 
 - Classe `Mario` da `Turtle` dell'es. `bounce`
 - Considerare l'accelerazione di gravità
@@ -335,3 +391,28 @@ class Turtle(Actor):
 - Quando `Mario` collide con una piattaforma...
     - Si sposta al bordo più vicino della piattaforma
     - Se atterra sul bordo superiore, da lì può saltare
+
+---
+
+![](http://fondinfo.github.io/images/games/viewport.svg)
+# Scroll della vista
+
+- Arena con palline prese da esempio “*bounce*”
+- Impostare uno spazio ampio per i movimenti dei personaggi (`ARENA_W, ARENA_H`)
+- Creare un canvas di disegno più piccolo (`VIEW_W, VIEW_H`)
+    - Viene mostrata solo una porzione dell'arena
+- Permettere all'utente di spostare la *vista* sull'arena
+    - Usando i tasti cursore
+
+
+---
+
+![](http://fondinfo.github.io/images/games/climbing.svg)
+# Free climbing
+
+- Continuare esercizi su free climbing da capitoli precedenti
+- Più di due concorrenti, con caratteristiche varie
+- `Climber`: classe astratta con tre differenti sottoclassi
+    - `RiskyClimber`: balzi più lunghi, ma possono *precipitare* fino a punto di partenza, per poi ricominciare
+    - `SteadyClimber`: più costanti nella progressione
+    - `MindfulClimber`: momenti di massima velocità; momenti per “pensare”

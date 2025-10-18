@@ -335,3 +335,27 @@ class Turtle(Actor):
 - When `Mario` collides with a platform...
     - Moves to the nearest edge of the platform
     - If it lands on the top edge, it can jump from there
+
+---
+
+![](http://fondinfo.github.io/images/games/viewport.svg)
+# View Scrolling
+
+- Arena with balls taken from the “*bounce*” example
+- Set a large space for character movements (`ARENA_W, ARENA_H`)
+- Create a smaller drawing canvas (`VIEW_W, VIEW_H`)
+    - Only a portion of the arena is shown
+- Allow the user to move the *view* on the arena
+    - Using arrow keys
+
+---
+
+![](http://fondinfo.github.io/images/games/climbing.svg)
+# Free climbing
+
+- Continue exercises on free climbing from previous chapters
+- More than two opponents, with various features
+- `Climber`: abstract class with three different subclasses
+    - `RiskyClimber`: longer jumps, but can *fall down*, to start again from the beginning
+    - `SteadyClimber`: with more constant progression
+    - `MindfulClimber`: moments at maximum speed; moments for “thinking”

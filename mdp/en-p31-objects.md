@@ -560,17 +560,6 @@ Start from the linear model example
 
 ---
 
-![](http://fondinfo.github.io/images/games/viewport.svg)
-# View Scrolling
-
-- Set a large space for character movements (`ARENA_W, ARENA_H`)
-- Create a smaller drawing canvas (`VIEW_W, VIEW_H`)
-    - Only a portion of the arena is shown
-- Allow the user to move the *view* on the arena
-    - Using arrow keys
-
----
-
 ![](http://fondinfo.github.io/images/draw/spiral-circles.svg)
 # 🥷 Object Spiral
 
@@ -584,3 +573,12 @@ Start from the linear model example
     - `move` method for one-step movement
     - *Getter* methods for position, radius, and color
     - Counter field; if it exceeds limit $N$, it returns to 0
+
+---
+
+![](http://fondinfo.github.io/images/games/climbing.svg)
+# Free climbing
+
+- Continue exercises on free climbing from previous chapter
+- Two opponents, objects of a `Climber` class
+    - Provide adequate methods for the simulation
