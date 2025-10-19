@@ -183,7 +183,7 @@ Usare una variabile globale booleana, `visible`
 
 ---
 
-# 2.4 Tabella delle distanze
+# 2.4 Funzione tabellata
 
 - Considerare due variabili: `x` e `y`
     - Ciascuna variabile compresa tra 0 e 4

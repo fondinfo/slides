@@ -237,9 +237,11 @@ Non c'è input dell'utente
 
 ---
 
+![](https://fondinfo.github.io/images/misc/gold-price.svg)
 # 2.7 Valori sopra e sotto la media
 
-- Chiedere all'utente una sequenza in interi, terminata da 0
+- Chiedere all'utente una sequenza di interi
+    - Sequenza terminata da $0$ (*sentinella*)
 - Calcolare e mostrare il valore medio
 - Elencare i valori sotto alla media
 - Elencare i valori sopra (o uguali) alla media
