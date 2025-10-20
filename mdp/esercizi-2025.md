@@ -191,7 +191,7 @@ Tenere le operazioni di I/O fuori dalla funzione `circumference`
     - Variare ciascuna componente di colore
     - Dal livello iniziale fino a quello finale
 - Per esempio: primo punto rosso saturo, ultimo punto blu saturo
-    
+
 ---
 
 ![](https://fondinfo.github.io/images/games/play-pause.svg)
@@ -287,8 +287,8 @@ Usare una variabile globale booleana, `visible`
 
 - Classe che modella un parallelepipedo
     - Campi privati per *largezza*, *profondità* e *altezza* ($l, w, h$)
-	- Metodo per calcolare il volume
-	- Metodo per calcolare la diagonale
+    - Metodo per calcolare il volume
+    - Metodo per calcolare la diagonale
 - Nella funzione `main`
     - Chiedere all'utente le dimensioni del parallelepipedo
     - Passare queste dimensioni al costruttore, come parametri
@@ -326,10 +326,10 @@ from math import e, exp
 
 - Partire dalla classe `Ball` vista a lezione
 - Aggiungere un campo per il colore
-	- Scelto casualmente nel costruttore
-	- Al momento del rimbalzo, scegliere un nuovo colore casuale
+    - Scelto casualmente nel costruttore
+    - Al momento del rimbalzo, scegliere un nuovo colore casuale
 - Aggiungere un metodo *getter* `color`, per ottenere il colore
-	- Similmente a `pos`
+    - Similmente a `pos`
 - Nel `tick`, disegnare un quadrato colorato al posto di ogni pallina
 - Mostrare l'animazione di tre palline (quadrati)
 
@@ -340,8 +340,8 @@ from math import e, exp
 
 - Riprendere l'esercizio 2.6
 - Definire una classe `RandomWalker`
-	- Incapsulare il comportamento del personaggio
-	- Arrotondare $x$ e $y$ iniziali a un multiplo di 2, per difetto
+    - Incapsulare il comportamento del personaggio
+    - Arrotondare $x$ e $y$ iniziali a un multiplo di 2, per difetto
     - Direzione iniziale, verso destra di 2 px
 - Nella scelta della direzione casuale…
     - Escludere la direzione opposta a quella attuale
@@ -410,11 +410,167 @@ Determinare automaticamente le variazioni migliori per lato e colore, prima di i
 
 - Riprendere gli esercizi 2.7 e 2.8
 - Definire una classe `OscillatingGhost`
-	- Incapsulare il comportamento del personaggio
-	- Aggiungere campo per visibilità
+    - Incapsulare il comportamento del personaggio
+    - Aggiungere campo per visibilità
 - Aggiungere alla classe un metodo *getter* `size`
-	- Restituisce tupla *(w, h)* : larghezza e altezza
+    - Restituisce tupla *(w, h)* : larghezza e altezza
 - Aggiungere alla classe un metodo *getter* `sprite`
-	- Restituisce tupla *(x, y)* : posizione dello sprite in `sprites.png`
+    - Restituisce tupla *(x, y)* : posizione dello sprite in `sprites.png`
 - In `tick`, usare questi metodi per disegnare
 
+---
+
+# Esercitazione 4 (2025-10-20)
+
+---
+
+![](https://fondinfo.github.io/images/misc/gold-price.svg)
+# 4.1 Sopra e sotto la media
+
+- Chiedere all'utente una sequenza di interi
+    - Sequenza terminata da $0$ (*sentinella*)
+- Calcolare e mostrare il valore medio
+- Elencare i valori sotto alla media
+- Elencare i valori sopra (o uguali) alla media
+
+>
+
+Aggiungere ciascun valore a una lista inizialmente vuota, con `append`
+
+---
+
+![](https://fondinfo.github.io/images/draw/n2-circles.svg)
+# 4.2 Figure affiancate
+
+- Definire una funzione `draw_figure`
+	- Parametri per: centro, raggio, $n$
+	- Disegnare una figura di $n$ cerchi concentrici
+    - Il raggio più interno è $\frac{1}{n}$ rispetto al più esterno
+    - Colorare i cerchi in grigio: dal nero esterno al bianco interno
+- In `main`:
+	- Chiedere all'utente un numero $n$
+	- In un canvas $500×500$, disegnare $n$ figure uguali affiancate
+
+---
+
+![](https://fondinfo.github.io/images/oop/personal-data.png)
+# 4.3 Dati anagrafici
+
+- Creare classe `Person`: dati anagrafici di una persona
+    - Nome, cognome: testo
+    - Data di nascita: anno, mese, giorno
+- Costruttore con parametri per tutti i campi
+- Metodo `age` per calcolare l'età in anni
+    - Parametro/i per data attuale: *non è un campo!*
+    - Controllare se è passato il giorno del compleanno
+- Metodo `describe` per avere in un testo: nome, cognome ed età
+- Nella funzione `main`
+    - Utente fornisce dati per istanziare *tre* oggetti persona
+    - Utente fornisce poi varie date attuali
+    - Per ciascuna data, decrivere ciascuna persona, se maggiorenne
+    - Il programma termina all'inserimento di una riga vuota
+
+---
+
+![](https://fondinfo.github.io/images/draw/segments-4.svg)
+# 4.4 Linea spezzata
+
+- Funzione `randline`
+    - Prende le coordinate $(x, y)$ di un punto $p_1$
+    - Genera un punto casuale $p_2$
+    - Distanza $100$ tra $p_1$ e $p_2$, ma angolo casuale
+    - Disegna una linea da $p_1$ a $p_2$
+    - Restituisce $p_2$ come risultato
+- In `main`
+    - Chiedere all'utente un numero $n$
+    - A partire dal centro di un canvas $400×400$…
+    - Disegnare una linea spezzata di $n$ segmenti
+    - Sfruttare la funzione `randline`
+
+---
+
+![](https://fondinfo.github.io/images/misc/letters.png)
+# 4.5 Stringa casuale
+
+- Definire una funzione `add_letter`
+    - Stringa come parametro
+    - Restituisce la stessa stringa…
+    - Ma con una lettera minuscola casuale aggiunta in fondo
+- Nella funzione `main`
+    - Chiedere all'utente un numero $n$
+    - Chiamare ripetutamente la funzione `add_letter`
+    - Per generare una stringa casuale di $n$ lettere
+
+>
+
+`chr/ord`, oppure `string.ascii_lowercase`
+
+---
+
+![](https://fondinfo.github.io/images/games/ghost.svg)
+# 4.6 Fantasma a casa
+
+- Modificare la classe `Ghost` dell'esempio “*bounce*”
+- Posizione iniziale
+    - Nel costruttore, scelta casualmente, attorno al centro del canvas
+    - Distanza $100$ dal centro, con angolo casuale
+    - Memorizzata in opportuni campi
+- Alla pressione del tasto “`h`”, ogni fantasma ritorna alla sua posizione iniziale
+
+>
+
+<https://fondinfo.github.io/play/?c07_bounce.py>
+
+---
+
+![](http://fondinfo.github.io/images/games/viewport.svg)
+# 4.7 Focus su un personaggio
+
+- Risolvere l'esercizio “*Scroll della vista*” *(✶)*
+- Inoltre, spostare automaticamente la vista
+    - Mantentere la vista centrata sulla *prima pallina* della lista, quando possibile
+    - Però, la vista non esce mai dai limiti dall'*arena*
+
+>
+
+(✶) <https://fondinfo.github.io/slides/p32-relazioni.html#/24>
+
+---
+
+![](https://fondinfo.github.io/images/games/ghosts-goblins.png)
+# 4.8 Arthur - Salti [P1]
+
+- Creare una classe `Arthur`, sottoclasse di `Actor`
+- Arthur si può muovere a sinistra o a desta, sul fondo del canvas
+- Alla pressione della freccia in alto (p.es.), salta
+- Poi ricade sul fondo, in base a una forza di gravità
+- Istanziare il personaggio in un oggetto `Arena`
+- Variare lo sprite in base all'azione
+
+>
+
+Partire da `Turtle` di “*bounce*”
+<br>
+Sprite: <https://github.com/fondinfo/sprites>
+
+---
+
+![](https://fondinfo.github.io/images/games/ghosts-goblins.png)
+# 4.9 Zombie [P1]
+
+- Creare una classe `Zombie`, sottoclasse di `Actor`
+- Nel costrutture
+    - Riceve parametro per direzione: *destra/sinistra*
+    - Sceglie distanza casuale da percorrere $\in [150, 300]$
+- Comportamento di uno zombie
+    1. Sorge dal terreno in alcuni frame
+    2. Si sposta sempre nella stessa direzione
+    3. Sprofonda nel terreno in alcuni frame
+- Uno zombie può essere generato nella funzione `tick`
+    - In ogni frame, con probabilità $\frac{1}{500}$
+    - A distanza non superiore a $200$ da Arthur
+    - Si sposta in direzione di Arthur
+
+>
+
+Regolare i valori numerici a piacere
