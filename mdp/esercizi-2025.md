@@ -443,13 +443,13 @@ Aggiungere ciascun valore a una lista inizialmente vuota, con `append`
 # 4.2 Figure affiancate
 
 - Definire una funzione `draw_figure`
-	- Parametri per: centro, raggio, $n$
-	- Disegnare una figura di $n$ cerchi concentrici
+    - Parametri per: centro, raggio, $n$
+    - Disegnare una figura di $n$ cerchi concentrici
     - Il raggio più interno è $\frac{1}{n}$ rispetto al più esterno
     - Colorare i cerchi in grigio: dal nero esterno al bianco interno
 - In `main`:
-	- Chiedere all'utente un numero $n$
-	- In un canvas $500×500$, disegnare $n$ figure uguali affiancate
+    - Chiedere all'utente un numero $n$
+    - In un canvas $500×500$, disegnare $n$ figure uguali affiancate
 
 ---
 
@@ -540,37 +540,79 @@ Aggiungere ciascun valore a una lista inizialmente vuota, con `append`
 ![](https://fondinfo.github.io/images/games/ghosts-goblins.png)
 # 4.8 Arthur - Salti [P1]
 
-- Creare una classe `Arthur`, sottoclasse di `Actor`
-- Arthur si può muovere a sinistra o a desta, sul fondo del canvas
+- Gioco “*Ghosts 'N Goblins*”
+- Creare personaggio **`Arthur`** *(✶)*
+- Si può muovere a sinistra o a desta, sul fondo del canvas
 - Alla pressione della freccia in alto (p.es.), salta
-- Poi ricade sul fondo, in base a una forza di gravità
+- Poi ricade sul fondo, per forza di gravità
 - Istanziare il personaggio in un oggetto `Arena`
 - Variare lo sprite in base all'azione
 
 >
 
-Partire da `Turtle` di “*bounce*”
+(✶) Tutti i personaggi sono sottoclassi di `Actor`
+<br>
+Partire da `Turtle` dell'esempio “`bounce`”
 <br>
 Sprite: <https://github.com/fondinfo/sprites>
+<br>
+Gioco: <https://archive.org/details/GNG_DOS>
 
 ---
 
 ![](https://fondinfo.github.io/images/games/ghosts-goblins.png)
 # 4.9 Zombie [P1]
 
-- Creare una classe `Zombie`, sottoclasse di `Actor`
-- Nel costrutture
+- Creare personaggio **`Zombie`**
+- Inizializzazione
     - Riceve parametro per direzione: *destra/sinistra*
     - Sceglie distanza casuale da percorrere $\in [150, 300]$
-- Comportamento di uno zombie
+- Comportamento
     1. Sorge dal terreno in alcuni frame
     2. Si sposta sempre nella stessa direzione
     3. Sprofonda nel terreno in alcuni frame
-- Uno zombie può essere generato nella funzione `tick`
+- Uno *zombie* può essere generato nella funzione `tick`
     - In ogni frame, con probabilità $\frac{1}{500}$
-    - A distanza non superiore a $200$ da Arthur
-    - Si sposta in direzione di Arthur
+    - A distanza non superiore a $200$ da *Arthur*
+    - Si sposta in direzione di *Arthur*
 
 >
 
 Regolare i valori numerici a piacere
+
+---
+
+# Esercitazione 5 (2025-10-27)
+
+---
+
+![](https://fondinfo.github.io/images/games/ghosts-goblins.png)
+# 5.1 Piattaforme [P1]
+
+- Creare personaggio **`Platform`**
+    - Immobile e già parte dello sfondo
+    - Restituisce `None` nel metodo `sprite`
+    - Gli altri personaggi collidono e atterrano sulle piattaforme
+- Creare personaggio **`Gravestone`**
+    - Immobile e già parte dello sfondo
+    - Restituisce `None` nel metodo `sprite`
+    - *Arthur* non può attraversarle, ma ci può salire sopra
+    - Gli *zombie* le attraversano
+
+---
+
+![](https://fondinfo.github.io/images/games/ghosts-goblins.png)
+# 5.2 Fiaccole [P1]
+
+- *Arthur* può lanciare delle *fiaccole*
+    - Verso destra, o verso sinistra
+    - Dopo aver lanciato una fiaccola…
+    - Aspetta 10 frame prima di poter lanciarne un'altra
+- Creare personaggio **`Torch`**
+    - Cade per forza di gravità
+    - Uccide il primo *zombie* che tocca
+    - Se colpisce qualcosa, sparisce
+    - Se finisce a terra, genera una *fiammata*
+- Creare personaggio **`Flame`**
+    - Immobile, sparisce dopo 60 frame
+    - Uccide tutti gli *zombie* che tocca
