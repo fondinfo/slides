@@ -226,7 +226,7 @@ b1.multiple_move(2)
 
 ---
 
-![](http://fondinfo.github.io/images/misc/slope.svg)
+![large](http://fondinfo.github.io/images/misc/slope.svg)
 # 🧪 Modello lineare
 
 ``` py
