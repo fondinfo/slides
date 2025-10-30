@@ -233,11 +233,11 @@ b1.multiple_move(2)
 class LinearModel:
     def __init__(self, slope: float,
                  intercept: float):
-        self._a = slope
-        self._b = intercept
+        self._m = slope
+        self._q = intercept
 
     def predict(self, x: float) -> float:
-        return self._a * x + self._b
+        return self._m * x + self._q
 ```
 
 ---
