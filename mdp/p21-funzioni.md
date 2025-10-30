@@ -351,7 +351,7 @@ def draw_rays(x0: int, y0: int, r: int):
 
 - Funzioni più generali, astrazione migliore
 
-```
+``` py
 Point = tuple[float, float]  # Pt in cartesian coords (x, y)
 Polar = tuple[float, float]  # Pt in polar coords (r, angle)
 
