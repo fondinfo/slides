@@ -637,8 +637,6 @@ Regolare i valori numerici a piacere
 >
 
 Segnare in un `bool` se si è incontrato un asterisco iniziale, ma non ancora un asterisco finale
-<br>
-Non usare gli indici sulla stringa
 
 ---
 
