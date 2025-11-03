@@ -616,3 +616,141 @@ Regolare i valori numerici a piacere
 - Creare personaggio **`Flame`**
     - Immobile, sparisce dopo 60 frame
     - Uccide tutti gli *zombie* che tocca
+
+---
+
+# Esercitazione 6 (2025-11-03)
+
+---
+
+![](https://fondinfo.github.io/images/misc/troll-key.png)
+# 6.1 Maiuscole tra asterischi
+
+- Scrivere una funzione `shout` che:
+    - Riceve in input una stringa di testo
+    - Produce in output la stesso testo, ma...
+    - Trasforma in maiuscolo tutto il testo compreso tra asterischi
+- Es. “`I want *this text* to be uppercase`”
+    - → “`I want THIS TEXT to be uppercase`”
+- Da una funzione `main`, applicare la funzione `shout` su una stringa inserita dall'utente
+
+>
+
+Segnare in un `bool` se si è incontrato un asterisco iniziale, ma non ancora un asterisco finale
+<br>
+Non usare gli indici sulla stringa
+
+---
+
+# 6.2 Lettere iniziali uguali
+
+- Scrivere una funzione `len_common_prefix`
+    - Parametri: due stringhe da confrontare
+    - Risultato: numero di lettere iniziali uguali tra le due stringhe
+- Scrivere una funzione `main`
+    - Chiedere all'utente due stringhe di testo
+    - Invocare `len_common_prefix` sulle due stringhe
+    - Mostrare all'utente il risultato
+- Es. `“carta”` vs. `“carota”` → 3 (`“car”`)
+
+---
+
+![](https://fondinfo.github.io/images/algo/red-dice.svg)
+# 6.3 Risultati casuali
+
+- Simulare `n` lanci di una coppia di dadi
+    - `n` scelto dall'utente
+- Contare quante volte si presenta ciascun risultato
+    - Risultati possibili: da 2 a 12
+    - Somma dei due dadi
+    - Quante volte è uscito il 2? Quante il 3? … Quante il 12?
+
+>
+
+Per conteggiare i vari risultati, usare una lista di 13 interi (al massimo)
+
+---
+
+# 6.4 Quadrati sovrapposti
+
+- Disegnare dei quadrati casuali su un canvas 400×400
+    - Posizione e colore casuale
+    - Tutti di lato 20
+- Il numero dei quadrati non è fissato
+    - Il programma termina quando…
+    - L'ultimo quadrato interseca uno dei precedenti
+
+>
+
+Memorizzare in una lista le posizioni dei quadrati
+
+---
+
+![](https://fondinfo.github.io/images/misc/histogram-rot.svg)
+# 6.5 Istogramma in orizzontale
+
+- Chiedere all'utente una sequenza di valori (positivi)
+    - La sequenza termina all'inserimento di un valore negativo (*sentinella*)
+- Mostrare un istogramma, in un canvas 500×500
+    - Lunghezza di ciascuna barra proporzionale al valore corrispondente
+    - La barra più lunga occupa tutto lo spazio disponibile
+    - L'altezza del canvas è divisa equamente tra le barre
+
+>
+
+Memorizzare i valori in una lista
+
+---
+
+![](https://fondinfo.github.io/images/misc/clamp.svg)
+# 6.6 Clamp su lista
+
+- Definire una funzione con due parametri
+    - Una lista di `float`
+    - Un limite superiore fissato, come `float`
+    - Senza risultato esplicito: lista modificata *in place*
+- Per ciascun valore nella lista
+    - Se il valore supera il limite…
+    - Esso viene troncato, cioè sostituito con il limite stesso
+- Per esempio. con limite fissato a 3
+    - `[2, 3, 5, 1, 4]` → `[2, 3, 3, 1, 3]`
+
+---
+
+# 6.7 Lista di cifre
+
+- Definire una funzione `digits`
+    - Parametro: numero intero positivo
+    - Risultato: lista di `int`
+    - Cifre che compongono il numero, dalle unità in su
+- Divedere il numero ripetutamente per 10
+    - Ad ogni passaggio, la cifra è il resto della divisione
+    - *Non* usare la rappresentazione come `str`!
+    - Es. `6543 → [3, 4, 5, 6]`
+- Chiamare la funzione da `main`
+    - Chiedere dei numeri all'utente, fino a riga vuota
+    - Di volta in volta, mostrare la lista risultante
+
+---
+
+![](https://fondinfo.github.io/images/games/ghosts-goblins.png)
+# 6.8 Scale [P1]
+
+- Creare personaggio **`Ladder`**
+    - Immobile e già parte dello sfondo
+    - Restituisce `None` nel metodo `sprite`
+- *Arthur* può arrampicarsi sulla *scala*
+    - Mentre è sulla *scala* non salta e non spara
+    - Può muoversi solo in verticale
+
+---
+
+![](https://fondinfo.github.io/images/games/ghosts-goblins.png)
+# 6.9 Piante [P1]
+
+- Creare personaggio **`Plant`**
+    - Stazionario
+    - In momenti casuali, spara un *occhio* in direzione di *Arthur*
+- Creare personaggio **`Eyeball`**
+    - Non devia mai dalla sua direzione originale
+    - Se colpisce *Arthur*, lo uccide

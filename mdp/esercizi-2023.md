@@ -1350,7 +1350,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 # 10.6 Lunghezza media
 
-- Leggere per intero il file “`licence.txt`”
+- Leggere per intero il file “`license.txt`”
 - Calcolare la lunghezza media delle parole…
     - Raggruppate in base alla loro prima lettera
     - Indifferentemente, maiuscola o minuscola (*case-insensitive*)

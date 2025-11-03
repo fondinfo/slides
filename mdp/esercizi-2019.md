@@ -457,7 +457,7 @@ zyxw
 
 - Rovesciare una stringa, sfruttando la ricorsione
 - Qualsiasi stringa di lunghezza `0` o `1` rimane uguale quando rovesciata
-- Alrimenti, la stringa rovesciata è la concatenazione di:
+- Altrimenti, la stringa rovesciata è la concatenazione di:
     - Ultimo carattere della stringa originale
     - Risultato del rovesciamento della stringa originale, con l'esclusione dell'ultimo carattere
 

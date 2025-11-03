@@ -1292,7 +1292,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 # 10.6 Conteggio per iniziale
 
-- Leggere per intero il file “`licence.txt`”
+- Leggere per intero il file “`license.txt`”
 - Calcolare il numero delle parole…
     - Raggruppate in base alla loro prima lettera
     - Indifferentemente, maiuscola o minuscola (*case-insensitive*)
