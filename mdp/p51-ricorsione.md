@@ -364,7 +364,7 @@ MCD(a, b) = MCD(b, a mod b), se b > 0
 # Bisezione, ricorsione
 
 - Trovare lo zero della seguente funzione matematica
-    - *f(x) = x³ – x – 1, per 1 ≤ x ≤ 2*
+    - $f(x) = x^3 - x - 1$, per $1 \leq x \leq 2$
     - Trovare *x* t.c. *|f(x)| < 0.001*
 - Definire una funzione ricorsiva di bisezione
     - Parametri necessari: *inizio intervallo* di ricerca, *fine intervallo* di ricerca

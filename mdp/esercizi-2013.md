@@ -715,7 +715,7 @@ A ogni turno aggiungere una nuova coppia (x, y) per la testa e rimuovere la coda
 
 ---
 
-![](https://fondinfo.github.io/images/misc/tents.png)
+![](https://fondinfo.github.io/images/games/tents.png)
 # Tents puzzle
 
 - Posizionare tende sulla griglia, in modo che ogni albero sia *assegnato* a una tenda

@@ -8,16 +8,16 @@
 # Bomberman
 
 - **Ballom**
-	- Muovimento casuale
+    - Muovimento casuale
 - **Bomba**
-	- Ferma per alcuni frame, poi genera fuoco
+    - Ferma per alcuni frame, poi genera fuoco
 - **Fuoco**
-	- Si espande in quattro direzioni
+    - Si espande in quattro direzioni
 - **Muri**
-	- Alcuni indistruttibili, altri no
+    - Alcuni indistruttibili, altri no
 - **Bomberman**
-	- Guidato dall'utente
-	- Deve evitare fuoco e Ballom
+    - Guidato dall'utente
+    - Deve evitare fuoco e Ballom
 
 >
 
@@ -248,7 +248,7 @@
 
 ---
 
-![](https://fondinfo.github.io/images/misc/tents.png)
+![](https://fondinfo.github.io/images/games/tents.png)
 # Tents puzzle
 
 - Posizionare tende sulla griglia, in modo che ogni albero sia *assegnato* a una tenda

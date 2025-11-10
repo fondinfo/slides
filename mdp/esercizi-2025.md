@@ -721,13 +721,7 @@ Memorizzare i valori in una lista
     - Parametro: numero intero positivo
     - Risultato: lista di `int`
     - Cifre che compongono il numero, dalle unità in su
-- Divedere il numero ripetutamente per 10
-    - Ad ogni passaggio, la cifra è il resto della divisione
-    - *Non* usare la rappresentazione come `str`!
-    - Es. `6543 → [3, 4, 5, 6]`
-- Chiamare la funzione da `main`
-    - Chiedere dei numeri all'utente, fino a riga vuota
-    - Di volta in volta, mostrare la lista risultante
+- Es. `6543 → [3, 4, 5, 6]`
 
 ---
 
@@ -752,3 +746,176 @@ Memorizzare i valori in una lista
 - Creare personaggio **`Eyeball`**
     - Non devia mai dalla sua direzione originale
     - Se colpisce *Arthur*, lo uccide
+
+---
+
+# Esercitazione 7 (2025-11-10)
+
+---
+
+![](https://fondinfo.github.io/images/fun/matryoshka.png)
+# 7.1 Potenze con ricorsione
+
+- Definire una funzione ricorsiva `recursive_pow` per calcolare la potenza intera positiva di un numero
+- Per qualsiasi numero $x$, $x^0 = 1$
+- La potenza $n$-esima di un numero $x$ si può calcolare come:
+    - Prodotto tra $x$ e la potenza $n-1$ di $x$ (*ricorsione*)
+- In una funzione `main`
+    - Chiedere i dati all'utente
+    - Mostrare il risultato
+
+>
+
+Saranno accettate esclusivamente le soluzioni ricorsive
+
+---
+
+![](https://fondinfo.github.io/images/misc/characters.png)
+# 7.2 Carattere casuale
+
+- Definire funzione `randchar`
+- Due parametri di tipo carattere
+    - Estremi dell'intevallo di caratteri possibili
+    - Estremi *inclusi* (l'intervallo è *chiuso*)
+- Risultato: carattere casuale scelto dall'intervallo dato
+
+---
+
+# 7.3 Matrice casuale
+
+- Chiedere all'utente le dimensioni $w, h$ di una matrice
+- Riempire con una *comprehension* una lista
+    - Con $w·h$ lettere minuscole casuali, con possibili ripetizioni
+- Mostrare a console la lista come una matrice, riga per riga, in formato *CSV*
+    - Caratteri separati da virgola (ma senza virgola a fine riga)
+- In un ciclo
+    - Chiedere un carattere all'utente
+    - Contare quante volte è presente ovunque nella matrice
+    - Contare quante volte è presente nelle celle di bordo <br> (celle in prima o ultima colonna, o riga)
+
+``` txt
+a,c,r,a
+r,r,t,a
+t,r,e,f
+```
+
+---
+
+![](https://fondinfo.github.io/images/draw/rec-circles.svg)
+# 7.4 Cerchi ricorsivi
+
+- Definire funzione `rec_circles`
+    - Parametri: centro $p$ e raggio $r$
+- Se $r \leq 5$, non disegna niente
+- Altrimenti
+    - Disegna il cerchio specificato
+    - Disegna ricorsivamente altri 4 cerchi
+    - Spostati in orizzontale e in verticale di $\pm r$
+    - Con raggio ridotto al 42% ($\sqrt{2}-1$)
+
+>
+
+Saranno accettate esclusivamente le soluzioni ricorsive
+
+---
+
+# 7.5 Lista di cifre
+
+- Definire una funzione `digits`
+    - Parametro: numero intero positivo
+    - Risultato: lista di `int`
+    - Cifre che compongono il numero, dalle unità in su
+- Divedere il numero ripetutamente per 10
+    - A ogni passaggio, la cifra è il resto della divisione
+    - *Non* usare la rappresentazione come `str`!
+    - Es. `6543 → [3, 4, 5, 6]`
+- Chiamare la funzione da `main`
+    - Chiedere dei numeri all'utente, fino a riga vuota
+    - Di volta in volta, mostrare la lista risultante
+
+---
+
+# 7.6 Verifica di cifre
+
+- Ottenere la lista di cifre di un numero dalla funzione `digits` (es. 7.5)
+- Verificare la correttezza del risultato
+    - Ciclo sulla lista con `enumerate`
+    - Moltiplicare ogni cifra per la corrispondente potenza di 10
+
+$$6543 \to [3, 4, 5, 6]$$
+$$[3, 4, 5, 6] \to 3 \cdot 10^0 + 4 \cdot 10^1 + 5 \cdot 10^2 + 6 \cdot 10^3$$
+
+---
+
+# 7.7 Selezione di caratteri
+
+- Definire funzione `select_chars`
+    - Parametro: un testo
+    - Risultato: un nuovo testo
+- Selezione per il risultato
+    - Esclusi dal testo dato i caratteri con codice Unicode…
+    - Minore del carattere precedente o del carattere successivo
+- Es. “`testo di prova`” → “`ttirv`”
+
+---
+
+![](https://fondinfo.github.io/images/games/ghosts-goblins.png)
+# 7.8 GnG - Gioco e GUI [P1]
+
+- Classe `GngGame`, sottoclasse di `Arena` specializzata per *Ghosts'n Goblins*
+    - Inizializzare i personaggi (in base a un file testuale di configurazione)
+    - Controllare la conclusione della partita, positiva o negativa
+- Classe `GngGui` per la rappresentazione del gioco
+    - Disegno immagini e funzionalità legate a `g2d`
+    - Metodi `tick` etc.
+- Prendere spunto (…) da `BounceGame` e `BounceGui`
+    - <https://fondinfo.github.io/play/?c07_bouncegame.py>
+
+---
+
+# 7.8 GnG - Test [P1]
+
+- Creare degli *unit test* per il gioco *Ghosts'n Goblins*
+    - Sono consigliati *test parametrizzati*
+- Cercare di testare ciascun personaggio separatamente
+    - Chiamare direttamente `move`, `pos` ecc., in varie situazioni
+- Es. Testare il protagonista simulando varie sequenze di comandi
+    - Percorre sempre la traiettoria prevista?
+    - Sceglie sempre lo sprite corretto?
+    - Reagisce correttamente alle diverse collisioni?
+
+---
+
+![](https://fondinfo.github.io/images/misc/handwriting.jpg)
+# 7.8 GnG - Bella copia [P1]
+
+- **Codice leggibile**
+    - *Costanti*, anzichè numeri “*magici*” sparsi nel codice
+    - *Nomi esplicativi*, semplici, in inglese
+    - *Regole di stile* : `variable_name`, `function_name`, `ClassName`, `CONSTANT_NAME`
+    - *Commenti*, quando utili: *function annotation*, *docstring*
+- **Codice ben organizzato**
+    - *No copia&incolla* del codice: funzioni parametrizzate e/o cicli
+    - *Programmazione strutturata* : preferibilmente, cicli senza `break`
+    - *OOP* : *incapsulamento*, *ereditarietà*, *polimorfismo*
+
+---
+
+![](https://fondinfo.github.io/images/games/tents.png)
+# 7.9 Tents puzzle [P2]
+
+- Definire sottoclasse di `BoardGame`
+- Inizializzazione con *alberi* 🌳 prefissati
+    - Come in figura
+- Metodo `play` per inserire *tende* ⛺
+    - Liberamente, senza restrizioni
+- Metodo `finished` : controllare che…
+    - Le tende sono tante quanti gli alberi
+    - Ogni albero è adiacente (✜) ad almeno una tenda
+    - Ogni tenda è adiacente (✜) ad almeno un albero
+    - Per ora, trascurare le altre regole
+- Implementare gli altri metodi, tutti *getter*
+
+>
+
+<http://www.brainbashers.com/tentshelp.asp>
