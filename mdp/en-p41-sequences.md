@@ -202,9 +202,9 @@ txt[-6:]  # "Circus"
 
 - **`join`** : from list of strings to whole string
 - **`split`** : from whole string to list of strings
-	- Without params, splits according to sequences of white chars
+    - Without params, splits according to sequences of white chars
     - `" ", "\n", "\t"`…
-	
+
 ``` py
 whole = "|".join(["tue", "thu", "sat"])  # "tue|thu|sat"
 days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
@@ -214,14 +214,14 @@ days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
 
 # Unpacking
 
-- Any sequence can be unpacked into a *corresponding number* of variables 
+- Any sequence can be unpacked into a *corresponding number* of variables
 
 ``` py
 >>> a, b, c = [1, 2, 3]
 ```
 
 - *Starred* assignment for capturing a sequence into a list
-	- Try to omit `first`, `second`, or `last`
+    - Try to omit `first`, `second`, or `last`
 
 ``` py
 >>> first, second, *middle, last = [0, 1, 2, 3, 4, 5]  # range(6)
@@ -601,6 +601,9 @@ while (v := float(input("val? "))) >= 0:  # sentinel
 while v := input("val? "):  # sentinel, "" is falsy
     print(float(v) ** 2)
 ```
+
+- `and` : 1<sup>st</sup> operand if *falsy*, else 2<sup>nd</sup>
+- `or` : 1<sup>st</sup> operand if *truthy*, else 2<sup>nd</sup>
 
 >
 

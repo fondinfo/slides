@@ -202,9 +202,9 @@ txt[-6:]  # "Circus"
 
 - **`join`** : da lista di stringhe a stringa unica
 - **`split`** : da stringa unica a lista di stringhe
-	- Senza parametri, separa in base a sequenze di caratteri bianchi
+    - Senza parametri, separa in base a sequenze di caratteri bianchi
     - `" ", "\n", "\t"`…
-	
+
 ``` py
 whole = "|".join(["tue", "thu", "sat"])  # "tue|thu|sat"
 days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
@@ -221,7 +221,7 @@ days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
 ```
 
 - Assegnamento *con stella* per catturare una sequenza in una lista
-	- Provare a omettere `first`, `second`, o `last`
+    - Provare a omettere `first`, `second`, o `last`
 
 ``` py
 >>> first, second, *middle, last = [0, 1, 2, 3, 4, 5]  # range(6)
@@ -602,6 +602,9 @@ while v := input("val? "):  # sentinel, "" is falsy
     print(float(v) ** 2)
 ```
 
+- `and` : 1° operando se *falsy*, altrimenti 2°
+- `or` : 1° operando se *truthy*, altrimenti 2°
+
 >
 
 <https://docs.python.org/3/library/stdtypes.html#truth>
@@ -728,8 +731,8 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
 
 - Definire la funzione `clamp` con tre parametri
     - Una lista di numeri
-    - Un limite minimo $a$
-    - Un limite massimo $b$
+    - Un limite inferiore $a$
+    - Un limite superiore $b$
 - Modifica numeri nella lista
     - Se minori di $a$, li sostituisce con $a$
     - Se maggiori di $b$ li sostituisce con $b$
