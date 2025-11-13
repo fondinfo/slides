@@ -275,7 +275,7 @@ class Folder(Node):
     - Tipo param es.: `type T = int | list[T]`
 
 ``` py
-def count_tree(t) -> int:
+def count_tree(t: T) -> int:
     if not isinstance(t, list):
         return 1
     # return sum(count_tree(v) for v in t)
