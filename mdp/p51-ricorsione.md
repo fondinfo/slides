@@ -272,9 +272,10 @@ class Folder(Node):
 # Liste annidate
 
 - Casi semplici di alberi : liste annidate
-    - Tipo param es.: `type T = int | list[T]`
 
 ``` py
+type T = int | list[T]
+
 def count_tree(t: T) -> int:
     if not isinstance(t, list):
         return 1
