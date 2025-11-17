@@ -405,7 +405,7 @@ In questo modo, sarà noto il numero di barre verticali e lo spazio disponibile 
 - Leggere da un file una sequenza di colori
     - In ogni riga ci sono tre valori, per le componenti R, G, B
     - I colori vengono memorizzati in una lista (di tuple)
-- Chiedere all'ultente il numero di cerchi da disegnare
+- Chiedere all'utente il numero di cerchi da disegnare
 - Disegnare i cerchi in maniera concentrica
     - I colori dei cerchi sono presi in sequenza dalla lista inserita dall'utente
     - Se si esaurisce la sequenza, si ricomincia dal primo colore

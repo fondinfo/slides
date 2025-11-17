@@ -919,3 +919,139 @@ $$[3, 4, 5, 6] \to 3 \cdot 10^0 + 4 \cdot 10^1 + 5 \cdot 10^2 + 6 \cdot 10^3$$
 >
 
 <http://www.brainbashers.com/tentshelp.asp>
+
+---
+
+# Esercitazione 8 (2025-11-17)
+
+---
+
+![](https://fondinfo.github.io/images/fun/matryoshka.png)
+# 8.1 Somma ricorsiva di cifre
+
+- Definire una funzione ricorsiva `sum_digits`
+    - Riceve come parametro un numero naturale $n$
+- Se $n < 10$, $n$ è il risultato
+- Altrimenti, si calcola la somma $s$ delle cifre di $n$
+    - Su $s$ si applica lo stesso algoritmo
+    - Per sommarne ricorsivamente le cifre
+- Esempi
+    - *f(41)=f(4+1)=f(5)=5*
+    - *f(327)=f(12)=f(3)=3*
+    - Infatti, *3+2+7=12* e *1+2=3*
+
+---
+
+![](https://fondinfo.github.io/images/draw/palette-circles.svg)
+# 8.2 Tavolozza di colori
+
+- Leggere da un file una sequenza di colori
+    - In ogni riga ci sono tre valori separati da virgola, per le componenti *R, G, B*
+    - I colori vengono memorizzati in una lista (di tuple)
+- Chiedere all'utente un numero $n$
+- Su un canvas 400×400, disegnare $n$ cerchi in maniera concentrica
+    - Il raggio decresce linearmente, da $200$ a $\frac{200}{n}$
+    - I colori dei cerchi sono presi in sequenza dalla lista
+    - Se si esaurisce la sequenza, si ricomincia dal primo colore
+
+---
+
+![](images/fun/matryoshka.png)
+# 8.3 Liste annidate, massimo
+
+- Definire una funzione *ricorsiva* `find_max`
+    - Parametro: semplice stringa o lista annidata di stringhe
+    - Risultato: stringa maggiore, anche nelle liste annidate
+- Una stringa semplice coincide con il risultato
+- In una lista, si applica la ricerca del massimo (ricorsivamente) a ogni elemento
+    - Il risultato sarà il massimo, tra i risultati ottenuti per ogni elemento
+- Esempio : `["Ann", ["Bart", ["Carol", "Cindy"], "Bob", "Art"], ["Bea"], "Bill"]`
+    - → Risultato: *Cindy*
+
+---
+
+![](https://fondinfo.github.io/images/draw/rec-circles-2.svg)
+# 8.4 Cerchi ricorsivi con palette
+
+- Riprendere l'esercizio 7.4
+- Definire un livello massimo di ricorsione
+    - Aggiungere un parametro `depth` alla funzione di disegno
+    - Per esempio, con `depth=4` si disegnano cerchi di 4 dimensioni diverse
+- Il colore dei cerchi dipende dal livello di ricorsione
+    - Stesso colore per cerchi della stessa dimensione
+    - Prendere i colori da una palette casuale (~ es. 8.2)
+- Evitare di disegnare cerchi nella direzione del cerchio grande di provenienza
+    - Aggiungere un parametro `skip_dir` alla funzione di disegno
+    - Per esempio come tupla $(\pm 1, \pm 1)$
+
+>
+
+Saranno accettate esclusivamente le soluzioni ricorsive
+
+---
+
+![](https://fondinfo.github.io/images/games/minesweeper.svg)
+# 8.5 Mines
+
+- Chiedere all'utente numeri $w, h, n$
+- Creare una matrice $w×h$ contenente $n$ valori 1 (💣)
+    - Valori 1 in posizioni casuali, altre celle a 0
+- Salvare la matrice in un file `output.csv`
+- Poi, iterativamente chiedere all'utente varie coppie $(x, y)$
+    - Valori $x$ e $y$ forniti su una sola riga, separati da spazio
+    - Riga vuota per terminare
+- Per ogni coppia $(x, y)$ fornita…
+    - Comunicare se nella cella scelta c'è 1 (💣)
+    - Altrimenti, comunicare quanti 1 ci sono *intorno* a $(x, y)$
+    - In orizzontale, verticale e diagonale
+
+---
+
+![](https://fondinfo.github.io/images/repr/file-system.svg)
+# 8.6 Profondità albero
+
+- Partire dall'albero di documenti e cartelle
+- Aggiungere a tutti i *nodi* un metodo `depth`
+    - Riporta la profondità della struttura
+    - Livello di annidamento massimo
+- Astratto nella classe base
+- Per un *documento*: 0
+- Per una *cartella*: 1 + profondità massima dei sottonodi
+- Rispetto alla struttura raffigurata a fianco
+    - Calcolare `depth` della cartella radice (*3*, nell'esempio)
+
+---
+
+![](https://fondinfo.github.io/images/games/tents.png)
+# 8.7 Tents, click [P2]
+
+- Rotazione al click
+    - Prato 🟩 / tenda ⛺ / niente
+- A `BoardGameGui` si possono passare due parametri opzionali
+    - Dizionario `actions` per definire *azioni* corrispondenti a tasti
+    - Dizionario `annots` per definire *colorazioni* delle celle
+- Eventualmente, modificare `BoardGameGui` a piacere
+
+---
+
+# 8.8 Tents, regole [P2]
+
+- Verificare i vincoli numerici per righe e colonne
+- Verificare che tende non siano vicine
+    - Nè in orizzontale, nè in verticale, nè in diagonale
+- Verificare associazioni, non ambigue
+    - Tenda adiacente (✜) a un solo albero, oppure…
+    - Albero adiacente (✜) a una sola tenda e nessuna cella libera
+    - $\implies$ albero e tenda *marcati*, eliminati iterativamente dal computo
+
+---
+
+# 8.9 Tents, automatismi [P2]
+
+- Tasto `g` per marcare automaticamente le celle con *prato*
+    - Vincolo di riga/colonna pari alle tende già poste: tutte le celle libere sono *prato*
+    - Cella libera vicina a una tenda (anche diagonalmente): *prato*
+    - Cella non adiacente a un albero (non assegnato): *prato*
+- Tasto `t` per marcare automaticamente le celle con *tende*
+    - Vincolo di riga/colonna pari alla somma delle celle libere e delle tende già poste: le celle libere sono *tende*
+    - Albero senza tende attorno, con una sola cella libera adiacente: *tenda*
