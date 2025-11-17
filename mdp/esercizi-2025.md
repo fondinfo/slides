@@ -775,7 +775,7 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 
 - Definire funzione `randchar`
 - Due parametri di tipo carattere
-    - Estremi dell'intevallo di caratteri possibili
+    - Estremi dell'intervallo di caratteri possibili
     - Estremi *inclusi* (l'intervallo è *chiuso*)
 - Risultato: carattere casuale scelto dall'intervallo dato
 
@@ -1019,6 +1019,10 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 - Per una *cartella*: 1 + profondità massima dei sottonodi
 - Rispetto alla struttura raffigurata a fianco
     - Calcolare `depth` della cartella radice (*3*, nell'esempio)
+
+>
+
+<https://fondinfo.github.io/play/?c12_folders.py>
 
 ---
 
