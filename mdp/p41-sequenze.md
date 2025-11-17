@@ -735,7 +735,7 @@ Per conteggiare i vari risultati, usare una lista di (almeno) 11 valori
     - Un limite superiore $b$
 - Modifica numeri nella lista
     - Se minori di $a$, li sostituisce con $a$
-    - Se maggiori di $b$ li sostituisce con $b$
+    - Se maggiori di $b$, li sostituisce con $b$
 
 ``` py
 data = [3, 4, 6, 7, 3, 5, 6, 12, 4]
