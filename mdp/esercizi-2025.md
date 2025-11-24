@@ -1059,3 +1059,139 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 - Tasto `t` per marcare automaticamente le celle con *tende*
     - Vincolo di riga/colonna pari alla somma delle celle libere e delle tende già poste: le celle libere sono *tende*
     - Albero senza tende attorno, con una sola cella libera adiacente: *tenda*
+
+---
+
+# Esercitazione 9 (2025-11-24)
+
+---
+
+# 9.1 Matrice casuale
+
+- Chiedere all'utente le dimensioni `w, h` di una matrice
+- Riempire la matrice con i numeri da `1` a `w*h`
+    - Ciascuno presente una sola volta, ma in posizione casuale
+- Salvare la matrice in un file di testo (*CSV*)
+    - Ogni riga della matrice in una riga del file
+    - Valori separati tra loro da una virgola
+
+---
+
+# 9.2 Colonne normalizzate
+
+- Leggere da file una matrice di numeri
+    - Per es. la matrice salvata nell'es. 9.1
+- Per ogni colonna della matrice
+    - Stampare il valore massimo
+    - Stampare il valore minimo
+- Riscrivere inoltre la matrice in un secondo file
+    - Ma con valori normalizzati in ogni colonna
+    - $v_{norm} = \frac{v - v_{min}}{v_{max} - v_{min}}$ <br> $v_{norm} \in [0, 1]$
+- Esempio di normalizzazione:
+    - $[2, 4, 6, 5] → [0.0, 0.5, 1.0, 0.75]$
+
+---
+
+# 9.3 In tutte le colonne
+
+- Chiedere all'utente le dimensioni `w, h` di una matrice
+- Riempire la matrice con numeri compresi tra 0 e 9, con possibili ripetizioni
+- Visualizzare la matrice
+- Elencare i numeri che sono presenti in tutte le colonne
+- P.es.: nella seguente matrice, i numeri 6 e 7 sono presenti in tutte le colonne
+
+```
+7,7,1
+6,2,7
+4,6,6
+3,7,8
+```
+
+---
+
+# 9.4 Conteggio parole
+
+- Leggere il contenuto del file `g2d.py`
+- Ottenerne le parole, in base alla separazione con qualsiasi carettere bianco
+    - Contare le occorrenze di tutte le parole trovate
+    - Mostrare le 10 parole più comuni assieme ai relativi conteggi
+- Per confronto, ripetere le operazioni, ma…
+    - Separare le parole usando `re.split(r"\W+", text)`
+
+---
+
+![](http://fondinfo.github.io/images/fun/polygon.svg) ![](http://fondinfo.github.io/images/fun/move-around.svg)
+# 9.5 Poligono in rotazione
+
+- Definire una funzione `regular_poly`
+    - Parametri: numero $n$ dei lati, centro $p$ e raggio $r$ del cerchio circoscritto, angolo $a$ del primo vertice
+    - Trovare gli $n$ vertici attorno al centro con `move_around`, tutti a distanza $r$
+    - Restituire una lista con tutti i punti del poligono, ciascuno rappresentato come una tupla
+- Funzioni `main` e `tick`
+    - Chiamare `regular_poly` con dati dell'utente
+    - Unire i vertici (anche l'ultimo al primo) per disegnare un poligono al centro del canvas
+    - Mostrare rotazione del poligono attorno al centro
+
+---
+
+![](https://fondinfo.github.io/images/repr/file-system.svg)
+# 9.6 Documento più grande
+
+- Partire dall'esempio di cartelle e documenti
+- Aggiungere metodo `largest` ai *nodi*
+    - Risultato: tupla `(size, relative_path)` del doc più grande nei sottonodi
+- Astratto nella classe base
+- Per un *documento*: dimensione del suo contenuto, suo nome
+- Per una *cartella*: risultato maggiore, tra i sottonodi
+    - Inserisce il suo nome davanti al path
+- Rispetto alla struttura raffigurata a fianco
+    - Cercare il `largest` a partire dalla cartella radice
+    - Es.: `(16, "Desktop/Personal/a1.txt")`
+
+>
+
+Strutture gerarchiche, ma il file system non c'entra
+
+---
+
+# 9.7 Tutti sotto soglia
+
+- Definire una funzione *ricorsiva* `all_below`
+    - Parametri: una lista di numeri *data* e un numero *limit*
+    - Controllare che tutti i numeri in *data* siano minori della soglia *limit*
+- Algoritmo:
+    - Una lista vuota non ha valori sopra la soglia
+    - Altrimenti, separare il primo elemento *head* dal resto della lista *tail*
+    - Se *head* maggiore di *limit*, risultato *falso*
+    - Altrimenti, infine, controllare gli altri valori
+
+>
+
+Saranno accettate solo le soluzioni ricorsive
+
+---
+
+![](https://fondinfo.github.io/images/misc/dead-end.jpg)
+# 9.8 Tents, vicolo cieco [P2]
+
+- Metodo booleano `wrong`, senza parametri
+- Controlla se una delle annotazioni inserite impedisce la soluzione del gioco
+    - *Non si può risolvere il gioco senza rimuovere una annotazione*
+    - Es. Due tende vicine
+    - Es. Una riga completa che non soddisfa vincolo numerico
+    - Es. Un albero senza tenda e senza celle libere vicine
+- Può restituire `False` anche se la partita non è finita
+    - Non ci sono violazioni evidenti, dovute ai simboli già inseriti
+    - Ci sono però delle celle ancora non marcate
+
+---
+
+# 9.9 Tents, test [P2]
+
+- Creare degli *unit test* per il gioco Hitori
+- Verificare il gioco dopo varie chiamate a `play`
+    - Usare `read` per osservare lo stato
+- Verificare il funzionamento di `finished` rispetto alle regole
+    - Nessun valore ripetuto, tra quelli non anneriti
+    - Celle annerite non adiacenti
+    - Contiguità tra tutte le celle bianche
