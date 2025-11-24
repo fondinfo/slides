@@ -254,7 +254,7 @@ for state in states:
 - Similar to FSM, but equipped with infinite memory, organized as a stack
     - Only the top of the stack can be accessed
     - Reading the top symbol
-    - Replacing the top symbol with a new string (even ε)
+    - Replacing the top symbol with a new string (even $\varepsilon$)
 - In non-deterministic form, it allows recognizing *context-free languages*
 - In deterministic form, it only recognizes *deterministic context-free languages* (a subclass)
     - Basis of common programming languages

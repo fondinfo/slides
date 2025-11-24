@@ -254,7 +254,7 @@ for state in states:
 - Simile a FSM, ma dotato di memoria infinita, organizzata a pila
     - Si può accedere solo alla cima della pila
     - Lettura del simbolo in cima
-    - Sostituzione simbolo in cima con nuova stringa (anche ε)
+    - Sostituzione simbolo in cima con nuova stringa (anche $\varepsilon$)
 - In forma non-deterministica, permette di riconoscere i *linguaggi non contestuali*
 - In forma deterministica, riconosce solo i *linguaggi non contestuali deterministici* (sottoclasse)
     - Base dei comuni linguaggi di programmazione
