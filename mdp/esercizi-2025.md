@@ -1238,7 +1238,7 @@ Se invece una ipotesi non risulta `wrong`, non è detto che sia giusta; non si p
 # 11.3 Tents, test soluzione [P2]
 
 - Permettere di inizializzare il gioco da un file di testo
-    - Usare gli schemi in `tents-games.zip` su Elly
+    - Usare gli schemi in `tents-games.zip` su [Elly](https://elly2025.didattica.unipr.it/mod/resource/view.php?id=65403)
 - Provare inoltre a risolvere quegli schemi automaticamente
     - Per ogni mossa, applicare i suggerimenti
     - Suggerimenti degli es. 11.1 e 11.2
