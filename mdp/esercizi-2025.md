@@ -1230,8 +1230,8 @@ Se invece una ipotesi non risulta `wrong`, non è detto che sia giusta; non si p
 - *Provare a inserire prato*
     - Applicare gli automatismi dell'es. 8.9
 - *Confrontare* tutte le annotazioni, aggiunte nei due casi
-    - Se una qualsiasi cella diventa tenda in entrambe le ipotesi ⇒ tenda nel gioco
-    - Se una qualsiasi cella diventa prato in entrambe le ipotesi ⇒ prato nel gioco
+    - Se una qualsiasi cella diventa *tenda* in entrambe le ipotesi ⇒ *tenda* nel gioco
+    - Se una qualsiasi cella diventa *prato* in entrambe le ipotesi ⇒ *prato* nel gioco
 
 ---
 
