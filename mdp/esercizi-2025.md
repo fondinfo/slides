@@ -1188,10 +1188,60 @@ Saranno accettate solo le soluzioni ricorsive
 
 # 9.9 Tents, test [P2]
 
-- Creare degli *unit test* per il gioco Hitori
+- Creare degli *unit test* per il gioco Tents
 - Verificare il gioco dopo varie chiamate a `play`
     - Usare `read` per osservare lo stato
 - Verificare il funzionamento di `finished` rispetto alle regole
     - Nessun valore ripetuto, tra quelli non anneriti
     - Celle annerite non adiacenti
     - Contiguità tra tutte le celle bianche
+
+---
+
+# Esercitazione 10 (2025-12-01)
+
+---
+
+![](https://fondinfo.github.io/images/misc/artificial-intelligence.png)
+# 10.1 Tents, suggerimenti [P2]
+
+- Cercare automaticamente la prossima mossa
+    - Ragionamento simile a giocatore umano
+    - Avviare la ricerca col tasto `a`
+- *Provare* a inserire una *tenda* in una cella non annotata
+    - Applicare gli automatismi dell'es. 8.9
+    - Se le regole sono violate (`wrong`), inserire un prato
+- *Provare* un prato in una cella non annotata
+    - Applicare gli automatismi dell'es. 8.9
+    - Se le regole sono violate (`wrong`), inserire una tenda
+
+>
+
+Se invece una ipotesi non risulta `wrong`, non è detto che sia giusta; non si possono trarre conclusioni!
+
+---
+
+![](https://fondinfo.github.io/images/misc/artificial-intelligence.png)
+# 11.2 Tents, altri suggerimenti [P2]
+
+- Considerare ogni cella non annotata, singolarmente
+- *Provare a inserire tenda*
+    - Applicare gli automatismi dell'es. 8.9
+- *Provare a inserire prato*
+    - Applicare gli automatismi dell'es. 8.9
+- *Confrontare* tutte le annotazioni, aggiunte nei due casi
+    - Se una qualsiasi cella diventa tenda in entrambe le ipotesi ⇒ tenda nel gioco
+    - Se una qualsiasi cella diventa prato in entrambe le ipotesi ⇒ prato nel gioco
+
+---
+
+# 11.3 Tents, test soluzione [P2]
+
+- Permettere di inizializzare il gioco da un file di testo
+    - Usare gli schemi in `tents-games.zip` su Elly
+- Provare inoltre a risolvere quegli schemi automaticamente
+    - Per ogni mossa, applicare i suggerimenti
+    - Suggerimenti degli es. 11.1 e 11.2
+- Ricordarsi…
+    - Inizializzare la partita da un *file* (parametro)
+    - Preparare vari *unit test*, per le principali funzionalità
