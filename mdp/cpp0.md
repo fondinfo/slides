@@ -41,7 +41,6 @@ sudo apt install build-essential libboost-dev geany
 
 ``` cpp
 #include <iostream>
-using namespace std;
 
 int main() {
     std::cout << "Hello, C++!\n";
@@ -480,7 +479,6 @@ while (std::getline(file2, line)) {  // for line in file2
 
 ``` cpp
 #include <iostream>
-using namespace std;
 
 int main() {
     float weight, height;
