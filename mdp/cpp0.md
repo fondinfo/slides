@@ -36,7 +36,7 @@ sudo apt install build-essential libboost-dev geany
 
 # Hello, C++
 
-- Output su console : **`cout`**
+- Output su console : **`std::cout`**
 - Operatore di *inserimento* : **`<<`**
 
 ``` cpp
@@ -44,7 +44,7 @@ sudo apt install build-essential libboost-dev geany
 using namespace std;
 
 int main() {
-    cout << "Hello, C++!\n";
+    std::cout << "Hello, C++!\n";
 }
 ```
 
@@ -67,15 +67,16 @@ g++ hello.cpp -o hello
     - Occorre **dichiarare** il tipo
     - Per allocare memoria e controllare le operazioni
 - Tipi principali
-    - `int`, `double` e `float`, `bool`, `string` e `char`
-- Funzioni di conversione
+    - `int`, `double` e `float`, `bool` e `char`
+- Stringhe e funzioni di conversione, `std::`
+    - `string`
     - `to_string` : numero → stringa
     - `stoi`, `stod`, `stof` : stringa → numero
 
 ``` cpp
 int x = 10;
 double h = 3.7;
-string txt = "hello";
+std::string txt = "hello";
 ```
 
 ---
@@ -109,31 +110,31 @@ auto txt = "hello"s;  // recent compiler
     - Costanti `true` e `false`
 
 ``` cpp
-cout << (3 < 5) << "\n";           // 1
-cout << (3 < 5 < 4) << "\n";       // 1 ⚠️
-cout << (3 < 5 && 5 < 4) << "\n";  // 0
+std::cout << (3 < 5) << "\n";           // 1
+std::cout << (3 < 5 < 4) << "\n";       // 1 ⚠️
+std::cout << (3 < 5 && 5 < 4) << "\n";  // 0
 ```
 
 ---
 
-# ⭐ Stringhe
+# ⭐ std::stringhe
 
-- `string`: sequenza *mutabile* di byte (tipo `char`)
+- `std::string`: sequenza *mutabile* di byte (tipo `char`)
 - Operazioni di *confronto* ; *concatenazione* : `+`
-- ⚠️ Apici doppi per valori `string`, singoli per `char`
+- ⚠️ Apici doppi per valori `std::string`, singoli per `char`
 
 ``` cpp
-string a = "0123456789abcdefghij";
+std::string a = "0123456789abcdefghij";
 a[10] = 'A';
 char c = a[10];  // 'A'
-cout << c << " " << int(c) << "\n";  // A 65
+std::cout << c << " " << int(c) << "\n";  // A 65
 
-string s1 = {'a'};  // char → string
-string txt = to_string(15);  // number → string
-int val = stoi("15");  // string → number; also `stod`, `stof`...
+std::string s1 = {'a'};  // char → string
+std::string txt = std::to_string(15);  // number → string
+int val = std::stoi("15");  // string → number; also `stod`, `stof`...
 
-string sub1 = a.substr(5, 3);  // 567
-string sub2 = a.substr(10);  // Abcdefghij
+std::string sub1 = a.substr(5, 3);  // 567
+std::string sub2 = a.substr(10);  // Abcdefghij
 ```
 
 ---
@@ -143,7 +144,6 @@ string sub2 = a.substr(10);  // Abcdefghij
 ``` cpp
 #include <cmath>
 #include <iostream>
-using namespace std;
 
 double hypotenuse(double a, double b) {  // ❗ pass by value
     auto c = sqrt(a * a + b * b);
@@ -153,13 +153,13 @@ double hypotenuse(double a, double b) {  // ❗ pass by value
 int main() {
     auto side1 = 3.0, side2 = 4.0;
     auto side3 = hypotenuse(side1, side2);
-    cout << "3rd side: " << side3 << "\n";
+    std::cout << "3rd side: " << side3 << "\n";
 }
 ```
 
 >
 
-[Funzioni in Python](p03-funzioni.html#/3)
+[Funzioni in Python](p21-funzioni.html#/3)
 
 ---
 
@@ -170,17 +170,16 @@ int main() {
 
 ``` cpp
 #include <iostream>
-using namespace std;
 
-string input(string message) {
-    string result;
-    cout << message;
-    getline(cin, result);
+std::string input(std::string message) {
+    std::string result;
+    std::cout << message;
+    std::getline(std::cin, result);
     return result;
 }
 int main() {
     auto user = input("Full name and surname?\n");
-    cout << "Hello, " << user << "\n";
+    std::cout << "Hello, " << user << "\n";
 }
 ```
 
@@ -190,21 +189,21 @@ int main() {
 # Selezione
 
 ``` cpp
-string a = input("First word?\n");
-string b = input("Second word?\n")
+std::string a = input("First word?\n");
+std::string b = input("Second word?\n")
 
 if (a < b) {
-    cout << "The words are ordered\n";
+    std::cout << "The words are ordered\n";
 } else if (a > b) {
-    cout << "The words are inverted\n";
+    std::cout << "The words are inverted\n";
 } else {
-    cout << "The words are equal\n";
+    std::cout << "The words are equal\n";
 }
 ```
 
 >
 
-[Selezioni in Python](p01-algoritmi.html#/31)
+[Selezioni in Python](p12-basi.html#/31)
 <br>
 [Strutture di controllo in C++](https://cppguide.readthedocs.io/en/latest/cpp/control.html)
 
@@ -215,20 +214,20 @@ if (a < b) {
 
 ``` cpp
 int total = 0, count = 0;
-int val = stoi(input("Val (-1 to finish)? "));
+int val = std::stoi(input("Val (-1 to finish)? "));
 while (val != -1) {
     total += val;
     ++count;
-    val = stoi(input("Val (-1 to finish)? "));
+    val = std::stoi(input("Val (-1 to finish)? "));
 }
 if (count > 0) {
-    cout << "Avg: " << total / float(count) << "\n";
+    std::cout << "Avg: " << total / float(count) << "\n";
 }
 ```
 
 >
 
-[Iterazioni in Python](p02-cicli.html#/5)
+[Iterazioni in Python](p13-cicli.html#/5)
 <br>
 [Strutture di controllo in C++](https://cppguide.readthedocs.io/en/latest/cpp/control.html)
 
@@ -244,14 +243,14 @@ if (count > 0) {
 ``` cpp
 int i = 0;                     // for each i : 0 <= i < 5
 while (i < 5) {
-    cout << i * i << "\n";
+    std::cout << i * i << "\n";
     ++i;
 }
 ```
 
 ``` cpp
 for (int i = 0; i < 5; ++i) {  // for each i : 0 <= i < 5
-    cout << i * i << "\n";
+    std::cout << i * i << "\n";
 }
 ```
 
@@ -307,14 +306,13 @@ Una procedura senza un valore di ritorno è di tipo `void`
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-using namespace std;
 
 int main() {
-    srand(time(nullptr));           // just once! (initial seed
+    std::srand(std::time({}));      // just once! (initial seed
                                     // for random numbers)
     for (int i = 0; i < 10; ++i) {
-        int r = 1 + rand() % 90;    // random value: 1 <= r <= 90
-        cout << r << "\n";
+        int r = 1 + std::rand() % 90;    // random value: 1 <= r <= 90
+        std::cout << r << "\n";
     }
 }
 ```
@@ -333,13 +331,13 @@ In alternativa (con estremi inclusi): `g2d::randint(1, 90)`
 ```
 
 ``` cpp
-vector<int> rainfall_data = {13, 24, 18, 15};
+std::vector<int> rainfall_data = {13, 24, 18, 15};
 ```
 
 ``` cpp
-vector<string> groceries = {"spam", "egg", "beans"};  // init list
-cout << groceries[1] << "\n";  // egg
-cout << groceries.size() << "\n";  // 3 -- also for strings
+std::vector<std::string> groceries = {"spam", "egg", "beans"};  // init list
+std::cout << groceries[1] << "\n";  // egg
+std::cout << groceries.size() << "\n";  // 3 -- also for strings
 groceries[0] = "sausage";  // replace an elem
 
 groceries.push_back("bacon");  // add elem to the end
@@ -348,41 +346,41 @@ groceries.pop_back();  // remove last elem
 
 >
 
-[Liste in Python](p02-cicli.html#/12)
+[Liste in Python](p13-cicli.html#/12)
 
 ---
 
 # ⭐ For su sequenze dati
 
 ``` cpp
-vector<int> values = {2, 3, 5, 7, 11};
+std::vector<int> values = {2, 3, 5, 7, 11};
 
 for (auto val : values) {
     cube = val * val * val;
-    cout << cube << "\t";
+    std::cout << cube << "\t";
 }
 // 8   27  125 343 1331
 ```
 
 ``` cpp
-string text = "eureka!";
+std::string text = "eureka!";
 for (auto c : text)  {  // for each char in text
-    cout << c << " " << int(c) << "\n";
+    std::cout << c << " " << int(c) << "\n";
 }
 ```
 
 >
 
-[Cicli su liste in Python](p02-cicli.html#/13)
+[Cicli su liste in Python](p13-cicli.html#/13)
 
 ---
 
 # Vector come pseudo-matrice
 
 ``` cpp
-vector<int> matrix = {2, 4, 3, 8,
-                      9, 3, 2, 7,
-                      5, 6, 9, 1};
+std::vector<int> matrix = {2, 4, 3, 8,
+                           9, 3, 2, 7,
+                           5, 6, 9, 1};
 auto cols = 4, rows = 3;  // rows = matrix.size() / cols;
 
 for (auto x = 0; x < cols; ++x) {
@@ -390,13 +388,13 @@ for (auto x = 0; x < cols; ++x) {
     for (auto y = 0; y < rows; ++y) {
         total += matrix[y * cols + x];
     }
-    cout << "Col #" << x << " sums to " << total << "\n";
+    std::cout << "Col #" << x << " sums to " << total << "\n";
 }
 ```
 
 >
 
-[Pseudo-matrice in Python](p09-matrici.html#/3)
+[Pseudo-matrice in Python](p42-matrici.html#/3)
 
 ---
 
@@ -407,17 +405,17 @@ for (auto x = 0; x < cols; ++x) {
     - *Valore iniziale* uguale per tutti gli elementi
 
 ``` cpp
-vector<string> some_list;
-some_list.assign(10, ""); // some_list contains 10 strings
+std::vector<std::string> some_list;
+some_list.assign(10, ""); // some_list contains 10 std::strings
 ```
 
 - *Iteratori* per *slicing*, inserimenti, rimozioni
     - Operazioni su *vector* e *string*
 
 ``` cpp
-vector<int> vals = {0, 1, 2, 3, 4, 5};
-vector<int> some = {vals.begin()+1 , vals.begin()+4};  // [1, 2, 3]
-vector<int> last_two = {vals.end()-2 , vals.end()};  // [4, 5]
+std::vector<int> vals = {0, 1, 2, 3, 4, 5};
+std::vector<int> some = {vals.begin()+1 , vals.begin()+4};  // [1, 2, 3]
+std::vector<int> last_two = {vals.end()-2 , vals.end()};  // [4, 5]
 ```
 
 ---
@@ -445,7 +443,7 @@ if (pos != groceries.end()) {
 
 >
 
-[Slice in Python](p07-sequenze.html#/5)
+[Slice in Python](p41-sequenze.html#/5)
 
 ---
 
@@ -458,18 +456,18 @@ if (pos != groceries.end()) {
 ```
 
 ``` cpp
-// output file stream, ~ cout
-ofstream file1{"output.txt"};
+// output file stream, ~ std::cout
+std::ofstream file1{"output.txt"};
 
 file1 << "Hello, file!\n";
 ```
 
 ``` cpp
 // input file stream, ~ cin
-ifstream file2{"input.txt"};
-string line;
-while (getline(file2, line)) {  // for line in file2
-    cout << line.size();
+std::ifstream file2{"input.txt"};
+std::string line;
+while (std::getline(file2, line)) {  // for line in file2
+    std::cout << line.size();
 }
 ```
 
@@ -486,14 +484,14 @@ using namespace std;
 
 int main() {
     float weight, height;
-    cout << "Weight (kg) and height (m)?\n";
-    cin >> weight >> height;
-    cout << "Your BMI is " << weight / (height*height) << "\n";
+    std::cout << "Weight (kg) and height (m)?\n";
+    std::cin >> weight >> height;
+    std::cout << "Your BMI is " << weight / (height*height) << "\n";
 }
 ```
 
 - ⚠️ Attenzione a usare `getline` dopo estrazione (`>>`)
-    - `cin` contiene subito `\n` ⇒ `getline` dà stringa vuota
+    - `cin` contiene subito `\n` ⇒ `getline` dà std::stringa vuota
     - Scartare `\n` residuo : `cin.ignore()`
 
 ---
@@ -537,8 +535,8 @@ int main() {
     for (auto i = 0; i < 25; ++i) {
         b1.move();
         b2.move();
-        cout << b1.pos_x() << " " << b1.pos_y() << "\n";
-        cout << b2.pos_x() << " " << b2.pos_y() << "\n\n";
+        std::cout << b1.pos_x() << " " << b1.pos_y() << "\n";
+        std::cout << b2.pos_x() << " " << b2.pos_y() << "\n\n";
     }
 }
 ```
@@ -624,8 +622,8 @@ auto b2 = new Ball{80, 40};  // Ball*
 for (auto i = 0; i < 25; ++i) {
     b1.move();
     b2->move();
-    cout << b1.pos_x() << ", " << b1.pos_y() << "\n";
-    cout << b2->pos_x() << ", " << b2->pos_y() << "\n\n";
+    std::cout << b1.pos_x() << ", " << b1.pos_y() << "\n";
+    std::cout << b2->pos_x() << ", " << b2->pos_y() << "\n\n";
 }
 delete b2;
 ```
@@ -659,19 +657,19 @@ public:
 
 ``` cpp
 class Dog : public Animal {
-    string name_;
+    std::string name_;
 public:
-    Dog(string name) { name_ = name; }
+    Dog(std::string name) { name_ = name; }
     void say() {
-        cout << "I am " << name_ << " Dog. "
-             << "I say: WOOF!\n";
+        std::cout << "I am " << name_ << " Dog. "
+                  << "I say: WOOF!\n";
     }
 };
 class Cat : public Animal {
     /* ... */
     void say() {
-        cout << "I am " << name_ << " Cat. "
-             << "I say: MEOW!\n";
+        std::cout << "I am " << name_ << " Cat. "
+                  << "I say: MEOW!\n";
     }
 };
 ```
@@ -687,7 +685,7 @@ auto c = Cat("Candy");
 auto p1 = Pig("Peppa");
 auto p2 = Pig("George");
 // polymorphism requires pointers to objects
-vector<Animal*> animals = {&d, &c, &p1, &p2};
+std::vector<Animal*> animals = {&d, &c, &p1, &p2};
 for (auto a : animals) { a->say(); }
 ```
 
@@ -739,9 +737,9 @@ public:
     virtual void flag_at(int x, int y) = 0;
     virtual int cols() = 0;
     virtual int rows() = 0;
-    virtual string value_at(int x, int y) = 0;
+    virtual std::string value_at(int x, int y) = 0;
     virtual bool finished() = 0;
-    virtual string message() = 0;
+    virtual std::string message() = 0;
 
     virtual ~BoardGame() {}
 };
@@ -825,8 +823,8 @@ int main() {
 
     for (auto i = 0; i < 25; ++i) {
         b1.move(); b2.move();
-        cout << b1.pos_x() << ", " << b1.pos_y() << "\n";
-        cout << b2.pos_x() << ", " << b2.pos_y() << "\n\n";
+        std::cout << b1.pos_x() << ", " << b1.pos_y() << "\n";
+        std::cout << b2.pos_x() << ", " << b2.pos_y() << "\n\n";
     }
 }
 ```
@@ -844,7 +842,7 @@ g++ -o ball ball.o main.o
 ``` text
 // file: ball.i
 %module ball
-%include "std_string.i"
+%include "std_std::string.i"
 %{
 #include "ball.h"  // Include the header in the wrapper code
 %}

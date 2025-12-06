@@ -11,10 +11,10 @@
 ```
 
 ``` cpp
-int n; float r; string w;
-cin >> n >> r >> w;
+int n; float r; std::string w;
+std::cin >> n >> r >> w;
 
-ofstream file2{"output.txt"};  // file output stream
+std::ofstream file2{"output.txt"};  // file output stream
 if (file2) {                   // is stream available?
     file2 << "Values: " << n << " " << r << " " << w << endl;
 }
@@ -26,25 +26,25 @@ file2.close();
 # Lettura di righe
 
 ``` cpp
-ifstream file1{"input.txt"};  // when finished, close file1!
+std::ifstream file1{"input.txt"};  // when finished, close file1!
 ```
 
 ``` cpp
-string first_line, second_line;
-getline(file1, first_line);   // no newline at end
-getline(file1, second_line);  // no newline at end
+std::string first_line, second_line;
+std::getline(file1, first_line);   // no newline at end
+std::getline(file1, second_line);  // no newline at end
 ```
 
 ``` cpp
-string whole_text;
-getline(file1, whole_text, '\0');  // read whole file
+std::string whole_text;
+std::getline(file1, whole_text, '\0');  // read whole file
 ```
 
 ``` cpp
-string line;
+std::string line;
 // for each line in file1...
-while (getline(file1, line)) {
-    cout << line << endl;
+while (std::getline(file1, line)) {
+    std::cout << line << endl;
 }
 ```
 
@@ -62,10 +62,10 @@ while (getline(file1, line)) {
 
 ``` cpp
 /* Split a text into a sequence of strings */
-string text = "one:two::three";
-istringstream sstr{text};  // a stream view on a string
-for (string item; getline(sstr, item, ':');) {
-    cout << "- " << item << endl;
+std::string text = "one:two::three";
+std::istringstream sstr{text};  // a stream view on a string
+for (std::string item; std::getline(sstr, item, ':');) {
+    std::cout << "- " << item << endl;
 }
 ```
 
@@ -81,26 +81,26 @@ for (string item; getline(sstr, item, ':');) {
 # Lettura di dati
 
 ``` cpp
-ifstream file1{"input.txt"};
+std::ifstream file1{"input.txt"};
 ```
 
 ``` cpp
 if (file1) {                         // is stream available?
-    int n; float r; string w;
+    int n; float r; std::string w;
     file1 >> n >> r >> w;
 }
 ```
 
 ``` cpp
-for (int val; file1 >> val;) {       // or float, string ...
-    cout << setw(4) << val << endl;  // val occupies 4 chars
-}                                    // setw in <iomanip>
+for (int val; file1 >> val;) {                 // or float, string ...
+    std::cout << std::setw(4) << val << endl;  // val occupies 4 chars
+}                                              // setw in <iomanip>
 ```
 
 ``` cpp
-file1 >> noskipws;                   // scan also whitespaces
+file1 >> std::noskipws;              // scan also whitespaces
 for (char val; file1 >> val;) {      // for each char in file1
-    cout << val << endl;
+    std::cout << val << "\n";
 }
 ```
 
@@ -122,7 +122,7 @@ void swap(int& m, int& n) {
 int main() {
     int a = 5, b = 7;
     swap(a, b);
-    cout << a << " " << b << endl;
+    std::cout << a << " " << b << endl;
 }
 ```
 
