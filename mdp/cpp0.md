@@ -145,7 +145,7 @@ std::string sub2 = a.substr(10);  // Abcdefghij
 #include <iostream>
 
 double hypotenuse(double a, double b) {  // ❗ pass by value
-    auto c = sqrt(a * a + b * b);
+    auto c = std::sqrt(a * a + b * b);
     return c;
 }
 
