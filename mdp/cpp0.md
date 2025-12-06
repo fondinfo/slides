@@ -67,10 +67,10 @@ g++ hello.cpp -o hello
     - Per allocare memoria e controllare le operazioni
 - Tipi principali
     - `int`, `double` e `float`, `bool` e `char`
-- Stringhe e funzioni di conversione, `std::`
-    - `string`
-    - `to_string` : numero → stringa
-    - `stoi`, `stod`, `stof` : stringa → numero
+- Stringhe e funzioni di conversione
+    - `std::string`
+    - `std::to_string` : numero → stringa
+    - `std::stoi`, `std::stod`, `std::stof` : stringa → numero
 
 ``` cpp
 int x = 10;
