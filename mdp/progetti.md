@@ -7,7 +7,7 @@
 ![](https://fondinfo.github.io/images/games/ghosts-goblins.png)
 # Ghosts 'N Goblins
 
-- **Arthur** : Salta sulle *piattaforme* e sulle *lapidi*; si arrampica sulle *scale*; lancia *fiaccole*
+- **Arthur** : Salta sulle *piattaforme* e sulle *lapidi* ; si arrampica sulle *scale* ; lancia *fiaccole*
 - **Zombie** : Sorge lentamente dal terreno; sceglie e mantiene la stessa direzione; infine sprofonda lentamente nel terreno
 - **Fiaccola** : Cade per forza di gravità; uccide il primo *zombie* che tocca; se finisce a terra genera una *fiammata*
 - **Fiammata** : Immobile; sparisce dopo un paio di secondi; uccide tutti gli *zombie* che tocca
