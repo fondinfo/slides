@@ -65,7 +65,7 @@ g++ hello.cpp -o hello
 - Ogni variabile è un *contenitore* di dati
     - Occorre **dichiarare** il tipo
     - Per allocare memoria e controllare le operazioni
-- Tipi principali
+- Tipi primitivi
     - `int`, `double` e `float`, `bool` e `char`
 - Stringhe e funzioni di conversione
     - `std::string`

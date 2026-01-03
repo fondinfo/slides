@@ -4,6 +4,21 @@
 
 ---
 
+![](https://fondinfo.github.io/images/games/ghosts-goblins.png)
+# Ghosts 'N Goblins
+
+- **Arthur** : Salta sulle *piattaforme* e sulle *lapidi*; si arrampica sulle *scale*; lancia *fiaccole*
+- **Zombie** : Sorge lentamente dal terreno; sceglie e mantiene la stessa direzione; infine sprofonda lentamente nel terreno
+- **Fiaccola** : Cade per forza di gravità; uccide il primo *zombie* che tocca; se finisce a terra genera una *fiammata*
+- **Fiammata** : Immobile; sparisce dopo un paio di secondi; uccide tutti gli *zombie* che tocca
+- **Pianta** : Immobile; in momenti casuali spara un *occhio* in direzione di *Arthur*
+
+>
+
+<https://archive.org/details/GNG_DOS>
+
+---
+
 ![](https://fondinfo.github.io/images/games/bomberman.png)
 # Bomberman
 
@@ -48,16 +63,16 @@
 ![](https://fondinfo.github.io/images/misc/pac-man.png)
 # Pac-Man
 
-- *Pac-Man*
+- **Pac-Man**
     - Guidato dal giocatore, con la tastiera
     - Applica i comandi solo solo agli incroci
-- *Fantasmi*
+- **Fantasmi**
     - Uccidono Pac-Man se lo toccano
     - Agli incroci svoltano casualmente
     - Ma non tornano mai indietro!
-- *Biscotti*
+- **Biscotti**
     - Pac-Man vince se li mangia tutti
-- *SuperBiscotti*
+- **SuperBiscotti**
     - Danno per breve tempo a Pac-Man il potere di mangiare i fantasmi
 
 ---
@@ -65,15 +80,15 @@
 ![](https://fondinfo.github.io/images/misc/super-mario.jpg)
 # Super Mario
 
-- *Mario*: guidato dal giocatore
+- **Mario**: guidato dal giocatore
     - Si muove e salta sulle piattaforme
     - Cade secondo gravità, fuori dalle piattaforme
     - Ma non accelera oltre una velocità limite
     - Muore se cade in fondo allo schermo
-- *Muri e piattaforme*
+- **Muri e piattaforme**
     - Mario ci atterra dall'alto
     - Non si possono attraversare in nessuna direzione
-- *Avversari*
+- **Avversari**
     - Movimenti come Mario, ma scelti casualmente
     - Uccidono Mario se lo urtano, ma muoiono se Mario ci salta sopra
 
@@ -82,14 +97,14 @@
 ![](https://fondinfo.github.io/images/misc/bubble-bobble.png)
 # Bubble Bobble
 
-- *Draghetto*: guidato dal giocatore
+- **Draghetto**: guidato dal giocatore
     - Si muove e salta sulle *piattaforme*
     - Muore se cade in fondo allo schermo
-- *Avversari*
+- **Avversari**
     - Saltano come il draghetto sulle *piattaforme*
     - Ma scelgono casualmente la direzione
     - Uccidono il draghetto se lo urtano
-- *Bolle*
+- **Bolle**
     - Lanciate in orizzontale dal draghetto
     - Dopo un po' deviano verso l'alto
     - Catturano gli avversari che urtano
