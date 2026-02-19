@@ -34,7 +34,7 @@
 
 ---
 
-![large](https://fondinfo.github.io/images/misc/dooku.jpg)
+![large](https://fondinfo.github.io/images/misc/dooku.jpg) [Dooku ▶️](https://www.youtube.com/watch?v=OcXaicGvcvA)
 # Functional paradigm
 
 - Program execution: evaluation of *mathematical functions*
@@ -44,6 +44,8 @@
 - Optimizable: fit for *parallel programming*
 - *Expression*-oriented, composable: everything is an expression, producing a value
 - Functions are values, too: used as parameters and results of other, *higher-order*, functions
+
+> ⚔️ Fighting with one arm tied behind the back
 
 ---
 
