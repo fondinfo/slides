@@ -34,7 +34,7 @@
 
 ---
 
-![](https://fondinfo.github.io/images/fun/function.png)
+![large](https://fondinfo.github.io/images/misc/dooku.jpg)
 # Functional paradigm
 
 - Program execution: evaluation of *mathematical functions*
