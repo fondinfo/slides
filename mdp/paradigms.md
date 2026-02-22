@@ -53,7 +53,7 @@
 
 - ① Haskell test: ~ 1h½, 15 pts
     - During the lessons period w/ bonus, or in exam sessions
-- ② Rust test: 1h½, ~ 15 pts
+- ② Rust test: ~ 1h½, 15 pts
     - During the lessons period w/ bonus, or in exam sessions
 - ③ Active and continuous participation: ~ 2 pts
     - Lab activities and classes during the lessons period
