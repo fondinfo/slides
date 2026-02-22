@@ -64,7 +64,7 @@
 
 ---
 
-# Paradigms and languages
+# Evolution of languages
 
 ---
 
@@ -239,6 +239,10 @@ Some examples… are C#, Go, Java, Ruby, and Swift.
 
 ---
 
+# Paradigms
+
+---
+
 # Programming paradigm
 
 - Define an approach to programming
@@ -402,6 +406,10 @@ Some examples… are C#, Go, Java, Ruby, and Swift.
     - Dynamic typing
     - DRY principle - Don't Repeat Yourself
     - *JavaScript, Python, PHP, Ruby, Shell, Lua*
+
+---
+
+# Concepts and languages
 
 ---
 
