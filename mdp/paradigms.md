@@ -51,13 +51,13 @@
 
 # Exam
 
-- ① Haskell test: ~ 1h½, 15 pts
+- ① **Haskell test** : ~ 1h½, 15 pts
     - During the lessons period w/ bonus, or in exam sessions
-- ② Rust test: ~ 1h½, 15 pts
+- ② **Rust test** : ~ 1h½, 15 pts
     - During the lessons period w/ bonus, or in exam sessions
-- ③ Active and continuous participation: ~ 2 pts
-    - Lab activities and classes during the lessons period
-- ④ Optional project: ~ 2pts
+- ③ *Participation*, optional : ~ 2 pts
+    - Active and continuous participation <br> into lab activities and classes <br> during the lessons period
+- ④ *Project*, optional : ~ 2pts
     - On data analysis and arguments related to the course
     - Can be devoloped in tandem with another student
     - To be presented to the class, during the lessons period
@@ -83,7 +83,7 @@
 
 # Language popularity
 
-![large](https://fondinfo.github.io/images/dev/lang-github.svg)
+![large](https://fondinfo.github.io/images/dev/lang-github.png)
 
 >
 
