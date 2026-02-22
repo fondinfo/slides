@@ -51,12 +51,16 @@
 
 # Exam
 
-- ① **Optional project**, on arguments related to the course
+- ① Haskell test: ~ 1h½, 15 pts
+    - During the lessons period w/ bonus, or in exam sessions
+- ② Rust test: 1h½, ~ 15 pts
+    - During the lessons period w/ bonus, or in exam sessions
+- ③ Active and continuous participation: ~ 2 pts
+    - Lab activities and classes during the lessons period
+- ④ Optional project: ~ 2pts
+    - On data analysis and arguments related to the course
     - Can be devoloped in tandem with another student
     - To be presented to the class, during the lessons period
-- ② **Test** about the course matters
-    - Final test ~ 3h, including coding exercises in Haskell and Rust
-    - Or… active and continuous participation into lab activities and classes during the lessons period
 
 ---
 
