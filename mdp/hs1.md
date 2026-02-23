@@ -291,6 +291,10 @@ ghci> (/) 5 3
 2.5
 ```
 
+>
+
+`div/mod` : floor div — `quot/rem` : trunc div
+
 ---
 
 ![](https://fondinfo.github.io/images/fun/fx.png)
@@ -460,7 +464,7 @@ ghci> [9.4,33.2,96.2,11.2,23.25] !! 1
 33.2
 ```
 
-- But if you try to get the sixth element from a list that only has four elements, you'll get an error so be careful!
+- But if you try to get the sixth element from a list that only has four elements, you'll get an error. So be careful!
 
 ---
 
@@ -772,6 +776,31 @@ q4_rev = months[11:8:-1]   # ['Dec', 'Nov', 'Oct']
 >
 
 Third value for step, possibly negative
+
+---
+
+# Unpacking
+
+- Any sequence can be unpacked into a *corresponding number* of variables
+
+``` py
+>>> a, b, c = [1, 2, 3]
+```
+
+- *Starred* assignment for capturing a sequence into a list
+    - Try to omit `first`, `second`, or `last`
+
+``` py
+>>> first, second, *middle, last = [0, 1, 2, 3, 4, 5]  # range(6)
+>>> first
+0
+>>> second
+1
+>>> middle
+[2, 3, 4]
+>>> last
+5
+```
 
 ---
 
