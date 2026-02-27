@@ -263,7 +263,7 @@ ghci> 2 ^ 3
 
 >
 
-<http://learnyouahaskell.com/>
+<http://learnyouahaskell.github.io/>
 –
 <http://www.haskell.org/>
 –
@@ -949,7 +949,11 @@ c = Fighter("Hero")
 print(c)  # instead of `c.describe()`
 ```
 
-- Other special methods: [docs.python.org/3/reference](https://docs.python.org/3/reference/datamodel.html#special-method-names)
+>
+
+Other special methods:
+<br>
+👉 [docs.python.org/3/reference](https://docs.python.org/3/reference/datamodel.html#special-method-names)
 
 ---
 
@@ -1003,17 +1007,21 @@ def fib_list(stop):
 
 # Iterables and iterators
 
-- **Iterable**: an object that implements `__iter__`
-    - `__iter__` returns an *iterator* object
-- **Iterator**: an object that implements `__next__`
-    - `__next__` returns the next element of the iterable
-    - Raises a `StopIteration` exception when no more elements are available
-- *Simplest case*: iterable implements `__next__` itself and returns `self` in `__iter__`
+- **Iterable**: an object with an `__iter__` method
+    - Returns an *iterator* object
+    - Accessed through `iter` built-in function
+- **Iterator**: an object with a `__next__` method
+    - Returns the next element of the iterable
+    - No more elements? `StopIteration` exception is raised
+    - Accessed through `next` built-in function
+- *Simplest case*: same object is both iterable and iterator
+    - Implements `__next__` itself
+    - Returns `self` in `__iter__`
 
 ``` py
->>> r = range(1, 4)  # dir(r)
->>> it = r.__iter__()  # dir(it)
->>> it.__next__()  # …
+>>> r = range(1, 4)  # try `dir(r)` and then `dir(it)`
+>>> it = iter(r)     # same as `it = r.__iter__()`
+>>> next(it)         # same as `it.__next__()`
 1
 ```
 
@@ -1035,7 +1043,7 @@ class Fib:
     def __next__(self):
         fib = self._a
         if fib > self._stop:
-            raise StopIteration
+            raise StopIteration()
         self._a, self._b = self._b, self._a + self._b
         return fib
 ```
@@ -1049,7 +1057,6 @@ class Fib:
 >>> f
 <__main__.Fib object at 0x7fc31dbbdbe0>
 >>> for v in f: print(v, end=' ')
-
 0 1 1 2 3 5 8 13
 >>> list(f)
 [0, 1, 1, 2, 3, 5, 8, 13]
@@ -1111,7 +1118,6 @@ def fib_unb():
 # Infinite iterators
 
 - Much more, in the `itertools` module
-    - See: <https://docs.python.org/3/library/itertools.html>
 - `count(start, [step])`
     - `count(10, 2) --> 10 12 14 …`
 - `cycle(p)`
@@ -1123,9 +1129,11 @@ def fib_unb():
 
 >
 
-See also: <https://docs.python.org/3/library/functools.html>
+👉 <https://docs.python.org/3/library/itertools.html>
 <br>
-See also: <https://docs.python.org/3/library/operator.html>
+👉 <https://docs.python.org/3/library/functools.html>
+<br>
+👉 <https://docs.python.org/3/library/operator.html>
 
 ---
 
