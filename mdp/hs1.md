@@ -1188,14 +1188,14 @@ ghci> [x | x <- [50..100], x `mod` 7 == 3]
 
 ``` hs
 ghci> boomBangs xs = [if x < 10 then "BOOM!"
-                             else "BANG!" | x <- xs, odd x]
+                            else "BANG!" | x <- xs, odd x]
 ghci> boomBangs [7..13]
 ["BOOM!","BOOM!","BANG!","BANG!"]
 ```
 
 ``` hs
 ghci> removeNonUppercase st = [c | c <- st,
-                                      c `elem` ['A'..'Z']]
+                                     c `elem` ['A'..'Z']]
 ghci> removeNonUppercase "IdontLIKEFROGS"
 "ILIKEFROGS"
 ```
@@ -1487,7 +1487,7 @@ addThree x y z = x + y + z
 
 ``` py
 from typing import Callable
-FunT = Callable[[int, int, int], int]
+type FunT = Callable[[int, int, int], int]
 ```
 
 ---
