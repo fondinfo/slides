@@ -1149,7 +1149,7 @@ def fib_unb():
 
 - In mathematics, set comprehensions are normally used for building more specific sets out of general sets
     - E.g.: set of first ten even natural numbers
-    - `S = {2·x | x ∈ N, x ≤ 10}`
+    - $S = \\{ 2\cdot x | x \in \mathbb{N}, x ≤ 10 \\}$
 
 ``` hs
 ghci> [x*2 | x <- [1..10]]
