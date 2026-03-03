@@ -1752,7 +1752,7 @@ ghci> succ 'B'
 - **`Num`** is a numeric typeclass
     - Its types define `+, -, *` etc.
     - ~~They must also be in `Show` and `Eq`~~
-    - Types: `Int, Integer, Float, Double`
+    - Types: `Integer, Int, Word, Float, Double`
 - **`Integral`** typeclass: `Integer`, `Int` and `Word` types
 - **`Floating`** typeclass: `Float` and `Double` types
 
