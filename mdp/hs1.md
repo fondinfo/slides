@@ -1497,6 +1497,7 @@ type FunT = Callable[[int, int, int], int]
 - `Integer` stands for *unbounded* integer
 - `Int` stands for *bounded* integer
     - More efficient
+- `Word` is unsigned, same size as `Int`
 
 ``` hs
 factorial :: Integer -> Integer
@@ -1728,7 +1729,7 @@ ghci> read "(3, 'a')" :: (Int, Char)
     - Which can be enumerated
     - Its types define `succ` and `pred` f.s
     - They can be used in list ranges
-    - Types include: `Bool, Char, Ordering, Int, Integer…`
+    - Types include: <br> `Bool, Char, Ordering, Int, Integer, Float, Double…`
 
 ```haskell
 ghci> ['a'..'e']
