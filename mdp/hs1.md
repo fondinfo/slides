@@ -1568,7 +1568,7 @@ head :: [a] -> a
 # Type variables in C++
 
 ``` cpp
-template <typename T>
+template <typename T>  // `LessThanComparable T` in C++20
 T max2(T a, T b) {
     return a < b ? b : a;
 }
