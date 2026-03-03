@@ -1753,7 +1753,7 @@ ghci> succ 'B'
     - Its types define `+, -, *` etc.
     - ~~They must also be in `Show` and `Eq`~~
     - Types: `Int, Integer, Float, Double`
-- **`Integral`** typeclass: `Int` and `Integer` types
+- **`Integral`** typeclass: `Integer`, `Int` and `Word` types
 - **`Floating`** typeclass: `Float` and `Double` types
 
 ---
