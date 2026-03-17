@@ -660,7 +660,7 @@ ghci> zipWith (++) ["foo ", "bar ", "baz "]
                       ["fighters", "hoppers", "aldrin"]
 ["foo fighters","bar hoppers","baz aldrin"]
 ghci> zipWith (zipWith (*)) [[1,2,3],[3,5,6],[2,3,4]]
-                               [[3,2,2],[3,4,5],[5,4,3]]
+                            [[3,2,2],[3,4,5],[5,4,3]]
 [[3,4,6],[9,20,30],[10,12,12]]
 ```
 
@@ -1065,11 +1065,11 @@ required argument
 
 ---
 
-# Folding
+# Exercise
 
 ---
 
-# Exercise
+# Folding
 
 ---
 
@@ -1396,6 +1396,15 @@ ghci> map (negate . sum . tail) [[1..5],[3..6],[1..7]]
 [-14,-15,-27]
 ghci> map (\xs -> negate (sum (tail xs))) [[1..5],[3..6],[1..7]]
 [-14,-15,-27]
+```
+
+- Composition of the same f., indefinitely: **`iterate`**
+    - Infinite list as result
+    - ~ *scan*, on a unary f.
+
+``` hs
+ghci> take 5 $ iterate (^2) 3
+[3,9,81,6561,43046721]
 ```
 
 ---
