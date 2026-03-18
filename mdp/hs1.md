@@ -1726,10 +1726,10 @@ ghci> read "(3, 'a')" :: (Int, Char)
 # Enum typeclass
 
 - **`Enum`** members are sequentially ordered types
-    - Which can be enumerated
+    - They can be *enumerated* and used in list *ranges*
     - Its types define `succ` and `pred` f.s
-    - They can be used in list ranges
     - Types include: <br> `Bool, Char, Ordering, Int, Integer, Float, Double…`
+    - `fromEnum`: value → index, `toEnum`: index → value (exp. Unicode)
 
 ```haskell
 ghci> ['a'..'e']

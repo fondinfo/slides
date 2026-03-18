@@ -1228,7 +1228,7 @@ filter' p = foldr (\x acc -> if p x then x : acc else acc) []
     - Takes a f., a sequence and an (optional) initial value
     - The f. is applied repeatedly, on previous result and next value in sequence
     - Without initial value, f. is applied to first 2 elements
-    - Similar to Haskell *folding*
+    - Similar to Haskell `foldl`
 
 ``` py
 >>> from functools import reduce
@@ -1252,11 +1252,8 @@ filter' p = foldr (\x acc -> if p x then x : acc else acc) []
 4096
 ```
 
->
-
-Reducing with a non-associative f. is discouraged in Python
-
-`(4 ** 3) ** 2 != 4 ** (3 ** 2)`
+- ~~Reducing with a non-associative f. is discouraged in Python~~
+    - `(4 ** 3) ** 2 != 4 ** (3 ** 2)`
 
 ---
 
@@ -1271,6 +1268,7 @@ Reducing with a non-associative f. is discouraged in Python
     - `scanl`: final result is *last* element
     - `scanr`: final result is *first* element
     - There are also `scanl1` and `scanr1`
+- `accumulate` in *Python* `itertools` module: ~ `scanl`
 
 ``` hs
 ghci> scanl (+) 0 [3,5,2,1]
