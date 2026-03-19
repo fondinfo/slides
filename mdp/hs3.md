@@ -366,113 +366,6 @@ inPhoneBook name pnumber pbook = (name,pnumber) `elem` pbook
 
 ---
 
-# Randomness
-
-- The `System.Random` module has all needed f.s, including `random`
-
-``` cmd
-sudo apt install cabal-install
-cabal update
-cabal install --lib random
-```
-
-``` hs
-ghci> import System.Random
-ghci> :t random
-random :: (Random a, RandomGen g) => g -> (a, g)
-```
-
-- It takes a random generator
-- It returns a random value and a new random generator
-    - `RandomGen`: types acting as sources of randomness
-    - `Random`: types representing random values
-
----
-
-# Rnd generators
-
-- `mkStdGen` f., to manually make a random generator
-    - `StdGen`: instance of `RandomGen`
-
-``` hs
-ghci> :t mkStdGen
-mkStdGen :: Int -> StdGen
-ghci> random (mkStdGen 100) :: (Int, StdGen)
-(-1352021624,651872571 1655838864)
-ghci> random (mkStdGen 100) :: (Int, StdGen)
-(-1352021624,651872571 1655838864)
-```
-
-- Why does `random` also return a new generator?
-    - *Idempotence*: calling a function twice ...
-    - With the same params → Produces the same result
-
----
-
-# Tossing a coin
-
-- Represent a coin with a simple `Bool`: `True` is tails, `False` is heads
-- Call `random` with a generator, get a coin and a new generator
-
-``` hs
-threeCoins :: StdGen -> (Bool, Bool, Bool)
-threeCoins gen =
-    let (firstCoin, newGen) = random gen
-        (secondCoin, newGen') = random newGen
-        (thirdCoin, newGen'') = random newGen'
-    in  (firstCoin, secondCoin, thirdCoin)
-```
-
-``` hs
-ghci> threeCoins (mkStdGen 21)
-(True,True,True)
-ghci> threeCoins (mkStdGen 943)
-(True,False,True)
-```
-
----
-
-# Multiple random values
-
-- `randoms` f. takes a generator and returns an infinite sequence of values
-- Doesn't give the new random generator back
-
-``` hs
-randoms' :: (RandomGen g, Random a) => g -> [a]
-randoms' gen = let (value, newGen) = random gen
-              in value:randoms' newGen
-```
-
-``` hs
-ghci> take 5 $ randoms (mkStdGen 11) :: [Int]
-[-1807975507,545074951,-1015194702,-1622477312,-502893664]
-ghci> take 5 $ randoms (mkStdGen 11) :: [Bool]
-[True,True,True,True,False]
-```
-
----
-
-![](https://fondinfo.github.io/images/misc/dice.png)
-# Random in a range
-
-- `randomR`: single random value within a defined range
-
-``` hs
-ghci> randomR (1,6) (mkStdGen 123456)
-(4,645041272 40692)
-ghci> randomR (1,6) (mkStdGen 654321)
-(6,412237752 40692)
-```
-
-- `randomRs`: stream of random values within a defined range
-
-``` hs
-ghci> take 10 $ randomRs ('a','z') (mkStdGen 3) :: [Char]
-"ndkxbvmomg"
-```
-
----
-
 # Xorshift RNG
 
 ``` hs
@@ -495,6 +388,66 @@ randint (nmin, nmax) gen = (val, nxt) where
 >
 
 <https://github.com/tomamic/paradigmi/blob/master/haskell/xorshift.hs>
+
+---
+
+# Randomness
+
+- `randint` takes a tuple (*range*) and a random *generator*
+- It returns a random value and a new random generator
+    - `Rng32`: acts as sources of randomness
+    - `Int`: type of random values, in a range
+- Why does `random` also return a new generator?
+    - *Idempotence*: calling a function twice ...
+    - With the same params → Produces the same result
+
+``` hs
+ghci> randint (1,6) 4242
+(4,1079534331)
+ghci> randint (1,6) 1079534331
+(3,3437476856)
+```
+
+---
+
+# Casting three dice
+
+- Call `randint` with a generator, get a result and a new generator
+
+``` hs
+threeDice :: Rng32 -> (Int, Int, Int)
+threeDice gen =
+    let (first, gen') = randint (1,6) gen
+        (second, gen'') = randint (1,6) gen'
+        (third, _) = randint (1,6) gen''
+    in  (first, second, third)
+```
+
+``` hs
+ghci> threeDice 21
+(1,3,6)
+ghci> threeDice 943
+(6,1,6)
+```
+
+---
+
+# Infinite random values
+
+- `randins` f. takes a generator and returns an infinite sequence of values
+- Doesn't give the new random generator back
+
+``` hs
+randints :: (Int, Int) -> Rng32 -> [Int]
+randints range gen =
+    val : randints range nxt
+    where (val, nxt) = randint range gen
+```
+
+``` hs
+ghci> take 5 $ randints (1,10) 42
+[3,9,10,7,7]
+```
 
 ---
 
@@ -1057,8 +1010,8 @@ a1 = a0 // [((i,i), 0) | i <- [1..n], even i]
 ```
 
 - Getting back from an array to a list: `elems`
-	- Flat list
-	- See also: `bounds, indices, assocs`
+    - Flat list
+    - See also: `bounds, indices, assocs`
 
 ``` hs
 xs = elems a1
@@ -1426,4 +1379,111 @@ class Arena:  # ...
     def tick(self):
         for a in self._actors:
             a.move()
+```
+
+---
+
+# System.Random
+
+- The `System.Random` module has all needed f.s, including `random`
+
+``` cmd
+sudo apt install cabal-install
+cabal update
+cabal install --lib random
+```
+
+``` hs
+ghci> import System.Random
+ghci> :t random
+random :: (Random a, RandomGen g) => g -> (a, g)
+```
+
+- It takes a random generator
+- It returns a random value and a new random generator
+    - `RandomGen`: types acting as sources of randomness
+    - `Random`: types representing random values
+
+---
+
+# Rnd generators
+
+- `mkStdGen` f., to manually make a random generator
+    - `StdGen`: instance of `RandomGen`
+
+``` hs
+ghci> :t mkStdGen
+mkStdGen :: Int -> StdGen
+ghci> random (mkStdGen 100) :: (Int, StdGen)
+(-1352021624,651872571 1655838864)
+ghci> random (mkStdGen 100) :: (Int, StdGen)
+(-1352021624,651872571 1655838864)
+```
+
+- Why does `random` also return a new generator?
+    - *Idempotence*: calling a function twice ...
+    - With the same params → Produces the same result
+
+---
+
+# Tossing a coin
+
+- Represent a coin with a simple `Bool`: `True` is tails, `False` is heads
+- Call `random` with a generator, get a coin and a new generator
+
+``` hs
+threeCoins :: StdGen -> (Bool, Bool, Bool)
+threeCoins gen =
+    let (firstCoin, newGen) = random gen
+        (secondCoin, newGen') = random newGen
+        (thirdCoin, newGen'') = random newGen'
+    in  (firstCoin, secondCoin, thirdCoin)
+```
+
+``` hs
+ghci> threeCoins (mkStdGen 21)
+(True,True,True)
+ghci> threeCoins (mkStdGen 943)
+(True,False,True)
+```
+
+---
+
+# Multiple random values
+
+- `randoms` f. takes a generator and returns an infinite sequence of values
+- Doesn't give the new random generator back
+
+``` hs
+randoms' :: (RandomGen g, Random a) => g -> [a]
+randoms' gen = let (value, newGen) = random gen
+              in value:randoms' newGen
+```
+
+``` hs
+ghci> take 5 $ randoms (mkStdGen 11) :: [Int]
+[-1807975507,545074951,-1015194702,-1622477312,-502893664]
+ghci> take 5 $ randoms (mkStdGen 11) :: [Bool]
+[True,True,True,True,False]
+```
+
+---
+
+![](https://fondinfo.github.io/images/misc/dice.png)
+# Random in a range
+
+- `randomR`: single random value within a defined range
+
+``` hs
+ghci> randomR (1,6) (mkStdGen 123456)
+(4,645041272 40692)
+ghci> randomR (1,6) (mkStdGen 654321)
+(6,412237752 40692)
+```
+
+- `randomRs`: stream of random values within a defined range
+
+``` hs
+ghci> take 10 $ randomRs ('a','z') (mkStdGen 3) :: [Char]
+"ndkxbvmomg"
 ```
