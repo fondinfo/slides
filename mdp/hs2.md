@@ -698,6 +698,17 @@ ghci> takeWhile (/=' ') "elephants know how to party"
 "elephants"
 ```
 
+- `span` is very similar, but returns a pair
+- `splitAt` splits at a given index — combines `take` and `drop`
+
+``` hs
+ghci> span (/=' ') "elephants know how to party"
+("elephants"," know how to party")
+ghci> splitAt 9 "elephants know how to party"
+("elephants"," know how to party")
+```
+
+
 ---
 
 # Collatz sequences

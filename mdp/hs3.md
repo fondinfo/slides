@@ -761,7 +761,7 @@ Useful in combination with lambdas and `do` notation
 
 ---
 
-# The getContents action
+# Interact
 
 - `getContents`: whole stdin as a `String` (*lazy*)
 
@@ -777,31 +777,27 @@ shortLinesOnly input =
     in  unlines shortLines
 ```
 
-- `interact`: applies a `String -> String` f. between stdin and stdout (*lazy*)
+- **`interact`** : applies a `String -> String` f. between stdin and stdout (*lazy*)
 
 ``` hs
-main = interact $ unlines . filter ((<10) . length) . lines
+shortLinesOnly = unlines . filter ((<10) . length) . lines
+main = interact shortLinesOnly
 ```
 
 ---
 
-# Getting a rnd generator
+# Getting a Rng32
 
-- `getStdGen`, get the global rnd generator (`:: IO StdGen`)
-    - Performed twice: get same generator
-- `newStdGen`, get a new generator, update the global one
+- `getRng32` action
+    - Creating a new random generator
+    - Based on current time (millis)
+    - Do it once, at start of execution
 
 ``` hs
-import System.Random (getStdGen, randomRs)
-
-main = do
-    gen <- getStdGen
-    putStr $ take 20 (randomRs ('a','z') gen)
-
-$ runhaskell random_string.hs
-pybphhzzhuepknbykxhe
-$ runhaskell random_string.hs
-eiqgcxykivpudlsvvjpg
+getRng32 :: IO Rng32
+getRng32 = do
+    now <- getPOSIXTime
+    return (round (now * 1000) :: Rng32)
 ```
 
 ---
@@ -1487,3 +1483,25 @@ ghci> randomR (1,6) (mkStdGen 654321)
 ghci> take 10 $ randomRs ('a','z') (mkStdGen 3) :: [Char]
 "ndkxbvmomg"
 ```
+
+---
+
+# Getting a rnd generator
+
+- `getStdGen`, get the global rnd generator (`:: IO StdGen`)
+    - Performed twice: get same generator
+- `newStdGen`, get a new generator, update the global one
+
+``` hs
+import System.Random (getStdGen, randomRs)
+
+main = do
+    gen <- getStdGen
+    putStr $ take 20 (randomRs ('a','z') gen)
+
+$ runhaskell random_string.hs
+pybphhzzhuepknbykxhe
+$ runhaskell random_string.hs
+eiqgcxykivpudlsvvjpg
+```
+
