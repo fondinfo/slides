@@ -393,7 +393,7 @@ randint (nmin, nmax) gen = (val, nxt) where
 
 # Randomness
 
-- `randint` takes a tuple (*range*) and a random *generator*
+- `randint` takes a tuple ( *range* ) and a random *generator*
 - It returns a random value and a new random generator
     - `Rng32`: acts as sources of randomness
     - `Int`: type of random values, in a range
