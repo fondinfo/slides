@@ -369,8 +369,6 @@ inPhoneBook name pnumber pbook = (name,pnumber) `elem` pbook
 # Xorshift RNG
 
 ``` hs
-import Data.Word (Word64)
-import Data.Bits (xor, shiftL, shiftR)
 type Rng = Word64
 (%%) = mod
 
