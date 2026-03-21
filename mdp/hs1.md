@@ -302,7 +302,6 @@ ghci> (/) 5 3
 
 ``` hs
 doubleMe x = x + x
-
 doubleUs x y = doubleMe x + doubleMe y
 ```
 
@@ -315,6 +314,13 @@ ghci> doubleMe 5
 10
 ghci> doubleUs 4 3
 14
+```
+
+- Defining *operators*
+
+``` hs
+(//) = div
+(%%) = mod
 ```
 
 ---

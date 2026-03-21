@@ -369,20 +369,22 @@ inPhoneBook name pnumber pbook = (name,pnumber) `elem` pbook
 # Xorshift RNG
 
 ``` hs
-import Data.Word (Word32)
+import Data.Word (Word64)
 import Data.Bits (xor, shiftL, shiftR)
-type Rng32 = Word32
+type Rng = Word64
+(%%) = mod
 
-xorshift32 :: Rng32 -> Rng32
-xorshift32 a = d where
-    b = a `xor` (a `shiftL` 13)
-    c = b `xor` (b `shiftR` 17)
-    d = c `xor` (c `shiftL` 5)
+xorshift :: Rng -> Rng
+xorshift a = d where
+  b = a `xor` (a `shiftL` 13)
+  c = b `xor` (b `shiftR` 7)
+  d = c `xor` (c `shiftL` 17)
 
-randint :: (Int, Int) -> Rng32 -> (Int, Rng32)
-randint (nmin, nmax) gen = (val, nxt) where
-    nxt = xorshift32 gen
-    val = nmin + (fromIntegral nxt) `mod` (nmax + 1 - nmin)
+constrain :: (Int, Int) -> Rng -> Int
+constrain (nmin, nmax) n = fromIntegral n %% (nmax+1-nmin) + nmin
+
+randint :: (Int, Int) -> Rng -> (Int, Rng)
+randint range gen = (constrain range gen, xorshift gen)
 ```
 
 >
@@ -395,7 +397,7 @@ randint (nmin, nmax) gen = (val, nxt) where
 
 - `randint` takes a tuple ( *range* ) and a random *generator*
 - It returns a random value and a new random generator
-    - `Rng32`: acts as sources of randomness
+    - `Rng`: acts as sources of randomness
     - `Int`: type of random values, in a range
 - Why does `random` also return a new generator?
     - *Idempotence*: calling a function twice ...
@@ -403,9 +405,9 @@ randint (nmin, nmax) gen = (val, nxt) where
 
 ``` hs
 ghci> randint (1,6) 4242
-(4,1079534331)
-ghci> randint (1,6) 1079534331
-(3,3437476856)
+(1,4590958310451)
+ghci> randint (1,6) 4590958310451
+(4,2604435388316121115)
 ```
 
 ---
@@ -415,7 +417,7 @@ ghci> randint (1,6) 1079534331
 - Call `randint` with a generator, get a result and a new generator
 
 ``` hs
-threeDice :: Rng32 -> (Int, Int, Int)
+threeDice :: Rng -> (Int, Int, Int)
 threeDice gen =
     let (first, gen') = randint (1,6) gen
         (second, gen'') = randint (1,6) gen'
@@ -425,28 +427,31 @@ threeDice gen =
 
 ``` hs
 ghci> threeDice 21
-(1,3,6)
+(4,6,6)
 ghci> threeDice 943
-(6,1,6)
+(2,3,1)
 ```
 
 ---
 
 # Infinite random values
 
-- `randins` f. takes a generator and returns an infinite sequence of values
+- `randints` f. takes a generator and returns an infinite sequence of values
 - Doesn't give the new random generator back
 
 ``` hs
-randints :: (Int, Int) -> Rng32 -> [Int]
-randints range gen =
-    val : randints range nxt
-    where (val, nxt) = randint range gen
+randints :: (Int, Int) -> Rng -> [Int]
+randints range = map (constrain range) $ iterate xorshift
+
+shuffle :: [a] -> Rng -> ([a], Rng)
+shuffle vals gen = (shuffled, nxt) where
+    (rs, nxt:_) = splitAt (length vals) $ iterate xorshift gen
+    shuffled = map snd $ sortWith fst $ zip rs vals
 ```
 
 ``` hs
 ghci> take 5 $ randints (1,10) 42
-[3,9,10,7,7]
+[3,5,6,9,7]
 ```
 
 ---
@@ -786,19 +791,23 @@ main = interact shortLinesOnly
 
 ---
 
-# Getting a Rng32
+# Getting a Rng
 
-- `getRng32` action
+- `getRng` action
     - Creating a new random generator
     - Based on current time (millis)
     - Do it once, at start of execution
 
 ``` hs
-getRng32 :: IO Rng32
-getRng32 = do
+getRng :: IO Rng
+getRng = do
     now <- getPOSIXTime
-    return (round (now * 1000) :: Rng32)
+    return (round (now * 1000) :: Rng)
 ```
+
+>
+
+<https://github.com/tomamic/paradigmi/blob/master/haskell/xorshift.hs>
 
 ---
 
