@@ -604,6 +604,14 @@ ghci> drop 100 [1,2,3,4]
 []
 ```
 
+- `splitAt` splits a *list* at a given index, combining `take` and `drop`
+    - The result is a *pair* of two lists — We'll come back to this, soon
+
+``` hs
+ghci> splitAt 15 "elephants know how to party"
+("elephants know ","how to party")
+```
+
 ---
 
 # Membership
@@ -1278,7 +1286,8 @@ False
 ![](https://fondinfo.github.io/images/fun/zip.png)
 # Zipping
 
-- `zip` takes two lists and returns one list, by joining the matching elements into *pairs*
+- `zip` takes *two lists* and returns a *list of pairs*
+    - By joining the matching elements
     - 1st element goes with 1st, 2nd with 2nd…
     - The two lists can contain different types
     - E.g.: to traverse two lists simultaneously
@@ -1290,16 +1299,34 @@ ghci> zip [1..5] ["one", "two", "three", "four", "five"]
 [(1,"one"),(2,"two"),(3,"three"),(4,"four"),(5,"five")]
 ```
 
----
-
-# Zipping infinite lists
-
-- If a list is longer than the other, it gets *cut off*
-- Haskell is *lazy*: zip finite lists with infinite lists
+- Haskell is *lazy* : zip finite lists with **infinite lists**
+    - If a list is longer than the other, it gets *cut off*
 
 ``` hs
 ghci> zip [1..] ["apple", "orange", "cherry", "mango"]
 [(1,"apple"),(2,"orange"),(3,"cherry"),(4,"mango")]
+```
+
+---
+
+# Splitting and joining lists
+
+- `lines` splits on each newline
+- `words` splits on any sequence of whitespaces
+- `concat` joins elems in a list of lists, w/o sep.
+- `unlines`, `unwords` join strings using a newline/space as sep.
+- `intercalate` joins elems, with a given separator
+
+``` hs
+ghci> lines "Haskell \nis\n\n\tfun!"
+["Haskell ","is","","\tfun!"]
+ghci> words "Haskell \nis\n\n\tfun!"
+["Haskell","is","fun!"]
+ghci> unwords ["Haskell","is","fun!"]
+"Haskell is fun!"
+ghci> import Data.List (intercalate)
+ghci> intercalate ";" ["one", "two"]
+"one;two"
 ```
 
 ---

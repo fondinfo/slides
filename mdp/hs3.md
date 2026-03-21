@@ -415,12 +415,11 @@ ghci> randint (1,6) 4590958310451
 - Call `randint` with a generator, get a result and a new generator
 
 ``` hs
-threeDice :: Rng -> (Int, Int, Int)
-threeDice gen =
-    let (first, gen') = randint (1,6) gen
-        (second, gen'') = randint (1,6) gen'
-        (third, _) = randint (1,6) gen''
-    in  (first, second, third)
+threeDice :: Rng -> (Int, Int, Int)  -- Return a new gen, too?
+threeDice gen = (first, second, third) where
+    (first, gen') = randint (1,6) gen
+    (second, gen'') = randint (1,6) gen'
+    (third, _) = randint (1,6) gen''
 ```
 
 ``` hs
@@ -439,7 +438,7 @@ ghci> threeDice 943
 
 ``` hs
 randints :: (Int, Int) -> Rng -> [Int]
-randints range = map (constrain range) $ iterate xorshift
+randints range gen = map (constrain range) $ iterate xorshift gen
 
 shuffle :: [a] -> Rng -> ([a], Rng)
 shuffle vals gen = (shuffled, nxt) where
@@ -640,7 +639,7 @@ main = do
 - *Newline* as separator
     - `lines :: String -> [String]`
     - `unlines :: [String] -> String`
-- *Spaces* as separator
+- Sequence of *whitespaces* as separator
     - `words :: String -> [String]`
     - `unwords :: [String] -> String`
 - Join with a *given separator* (in module `Data.List`)

@@ -649,7 +649,7 @@ zipWith' f (x:xs) (y:ys) = f x y : zipWith' f xs ys
 
 # Using zipWith
 
-- Pretty similar to the normal zip, with a joining function
+- Pretty similar to the normal `zip`, with a joining function
 
 ``` hs
 ghci> zipWith (+) [4,2,5,6] [2,6,2,3]
@@ -689,25 +689,22 @@ ghci> zipWith (flip div) [2,2..] [10,8,6,4,2]
 
 # The takeWhile function
 
-- It takes a predicate and a list
-- It goes from the beginning of the list and returns its elements while the predicate holds true
-- Once an element is found for which the predicate doesn't hold, it stops
+- `takeWhile` takes a *predicate* and a *list*
+    - It goes from the beginning of the list and returns its elements…
+    - While the predicate holds true
+    - It stops, once it finds an element not satisfying the predicate
+- `dropWhile` gets the rest of the list
+- `span` returns a pair, combining `takeWhile` and `dropWhile`
+- `break` does the same, but with negated predicate
 
 ``` hs
 ghci> takeWhile (/=' ') "elephants know how to party"
 "elephants"
-```
-
-- `span` is very similar, but returns a pair
-- `splitAt` splits at a given index — combines `take` and `drop`
-
-``` hs
-ghci> span (/=' ') "elephants know how to party"
-("elephants"," know how to party")
-ghci> splitAt 9 "elephants know how to party"
+ghci> dropWhile (/=' ') "elephants know how to party"
+" know how to party"
+ghci> span (/=' ') "elephants know how to party"  -- break (==' ')...
 ("elephants"," know how to party")
 ```
-
 
 ---
 
