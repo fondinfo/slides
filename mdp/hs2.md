@@ -1218,6 +1218,7 @@ map' f xs = foldl (\acc x -> acc ++ [f x]) [] xs
 
 ``` hs
 maximum' = foldr1 (\x acc -> if x > acc then x else acc)
+maximum'' = foldr1 max
 
 reverse' = foldl (\acc x -> x : acc) []
 reverse'' = foldl (flip (:)) []
@@ -1225,47 +1226,12 @@ reverse'' = foldl (flip (:)) []
 product' = foldr1 (*)
 
 filter' p = foldr (\x acc -> if p x then x : acc else acc) []
+
+takeWhile' p = foldr (\x acc -> if p x then x:acc else []) []
+
+-- inclusive takeWhile, with an element more
+takeWhileInc p = foldr (\x acc -> if p x then x:acc else [x]) []
 ```
-
----
-
-![](https://fondinfo.github.io/images/fun/foldl.png)
-# Python reduce
-
-- `reduce` f. in `functools` module
-    - Takes a f., a sequence and an (optional) initial value
-    - The f. is applied repeatedly, on previous result and next value in sequence
-    - Without initial value, f. is applied to first 2 elements
-    - Similar to Haskell `foldl`
-
-``` py
->>> from functools import reduce
->>> reduce(lambda a, b: a + b, [3, 5, 2, 1], 0)
-11
-```
-
----
-
-# Python reduce with operators
-
-``` py
->>> from operator import add, mul
->>> add(2, 3)
-5
->>> reduce(add, [3, 5, 2, 1])
-11
->>> reduce(mul, [3, 5, 2, 1])
-30
->>> reduce(pow, [2, 3, 4])
-4096
-```
-
-- ~~Reducing with a non-associative f. is discouraged in Python~~
-    - `(4 ** 3) ** 2 != 4 ** (3 ** 2)`
-
----
-
-# Exercise
 
 ---
 
@@ -1276,14 +1242,13 @@ filter' p = foldr (\x acc -> if p x then x : acc else acc) []
     - `scanl`: final result is *last* element
     - `scanr`: final result is *first* element
     - There are also `scanl1` and `scanr1`
-- `accumulate` in *Python* `itertools` module: ~ `scanl`
 
 ``` hs
 ghci> scanl (+) 0 [3,5,2,1]
 [0,3,8,10,11]
 ghci> scanr (+) 0 [3,5,2,1]
 [11,8,3,1,0]
-ghci> scanl1 (\acc x -> if x > acc then x else acc) [3,4,5,3,7,9,2,1]
+ghci> scanl1 max [3,4,5,3,7,9,2,1]
 [3,4,5,5,7,9,9,9]
 ghci> scanl (flip (:)) [] [3,2,1]
 [[],[3],[2,3],[1,2,3]]
@@ -1308,6 +1273,52 @@ ghci> sqrtSums
 ghci> sum (map sqrt [1..131])  -- try also 130
 1005.0942035344083
 ```
+
+---
+
+![small](https://fondinfo.github.io/images/fun/foldl.png)
+# Python reduce
+
+- `reduce` f. in `functools` module
+    - Similar to Haskell `foldl` or `foldl1`
+    - Takes a f., a sequence and an (optional) initial value
+    - The f. is applied repeatedly, on previous result and next value in sequence
+    - Without initial value, f. is applied to first 2 elements
+- `accumulate` f. in `itertools` module
+    - Similar to Haskell `scanl` or `scanl1`
+
+``` py
+>>> from functools import reduce
+>>> reduce(lambda a, b: a + b, [3, 5, 2, 1], 0)
+11
+```
+
+---
+
+![small](https://fondinfo.github.io/images/fun/foldl.png)
+# Python reduce with operators
+
+``` py
+>>> from itertools import accumulate
+>>> from operator import add, mul
+>>> add(2, 3)
+5
+>>> reduce(add, [3, 5, 2, 1])
+11
+>>> reduce(mul, [3, 5, 2, 1])
+30
+>>> reduce(pow, [4, 3, 2])  # strange…
+4096
+>>> list(accumulate([3, 5, 2, 1], add, initial=0))
+[0, 3, 8, 10, 11]
+```
+
+- ~~Reducing with a non-associative f. is discouraged~~
+- `(4 ** 3) ** 2 != 4 ** 3 ** 2` (right assoc.)
+
+---
+
+# Exercise
 
 ---
 
@@ -1424,9 +1435,13 @@ ghci> take 5 $ iterate (^2) 3
 - To rewrite an expression with a lot of parentheses by using f. composition...
     - First put last param of the innermost f. after a `$`
     - Then compose all other f.s, without their last param
-- Example:
-    - `replicate 100 (product (map (*3) (zipWith max [1,2,3,4,5] [4,5,6,7,8])))`
-    - `replicate 100 . product . map (*3) . zipWith max [1,2,3,4,5] $ [4,5,6,7,8]`
+
+``` hs
+ghci> replicate 3 (product (map (*3) (zipWith max [1,2,3,4,5] [4,5,6,7,8])))
+[1632960,1632960,1632960]
+ghci> replicate 3 . product . map (*3) . zipWith max [1,2,3,4,5] $ [4,5,6,7,8]
+[1632960,1632960,1632960]
+```
 
 ---
 

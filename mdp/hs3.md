@@ -362,24 +362,19 @@ inPhoneBook name pnumber pbook = (name,pnumber) `elem` pbook
 
 ---
 
-# Exercise
-
----
-
 # Xorshift RNG
 
 ``` hs
 type Rng = Word64
-(%%) = mod
 
-xorshift :: Rng -> Rng
+xorshift :: Rng -> Rng  -- Marsaglia https://doi.org/10.18637/jss.v008.i14
 xorshift a = d where
   b = a `xor` (a `shiftL` 13)
   c = b `xor` (b `shiftR` 7)
   d = c `xor` (c `shiftL` 17)
 
 constrain :: (Int, Int) -> Rng -> Int
-constrain (nmin, nmax) n = fromIntegral n %% (nmax+1-nmin) + nmin
+constrain (nmin, nmax) n = fromIntegral n `mod` (nmax+1-nmin) + nmin
 
 randint :: (Int, Int) -> Rng -> (Int, Rng)
 randint range gen = (constrain range gen, xorshift gen)
@@ -449,6 +444,143 @@ shuffle vals gen = (shuffled, nxt) where
 ``` hs
 ghci> take 5 $ randints (1,10) 42
 [3,5,6,9,7]
+```
+---
+
+# Exercise
+
+---
+
+# Recursive data structures
+
+- One value of some type contains values of that type...
+    - We can make types whose constructors have fields...
+    - that are of the same type
+- List `[4,5]` same as `4:(5:[])`
+    - First `:` has an element on its left side...
+    - and a list (`5:[]`) on its right side
+- A list can be:
+    - An empty list, or
+    - An element joined together with another list by a `:`
+
+---
+
+# Generic list
+
+``` hs
+data List a = Empty
+              | Cons a (List a)
+              deriving (Show, Read, Eq, Ord)
+```
+
+``` hs
+data List a = Empty
+              | Cons { listHead :: a, listTail :: List a}
+              deriving (Show, Read, Eq, Ord)
+```
+
+- `Cons` constructor represents `:`
+    - `:` is a constructor for lists (params: value, list)
+
+``` hs
+ghci> Empty
+Empty
+ghci> 4 `Cons` (5 `Cons` Empty)
+Cons 4 (Cons 5 Empty)
+```
+
+---
+
+# List of ints
+
+- Without the *type parameter* (`a`)...
+- A `List'` should be defined for a precise content type, e.g. `Int`
+- For containing a `String`, for example, a different definition of `List'` would be needed
+
+``` hs
+data List' = Empty'
+             | Cons' Int List'
+             deriving (Show, Read, Eq, Ord)
+```
+
+``` hs
+ghci> Empty'
+Empty'
+ghci> 4 `Cons'` (5 `Cons'` Empty')
+Cons' 4 (Cons' 5 Empty')
+```
+
+---
+
+# Binary search tree
+
+- A tree is either an empty tree, or...
+- it's an element that contains some value and two trees
+    - Elements at the left sub-tree are smaller than the value
+    - Elements in the right sub-tree are bigger
+
+``` hs
+data Tree a = EmptyTree
+              | Node a (Tree a) (Tree a)
+              deriving (Show, Read, Eq)
+```
+
+- Instead of manually building a tree...
+- Make a f. that takes a tree and an element to insert
+
+---
+
+# Inserting an element
+
+- In *C* etc., we modify the pointers and values inside the tree
+- In *Haskell*, the insertion function returns a **new tree**
+    - `a -> Tree a - > Tree a`
+- It seems inefficient, but most of the structure is shared
+
+``` hs
+singleton :: a -> Tree a    -- just a shortcut f.
+singleton x = Node x EmptyTree EmptyTree
+
+treeInsert :: (Ord a) => a -> Tree a -> Tree a
+treeInsert x EmptyTree = singleton x
+treeInsert x (Node a left right)
+    | x == a = Node a left right
+    | x < a  = Node a (treeInsert x left) right
+    | x > a  = Node a left (treeInsert x right)
+```
+
+---
+
+# Folding into a tree
+
+- Folding: traversing a list and returning some value
+- Use a fold to build up a tree from a list
+
+``` hs
+ghci> let nums = [8,6,4,1,7,3,5]
+ghci> let numsTree = foldr treeInsert EmptyTree nums
+ghci> numsTree
+Node 5 (Node 3 ...
+```
+
+---
+
+# Checking for membership
+
+``` hs
+treeElem :: (Ord a) => a -> Tree a -> Bool
+treeElem x EmptyTree = False
+treeElem x (Node a left right)
+    | x == a = True
+    | x < a  = treeElem x left
+    | x > a  = treeElem x right
+```
+
+``` hs
+ghci> 8 `treeElem` numsTree
+True
+ghci> 100 `treeElem` numsTree
+False
 ```
 
 ---
@@ -598,11 +730,10 @@ name = getLine
 ``` hs
 main = do
     line <- getLine
-    if null line
-        then return ()
-        else do
-            putStrLn $ reverseWords line
-            main
+    if null line then return ()
+    else do
+        putStrLn $ reverseWords line
+        main
 
 reverseWords :: String -> String
 reverseWords = unwords . map reverse . words
@@ -642,14 +773,117 @@ main = do
 - Sequence of *whitespaces* as separator
     - `words :: String -> [String]`
     - `unwords :: [String] -> String`
+- Join w/o a *given separator*
+    - `concat :: [[a]] -> [a]`
 - Join with a *given separator* (in module `Data.List`)
-    - `intercalate :: String -> [String] -> String`
-- Split with a *given separator* (in module `Data.List.Split`)
-    - `splitOn :: String -> String -> [String]`
+    - `intercalate :: [a] -> [[a]] -> [a]`
 
-``` cmd
-cabal install --lib split
+---
+
+# Interact
+
+- `getContents`: whole stdin as a `String` (*lazy*)
+
+``` hs
+main = do
+    contents <- getContents
+    putStr (shortLinesOnly contents)
+
+shortLinesOnly :: String -> String
+shortLinesOnly input =
+    let allLines = lines input
+        shortLines = filter (\line -> length line < 10) allLines
+    in  unlines shortLines
 ```
+
+- **`interact`** : applies a `String -> String` f. between stdin and stdout (*lazy*)
+
+``` hs
+shortLinesOnly = unlines . filter ((<10) . length) . lines
+main = interact shortLinesOnly
+```
+
+---
+
+# Getting a Rng
+
+- `getRng` action
+    - Creating a new random generator
+    - Based on current time (millis)
+    - Do it once, at start of execution
+
+``` hs
+getRng :: IO Rng
+getRng = do
+    now <- getPOSIXTime
+    return (round (now * 1000) :: Rng)
+```
+
+>
+
+<https://github.com/tomamic/paradigmi/blob/master/haskell/xorshift.hs>
+
+---
+
+# Read and write files
+
+- **simple** f.s: `readFile`, `writeFile`, `appendFile`
+
+```haskell
+import System.IO (readFile, writeFile)
+import Data.Char (toUpper)
+
+main = do
+    contents <- readFile "girlfriend.txt"
+    writeFile "girlfriendcaps.txt" (map toUpper contents)
+```
+
+---
+
+# Guess the number
+
+``` hs
+main = do
+    gen <- getRng
+    askForNumber gen
+
+askForNumber :: Rng -> IO ()
+askForNumber gen = do
+    let (secret, newGen) = randint (1,10) gen
+    putStrLn "Which number (1-10) am I thinking of?"
+    guess <- getLine
+    if (null guess) then putStrLn "Bye."
+    else if guess == show secret then putStrLn "You are correct!"
+    else do
+        putStrLn $ "Sorry, it was " ++ show secret ++ "."
+        askForNumber newGen
+```
+
+---
+
+# Guess, purer
+
+``` hs
+question = "Which number (1-10) am I thinking of?"
+
+check :: (String, String) -> [String] -> [String]
+check (secret,guess) acc
+    | guess == "" = ["Bye."]
+    | guess == secret = ["You are correct!"]
+    | otherwise = ("Sorry, it was "++secret++".\n"++question) : acc
+
+process :: Rng -> String -> String
+process gen = unlines.(question:).foldr check [].zip secrets.lines
+    where secrets = map show $ randints (1,10) gen
+
+main = do
+    gen <- getRng
+    interact $ process gen
+```
+
+---
+
+# More I/O
 
 ---
 
@@ -670,6 +904,25 @@ putStr (x:xs) = do
 - `print` prints an instance of `Show`
 - It's basically `putStrLn . show`
 - `getChar` reads a `Char` from the input (with buffering)
+
+---
+
+# Basic operations on files
+
+- Basic operations on file:
+    - Open/close: `openFile`, `hClose`, `withFile`
+    - Mode: `ReadMode | WriteMode | AppendMode | ReadWriteMode`
+    - Read: `hGetContents`, `hGetLine`, `hGetChar`
+    - Write: `hPrint`, `hPutStr`, `hPutStrLn`
+
+```haskell
+import System.IO (withFile, IOMode(ReadMode), hGetContents)
+
+main = do
+    withFile "something.txt" ReadMode (\handle -> do
+        contents <- hGetContents handle
+        putStr contents)
+```
 
 ---
 
@@ -763,85 +1016,6 @@ Useful in combination with lambdas and `do` notation
 
 ---
 
-# Interact
-
-- `getContents`: whole stdin as a `String` (*lazy*)
-
-``` hs
-main = do
-    contents <- getContents
-    putStr (shortLinesOnly contents)
-
-shortLinesOnly :: String -> String
-shortLinesOnly input =
-    let allLines = lines input
-        shortLines = filter (\line -> length line < 10) allLines
-    in  unlines shortLines
-```
-
-- **`interact`** : applies a `String -> String` f. between stdin and stdout (*lazy*)
-
-``` hs
-shortLinesOnly = unlines . filter ((<10) . length) . lines
-main = interact shortLinesOnly
-```
-
----
-
-# Getting a Rng
-
-- `getRng` action
-    - Creating a new random generator
-    - Based on current time (millis)
-    - Do it once, at start of execution
-
-``` hs
-getRng :: IO Rng
-getRng = do
-    now <- getPOSIXTime
-    return (round (now * 1000) :: Rng)
-```
-
->
-
-<https://github.com/tomamic/paradigmi/blob/master/haskell/xorshift.hs>
-
----
-
-# Basic operations on files
-
-- Basic operations on file:
-    - Open/close: `openFile`, `hClose`, `withFile`
-    - Mode: `ReadMode | WriteMode | AppendMode | ReadWriteMode`
-    - Read: `hGetContents`, `hGetLine`, `hGetChar`
-    - Write: `hPrint`, `hPutStr`, `hPutStrLn`
-
-```haskell
-import System.IO (withFile, IOMode(ReadMode), hGetContents)
-
-main = do
-    withFile "something.txt" ReadMode (\handle -> do
-        contents <- hGetContents handle
-        putStr contents)
-```
-
----
-
-# Read and write on files
-
-- **simpler** f.s: `readFile`, `writeFile`, `appendFile`
-
-```haskell
-import System.IO (readFile, writeFile)
-import Data.Char (toUpper)
-
-main = do
-    contents <- readFile "girlfriend.txt"
-    writeFile "girlfriendcaps.txt" (map toUpper contents)
-```
-
----
-
 # The when action
 
 - Like a control flow statement, but actually a normal f.
@@ -880,49 +1054,6 @@ main = forever $ do
 >
 
 In this case, close the `stdin` stream to break out
-
----
-
-# Guess the number
-
-``` hs
-main = do
-    gen <- getStdGen
-    askForNumber gen
-
-askForNumber :: StdGen -> IO ()
-askForNumber gen = do
-    let (secret, newGen) = randomR (1,10) gen :: (Int, StdGen)
-    putStrLn "Which number (1-10) am I thinking of?"
-    guess <- getLine
-    when (not $ null guess) $
-        if guess == show secret
-        then putStrLn "You are correct!"
-        else do
-            putStrLn $ "Sorry, it was " ++ show secret
-            askForNumber newGen
-```
-
----
-
-# Guess, purer
-
-``` hs
-process :: [Int] -> [String] -> [String]
-process secrets guesses =
-    "Which number (1-10) am I thinking of?" : check secrets guesses
-
-check :: [Int] -> [String] -> [String]
-check _ ("":_) = []
-check (secret:secrets) (guess:guesses)
-    | guess == show secret = ["You are correct!"]
-    | otherwise = ("Sorry, it was " ++ show secret) : process secrets guesses
-
-main = do
-    gen <- getStdGen
-    let secrets = randomRs (1,10) gen
-    interact $ unlines . (process secrets) . lines
-```
 
 ---
 
@@ -1017,140 +1148,6 @@ a1 = a0 // [((i,i), 0) | i <- [1..n], even i]
 
 ``` hs
 xs = elems a1
-```
-
----
-
-# Recursive data structures
-
-- One value of some type contains values of that type...
-    - We can make types whose constructors have fields...
-    - that are of the same type
-- List `[4,5]` same as `4:(5:[])`
-    - First `:` has an element on its left side...
-    - and a list (`5:[]`) on its right side
-- A list can be:
-    - An empty list, or
-    - An element joined together with another list by a `:`
-
----
-
-# Generic list
-
-``` hs
-data List a = Empty
-              | Cons a (List a)
-              deriving (Show, Read, Eq, Ord)
-```
-
-``` hs
-data List a = Empty
-              | Cons { listHead :: a, listTail :: List a}
-              deriving (Show, Read, Eq, Ord)
-```
-
-- `Cons` constructor represents `:`
-    - `:` is a constructor for lists (params: value, list)
-
-``` hs
-ghci> Empty
-Empty
-ghci> 4 `Cons` (5 `Cons` Empty)
-Cons 4 (Cons 5 Empty)
-```
-
----
-
-# List of ints
-
-- Without the *type parameter* (`a`)...
-- A `List'` should be defined for a precise content type, e.g. `Int`
-- For containing a `String`, for example, a different definition of `List'` would be needed
-
-``` hs
-data List' = Empty'
-             | Cons' Int List'
-             deriving (Show, Read, Eq, Ord)
-```
-
-``` hs
-ghci> Empty'
-Empty'
-ghci> 4 `Cons'` (5 `Cons'` Empty')
-Cons' 4 (Cons' 5 Empty')
-```
-
----
-
-# Binary search tree
-
-- A tree is either an empty tree, or...
-- it's an element that contains some value and two trees
-    - Elements at the left sub-tree are smaller than the value
-    - Elements in the right sub-tree are bigger
-
-``` hs
-data Tree a = EmptyTree
-              | Node a (Tree a) (Tree a)
-              deriving (Show, Read, Eq)
-```
-
-- Instead of manually building a tree...
-- Make a f. that takes a tree and an element to insert
-
----
-
-# Inserting an element
-
-- In *C* etc., we modify the pointers and values inside the tree
-- In *Haskell*, the insertion function returns a **new tree**
-    - `a -> Tree a - > Tree a`
-- It seems inefficient, but most of the structure is shared
-
-``` hs
-singleton :: a -> Tree a    -- just a shortcut f.
-singleton x = Node x EmptyTree EmptyTree
-
-treeInsert :: (Ord a) => a -> Tree a -> Tree a
-treeInsert x EmptyTree = singleton x
-treeInsert x (Node a left right)
-    | x == a = Node a left right
-    | x < a  = Node a (treeInsert x left) right
-    | x > a  = Node a left (treeInsert x right)
-```
-
----
-
-# Folding into a tree
-
-- Folding: traversing a list and returning some value
-- Use a fold to build up a tree from a list
-
-``` hs
-ghci> let nums = [8,6,4,1,7,3,5]
-ghci> let numsTree = foldr treeInsert EmptyTree nums
-ghci> numsTree
-Node 5 (Node 3 ...
-```
-
----
-
-# Checking for membership
-
-``` hs
-treeElem :: (Ord a) => a -> Tree a -> Bool
-treeElem x EmptyTree = False
-treeElem x (Node a left right)
-    | x == a = True
-    | x < a  = treeElem x left
-    | x > a  = treeElem x right
-```
-
-``` hs
-ghci> 8 `treeElem` numsTree
-True
-ghci> 100 `treeElem` numsTree
-False
 ```
 
 ---
