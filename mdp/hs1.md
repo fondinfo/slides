@@ -652,15 +652,18 @@ ghci> maximum [1,9,2,3,4]
 # More list functions
 
 ```
-ghci> import Data.List (group,isPrefixOf,isInfixOf,isSuffixOf,sort,transpose)
+ghci> import Data.List (group,nub,sort,transpose)
 ghci> group [1, 1, 1, 2, 2, 3, 4, 5, 5]
-[[1,1,1],[2,2],[3],[4],[5,5]]
-ghci> "Hello" `isPrefixOf` "Hello World!"
-True
+[[1,1,1],[2,2],[3],[4],[5,5]]  -- equal adjacent elements
+ghci> nub [1,2,3,4,3,2,1,2,4,3,5]
+[1,2,3,4,5]  -- `essence`, no duplicates, O(n²)
 ghci> sort [1,6,4,3,2,5]
 [1,2,3,4,5,6]
 ghci> transpose [[1,2,3],[4,5,6],[7,8,9]]
 [[1,4,7],[2,5,8],[3,6,9]]
+ghci> import Data.List (isPrefixOf,isInfixOf,isSuffixOf)
+ghci> "Hello" `isPrefixOf` "Hello World!"
+True
 ```
 
 >
