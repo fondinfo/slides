@@ -585,6 +585,74 @@ False
 
 ---
 
+![](http://fondinfo.github.io/images/repr/file-system.svg)
+# Folders
+
+``` hs
+data Elem = Document String String
+          | Folder String [Elem]
+          deriving (Show, Read, Eq)
+
+sizeNode (Document _ content) = length content
+sizeNode (Folder _ nodes) = sum $ map sizeNode nodes
+
+prodD = Document "prod.csv" "1,2,3,4"
+dataF = Folder "data" [prodD]
+a1_0D = Document "a1.txt" "bla bla 0"
+workF = Folder "Work" [a1_0D, dataF]
+a1_1D = Document "a1.txt" "a different file"
+personalF = Folder "Personal" [a1_1D]
+desktopF = Folder "Desktop" [workF, personalF]
+
+main = print $ sizeNode desktopF  -- i/o action…
+```
+
+---
+
+![](http://fondinfo.github.io/images/comp/expression.svg)
+# Expressions
+
+``` hs
+op2 "+" = (+)
+op2 "*" = (*)  -- …
+
+data Expr = Literal Float
+          | BinaryOp String Expr Expr
+          deriving (Show, Read, Eq)
+
+eval :: Expr -> Float
+eval (Literal v) = v
+eval (BinaryOp op a b) = (op2 op) (eval a) (eval b)
+
+prod1 = BinaryOp "*" (Literal 3) (Literal 2)
+sum1 = BinaryOp "+" prod1 (Literal 4)
+prod2 = BinaryOp "*" (Literal 5) sum1
+
+main = print $ eval prod2  -- i/o action…
+```
+
+---
+
+![](http://fondinfo.github.io/images/comp/list-tree.svg)
+# Nested lists
+
+
+``` hs
+data Nested a = NVal a
+              | NLst [Nested a]
+              deriving (Show, Read, Eq)
+
+sumNested (NVal v) = v
+sumNested (NLst l) = sum $ map sumNested l
+
+vals = NLst [NLst [NVal 1, NVal 2, NLst [NVal 3, NVal 4],
+                   NLst [NVal 5]], NVal 6]
+
+main = print $ sumNested vals  -- i/o action…
+```
+
+---
+
 # The impure
 
 ---
@@ -866,15 +934,15 @@ askForNumber gen = do
 ``` hs
 question = "Which number (1-10) am I thinking of?"
 
-check :: (String, String) -> [String] -> [String]
-check (secret,guess) acc
-    | guess == "" = ["Bye."]
-    | guess == secret = ["You are correct!"]
-    | otherwise = ("Sorry, it was "++secret++".\n"++question) : acc
+response :: (String, String) -> String
+response (secret, guess) | guess == secret = "You are correct!"
+response (_, "") = "Bye."
+response (secret, _) = "Sorry, it was " ++ secret ++ ".\n" ++ question
 
 process :: Rng -> String -> String
-process gen = unlines.(question:).foldr check [].zip secrets.lines
+process gen = unlines.(question:).whileSorry.map response.zip secrets.lines
     where secrets = map show $ randints (1,10) gen
+          whileSorry = takeWhileInc ((=='S').head)
 
 main = do
     gen <- getRng

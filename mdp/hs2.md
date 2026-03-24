@@ -668,8 +668,8 @@ ghci> zipWith (zipWith (*)) [[1,2,3],[3,5,6],[2,3,4]]
 
 # The flip function
 
-- In the standard library, `flip` takes a f. and returns a f.
-    - The returned f. is like the original one, only the first two arguments are flipped
+- `flip` converts a f. into another f.
+    - The returned f. is like the original one, but the arguments are flipped
     - It takes a f. that takes an `a` and a `b`
     - It returns a f. that takes a `b` and an `a`
 
@@ -683,6 +683,30 @@ ghci> flip zip [1,2,3,4,5] "hello"
 [('h',1),('e',2),('l',3),('l',4),('o',5)]
 ghci> zipWith (flip div) [2,2..] [10,8,6,4,2]
 [5,4,3,2,1]
+```
+
+---
+
+# The uncurry function
+
+- `uncurry` converts a f. into another f.
+    - The original f. takes two arguments
+    - The returned f. takes a pair as its only argument
+
+``` hs
+ghci> :t uncurry
+uncurry :: (a -> b -> c) -> (a, b) -> c
+ghci> addPair = uncurry (+)
+ghci> addPair (2, 3)
+5
+```
+
+- There is also `curry`, which is the opposite of `uncurry`
+    - Less common, since most f.s are already curried
+
+``` hs
+ghci> :t curry
+curry :: ((a, b) -> c) -> a -> b -> c
 ```
 
 ---
@@ -702,7 +726,7 @@ ghci> takeWhile (/=' ') "elephants know how to party"
 "elephants"
 ghci> dropWhile (/=' ') "elephants know how to party"
 " know how to party"
-ghci> span (/=' ') "elephants know how to party"  -- break (==' ')...
+ghci> span (/=' ') "elephants know how to party"  -- or, break (==' ')…
 ("elephants"," know how to party")
 ```
 
