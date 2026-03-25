@@ -1792,10 +1792,10 @@ ghci> ['a'..'e']
 "abcde"
 ghci> [LT..GT]
 [LT,EQ,GT]
-ghci> [3..5]
-[3,4,5]
 ghci> succ 'B'
 'C'
+ghci> fromEnum 'a'
+97
 ```
 
 ---
