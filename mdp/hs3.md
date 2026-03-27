@@ -382,7 +382,7 @@ randint range gen = (constrain range gen, xorshift gen)
 
 >
 
-<https://github.com/tomamic/paradigmi/blob/master/haskell/xorshift.hs>
+<https://github.com/tomamic/paradigmi/blob/master/haskell/Xorshift.hs>
 
 ---
 
@@ -889,7 +889,7 @@ getRng = do
 
 >
 
-<https://github.com/tomamic/paradigmi/blob/master/haskell/xorshift.hs>
+<https://github.com/tomamic/paradigmi/blob/master/haskell/Xorshift.hs>
 
 ---
 
