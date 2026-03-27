@@ -593,8 +593,8 @@ data Elem = Document String String
           | Folder String [Elem]
           deriving (Show, Read, Eq)
 
-sizeNode (Document _ content) = length content
-sizeNode (Folder _ nodes) = sum $ map sizeNode nodes
+elemSize (Document _ content) = length content
+elemSize (Folder _ nodes) = sum $ map elemSize nodes
 
 prodD = Document "prod.csv" "1,2,3,4"
 dataF = Folder "data" [prodD]
@@ -604,7 +604,7 @@ a1_1D = Document "a1.txt" "a different file"
 personalF = Folder "Personal" [a1_1D]
 desktopF = Folder "Desktop" [workF, personalF]
 
-main = print $ sizeNode desktopF  -- i/o action…
+main = print $ elemSize desktopF  -- i/o action…
 ```
 
 ---
@@ -620,15 +620,15 @@ data Expr = Literal Float
           | BinaryOp String Expr Expr
           deriving (Show, Read, Eq)
 
-eval :: Expr -> Float
-eval (Literal v) = v
-eval (BinaryOp op a b) = (op2 op) (eval a) (eval b)
+exprEval :: Expr -> Float
+exprEval (Literal v) = v
+exprEval (BinaryOp op a b) = (op2 op) (exprEval a) (exprEval b)
 
 prod1 = BinaryOp "*" (Literal 3) (Literal 2)
 sum1 = BinaryOp "+" prod1 (Literal 4)
 prod2 = BinaryOp "*" (Literal 5) sum1
 
-main = print $ eval prod2  -- i/o action…
+main = print $ exprEval prod2  -- i/o action…
 ```
 
 ---
