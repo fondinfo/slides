@@ -85,8 +85,8 @@ Rectangle 50.0 230.0 60.0 90.0
 
 ``` hs
 data Point = Point Float Float deriving (Show)
-data Shape = Circle Point Float |
-             Rectangle Point Point deriving (Show)
+data Shape = Circle Point Float
+             | Rectangle Point Point deriving (Show)
 ```
 
 - Same name for the data type and the value constructor
@@ -150,13 +150,13 @@ Rectangle (Point 60.0 23.0) (Point 100.0 123.0)
     - First name, last name, age, height, phone number, and favorite ice-cream flavor
 
 ``` hs
-data Person = Person String String Int Float
-                     String String deriving (Show)
+data Person = Person String String Int Float String String
+              deriving (Show)
 ```
 
 ``` hs
 ghci> let guy = Person "Buddy" "Finklestein" 43 184.2
-                          "526-2928" "Chocolate"
+                       "526-2928" "Chocolate"
 ghci> guy
 Person "Buddy" "Finklestein" 43 184.2 "526-2928" "Chocolate"
 ```
@@ -1293,7 +1293,7 @@ ghci> [Red, Yellow, Green]
 # Subclasses
 
 - You can also make typeclasses that are *subclasses* of other typeclasses
-- Ex.: class declaration for `Num`
+- Ex.: class declaration for `Num` (in old versions of Haskell)
 
 ``` hs
 class (Eq a) => Num a where

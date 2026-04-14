@@ -53,11 +53,12 @@
 
 >
 
-[Redmonk](https://redmonk.com/sogrady/2021/08/05/language-rankings-6-21/)
+[Redmonk](https://redmonk.com/sogrady/)
 – [Spectrum](https://spectrum.ieee.org/top-programming-languages/)
 – [PYPL](https://pypl.github.io/PYPL.html)
 – [Tiobe](https://www.tiobe.com/tiobe-index/)
-– [SO survey](https://insights.stackoverflow.com/survey/2021/#technology)
+– [Octoverse](https://octoverse.github.com/)
+— [SO survey](https://survey.stackoverflow.co/)
 
 ---
 
@@ -184,7 +185,7 @@ fn abs(x: i32) -> i32 {
 - Last expression is returned implicitly (w/o semicolon)
 
 ``` rs
-fn add_three(x: i32) -> i32{
+fn add_three(x: i32) -> i32 {
     x + 3
 }
 ```
@@ -473,14 +474,20 @@ let number = if condition {
 # Mapping and folding
 
 - Rust has many functional tools
-    - `map, filter, fold…`
+    - `take, skip, zip, take_while…`
+    - `map, filter, fold, scan…`
     - Iterators are lazy
 
 ``` rs
-let numbers_iterator = [2,3,4,5].iter();
+let numbers_iterator = [2,3,4,5].into_iter();
 let sum = numbers_iterator.fold(0, |acc, x| acc + x);
-
 let squared: Vec<i32> = (1..10).map(|x| x * x).collect();
+```
+
+``` rs
+use std::iter::successors;  // ~ Haskell iterate
+let squares = successors(Some(2_u64), |n| Some(n.pow(2))); // checked_pow
+println!("{:?}", squares.take(4).collect::<Vec<_>>());  // [2, 4, 16, 256]
 ```
 
 ---
@@ -489,12 +496,12 @@ let squared: Vec<i32> = (1..10).map(|x| x * x).collect();
 
 ```
 fn main() {
-    let vector = (1..)            // Infinite range of integers
-        .filter(|x| x % 2 != 0)   // Collect odd numbers
-        .take(5)                  // Only take five numbers
-        .map(|x| x * x)           // Square each number
-        .collect::<Vec<usize>>(); // Return as a new Vec<usize>
-    println!("{:?}", vector);     // Print result
+    let vector = (1..)           // Infinite range of integers
+        .filter(|x| x % 2 != 0)  // Collect odd numbers
+        .take(5)                 // Only take five numbers
+        .map(|x| x * x)          // Square each number
+        .collect::<Vec<_>>();    // Return as a new Vec
+    println!("{:?}", vector);    // Print result
 }
 ```
 
@@ -505,13 +512,20 @@ fn main() {
 # Console input
 
 ``` rs
+use std::io::stdin;
+
+fn input(msg: String) -> String {
+    println!("{}", msg);
+    let txt = std::io::stdin().lock().lines().next().unwrap().unwrap();
+    txt
+}
+
 fn main() {
-    use std::io::*;
-    println!("What's your name?");
-    let name = stdin().lock().lines().next().unwrap().unwrap();
+    let name = input("What's your name?".to_string());
     println!("Hello, {}!", name);
 
     for l in stdin().lock().lines() {
+        // .take_while(|l| !l.as_ref().unwrap().is_empty())
         println!("{}", l.unwrap().to_uppercase());
     }
 }
