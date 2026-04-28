@@ -929,10 +929,10 @@ except IOError as err:
 
 - Analyze students' answers to questionnaires about courses
 - Load a csv like one of these:
-    - <https://www.dropbox.com/s/bfunquwvcg8mv09/report-2016-2017.csv?dl=1>
-    - <https://www.dropbox.com/s/bj3rm90083d2rqz/report-2017-2018.csv?dl=1>
+    - [report-2016-2017.csv](https://www.dropbox.com/s/bfunquwvcg8mv09/report-2016-2017.csv?dl=1)
+    - [report-2017-2018.csv](https://www.dropbox.com/s/bj3rm90083d2rqz/report-2017-2018.csv?dl=1)
 - Save a csv like this one:
-    - <https://www.dropbox.com/s/0hud1kfeem2gtxz/marks.csv?dl=1>
+    - [marks.csv](https://www.dropbox.com/s/0hud1kfeem2gtxz/marks.csv?dl=1)
 
 ---
 
