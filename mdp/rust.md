@@ -516,7 +516,7 @@ use std::io::stdin;
 
 fn input(msg: String) -> String {
     println!("{}", msg);
-    let txt = std::io::stdin().lock().lines().next().unwrap().unwrap();
+    let txt = stdin().lock().lines().next().unwrap().unwrap();
     txt
 }
 
@@ -582,6 +582,45 @@ fn main() {
     f.write_all(data.as_bytes()).expect("Unable to write data");
 }
 ```
+
+---
+
+# Error propagation
+
+``` rs
+fn read_username_from_file() -> Result<String, io::Error> {
+    let username_file_result = File::open("hello.txt");
+    let mut username_file = match username_file_result {
+        Ok(file) => file,
+        Err(e) => return Err(e),
+    };
+
+    let mut username = String::new();
+    match username_file.read_to_string(&mut username) {
+        Ok(_) => Ok(username),
+        Err(e) => Err(e),
+    }
+}
+```
+
+---
+
+# Question mark
+
+- Shortcut for error propagation
+
+``` rs
+fn read_username_from_file() -> Result<String, io::Error> {
+    let mut username = String::new();
+    let mut username_file = File::open("hello.txt")?;
+    username_file.read_to_string(&mut username)?;
+    // File::open("hello.txt")?.read_to_string(&mut username)?;
+    Ok(username)
+}
+```
+
+- Usually, `main` returns `()`
+- It can also return a `Result<(), E>`
 
 ---
 
