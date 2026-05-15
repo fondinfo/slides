@@ -545,9 +545,10 @@ let parsed: i32 = "5".parse().unwrap();
 let turbo_parsed = "10".parse::<i32>().unwrap();
 ```
 
-- Splitting
-    - Use `split` method (given a separator char)
+- Splitting & joining
+    - `split` method (given a separator char)
     - Otherwise, `split_whitespace` or `lines`
+    - `connect` or `join`, to concatenate a `Vec<String>`
 
 ---
 
@@ -555,7 +556,7 @@ let turbo_parsed = "10".parse::<i32>().unwrap();
 
 ``` rs
 use std::fs::File;
-use std::io::BufReader;
+use std::io::{BufReader, BufRead};
 
 fn main() {
     let file = File::open("foo.txt").unwrap();
@@ -573,13 +574,14 @@ fn main() {
 
 ``` rs
 use std::fs::File;
-use std::io::BufWriter;
+use std::io::{BufWriter, Write};
 
 fn main() {
-    let data = "Some data!";
+    let titles = "One,Two,Three\n";
     let f = File::create("foo.txt").expect("Unable to create file");
     let mut f = BufWriter::new(f);
-    f.write_all(data.as_bytes()).expect("Unable to write data");
+    f.write_all(titles.as_bytes()).expect("Unable to write titles");
+    writeln!(f, "{},{},{}", 1, 2, 3);  // ~ println
 }
 ```
 
