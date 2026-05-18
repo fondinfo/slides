@@ -365,8 +365,14 @@ def main():
 
 - Download latest Spark
     - <http://spark.apache.org/downloads.html>
-    - Spark 3.x built for Hadoop 2.7
+    - Spark 4.x built for Hadoop 3.x
 - Unzip it in ~/spark
+
+``` sh
+tar -xzvf spark.tgz
+sudo apt install default-jdk
+sudo apt install jupyter-notebook
+```
 
 ``` sh
 export PYSPARK_PYTHON=python3
