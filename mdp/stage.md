@@ -62,23 +62,27 @@ Ven    | Completamento del gioco
 ![](http://fondinfo.github.io/images/dev/python.svg) ![](http://fondinfo.github.io/images/dev/devices.svg) ![](http://fondinfo.github.io/images/dev/raspberry-pi.png)
 # 💾 Strumenti software
 
-- Linguaggio **Python 3**
-    - [**Thonny**](https://www.thonny.org/), ambiente Python, *battery included*
-    - [Playground](https://fondinfo.github.io/play)
-- Sviluppo **open-source** e **multi-piattaforma**
-    - PC, cellulari e tablet
-- Anche su Raspberry Pi
-    - <http://raspberrypi.org/>
+- **[▶️ Playground nel browser](https://fondinfo.github.io/play)**, con esempi
+
+- **Thonny**: <https://www.thonny.org/>
+    - Semplice IDE (*Integrated Development Environment*)
+    - Open source, multi-piattaforma, *battery included*
+    - ⬇️ Salvare nella cartella di lavoro il file [`g2d.py`](https://github.com/fondinfo/fondinfo/blob/master/g2d.py)
+
+- Opzionalmente, [*Termux*](https://fondinfo.github.io/termux/) su Android
 
 ---
 
 ![](http://fondinfo.github.io/images/fun/books-stack.png)
 # 📚 Approfondimento
 
-- *Dispense* del corso - <https://github.com/tomamic/fondinfo/wiki/>
-- A.B. Downey: *Think Python* 2e - <https://github.com/AllenDowney/ThinkPythonItalian>
+- *Libro* di testo e *slide* del corso <br> <https://fondinfo.github.io/>
+
+- A.B. Downey: *Think Python* 2e <br> <https://github.com/AllenDowney/ThinkPythonItalian>
+
 - M. Beri: *Python*, Apogeo Pocket, 2010, 978-8850329151
-- MIT: *Intro to CS and Programming in Python* - [Video delle lezioni](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/index.htm)
+
+- MIT: *Intro to CS and Programming in Python* <br> [Video delle lezioni](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/index.htm)
 
 [**Progetti**](progetti.html)
 

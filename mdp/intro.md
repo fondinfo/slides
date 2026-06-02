@@ -115,7 +115,7 @@ Applicazioni testuali e con grafica
 ![small](https://fondinfo.github.io/images/dev/python-logo.svg)
 # 💾 Strumenti software
 
-- **[▶️ Playground Python](https://fondinfo.github.io/play)**, con esempi
+- **[▶️ Playground nel browser](https://fondinfo.github.io/play)**, con esempi
 
 - **Thonny**: <https://www.thonny.org/>
     - Semplice IDE (*Integrated Development Environment*)
