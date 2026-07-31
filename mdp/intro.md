@@ -67,6 +67,9 @@ Applicazioni testuali e con grafica
     - Contrassegnati con `P1` e `P2`
     - Da sviluppare in alcune settimane, da soli o in coppia
     - Ma tassativamente *non più di due!*
+- Criteri di valutazione
+    - Importante l'originalità del codice
+	- Voto condizionato dalla prova di programmazione (≤133%)
 
 [**Progetti**](progetti.html)
 
@@ -79,13 +82,13 @@ Applicazioni testuali e con grafica
     - *Esempi* prima delle esercitazioni
     - *Soluzioni* di esercizi delle settimane precedenti
 - *Ricevimento* aperto a tutti
-    - In lab 4, sede didattica, ogni martedì 12:30-13:30
-    - In lab Workstation, sede scientifica, ogni giovedì 12:30-13:30
+    - In lab Workstation, sede scientifica
+    - Ogni martedì e ogni giovedì, 12:30-13:30
 
 ---
 
 ![](https://fondinfo.github.io/images/misc/quiz.png)
-# 🎓 Modalità d'esame
+# 🎓 Modalità d'esame 2025
 
 - *➊* Quiz di teoria e comprensione del codice
     - A fine corso, con bonus, oppure…
@@ -98,6 +101,25 @@ Applicazioni testuali e con grafica
     - Per ⅓ dal quiz di teoria
     - Per ⅔ dalla prova di programmazione
     - Bonus 1-2 punti per partecipazione attiva a lezioni
+
+---
+
+![](https://fondinfo.github.io/images/misc/quiz.png)
+# 🎓 Modalità d'esame 2026
+
+- *①* Prova di programmazione in lab, peso **½**
+	- 2 parti, ciascuna 6 esercizi in 90 minuti
+	- $v = \frac{2·v_{max} + v_{min}}{3}$
+    - Durante le lezioni, con bonus, oppure nei normali appelli
+- *②* Prova di teoria e comprensione del codice, peso **¼**
+	- ~ 15 domande in 45 minuti
+    - Durante le lezioni, con bonus, oppure nei normali appelli
+- *③* Prova progettuale, *opzionale*, peso **¼**
+    - A richiesta in lab durante i normali appelli, oppure…
+    - Consegna dei progetti *P1* e *P2*, con frequenza delle lezioni
+- *⊕* Bonus fino a 3 punti per partecipazione *attiva* a esercitazioni e lezioni
+- Le singole prove si possono svolgere in tempi diversi
+	- Ciascuna resta valida per l'intero anno (fino a ottobre)
 
 ---
 
@@ -124,7 +146,7 @@ Applicazioni testuali e con grafica
 
 - Opzionalmente
     - [*Termux*](https://fondinfo.github.io/termux/) su Android
-    - [*Ubuntu*](http://releases.ubuntu.com/24.04/) in una [VirtualBox](https://www.virtualbox.org/wiki/Downloads), [WikiHow](https://www.wikihow.com/Install-Ubuntu-on-VirtualBox)
+    - [*Ubuntu*](http://releases.ubuntu.com/26.04/) in una [VirtualBox](https://www.virtualbox.org/wiki/Downloads), [WikiHow](https://www.wikihow.com/Install-Ubuntu-on-VirtualBox)
 
 ``` sh
 ## Ubuntu, Debian etc.
