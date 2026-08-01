@@ -52,26 +52,11 @@ Applicazioni testuali e con grafica
 # ℹ️ Istruzioni per i laboratori
 
 - Esercitazioni in lab ogni lunedì
+    - Lavoro *individuale*
     - Proprio PC, o postazioni in lab
-- Esercizi da cominciare in lab e continuare a casa, *individualmente*
-- *Verifica* esercitazioni
-    - Alla fine di ogni esercitazione, consegna dei programmi secondo le indicazioni del docente
-    - Periodicamente, lavori consegnati sottoposti a *valutazioni intermedie*
-
----
-
-![large](https://fondinfo.github.io/images/misc/videogames.png)
-# ℹ️ Istruzioni per i progetti
-
-- Più avanti, un paio di progetti a casa
-    - Contrassegnati con `P1` e `P2`
-    - Da sviluppare in alcune settimane, da soli o in coppia
-    - Ma tassativamente *non più di due!*
-- Criteri di valutazione
-    - Importante l'originalità del codice
-	- Voto condizionato dalla prova di programmazione (≤133%)
-
-[**Progetti**](progetti.html)
+- Esercizi da cominciare in lab e continuare a casa
+- Consegna dei programmi alla fine di ogni esercitazione
+    - Secondo le indicazioni del docente
 
 ---
 
@@ -84,6 +69,24 @@ Applicazioni testuali e con grafica
 - *Ricevimento* aperto a tutti
     - In lab Workstation, sede scientifica
     - Ogni martedì e ogni giovedì, 12:30-13:30
+
+---
+
+![large](https://fondinfo.github.io/images/misc/videogames.png)
+# 👾 Istruzioni per i progetti
+
+- Più avanti, un paio di progetti (*P₁*, *P₂*)
+    - Da sviluppare in alcune settimane
+    - Anche a casa, da soli o in coppia
+    - Ma tassativamente *non più di due!*
+    - Consegna prefissata, durante il periodo di lezione
+- Criteri di valutazione
+    - Importante l'originalità del codice
+    - Voto condizionato dalla verifica di programmazione in lab (≤133%)
+- In *alternativa*, a richiesta
+    - Prova progettuale finale in lab durante i normali appelli ~ 2h½
+
+[**Progetti**](progetti.html)
 
 ---
 
@@ -107,19 +110,30 @@ Applicazioni testuali e con grafica
 ![](https://fondinfo.github.io/images/misc/quiz.png)
 # 🎓 Modalità d'esame 2026
 
-- *①* Prova di programmazione in lab, peso **½**
-	- 2 parti, ciascuna 6 esercizi in 90 minuti
-	- $v = \frac{2·v_{max} + v_{min}}{3}$
-    - Durante le lezioni, con bonus, oppure nei normali appelli
-- *②* Prova di teoria e comprensione del codice, peso **¼**
-	- ~ 15 domande in 45 minuti
-    - Durante le lezioni, con bonus, oppure nei normali appelli
-- *③* Prova progettuale, *opzionale*, peso **¼**
-    - A richiesta in lab durante i normali appelli, oppure…
-    - Consegna dei progetti *P1* e *P2*, con frequenza delle lezioni
+- Voto finale composto da 3 parti principali
+- *①* Programmazione in lab, peso **½**
+    - 2 prove, ciascuna da 6 esercizi in 90 minuti
+    - $v = \frac{2·v_{max} + v_{min}}{3}$
+- *②* Teoria e comprensione del codice, peso **¼**
+    - Quiz da 15 domande in 45 minuti
+- *③* Sviluppo progettuale, *opzionale*, peso **¼**
+    - Progetti (*P₁*, *P₂*), oppure prova finale in lab, oppure niente
 - *⊕* Bonus fino a 3 punti per partecipazione *attiva* a esercitazioni e lezioni
-- Le singole prove si possono svolgere in tempi diversi
-	- Ciascuna resta valida per l'intero anno (fino a ottobre)
+- *✋* Colloquio di verifica a discrezione del docente
+
+---
+
+![](https://fondinfo.github.io/images/misc/quiz.png)
+# 🎓 Svolgimento delle prove
+
+- Ciascuna prova si può svolgere in qualsiasi data prevista, in qualsiasi ordine
+    - Durante le lezioni, con bonus ~ ⅒…
+    - Oppure nei normali appelli
+    - Resta valida per l'intero anno (fino a ottobre)
+- Prima della prova progettuale *opzionale* in lab, però…
+    - Bisogna superare la verifica di programmazione
+- ⚠️ Se si torna a svolgere una prova già superata…
+    - S'intende rifiutato il risultato precedente in quella prova
 
 ---
 
