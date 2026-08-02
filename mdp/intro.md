@@ -111,15 +111,15 @@ Applicazioni testuali e con grafica
 # 🎓 Modalità d'esame 2026
 
 - Voto finale composto da 3 parti principali
-- *①* Programmazione in lab, peso **½**
+- **①** Programmazione in lab, peso **½**
     - 2 prove, ciascuna da 6 esercizi in 90 minuti
     - $v = \frac{2·v_{max} + v_{min}}{3}$
-- *②* Teoria e comprensione del codice, peso **¼**
+- **②** Teoria e comprensione del codice, peso **¼**
     - Quiz da 15 domande in 45 minuti
-- *③* Sviluppo progettuale, *opzionale*, peso **¼**
+- **③** Sviluppo progettuale, *opzionale*, peso **¼**
     - Progetti (*P₁*, *P₂*), oppure prova finale in lab, oppure niente
-- *⊕* Bonus fino a 3 punti per partecipazione *attiva* a esercitazioni e lezioni
-- *✋* Colloquio di verifica a discrezione del docente
+- **⊕** Bonus fino a 3 punti per partecipazione *attiva* a esercitazioni e lezioni
+- ✋ Colloquio di verifica a discrezione del docente
 
 ---
 
