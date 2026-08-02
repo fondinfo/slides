@@ -7,7 +7,7 @@
     await import('../plugin/highlight/highlight.js');
     await import('../plugin/math/math.js');
 
-    var name = location.href.split('#')[0].split('/')[-1].replace(/\.[^\.]+$/, '');
+    var name = location.href.split('#')[0].split('/').pop().replace(/\.[^\.]+$/, '');
     console.log(location.href);
     console.log(name);
     var ico = '<link rel="icon" href="/images/logo.svg" />';
