@@ -124,7 +124,7 @@ Applicazioni testuali e con grafica
 ---
 
 ![](https://fondinfo.github.io/images/misc/quiz.png)
-# 🎓 Svolgimento delle prove
+# ✅ Svolgimento delle prove
 
 - Ciascuna prova si può svolgere in qualsiasi data prevista, in qualsiasi ordine
     - Durante le lezioni, con bonus ~ ⅒…
@@ -134,6 +134,28 @@ Applicazioni testuali e con grafica
     - Bisogna superare la verifica di programmazione
 - ⚠️ Se si torna a svolgere una prova già superata…
     - S'intende rifiutato il risultato precedente in quella prova
+- Materiale utilizzabile durante le prove
+	- Prove di programmazione: slide su Elly, libro di testo
+	- Prova di teoria: foglio con tabelle fornito, penna
+	- Svolgimento solo sulle postazioni dei lab
+
+---
+
+![](https://fondinfo.github.io/images/misc/quiz.png)
+# 📅 Calendario indicativo
+
+- Fine ottobre
+	- Prima prova di programmazione, con bonus
+- Metà novembre
+	- Consegna progetto *P1*
+- Fine novembre
+	- Possibilmente, recupero prima prova, senza bonus 
+- Inizio dicembre
+	- Seconda prova di programmazione, con bonus
+	- Consegna progetto *P2*
+- Metà dicembre
+	- Prova di teoria, con bonus
+	- Appello di verbalizzazione formale
 
 ---
 
