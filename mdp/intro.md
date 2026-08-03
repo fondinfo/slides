@@ -5,30 +5,32 @@
 ---
 
 ![large](https://fondinfo.github.io/images/sys/globe.jpg)
-# ➊ Introduzione all'informatica
+# ➊ Teoria
 
-- Logica
+- *Logica*
     - Algebra booleana, logica dei predicati
-- Rappresentazione dei dati
+- *Rappresentazione dei dati*
     - Numeri, testi, immagini, suoni
-- Teoria della computazione
+- *Teoria della computazione*
     - Linguaggi, automi, complessità
 
 ---
 
 ![large](https://fondinfo.github.io/images/misc/space-invaders-school.png)
-# ➋ Introduzione alla programmazione
+# ➋ Programmazione
 
-- Algoritmi in *Python 3*
-- Funzioni, grafica
-- Oggetti, relazioni
-- Sviluppo del software, collaudo
-- Liste, sequenze, collezioni
-- Ricorsione
-
->
-
-Applicazioni testuali e con grafica
+- Problem solving, linguaggio Python
+- *Prima parte*
+    - Iterazioni, grafica
+    - Funzioni, animazioni
+    - Oggetti
+- *Seconda parte*
+    - Liste, sequenze, collezioni
+    - Matrici, file
+    - Ricorsione
+- *Sviluppo progettuale*
+    - Relazioni tra classi, polimorfismo
+    - Sviluppo del software, collaudo
 
 ---
 
@@ -135,9 +137,9 @@ Applicazioni testuali e con grafica
 - ⚠️ Se si torna a svolgere una prova già superata…
     - S'intende rifiutato il risultato precedente in quella prova
 - Materiale utilizzabile durante le prove
-	- Prove di programmazione: slide su Elly, libro di testo
-	- Prova di teoria: foglio con tabelle fornito, penna
-	- Svolgimento solo sulle postazioni dei lab
+    - Prove di programmazione: slide su Elly, libro di testo
+    - Prova di teoria: foglio con tabelle fornito, penna
+    - Svolgimento solo sulle postazioni dei lab
 
 ---
 
@@ -145,17 +147,17 @@ Applicazioni testuali e con grafica
 # 📅 Calendario indicativo
 
 - Fine ottobre
-	- Prima prova di programmazione, con bonus
+    - Prima prova di programmazione, con bonus
 - Metà novembre
-	- Consegna progetto *P1*
+    - Consegna progetto *P1*
 - Fine novembre
-	- Possibilmente, recupero prima prova, senza bonus 
+    - Possibilmente, recupero prima prova, senza bonus
 - Inizio dicembre
-	- Seconda prova di programmazione, con bonus
-	- Consegna progetto *P2*
+    - Seconda prova di programmazione, con bonus
+    - Consegna progetto *P2*
 - Metà dicembre
-	- Prova di teoria, con bonus
-	- Appello di verbalizzazione formale
+    - Prova di teoria, con bonus
+    - Appello di verbalizzazione formale
 
 ---
 
