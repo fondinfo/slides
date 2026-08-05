@@ -26,7 +26,6 @@ Prima versione: chiedere e controllare solo il nome
 <br><br>
 <https://www.youtube.com/watch?v=Xel0c6mpqPA>
 
-
 ---
 
 ![large](https://fondinfo.github.io/images/draw/three-circles.svg)
