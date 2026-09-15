@@ -297,7 +297,7 @@ Mescolamento: per ogni cella, scegliere casualmente una nuova posizione; scambia
 
 ---
 
-![](https://fondinfo.github.io/images/misc/calendar-cols.jpg)
+![](https://fondinfo.github.io/images/misc/calendar-cols.png)
 # 3.7 Calendario trasposto
 
 - L'utente inserisce:

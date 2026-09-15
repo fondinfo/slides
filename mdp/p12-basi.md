@@ -562,6 +562,32 @@ g2d.main_loop()
 
 ---
 
+![large](http://fondinfo.github.io/images/misc/slope.svg)
+# 🧪 Formule utili
+
+- Distanza tra due punti
+
+``` py
+x1, y1 = 150, 400
+x2, y2 = 550, 100
+```
+
+``` py
+from math import dist
+p1 = (x1, y1)
+p2 = (x2, y2)
+d = dist(p1, p2)
+```
+
+``` py
+from math import sqrt
+dx = x2 - x1
+dy = y2 - y1
+d = sqrt(dx ** 2 + dy ** 2)
+```
+
+---
+
 # 🏊 Esercizi
 
 ---
@@ -625,7 +651,7 @@ Prima versione: chiedere e controllare solo il nome
 
 ---
 
-![](http://fondinfo.github.io/images/misc/calendar-cols.jpg)
+![](http://fondinfo.github.io/images/misc/calendar-cols.png)
 # Calcolo dell'età
 
 - Chiedere all'utente la sua data di nascita

@@ -625,7 +625,7 @@ First version: ask and check only the name
 
 ---
 
-![](http://fondinfo.github.io/images/misc/calendar-cols.jpg)
+![](http://fondinfo.github.io/images/misc/calendar-cols.png)
 # Age Calculation
 
 - Ask the user for their birth date
