@@ -202,7 +202,7 @@ Si può sfruttare l'operatore `%` (resto della divisione)
 
 ---
 
-![](https://fondinfo.github.io/images/misc/calendar-rows.jpg)
+![](https://fondinfo.github.io/images/misc/calendar-rows.png)
 # 2.7 Calendario da tavolo
 
 - L'utente inserisce:

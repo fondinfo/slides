@@ -93,24 +93,7 @@
 ---
 
 ![](https://fondinfo.github.io/images/misc/quiz.png)
-# 🎓 Modalità d'esame 2025
-
-- *➊* Quiz di teoria e comprensione del codice
-    - A fine corso, con bonus, oppure…
-    - Appelli usuali (sempre ~ 15 domande, 45 minuti)
-- *➋* Prova di programmazione in lab
-    - Svolgimento esercitazioni in laboratorio, oppure…
-    - Prova in appelli usuali (~ 3 ore)
-- Le due prove si possono svolgere in tempi diversi e ciascuna resta valida per l'intero anno (fino a ottobre)
-- Il *voto finale* è determinato:
-    - Per ⅓ dal quiz di teoria
-    - Per ⅔ dalla prova di programmazione
-    - Bonus 1-2 punti per partecipazione attiva a lezioni
-
----
-
-![](https://fondinfo.github.io/images/misc/quiz.png)
-# 🎓 Modalità d'esame 2026
+# 🎓 Modalità d'esame
 
 - Voto finale composto da 3 parti principali
 - **①** Programmazione in lab, peso **½**
