@@ -16,7 +16,7 @@
 `$$\begin{cases}0! = 1 \\ n! = n · (n-1)!, n>0\end{cases}$$` ![](http://fondinfo.github.io/images/fun/stack.svg)
 # ⭐ Fattoriale, ricorsione
 
-§ py
+``` py
 def factorial(n: int) -> int:
     if n == 0:
         result = 1
@@ -24,7 +24,7 @@ def factorial(n: int) -> int:
         result = n * factorial(n - 1)
     return result
 
-§
+```
 
 - A ogni invocazione di una funzione, viene creato nello **stack** un nuovo record
 - **Contesto locale** alla particolare attivazione della funzione stessa
@@ -100,12 +100,12 @@ Ai primordi (Fortran 66 ecc.) solo allocazione statica <br> Spazio fisso e unico
 
 # 🧪 Fibonacci, ricorsione
 
-§ py
+``` py
 def fibonacci(n: int) -> int:
     if n <= 1:
         return n
     return fibonacci(n-1) + fibonacci(n-2)
-§
+```
 
 ![](http://fondinfo.github.io/images/fun/fib-calls.svg)
 
@@ -117,28 +117,28 @@ def fibonacci(n: int) -> int:
 
 # 🧪 Fibonacci, memoization
 
-§ py
+``` py
 def fibonacci(n: int, _cache=[0, 1]) -> int:
     if n < len(_cache):
         return _cache[n]
     result = fibonacci(n - 1) + fibonacci(n - 2)
     _cache.append(result)
     return result
-§
+```
 
-§ py
+``` py
 from functools import lru_cache
 @lru_cache()  # function decoration
 def fibonacci(n: int) -> int:
     if n <= 1:
         return n
     return fibonacci(n-1) + fibonacci(n-2)
-§
+```
 ---
 
 # 🧪 Fibonacci, iterazione
 
-§ py
+``` py
 def fibonacci(n: int) -> int:
     val, nxt = 0, 1
 
@@ -146,7 +146,7 @@ def fibonacci(n: int) -> int:
         val, nxt = nxt, val + nxt
 
     return val
-§
+```
 
 >
 
@@ -158,7 +158,7 @@ def fibonacci(n: int) -> int:
 
 - Trovare un'area contigua e omogenea in una matrice
 
-§ py
+``` py
 def find_area(board, x, y, val, area=None):
     if area is None:
         area = set()
@@ -170,7 +170,7 @@ def find_area(board, x, y, val, area=None):
         for dx, dy in ((1, 0), (0, 1), (-1, 0), (0, -1)):
             find_area(board, x + dx, y + dy, val, area)
     return area
-§
+```
 
 >
 
@@ -187,7 +187,7 @@ def find_area(board, x, y, val, area=None):
 
 ![](http://fondinfo.github.io/images/fun/linked-list.svg)
 
-§ py
+``` py
 class ListNode:
     def __init__(self, data, next=None):
         self.data = data
@@ -195,7 +195,7 @@ class ListNode:
 
     def __str__(self) -> str:
         return f"<{self.data} {self.next}>"
-§
+```
 
 ---
 
@@ -208,7 +208,7 @@ class ListNode:
 - *Albero binario*
     - Due figli per ogni nodo
 
-§ py
+``` py
 class TreeNode:
     def __init__(self, data, left=None, right=None):
         self.data = data
@@ -217,14 +217,14 @@ class TreeNode:
 
     def __str__(self) -> str:
         return f"<{self.data} {self.left} {self.right}>"
-§
+```
 
 ---
 
 ![](http://fondinfo.github.io/images/comp/sorted-tree.svg)
 # Albero ordinato
 
-§ py
+``` py
 def insert(tree, val) -> TreeNode:
     if tree == None:
         tree = TreeNode(val)
@@ -238,7 +238,7 @@ def flatten(tree) -> list:
     if tree == None:
         return []
     return flatten(tree.left) + [tree.data] + flatten(tree.right)
-§
+```
 
 - Albero ordinato come `set`, *senza ripetizioni*
 
@@ -247,7 +247,7 @@ def flatten(tree) -> list:
 ![](http://fondinfo.github.io/images/comp/sorted-tree.svg)
 # Ricerca binaria
 
-§ py
+``` py
 def contains(tree, val) -> bool:
     if tree == None:
         return False
@@ -255,9 +255,9 @@ def contains(tree, val) -> bool:
         return True
     subtree = tree.left if val < tree.data else tree.right
     return contains(subtree, val)
-§
+```
 
-§ py
+``` py
 t = None
 for v in [7, 5, 5, 9, 6, 2, 3, 11]:
     t = insert(t, v)
@@ -265,7 +265,7 @@ print(t)
 print(flatten(t))
 print(contains(t, 4))
 print(contains(t, 5))
-§
+```
 
 ---
 
@@ -277,7 +277,7 @@ print(contains(t, 5))
     - Un `Document` (*foglia*)
     - Oppure un `Folder`, con vari nodi figlio
 
-§ py
+``` py
 class Node:
     pass
 class Document(Node):
@@ -288,7 +288,7 @@ class Folder(Node):
     def __init__(self, name: str, children: list[Node]):
         self._name = name
         self._children = children
-§
+```
 
 ---
 
@@ -297,7 +297,7 @@ class Folder(Node):
 
 - Casi semplici di alberi : liste annidate
 
-§ py
+``` py
 type T = int | list[T]
 
 def count_tree(t: T) -> int:
@@ -311,7 +311,7 @@ def count_tree(t: T) -> int:
 
 tree = [[1, 2, [3, 4], [5]], 6]
 print(count_tree(tree))
-§
+```
 
 ---
 
@@ -522,13 +522,13 @@ Supporre che i “token” siano tutti separati da spazio e che gli operatori ab
 - Risultato da espressione di esempio:
     - `"* 5 + * 3 2 4"`
 
-§ py
+``` py
 prod1 = Product(Literal(3), Literal(2))
 sum1 = Sum(prod1, Literal(4))
 prod2 = Product(sum1, Literal(5))
 print(prod2.eval())
 print(prod2.prefix())
-§
+```
 
 >
 
@@ -553,9 +553,9 @@ print(prod2.prefix())
 - Creare un albero di stringhe
     - Struttura a liste annidate
 
-§ py
+``` py
 tree = [["spam"], [["egg", "sausage"], [], "spam"]]
-§
+```
 
 - Scrivere una funzione che trova la stringa più lunga
     - In albero, passato come parametro
