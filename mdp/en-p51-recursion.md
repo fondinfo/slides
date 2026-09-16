@@ -185,7 +185,7 @@ print(root.height())  # 3
 
 # 🧪 Is the tree balanced?
 
-- A tree is balanced if, for each node, the heights of its subtrees differ by at most 1
+- A tree is balanced if the heights of its subtrees differ by at most 1
     - And its subtrees are themselves balanced
 - The `is_balanced` method, if defined on the `Node` class, returns a `bool`
 
