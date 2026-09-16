@@ -7,16 +7,16 @@
 # 💡️ Recursive Programming
 
 - Many languages allow a function (or procedure) to call itself
-- Direct or indirect recursive call
+- Recursive call, direct or indirect
 
 ![](http://fondinfo.github.io/images/fun/recursion.svg)
 
 ---
 
-`$$\begin{cases}0! = 1 \\ n! = n \cdot (n-1)!, n>0\end{cases}$$` ![](http://fondinfo.github.io/images/fun/stack.svg)
+`$$\begin{cases}0! = 1 \\ n! = n · (n-1)!, n>0\end{cases}$$` ![](http://fondinfo.github.io/images/fun/stack.svg)
 # ⭐ Factorial, recursion
 
-§ py
+``` py
 def factorial(n: int) -> int:
     if n == 0:
         result = 1
@@ -24,11 +24,11 @@ def factorial(n: int) -> int:
         result = n * factorial(n - 1)
     return result
 
-§
+```
 
 - At each invocation of a function, a new record is created on the **stack**
-- **Local context** to the particular activation of the function itself
-- Execute with the *Thonny* debugger
+- **Local context** specific to that particular activation of the function
+- Execute using the *Thonny* debugger
 
 >
 
@@ -40,169 +40,278 @@ def factorial(n: int) -> int:
 
 - ① Find some *base case*
     - Result obtained without recursion
-- ② Find a solution in the *general case*
+- ② Find a solution for the *general case*
     - Requires solving a problem of the same type
     - But of reduced size
-- Thus, increasingly smaller problems are solved
+- Thus, progressively smaller problems are solved
     - Getting closer and closer to the base case
     - Recursion terminates
 
 ---
 
-![](http://fondinfo.github.io/images/misc/tree.svg)
-# ⭐ Binary Tree
+![](http://fondinfo.github.io/images/fun/books-stack.png)
+# 🔬 Application Stack
 
-- A tree is a data structure, in which each node can have "children" nodes
-- A *binary* tree has at most two children
-- Recursive definition:
-    - Base case: empty tree (no nodes)
-    - General case: a node (value) + two children (subtrees)
+- Stack: *LIFO (Last In First Out)* dynamic memory
+    - Fixed maximum size
+- The program automatically stores in it:
+    - **Return address** for the function <br> Pushed at the call, popped at exit
+    - **Parameters** of the function <br> Pushed at the call, removed at exit
+    - **Local variables**, defined in the function <br> Removed outside the scope of visibility
+
+>
+
+In early days (Fortran 66, etc.) only static allocation <br> Fixed and unique space for data local to a function → no recursion
 
 ---
 
-# 🧪 Tree (node) class
+# 🔬 Simplified Stack View
 
-§ py
+![large](http://fondinfo.github.io/images/fun/stack-content.svg)
+
+---
+
+# 🔬 Activation Record
+
+![large](http://fondinfo.github.io/images/fun/records.svg)
+
+---
+
+# 🔬 Variable Scope
+
+- Set of instructions from which a variable is accessible
+    - *Lifetime*: existence in memory of the variable (label)
+    - Values (objects) in Python are all managed dynamically
+- **Global** scope
+    - Variables outside any function - *Best avoided!*
+    - *Static* allocation in some languages
+- **Local** scope to the function
+    - Local variables and parameters
+    - *Automatic* allocation of space on the *stack* at each function activation (enabling recursion)
+- Block scope (e.g., `if`): not in Python!
+
+---
+
+# 🧪 Fibonacci's Rabbits
+
+![large](http://fondinfo.github.io/images/fun/fib-rabbits.png)
+
+---
+
+# 🧪 Fibonacci, recursion
+
+``` py
+def fibonacci(n: int) -> int:
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+```
+
+![](http://fondinfo.github.io/images/fun/fib-calls.svg)
+
+>
+
+<https://fondinfo.github.io/play/?c11_fibonacci.py>
+
+---
+
+# 🧪 Fibonacci, memoization
+
+``` py
+def fibonacci(n: int, _cache=[0, 1]) -> int:
+    if n < len(_cache):
+        return _cache[n]
+    result = fibonacci(n - 1) + fibonacci(n - 2)
+    _cache.append(result)
+    return result
+```
+
+``` py
+from functools import lru_cache
+@lru_cache()  # function decoration
+def fibonacci(n: int) -> int:
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+```
+---
+
+# 🧪 Fibonacci, iteration
+
+``` py
+def fibonacci(n: int) -> int:
+    val, nxt = 0, 1
+
+    for i in range(n):
+        val, nxt = nxt, val + nxt
+
+    return val
+```
+
+>
+
+<https://fondinfo.github.io/play/?c11_fibonacci.py>
+
+---
+
+# 🧪 Contiguous Area
+
+- Find a contiguous and homogeneous area in a matrix
+
+``` py
+def find_area(board, x, y, val, area=None):
+    if area is None:
+        area = set()
+    if y < 0 or y >= len(board) or x < 0 or x >= len(board[0]):
+        return area
+
+    if board[y][x] == val and (x, y) not in area:
+        area.add((x, y))  # area is a set of points
+        for dx, dy in ((1, 0), (0, 1), (-1, 0), (0, -1)):
+            find_area(board, x + dx, y + dy, val, area)
+    return area
+```
+
+>
+
+<https://fondinfo.github.io/play/?c11_findarea.py>
+
+---
+
+# 💡️ Recursive Data Type
+
+- A value can *contain* values of the same type
+- *Linked list*
+    - Empty / `None`, or...
+    - Head node, followed by a *linked list*
+
+![](http://fondinfo.github.io/images/fun/linked-list.svg)
+
+``` py
+class ListNode:
+    def __init__(self, data, next=None):
+        self.data = data
+        self.next = next  # ListNode | None
+
+    def __str__(self) -> str:
+        return f"<{self.data} {self.next}>"
+```
+
+---
+
+![](http://fondinfo.github.io/images/comp/binary-tree.svg)
+# Binary Tree
+
+- *Tree*
+    - Empty / `None`, or...
+    - Head node, followed by multiple trees
+- *Binary tree*
+    - Two children for each node
+
+``` py
+class TreeNode:
+    def __init__(self, data, left=None, right=None):
+        self.data = data
+        self.left = left    # TreeNode | None
+        self.right = right  # TreeNode | None
+
+    def __str__(self) -> str:
+        return f"<{self.data} {self.left} {self.right}>"
+```
+
+---
+
+![](http://fondinfo.github.io/images/comp/sorted-tree.svg)
+# Sorted Tree
+
+``` py
+def insert(tree, val) -> TreeNode:
+    if tree == None:
+        tree = TreeNode(val)
+    elif val < tree.data:
+        tree.left = insert(tree.left, val)
+    elif val > tree.data:
+        tree.right = insert(tree.right, val)
+    return tree
+
+def flatten(tree) -> list:
+    if tree == None:
+        return []
+    return flatten(tree.left) + [tree.data] + flatten(tree.right)
+```
+
+- Sorted tree like a `set`, *without duplicates*
+
+---
+
+![](http://fondinfo.github.io/images/comp/sorted-tree.svg)
+# Binary Search
+
+``` py
+def contains(tree, val) -> bool:
+    if tree == None:
+        return False
+    if val == tree.data:
+        return True
+    subtree = tree.left if val < tree.data else tree.right
+    return contains(subtree, val)
+```
+
+``` py
+t = None
+for v in [7, 5, 5, 9, 6, 2, 3, 11]:
+    t = insert(t, v)
+print(t)
+print(flatten(t))
+print(contains(t, 4))
+print(contains(t, 5))
+```
+
+---
+
+![](http://fondinfo.github.io/images/repr/file-system.svg)
+# Documents and Folders
+
+- A tree representing a hierarchy of documents
+- Tree node
+    - A `Document` (*leaf*)
+    - Or a `Folder`, with various child nodes
+
+``` py
 class Node:
-    def __init__(self, val, left=None, right=None):
-        self.value = val
-        self.left = left
-        self.right = right
-§
-
-- Each `Node` can contain any value
-- `left` and `right` fields point to other `Node` objects
-    - Or to `None` if they are empty
-
----
-
-# 🧪 Creating a tree
-
-- A small example of a binary tree
-- Built explicitly, without using a complex algorithm
-- It is a balanced tree
-    - On level 0: one node
-    - On level 1: two nodes
-    - On level 2: four nodes
-
-§ py
-# Nodes on the last level (leaves)
-n7 = Node(7)
-n4 = Node(4)
-n2 = Node(2)
-n6 = Node(6)
-
-# Nodes on the intermediate level
-n3 = Node(3, n2, n4)
-n5 = Node(5, n6, n7)
-
-# Root node
-root = Node(1, n3, n5)
-§
+    pass
+class Document(Node):
+    def __init__(self, name: str, data: str):
+        self._name = name
+        self._data = data
+class Folder(Node):
+    def __init__(self, name: str, children: list[Node]):
+        self._name = name
+        self._children = children
+```
 
 ---
 
-# ⭐ Traversing a tree
+![](http://fondinfo.github.io/images/comp/list-tree.svg)
+# Nested Lists
 
-- How can we access all the nodes of a tree?
-- Using a *recursive algorithm*
-- It passes from the current node...
-    - To its left child, then recursively to its children
-    - To its right child, then recursively to its children
-- The depth of the recursion is the height of the tree
+- Simple cases of trees: nested lists
 
----
+``` py
+type T = int | list[T]
 
-# 🧪 Printing a tree
+def count_tree(t: T) -> int:
+    if not isinstance(t, list):
+        return 1
+    # return sum(count_tree(v) for v in t)
+    count = 0
+    for v in t:
+        count += count_tree(v)
+    return count
 
-§ py
-class Node:  # …
-    def print_tree(self):
-        if self.left is not None:
-            self.left.print_tree()
-        print(self.value, end=" ")
-        if self.right is not None:
-            self.right.print_tree()
-
-root.print_tree()
-§
-
-§ text
-2 3 4 1 6 5 7
-§
-
-- This traversal method is called *inorder*
-    - First left subtree, then root, then right subtree
-- The result of the print is the *sorted sequence* of values
-    - If it is a Binary Search Tree (BST)
-        - Values in left subtree < root < values in right subtree
-
----
-
-# 🧪 Summing values
-
-- How to sum all values in a tree?
-- Sum of `root.value` + sum of `left_subtree` + sum of `right_subtree`
-
-§ py
-class Node:  # …
-    def sum_values(self) -> int:
-        s = self.value
-        if self.left is not None:
-            s += self.left.sum_values()
-        if self.right is not None:
-            s += self.right.sum_values()
-        return s
-
-print(root.sum_values())  # 28
-§
-
----
-
-# 🧪 Tree height
-
-- Maximum level reachable from the root
-- How to calculate it?
-    - If the node is a leaf (no children), its height is 1
-    - Otherwise, it is 1 + maximum height of children
-
-§ py
-class Node:  # …
-    def height(self) -> int:
-        if self.left is None and self.right is None:
-            return 1
-        h_left, h_right = 0, 0
-        if self.left is not None:
-            h_left = self.left.height()
-        if self.right is not None:
-            h_right = self.right.height()
-        return 1 + max(h_left, h_right)
-
-print(root.height())  # 3
-§
-
----
-
-# 🧪 Is the tree balanced?
-
-- A tree is balanced if the heights of its subtrees differ by at most 1
-    - And its subtrees are themselves balanced
-- The `is_balanced` method, if defined on the `Node` class, returns a `bool`
-
-§ py
-class Node:  # …
-    def is_balanced(self) -> bool:
-        if self.left is None and self.right is None:
-            return True
-        h_left, h_right = 0, 0
-        if self.left is not None:
-            h_left = self.left.height()
-        if self.right is not None:
-            h_right = self.right.height()
-        return abs(h_left - h_right) <= 1 and \
-               (self.left is None or self.left.is_balanced()) and \
-               (self.right is None or self.right.is_balanced())
-§
+tree = [[1, 2, [3, 4], [5]], 6]
+print(count_tree(tree))
+```
 
 ---
 
@@ -210,169 +319,244 @@ class Node:  # …
 
 ---
 
-# Fibonacci, recursive
+# Recursion, Palindrome
 
-- Implement `fibonacci(n)`
-    - If `n` is 0 or 1, the result is `n`
-    - Otherwise, `fibonacci(n-1) + fibonacci(n-2)`
-- Print `fibonacci(8)` (which is 21)
+- *Palindrome*: text that remains the same when read backward
+- Write a recursive function to recognize palindromes
+    - Parameter: text to check
+    - Result: `bool`
 
 >
 
-[https://en.wikipedia.org/wiki/Fibonacci_number](https://en.wikipedia.org/wiki/Fibonacci_number)
+Palindrome string: if it has length 0 or 1, or...
+<br>
+First letter == last letter and...
+<br>
+Remaining string (without first and last letter) is a palindrome
 
 ---
 
-# Palindrome
+![](http://fondinfo.github.io/images/fun/sierpinski-triangle.svg)
+# Sierpinski Triangle
 
-- Implement `is_palindrome(s)`
-    - A string is a palindrome if it reads the same forwards and backward
-    - E.g., `otto`, `anna`, `radar`, `madam`, `rotor`
-- Recursive definition:
-    - Base cases: empty string or single-character string
-    - General case: first char == last char, AND inner string is palindrome
-
----
-
-# String reverse
-
-- Implement `reverse(s)`
-    - Returns the reversed string
-- Recursive definition:
-    - Base cases: empty string or single-character string
-    - General case: last char + reverse of inner string + first char
+- Draw on a rectangular area (black): `x`, `y`, `w`, `h`
+    - Initially, the entire canvas
+- If the area is sufficient, divide it into `4` sub-quadrants
+    - Color the top-left quadrant (white)
+    - Recursively apply the pattern to the other `3` quadrants
+- As an enhancement, allow the user to choose the *level of detail* (recursion depth), to color...
+    - Level `0`: nothing
+    - Level `1`: only `1` quadrant
+    - Level `2`: `1` large quadrant and `3` smaller ones
+    - Level `3`: `1+3+9` quadrants, etc.
 
 ---
 
-# Sum of digits
+![](http://fondinfo.github.io/images/fun/fractal-tree.png)
+# Fractal Tree
 
-- Implement `sum_digits(n)`
-    - Sums all digits of a number
-    - E.g., `sum_digits(1234) == 10`
-- Recursive definition:
-    - Base case: `n < 10`
-    - General case: last digit + sum of remaining digits
-
----
-
-# Binary representation
-
-- Implement `to_binary(n)`
-    - Returns the string representation of the number in binary
-    - E.g., `to_binary(10) == "1010"`
-- Recursive definition:
-    - Base case: `n < 2`
-    - General case: `to_binary(n // 2)` + `n % 2`
+- Recursive function to draw a tree
+    - Parameters: initial position, trunk length, angle
+- If trunk is less than 5 pixels
+    - Draw only a segment (green)
+- Otherwise:
+    - Segment for trunk (brown)
+    - At its tip, two branches with the same pattern
+    - 1st branch, with rotation of -30°
+    - 2nd branch, with rotation of +30°
+    - Branch length reduced to 4/5 of the parameter
 
 ---
 
-# Max in list
+![](http://fondinfo.github.io/images/hist/euclid.jpg)
+# Greatest Common Divisor
 
-- Implement `max_in_list(l)`
-    - Returns the maximum value in a list
-- Recursive definition:
-    - Base case: list with one element
-    - General case: maximum of `first` vs `max_in_list(rest)`
+- Read two numbers
+- Compute their Greatest Common Divisor inside a function
+- Display the result of the function
 
----
+>
 
-# `n_th` in list
-
-- Implement `n_th_in_list(l, n)`
-    - Returns the `n_th` element (0-indexed) of list `l`
-- Recursive definition:
-    - Base case: `n == 0`
-    - General case: `n_th_in_list(rest, n-1)`
+Try using both iteration and recursion
+<br>
+Euclid: GCD(a, b) = a, if b = 0;
+<br>
+GCD(a, b) = GCD(b, a mod b), if b > 0
 
 ---
 
-# Search in list
+![](http://fondinfo.github.io/images/misc/cubic-function.png)
+# Bisection, Recursion
 
-- Implement `search_in_list(l, x)`
-    - Returns `True` if `x` is in `l`, `False` otherwise
-- Recursive definition:
-    - Base case: empty list
-    - General case: `x == first` or `search_in_list(rest, x)`
+- Find the zero of the following mathematical function
+    - $f(x) = x^3 - x - 1$, for $1 \leq x \leq 2$
+    - Find *x* such that *$|f(x)| < 0.001$*
+- Define a recursive bisection function
+    - Required parameters: *start of search interval*, *end of search interval*
+    - At each level, call the function on a halved interval
 
----
+>
 
-# Tree properties
-
-- Add to the `Node` class
-    - `count_nodes()`: number of nodes in the tree
-    - `sum_leaves()`: sum of values in leaf nodes
-    - `count_leaves()`: number of leaf nodes
+<https://en.wikipedia.org/wiki/Bisection_method>
 
 ---
 
-# Tree methods
+![](http://fondinfo.github.io/images/fun/bike-lock.png)
+# Password Generation
 
-- Add to the `Node` class
-    - `level(val)`: returns the level (0-indexed) of the node containing `val`
-    - `depth(node)`: returns the depth (0-indexed) of the specified `node`
-        - The root has depth 0
-        - This should be a function (not a method)
+- Generate all passwords of a given length (*arrangements with repetition*)
+    - Parameter: length `n` of the passwords
+    - Parameter: `str` containing possible symbols
+    - Result: a list of strings
+- Algorithm:
+    - Length `0`: the only password is the empty string: `['']`
+    - Otherwise: for each symbol chosen as the first character...
+    - Concatenate it with all passwords of length `n - 1` (recursion)
+
+>
+
+Only recursive solutions will be accepted
+
+---
+
+![](http://fondinfo.github.io/images/fun/elvis-lives.svg)
+# Anagrams
+
+- Generate all anagrams (permutations) of a string
+- Result: a list of strings
+- Algorithm:
+    - Empty string: only itself
+    - Otherwise: for each character...
+    - Concatenate it with all permutations of the remaining characters (*recursion*)
+
+---
+
+![](http://fondinfo.github.io/images/fun/hanoi-tower.png) ![](http://fondinfo.github.io/images/fun/hanoi.svg)
+# Tower of Hanoi
+
+- Three pegs + N disks of decreasing diameter
+- Move all disks from the first to the last peg
+- Only one disk can be moved at a time
+- A disk cannot be placed on top of a smaller disk
+- Use recursion
+
+>
+
+Moving a single disk is immediate.
+<br><br>
+N disks: move N-1 disks to the peg that is neither source nor dest.,
+<br>
+move the last disk to the target peg,
+<br>
+move the remaining N-1 disks again.
+
+---
+
+# Polish Notation
+
+- Read a line of text into a string
+- Write a function that evaluates the string as an expression, in the form:
+    - `"+ 2 7"` (=9)
+- Operands can themselves be expressions:
+    - `"+ * 3 4 15"` (=27)
+- Write a second function that transforms the expression into standard infix notation:
+    - `"((3 * 4) + 15)"`
+- Use recursion
+
+>
+
+Assume all "tokens" are separated by spaces and that all operators have fixed arity
+
+---
+
+![](http://fondinfo.github.io/images/repr/file-system.svg)
+# Documents and Folders
+
+- A hierarchical document management system consists of two types of *nodes* (base class)
+    - *Documents*, characterized by a name and textual content (derived class)
+    - *Folders*, characterized by a name and a list of contained nodes (derived class)
+- Create a hierarchy for the three classes: `Node`, `Document`, `Folder`
+- In the main program body, instantiate and structure various nodes (without user input)
+    - Recreate with objects the structure shown alongside
+
+---
+
+![](http://fondinfo.github.io/images/repr/file-system.svg)
+# Folder Size
+
+- `size` method for all nodes (previous exercise)
+    - Abstract in base class
+    - For a document, length of content
+    - For a folder, sum of sizes of contained nodes
+- Calculate size for the previous exercise
+    - Make up content for the documents present
+- Additionally, `print(indent: int)` method for nodes
+    - To display the tree structure in the terminal
+    - Abstract method in base class
+    - Displays the name of documents and folders
+    - Indents nodes appropriately relative to their containing folder
 
 ---
 
 ![](http://fondinfo.github.io/images/comp/expression.svg)
-# Expression evaluation
+# Expressions
 
-- Define an abstract base class `Expression`
-    - With an abstract method `eval`
-- Then define concrete subclasses, derived from `Expression`
-    - **`Literal`**, containing a single number (value)
+- Define a class hierarchy to represent mathematical expressions
+- *Base class* **`Expression`** with abstract method `eval`
+    - Takes no parameters, returns the `float` value of the expression
+- Concrete *subclasses* of an expression are:
+    - **`Literal`**, containing a constant `float` value
     - **`Sum`**, containing two operands, both expressions
     - **`Product`**, containing two operands, both expressions
-- Instantiate (without *parsing*!) objects to represent this expression:
+- Instantiate objects (without parsing!) to represent this expression:
     - `5 * (3 * 2 + 4)`
-- Calculate the final value, calling `eval` on the root node
+- Calculate final value by calling `eval` on the root node
 
 ---
 
 ![](http://fondinfo.github.io/images/comp/expression.svg)
-# Prefix expressions
+# Prefix Expressions
 
-- Add a `prefix` method to `Expression` (previous ex.)
+- Add a `prefix` method to `Expression` (previous exercise)
     - Generates a string in prefix notation (operator followed by operands)
 - Result from example expression:
     - `"* 5 + * 3 2 4"`
 
-§ py
+``` py
 prod1 = Product(Literal(3), Literal(2))
 sum1 = Sum(prod1, Literal(4))
 prod2 = Product(sum1, Literal(5))
 print(prod2.eval())
 print(prod2.prefix())
-§
+```
 
 >
 
-<https://it.wikipedia.org/wiki/Polish_notation>
+<https://en.wikipedia.org/wiki/Polish_notation>
 
 ---
 
 ![](http://fondinfo.github.io/images/comp/expression.svg)
-# Tree from string
+# Tree from String
 
-- Analyze a string, provided by the user
-    - The string contains an expression in Polish, prefix notation
-    - Generate an object tree of type **Expression** in memory
-- Show the value of the expression, using `eval`
-- Show the infix representation, using `infix`
+- Parse a string provided by the user
+    - The string contains an expression in Polish prefix notation
+    - Construct an object tree in memory of type **Expression**
+- Show expression value using `eval`
+- Show infix representation using `infix`
     - Add an `infix` method to **Expression**
 
 ---
 
-# Strings in nested lists
+# Strings in Nested Lists
 
 - Create a tree of strings
-    - Structure with nested lists
+    - Nested list structure
 
 ``` py
 tree = [["spam"], [["egg", "sausage"], [], "spam"]]
 ```
 
-- Write a function to find the longest string
-    - In a tree, passed as parameter
-    - In the case of an empty list, return `""`
+- Write a function that finds the longest string
+    - In tree, passed as parameter
+    - In case of empty list, return `""`
