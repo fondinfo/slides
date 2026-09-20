@@ -77,11 +77,11 @@
 ![large](https://fondinfo.github.io/images/misc/videogames.png)
 # 👾 Istruzioni per i progetti
 
-- Più avanti, un paio di progetti (*P₁*, *P₂*)
+- Per i *frequentanti*, un paio di progetti (*P₁*, *P₂*)
     - Da sviluppare in alcune settimane
     - Anche a casa, da soli o in coppia
     - Ma tassativamente *non più di due!*
-    - Consegna prefissata, durante il periodo di lezione
+    - Consegna prefissata durante il periodo di lezione
 - Criteri di valutazione
     - Importante l'originalità del codice
     - Voto condizionato dalla verifica di programmazione in lab (≤133%)

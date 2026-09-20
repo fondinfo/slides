@@ -66,6 +66,26 @@ Una soluzione più breve e chiara si ottiene dopo più iterazioni
 
 ---
 
+# ⚠️ Un avvertimento sull'IA
+
+- L'IA generativa **non può sostituire** l'allenamento al *problem solving* e al *pensiero computazionale*
+    - Quelle abilità si sviluppano solo risolvendo i problemi da soli
+- ✅ Va bene farsi *spiegare* un concetto, chiedere *esempi* ed *esercizi* mirati
+- ⛔ Non va bene usarla come “spalla” nella **soluzione** degli esercizi
+- Rischio: delegare proprio il ragionamento che dovreste allenare
+    - Risolvere un problema con la guida di un compagno o della IA <br> non allena a *generare le idee* per risolverlo
+- Gli studi recenti confermano il rischio
+    - Chi usa l'IA migliora i voti dei compiti a casa…
+    - Ma **peggiora ai test in aula** (-20%)
+
+>
+
+👉 [Strömberg et al., "The generative AI learning penalty in secondary school", VoxEU/CEPR](https://cepr.org/voxeu/columns/generative-ai-learning-penalty-secondary-school)
+<br>
+👉 [OECD, PISA 2025 — risultati su IA e apprendimento](https://www.thestar.com.my/tech/tech-news/2026/09/09/school-students-who-use-ai-get-worse-test-scores-oecd-warns)
+
+---
+
 ![large](http://fondinfo.github.io/images/algo/origami.svg) Gli origami sono algoritmi
 # 💡️ Elementi di un algoritmo
 
