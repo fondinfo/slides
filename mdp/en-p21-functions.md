@@ -315,10 +315,6 @@ For example, with `x = 3` and `y = 4` the two results are `-2` and `4`
 - Cartesian coords `$(x, y)$` ⇒ Polar `$(r, \theta)$`
     - `$\begin{cases}r = \sqrt{x^2 + y^2} = hypot(x, y) \\ \theta = atan2(y, x)\end{cases}$`
 
->
-
-<https://github.com/tomamic/fondinfo/wiki/P03-Funzioni#coordinate-polari>
-
 ---
 
 ![](http://fondinfo.github.io/images/fun/move-around.svg)

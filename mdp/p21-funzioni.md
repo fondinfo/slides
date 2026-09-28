@@ -316,10 +316,6 @@ Ad esempio, con `x = 3` e `y = 4` i due risultati sono `-2` e `4`
 - Coord. *cartesiane* `$(x, y)$` ⇒ *polari* `$(r, \theta)$`
     - `$\begin{cases}r = \sqrt{x^2 + y^2} = hypot(x, y) \\ \theta = atan2(y, x)\end{cases}$`
 
->
-
-<https://github.com/tomamic/fondinfo/wiki/P03-Funzioni#coordinate-polari>
-
 ---
 
 ![](http://fondinfo.github.io/images/fun/move-around.svg)
