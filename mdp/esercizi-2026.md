@@ -127,3 +127,142 @@ Considerare la somma delle componenti *R, G, B*
 - Per ognuno, scegliere casualmente raggio e colore
 - Fermarsi quando il raggio diventa più piccolo di 10
 
+---
+
+# Esercitazione 2 (2026-10-05)
+
+---
+
+![](https://fondinfo.github.io/images/misc/solids.png)
+# 2.1 Funzione, volume del cilindro
+
+- Definire una funzione `cylinder_volume` per il calcolo del volume di un cilindro
+    - Parametri: raggio e altezza come `float`
+    - Risultato: volume ($\pi r^2h$) come `float`
+    - Validazione: generare un `ValueError` con messaggio esplicativo se raggio o altezza negativi
+- Invocare la funzione dalla shell interattiva
+    - Verificare con diversi valori di prova
+    - Sia argomenti corretti che errori
+- Aggiungere poi al programma una funzione `main`
+    - Chiedere all'utente i due valori
+    - Chiamare `cylinder_volume` con questi parametri
+    - Infine mostrare all'utente il risultato
+
+---
+
+# 2.2 Fattoriale
+
+- Definire una funzione `factorial`
+    - Parametro: intero positivo $n$
+    - Se $n$ è $0$, il risultato è $1$ per definizione matematica
+    - Altrimenti, è il prodotto tra i primi $n$ numeri naturali
+- Definire una funzione `main`
+    - Chiedere un numero all'utente e mostrarne il fattoriale
+
+>
+
+Memorizzare in una variabile il risultato parziale; a ogni ciclo, moltiplicarla per il nuovo numero
+
+---
+
+![](https://fondinfo.github.io/images/misc/letters.png)
+# 2.3 Gruppi di lettere
+
+- Definire una funzione `count_groups`
+- Parametro: un testo
+- Risultato: due valori
+    - Quante lettere del testo sono comprese nel gruppo `A-M`
+    - Quante nel gruppo `N-Z`
+    - Senza distinguere maiuscole e minuscole
+- Definire una funzione `main`
+    - Chiamare `count_groups` con un testo fornito dall'utente e mostrare i risultati
+    - Ripetere queste operazioni in un ciclo
+    - Finchè l'utente non fornisce una riga vuota, che non deve essere elaborata
+
+---
+
+![](https://fondinfo.github.io/images/draw/n-points.svg)
+# 2.4 Punti allineati
+
+- Chiedere all'utente il numero *n* di punti da visualizzare
+- Chiedere le coordinate del primo e dell'ultimo punto
+- Mostrare *n* punti su canvas 400×400
+    - Punti allineati ed equispaziati
+    - Ciascun punto è un cerchietto di raggio 5
+
+---
+
+![](https://fondinfo.github.io/images/draw/n-points.svg)
+# 2.5 Punti colorati
+
+- Riprendere l'esercizio precedente
+- Chiedere all'utente i colori del primo e dell'ultimo punto
+- Cambiare il colore gradualmente da un punto all'altro
+    - Variare ciascuna componente di colore
+    - Dal livello iniziale fino a quello finale
+- Per esempio: primo punto rosso saturo, ultimo punto blu saturo
+
+---
+
+![](https://fondinfo.github.io/images/misc/characters.png)
+# 2.6 Carattere Unicode
+
+- Chiedere all'utente un *numero*
+- Visualizzare il carattere Unicode corrispondente
+- Ripetere le operazioni in un ciclo, finchè l'utente non inserisce una *riga vuota*
+
+>
+
+Usare la funzione `chr` per convertire un codice nel carattere corrispondente
+
+---
+
+![](https://fondinfo.github.io/images/misc/gold-price.svg)
+# 2.7 Valori sopra e sotto la media
+
+- Chiedere all'utente una sequenza di interi
+    - Sequenza terminata da $0$ (*sentinella*)
+- Calcolare e mostrare il valore medio
+- Elencare i valori sotto alla media
+- Elencare i valori sopra (o uguali) alla media
+
+>
+
+Aggiungere ciascun valore a una lista inizialmente vuota, con `append`
+
+---
+
+![](https://fondinfo.github.io/images/games/diff-angle.svg)
+# 2.8 Super Sprint, direzione [P1]
+
+- Partire dall'animazione della pallina vista a lezione
+    - Partire da *(200, 200)* in un canvas *400×400*
+- Impostare variabili globali `v = 4`, `angle = 0`
+    - `v` per ampiezza dello spostamento
+    - `angle` per direzione dello spostamento
+    - Usare `move_around` da `polar`
+- Cambio di direzione, in base al puntatore del mouse
+    - Se è a sinistra, diminuire `angle` di `90/8`
+    - Se è a destra, aumentare `angle` di `90/8`
+
+>
+
+Da `polar` <https://fondinfo.github.io/play/?polar.py>
+<br>
+`d_tgt, a_tgt = to_polar(dist_vec(pos, tgt))`
+<br>
+Distanza tra pos attuale e target; angolo che indirizza verso target
+<br>
+Poi, valutare la differenza rispetto all'angolo attuale
+
+---
+
+![](https://fondinfo.github.io/images/games/super-sprint.png)
+# 2.9 Super Sprint, sprite [P1]
+
+- Continuare l'esercizio 2.8
+- Disegnare un'automobile anzichè una pallina
+    - Ritagliare l'immagine da [`super-sprint.png`](https://fondinfo.github.io/sprites/super-sprint.png)
+    - [`g2d.draw_image`](https://github.com/fondinfo/fondinfo#images-and-sounds)
+- Scegliere l'immagine in base al valore attuale di `angle`
+
