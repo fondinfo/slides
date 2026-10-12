@@ -479,8 +479,8 @@ Premesse | Conclusione
 # ⭐ Negazione con quantificatori
 
 - Per negare un enunciato che contiene quantificatori, occorrono due modifiche:
-    - **➊** Sostituire tutti i `$\forall$` con `$\exists$`, e viceversa
-    - **➋** Negare il predicato
+    - **①** Sostituire tutti i `$\forall$` con `$\exists$`, e viceversa
+    - **②** Negare il predicato
 - Proprietà analoga a *De Morgan*
     - Infatti i quantificatori sono sostanzialmente `$\land$` o `$\lor$` allargati
 - Esempi
@@ -537,8 +537,8 @@ De Morgan | `$(A \cap B)' = A' \cup B'$` | `$\lnot (P \land Q) \equiv \lnot P \l
 # ⭐ Principio di induzione
 
 - Sia `$P(n)$` un predicato definito su `$ℕ$`, tale che:
-    - **(1)** `$P(1)$` è vero
-    - **(2)** `$\forall n$`, supponendo `$P(n)$` vero, <br> segue che anche `$P(n+1)$` è vero
+    - **①** `$P(1)$` è vero
+    - **②** `$\forall n$`, supponendo `$P(n)$` vero, <br> segue che anche `$P(n+1)$` è vero
 - Allora `$P(n)$` risulta vero `$\forall n$`
 
 Premesse | Conclusione
@@ -556,9 +556,9 @@ Alcuni predicati sono definiti a partire da un dato `$k$`, anzichè da 1
 - Definiamo per comodità `$G(n) = \frac{n \cdot (n+1)}{2}$`
 - Definiamo il predicato `$P(n)$` come: `$1 + 2 +  \cdot  \cdot  \cdot  + n = G(n)$`
 - Dimostriamo *per induzione* che il predicato è vero `$\forall n$`
-- **(1)** Il predicato per `$n=1$` è vero, infatti:
+- **①** Il predicato per `$n=1$` è vero, infatti:
     - `$G(1) = \frac{1 \cdot (1+1)}{2} = 1$`
-- **(2)** Supponiamo `$P(n)$` vero, ne segue `$P(n+1)$` vero, infatti:
+- **②** Supponiamo `$P(n)$` vero, ne segue `$P(n+1)$` vero, infatti:
     - Per la somma fino a `$n+1$`, bisogna aggiungere un termine:
     - `$1 + 2 + ... + n + n+1 = G(n) + n+1 = \\ \frac{n \cdot (n+1)}{2} + n+1 = \frac{n^2 + 3n + 2}{2} = \\ \frac{(n+1) \cdot (n+2)}{2} = G(n+1)$`
 - Quindi la formula vale `$\forall n$`
@@ -575,8 +575,8 @@ Alcuni predicati sono definiti a partire da un dato `$k$`, anzichè da 1
     - poi ultimo disco → destinazione
     - infine gli altri → destinazione, in `$R(n)$` mosse
 - Dimostrare *per induzione* che il numero di mosse per spostare `$n$` dischi è `$R(n) = 2^n-1$`
-- **(1)** Per 1 disco, 1 mossa: `$1 = 2^1-1 = R(1)$`
-- **(2)** Supponiamo servano `$R(n)$` mosse per `$n$` dischi...
+- **①** Per 1 disco, 1 mossa: `$1 = 2^1-1 = R(1)$`
+- **②** Supponiamo servano `$R(n)$` mosse per `$n$` dischi...
     - Allora per `$n+1$` dischi:
     - `$R(n) + 1 + R(n) = 2 \cdot (2^n-1)+1 = 2^{n+1}-1 = R(n+1)$`
 - Quindi la formula vale `$\forall n$`
