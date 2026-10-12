@@ -266,3 +266,144 @@ Poi, valutare la differenza rispetto all'angolo attuale
     - [`g2d.draw_image`](https://github.com/fondinfo/fondinfo#images-and-sounds)
 - Scegliere l'immagine in base al valore attuale di `angle`
 
+---
+
+# Esercitazione 3 (2026-10-12)
+
+---
+
+![](https://fondinfo.github.io/images/misc/triangle-notations.svg)
+# 3.1 Classe triangolo
+
+- Creare una classe `Triangle`
+    - Campi: misure dei tre lati
+    - Metodo per il calcolo del perimetro
+    - Metodo per il calcolo dell'area
+- Definire una funzione `main`
+    - Chiedere all'utente le misure dei tre lati
+    - Istanziare un oggetto di classe `Triangle`
+    - Usarne i metodi per calcolare perimetro e area
+    - Mostrare all'utente i risultati
+
+>
+
+$area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}, s = \frac{a+b+c}{2}$
+
+---
+
+![](https://fondinfo.github.io/images/oop/ball-object.svg) ![](https://fondinfo.github.io/images/oop/ball-uml.svg) Class diagram UML
+# 3.2 Pallina al centro
+
+- Modificare la classe `Ball` presente negli esempi
+- Parte al centro, in direzione casuale
+    - Alto, basso, sinistra, destra
+    - Costruttore senza parametri (oltre a `self`)
+- Arrivata al bordo, riparte dal centro
+    - Nuova direzione casuale
+- Gestire l'animazione di una pallina
+    - Come nel codice di esempio
+
+---
+
+![](https://fondinfo.github.io/images/oop/ball-object.svg) ![](https://fondinfo.github.io/images/oop/ball-uml.svg) Class diagram UML
+# 3.3 Ritorno a casa
+
+- Riprendere l'esercizio precedente
+- Parametri del costruttore per posizione iniziale
+    - La posizione iniziale è la *home* della pallina
+- Arrivata al bordo, la pallina riparte dalla sua *home*
+    - Anzichè dal centro
+- Creare ed animare due palline
+    - Con due *home* diverse
+
+---
+
+# 3.4 Somma di cifre
+
+- Definire una funzione `sum_digits`, che prende come parametro un numero naturale $n$ e restituisce la somma delle sue cifre decimali
+- Definire inoltre una funzione `main`, in cui chiedere all'utente un numero iniziale
+    - Poi, invocare ripetutamente la funzione `sum_digits`, usando di volta in volta come argomento il risultato precedente
+    - Mostrare all'utente ciascun risultato ottenuto
+    - Il programma termina quando si ottiene un numero con una sola cifra
+- Per esempio, la sequenza ottenuta a partire da $9875$ è: $29, 11, 2$.
+
+---
+
+# 3.5 Tabella delle distanze
+
+- Considerare tutti gli accoppiamenti tra due numeri: `x` e `y`
+    - Ciascun numero compreso tra 1 e 5
+- Mostare in tabella la distanza (`abs`) tra i due numeri
+    - Una riga per ogni valore di `y`
+    - Una colonna per ogni valore di `x`
+
+``` text
+0   1   2   3   4
+1   0   1   2   3
+2   1   0   1   2
+3   2   1   0   1
+4   3   2   1   0
+```
+
+>
+
+Usare due cicli for annidati; cominciare a scrivere il solo ciclo sulla `x`, con `y` costante
+
+---
+
+![](https://fondinfo.github.io/images/draw/blue-row.svg)
+# 3.6 Cerchi blu
+
+- Chiedere all'utente un numero $n$
+- Disegnare una riga di $n$ cerchi blu
+    - Affiancati, su canvas 500×500
+    - Intensità di blu linearmente crescente
+- Disegno simile alla figura, però…
+    - Lasciare un margine di 25px rispetto ai bordi laterali del canvas
+    - Intensità di blu del primo cerchio: 50
+    - Intensità dell'ultimo: 200
+
+---
+
+![](https://fondinfo.github.io/images/draw/n2-circles.svg)
+# 3.7 Figure affiancate
+
+- Definire una funzione `draw_figure`
+    - Parametri per: centro, raggio, $n$
+    - Disegnare una figura di $n$ cerchi concentrici
+    - Il raggio più interno è $\frac{1}{n}$ rispetto al più esterno
+    - Colorare i cerchi in grigio: dal nero esterno al bianco interno
+- In `main`:
+    - Chiedere all'utente un numero $n$
+    - In un canvas $500×500$, disegnare $n$ figure uguali affiancate
+    - Occupare tutto lo spazio, in orizzontale
+
+---
+
+![](https://fondinfo.github.io/images/misc/characters.png)
+# 3.8 Codici pari e dispari
+
+- Per ogni riga di testo inserita dall'utente, stampare:
+    - Il numero delle minuscole con codice Unicode dispari: `a, c, e…`
+    - Il numero delle minuscole con codice Unicode pari: `b, d, f…`
+    - Es. `"Python"`: 3 minuscole con codice pari, 2 con codice dispari
+- Il programma si interrompe quando l'utente inserisce una *riga vuota*
+- Mostrare infine anche i conteggi complessivi
+    - Minuscole con codice dispari
+    - Minuscole con codice pari
+    - Numero di righe non vuote
+
+---
+
+![](https://fondinfo.github.io/images/games/super-sprint.png)
+# 3.9 Super Sprint, classe Car [P1]
+
+- Creare una classe `Car`, partendo dall'esempio `Ball`
+- Memorizza la direzione in un campo `angle`
+- Metodo `move`
+    - Aggiornare la posizione
+    - Ogni 2 frame, incrementare `angle` di `90/8`
+    - Ogni 64 frame, passare da rotazione oraria a antioraria e viceversa
+- Metodo `sprite`
+    - Ritagliare l'immagine da [`super-sprint.png`](https://fondinfo.github.io/sprites/super-sprint.png)
+    - Scegliere l'immagine in base al valore attuale del campo `angle`
