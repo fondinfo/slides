@@ -399,7 +399,7 @@ Usare due cicli for annidati; cominciare a scrivere il solo ciclo sulla `x`, con
 # 3.9 Super Sprint, classe Car [P1]
 
 - Creare una classe `Car`, partendo dall'esempio `Ball`
-- Memorizza la direzione in un campo `angle`
+- Memorizzare la direzione in un campo `angle`
 - Metodo `move`
     - Aggiornare la posizione
     - Ogni 2 frame, incrementare `angle` di `90/8`
