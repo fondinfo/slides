@@ -403,7 +403,7 @@ Usare due cicli for annidati; cominciare a scrivere il solo ciclo sulla `x`, con
 - Metodo `move`
     - Aggiornare la posizione
     - Ogni 2 frame, incrementare `angle` di `90/8`
-    - Ogni 64 frame, passare da rotazione oraria a antioraria e viceversa
+    - Ogni 64 frame, passare da rotazione oraria a antioraria e viceversa (cambiare il segno dell'incremento)
 - Metodo `sprite`
     - Ritagliare l'immagine da [`super-sprint.png`](https://fondinfo.github.io/sprites/super-sprint.png)
     - Scegliere l'immagine in base al valore attuale del campo `angle`
