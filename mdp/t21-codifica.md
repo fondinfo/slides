@@ -30,18 +30,24 @@
 
 - Sistema basato su simboli, che permette la rappresentazione dell’informazione
 - *Simbolo*: elemento atomico
-- *Alfabeto*: insieme dei simboli possibili (`$A$`)
+- *Alfabeto*: insieme dei simboli possibili ($A$)
 - *Cardinalità*: numero di simboli dell’alfabeto
-- *Stringa*: sequenza di simboli (`$s \in A^\star$`)
-- *Linguaggio*: insieme stringhe ben formate (`$L \subseteq A^\star$`)
+- *Stringa*: sequenza di simboli ($s \in A^\star$)
+- *Linguaggio*: insieme stringhe ben formate ($L \subseteq A^\star$)
+  <br>
+  <br>
+- **Codifica**: regole di corrispondenza biunivoca
+    - Tra una stringa di un codice
+    - E una stringa di un altro codice
+- Stringa breve in codice ricco di simboli, corrisponde a… <br>
+    - Stringa lunga in $A_2$ più ridotto
 
 ---
 
 ![](http://fondinfo.github.io/images/repr/child-fingers.png)
-# 💡️ Codice posizionale
+# 💡️ Numerazione posizionale
 
-- Un numero naturale può essere rappresentato con una notazione posizionale
-    - Somma di potenze positive della base
+- Un numero naturale è rappresentabile come somma di potenze positive della *base* di numerazione
 
 `$$
 N = c_0 \cdot base^0 + c_1 \cdot base^1 + \cdots + c_n \cdot base^n
@@ -50,19 +56,9 @@ $$`
 ![](http://fondinfo.github.io/images/repr/positional-notation.svg)
 
 - Sistemi di numerazione posizionali di uso comune
-    - Decimale (base 10; c: `$0-9$`)
-    - Binario (base 2; c: `$0-1$`)
-    - Esadecimale (base 16; c: `$0-9, A-F$`)
-
----
-
-# 💡️ Codifica dell’informazione
-
-- Codifica: regole di corrispondenza per passare da un certo codice a un altro
-- Corrispondenza biunivoca
-    - Tra una stringa di un codice
-    - E una stringa di un altro codice
-- A una certa stringa in un alfabeto ricco di simboli, corrisponde una stringa più lunga in un alfabeto più ridotto
+    - Decimale: $base=10$; $A=\\{0,1,…,9\\}$
+    - Binario: $base=2$; $A=\\{0,1\\}$
+    - Esadecimale: $base=16$; $A=\\{0,1,…,9,A,B,…,F\\}$
 
 ---
 
@@ -75,8 +71,8 @@ $$`
 ![](http://fondinfo.github.io/images/repr/sum-binary.jpg)
 # 💡️ Codice binario
 
-- Base 2; c: `$0-1$`
-- Informazione digitale nei calcolatori rappresentata con una sequenza di 0 e 1
+- Base 2; cifre `$0-1$`
+- Informazione digitale rappresentata nei calcolatori
     - Sistema ideato da Leibniz, ~1700
     - Calcolatore programmabile di Zuse, ~1940
 - **Bit**: singolo elemento di una sequenza binaria
@@ -96,7 +92,7 @@ $$`
 # ⭐ Codifica decimale → binaria
 
 - *(1)* Dividere il numero decimale per 2
-- *(2)* Il resto è il valore del nuovo bit, a sinistra
+- *(2)* Il resto è il nuovo bit del risultato, da anteporre a sinistra
 - *(3)* Il quoziente è il numero con cui continuare *(loop)*
 - Ossia continuare a dividere per 2 il quoziente, finché non si annulla
 - Es.: `$35_{dec} = 00100011_{bin} = 1·2^0 + 1·2^1 + 1·2^5$`
@@ -115,7 +111,7 @@ $$`
 ![](http://fondinfo.github.io/images/repr/binary-fingers.svg) … 819
 # 🧪 Numeri naturali
 
-- Rappresentare un numero naturale `$N$` in forma binaria
+- Rappresentazione binaria di numero naturale `$N$`
 - Occorrono `$k$` bit, t.c. `$2^k > N$`
 - Es. 4 bit per numeri naturali da 0 a 15
 - Un calcolatore assegna un numero fisso di bit per diversi tipi di informazione
@@ -123,8 +119,6 @@ $$`
     - **Overflow**, **underflow**
 
 ---
-
-# 🧪 Potenze di 2
 
 | | |
 |---|---|
@@ -136,10 +130,23 @@ $$`
 | `$2^6 = 64$`  | `$2^{24} = 16'777'216$` |
 | `$2^7 = 128$` | `$2^{32} = 4'294'967'296$` |
 | `$2^8 = 256$` | `$2^{64} ≃ 16 × 10^{18}$` |
+# 🧪 Potenze di 2
 
-$1K = 2^{10} ≃ 10^3$, $1M = 2^{20} ≃ 10^6$, $1G = 2^{30} ≃ 10^9$
 
-*Proprietà potenze*: $a^x·a^y = a^{x+y}, a^x/a^y = a^{x-y}, (a^x)^y = (a^y)^x = a^{x·y}$
+| | | |
+|---|---|---|
+| 1K *(Kilo)* | $= 2^{10}$ | $≃ 10^3$    |
+| 1M *(Mega)* | $= 2^{20}$ | $≃ 10^6$    |
+| 1G *(Giga)* | $= 2^{30}$ | $≃ 10^9$    |
+| 1T *(Tera)* | $= 2^{40}$ | $≃ 10^{12}$ |
+| 1P *(Peta)* | $= 2^{50}$ | $≃ 10^{15}$ |
+| 1E *(Exa)*  | $= 2^{60}$ | $≃ 10^{18}$ |
+
+*Proprietà potenze*:
+
+$\boxed{\mathstrut a^x·a^y = a^{x+y}},
+\boxed{a^x/a^y = a^{x-y}},
+\boxed{(a^x)^y = (a^y)^x = a^{x·y}}$
 
 ---
 
