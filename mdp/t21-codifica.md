@@ -47,7 +47,8 @@
 N = c_0 \cdot base^0 + c_1 \cdot base^1 + \cdots + c_n \cdot base^n
 $$`
 
-- Es. `$587_{dec} = 7 \cdot 10^0 + 8 \cdot 10^1 + 5 \cdot 10^2$`
+![](http://fondinfo.github.io/images/repr/positional-notation.svg)
+
 - Sistemi di numerazione posizionali di uso comune
     - Decimale (base 10; c: `$0-9$`)
     - Binario (base 2; c: `$0-1$`)
