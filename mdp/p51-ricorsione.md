@@ -313,6 +313,61 @@ print(count_tree(tree))
 
 ---
 
+# 💡️ Alberi di dizionari
+
+- Come `Folder`, ma i dati stanno in un `dict`
+    - Struttura tipica dei dati *JSON* (web, configurazioni)
+- Nodo: dizionario con chiavi note
+    - P.es. `node["children"]` invece di `node._children`
+    - Le chiavi sono sempre stringhe
+    - Alcune possono mancare, metodo `get` con default
+- I figli sono in una *lista* di nodi dello stesso tipo
+    - Foglia: lista dei figli *vuota o assente*
+    - Nome della lista di figli dipende dall'applicazione
+
+---
+
+# 🧪 Esempio - Struttura di un sito
+
+``` py
+site = {"title": "Home", "children": [
+    {"title": "News", "children": [
+        {"title": "2026"},
+        {"title": "Archive"},
+    ]},
+    {"title": "About", "content": "Best news website"},
+]}
+
+def count_pages(node: dict) -> int:
+    count = 1  # the node itself
+    for child in node.get("children", []):  # leaf without the key
+        count += count_pages(child)
+    return count
+
+print(count_pages(site))                 # 5
+print(count_pages(site["children"][0]))  # 3
+```
+
+---
+
+# 🧪 Dizionari e JSON
+
+- *JSON*: formato di testo per scambiare dati
+    - Oggetti → `dict`, array → `list`, testo → `str`, numeri → `int`/`float`
+    - `true`/`false`/`null` → `True`/`False`/`None`
+- Modulo `json`: da testo a dati e viceversa
+
+``` py
+import json
+
+text = """{"title": "Home", "children": [{"title": "About", "children": []}]}"""
+site = json.loads(text)             # str → dict
+print(count_pages(site))            # 2
+print(json.dumps(site, indent=2))   # dict → str, formatted
+```
+
+---
+
 # 🏊 Esercizi
 
 ---
@@ -558,3 +613,28 @@ tree = [["spam"], [["egg", "sausage"], [], "spam"]]
 - Scrivere una funzione che trova la stringa più lunga
     - In albero, passato come parametro
     - In caso di lista vuota, restituire `""`
+
+
+---
+
+# Mappa del sito
+
+- Riprendere l'albero di dizionari `site` visto a lezione
+    - Ogni pagina ha un `"title"` e una lista `"children"`
+- Funzione ricorsiva `show(node, indent)`
+    - Mostra il titolo di ogni pagina, uno per riga
+    - Indenta ogni livello di 4 spazi in più rispetto alla pagina che lo contiene
+- Funzione ricorsiva `find_page(node, title)`
+    - Restituisce il *dizionario* della pagina con quel titolo
+    - Se non esiste, restituisce `None`
+- Con `find_page` e `count_pages`, mostrare quante pagine contiene `"News"` (compresa se stessa)
+
+>
+
+Risultato atteso di `show(site, 0)`:
+<br>
+`Home` / `····News` / `········2026` / `········Archive` / `····About`
+<br><br>
+`find_page`: se il titolo è quello cercato, restituire il nodo; altrimenti provare con i figli, fermandosi al primo trovato.
+<br>
+Attenzione a distinguere `None` dal risultato di una ricerca riuscita.

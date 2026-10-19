@@ -399,7 +399,7 @@ Usare due cicli for annidati; cominciare a scrivere il solo ciclo sulla `x`, con
 # 3.9 Super Sprint, classe Car [P1]
 
 - Creare una classe `Car`, partendo dall'esempio `Ball`
-	- Modulo della velocità sempre pari a 4
+    - Modulo della velocità sempre pari a 4
 - Campo `angle` per memorizzare la direzione
 - Metodo `move`, per aggiornare la posizione
     - Ogni 2 frame, incrementare `angle` di una quantità fissa
@@ -408,3 +408,144 @@ Usare due cicli for annidati; cominciare a scrivere il solo ciclo sulla `x`, con
 - Metodo `sprite`
     - Ritagliare l'immagine da [`super-sprint.png`](https://fondinfo.github.io/sprites/super-sprint.png)
     - Scegliere l'immagine in base al valore attuale del campo `angle`
+
+---
+
+# Esercitazione 4 (2026-10-19)
+
+---
+
+![](https://fondinfo.github.io/images/comp/orders.svg)
+# 4.1 Modello esponenziale
+
+- Creare una classe delle curve esponenziali
+    - $y = a\cdot e^{b x} + c$
+- Campi per $a, b, c$, da inizializzare nel *costruttore*
+    - Se $a=0$ o $b=0$, il modello non è exp
+    - ⇒ `ValueError` con messaggio esplicativo
+- Metodo `predict`, con parametro $x$
+    - Risultato: valore della funzione in $x$
+- Nella funzione `main`
+    - Istanziare un *singolo* modello exp, con coefficienti forniti dall'utente
+    - Valutare il modello con `predict`, in diversi punti $x$ forniti dall'utente
+    - Il programma termina all'inserimento di una riga vuota
+
+```
+from math import e, exp  # use either one of them
+```
+
+---
+
+![](https://fondinfo.github.io/images/misc/calendar-rows.png)
+# 4.2 Calendario da tavolo
+
+- L'utente inserisce:
+    - La lunghezza del mese (28-31)
+    - Il primo giorno del mese <br> (lunedì=0 ... domenica=6)
+- Visualizzare il calendario del mese
+    - Sulla console *testuale*, senza grafica
+    - Disporre i giorni in una griglia, una riga alla volta
+    - 7 colonne, la prima per i lunedì, l'ultima per le domeniche
+
+>
+
+Procedere sempre una riga alla volta (come macchina da scrivere)
+<br>
+Partire con il caso più semplice: lunedì come primo giorno
+
+---
+
+![](https://fondinfo.github.io/images/draw/xmas-triangle.svg)
+# 4.3 Triangolo di cerchi colorati
+
+- Chiedere all'utente un numero `n`
+- Generare `n` righe di cerchi, allineate a sinistra
+- La prima riga contiene un solo cerchio
+- Ogni riga successiva contiene un cerchio in più
+- Ogni cerchio ha un colore casuale
+
+---
+
+![](https://fondinfo.github.io/images/draw/xmas-tree.svg)
+# 4.4 Albero di cerchi colorati
+
+- Chiedere all'utente un numero `n`
+- Generare `n` righe di cerchi, allineate al centro
+- Il numero di riga corrisponde al numero di cerchi da disegnare
+- Ogni cerchio ha un colore casuale
+- Aggiungere in fondo una riga con un solo cerchio
+
+---
+
+![](https://fondinfo.github.io/images/games/anim-bounce.svg)
+# 4.5 Pallina che cresce
+
+- Modificare `Ball` nell'esempio `bounce` (con `Arena`)
+    - <https://fondinfo.github.io/play/?c07_bounce.py>
+    - Mantenere gli stessi campi: *x, y, w, h, dx, dy*
+    - A ogni rimbalzo, il *raggio* aumenta di 2 pixel
+    - Fino a un massimo di 20 pixel, poi torna a 10
+- Definire metodo `grow`, senza parametri oltre `self`
+    - Calcolare la posizione centrale e il raggio attuali
+    - Modificare il raggio come richiesto (var locale)
+    - Rivalutare *x, y, w, h* della pallina
+- Restituire `None` nel metodo `sprite`
+- Nel `tick`, disegnare un rettangolo quando lo sprite è `None`
+
+---
+
+![](http://fondinfo.github.io/images/fun/polygon.svg) ![](http://fondinfo.github.io/images/fun/move-around.svg)
+# 4.6 Poligono in rotazione
+
+- Definire una funzione `regular_poly`
+    - Parametri: numero $n$ dei lati, centro $p$ e raggio $r$ del cerchio circoscritto, angolo $a$ del primo vertice
+    - Trovare gli $n$ vertici attorno al centro con `move_around`, tutti a distanza $r$
+    - Restituire una lista con tutti i punti del poligono, ciascuno rappresentato come una tupla
+- Funzioni `main` e `tick`
+    - Chiamare `regular_poly` con dati dell'utente
+    - Unire i vertici (anche l'ultimo al primo) per disegnare un poligono al centro del canvas
+    - Mostrare rotazione del poligono attorno al centro
+
+---
+
+![](https://fondinfo.github.io/images/games/super-sprint.png)
+# 4.7 Super Sprint, guida [P1]
+
+- Rendere la classe `Car` un *actor*
+- Aggiungerla all'arena fornita, 500×500, con `spawn`
+- Sterzata: cambio di direzione *graduale*
+    - Variazione fissa a ogni frame
+    - Se utente preme freccia verso destra, o sinistra
+- Accelerazione e frenata: cambio di velocità *graduale*
+    - Variazione fissa a ogni frame
+    - Se utente preme freccia verso alto, o basso
+- Prendere i tasti da `arena.current_keys()`
+
+---
+
+# 4.8 Super Sprint, avversari [P1]
+
+- Creare un personaggio `Opponent`, per le auto avversarie
+- Aggiungerla all'arena fornita, 500×500, con `spawn`
+- 🔁 Traiettoria fissa di tre punti da seguire, come *target* consecutivi
+    - *Waypoints*: (100, 100), (400, 100), (250, 360)
+    - Target attuale abbastanza vicino? (~ 25px)
+    - ⇒ Waypoint successivo nella traiettoria diventa target
+- Orientare *gradualmente* l'auto verso il target
+- Rallentare *gradualmente*, se l'auto è molto disallineata dal target
+
+---
+
+# 4.9 Super Sprint, collisioni [P1]
+
+- Gestire la collisione tra due auto
+    - In metodo `move`, controllare `arena.collisions()`
+- Cambio direzione e velocità semplicistico, p.es.:
+    - Perturbare casualmente di ±1 la posizione
+    - Se altra auto è a sinistra/destra, aumentare/diminuire direzione di 1
+    - Se altra auto è dietro/avanti, aumentare/diminuire velocità di 1
+
+```
+o_dist, o_angle = to_polar(dist_vec(self.pos(), other.pos()))
+diff_angle = coterminal(o_angle - self._angle * rot) # …
+```
