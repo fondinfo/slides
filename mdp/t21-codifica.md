@@ -31,7 +31,7 @@
 - Sistema basato su simboli, che permette la rappresentazione dell’informazione
 - *Simbolo*: elemento atomico
 - *Alfabeto*: insieme dei simboli possibili (`$A$`)
-- *Cardinalità* del codice: numero di simboli dell’alfabeto
+- *Cardinalità*: numero di simboli dell’alfabeto
 - *Stringa*: sequenza di simboli (`$s \in A^\star$`)
 - *Linguaggio*: insieme stringhe ben formate (`$L \subseteq A^\star$`)
 
