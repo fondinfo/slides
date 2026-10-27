@@ -635,7 +635,7 @@ diff_angle = coterminal(o_angle - self._angle * rot) # …
 
 - Definire una sequenza di *checkpoint* lungo il circuito (traguardo compreso)
 - L'auto deve attraversarli in ordine, per far avanzare il conteggio di un *giro*
-    - Attraversare un checkpoint "sbagliato" (fuori ordine) non ha effetto
+    - Attraversare un checkpoint “sbagliato” (fuori ordine) non ha effetto
 - Dopo 3 giri completi, la gara termina
 - Mostrare a schermo: giro corrente e tempo trascorso
 
@@ -651,7 +651,7 @@ Un checkpoint può essere un *actor*, per sfruttare il controllo delle collision
 - Se l'auto tocca un bordo esterno o un muro…
     - La velocità si riduce bruscamente (l'auto "sbatte")
 - Opzionalmente, definire alcuni tratti *fuoripista*
-    - Se l'auto è fuori dai bordi della pista (sull'"erba")…
+    - Se l'auto è fuori dai bordi della pista (sull'“erba”)…
     - La velocità massima raggiungibile si riduce (per es. a un terzo)
 
 >
