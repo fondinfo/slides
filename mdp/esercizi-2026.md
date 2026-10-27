@@ -549,3 +549,111 @@ Partire con il caso più semplice: lunedì come primo giorno
 o_dist, o_angle = to_polar(dist_vec(self.pos(), other.pos()))
 diff_angle = coterminal(o_angle - self._angle * rot) # …
 ```
+
+---
+
+# Esercitazione 5 (2026-10-26)
+
+---
+
+![](https://fondinfo.github.io/images/misc/clamp.svg)
+# 5.1 Clamp su lista
+
+- Definire una funzione con due parametri
+    - Una lista di `float`
+    - Un limite superiore fissato, come `float`
+    - Senza risultato esplicito: lista modificata *in place*
+- Per ciascun valore nella lista
+    - Se il valore supera il limite…
+    - Esso viene troncato, cioè sostituito con il limite stesso
+- Per esempio. con limite fissato a 3
+    - `[2, 3, 5, 1, 4]` → `[2, 3, 3, 1, 3]`
+
+---
+
+# 5.2 Lista di cifre
+
+- Definire una funzione `digits`
+    - Parametro: numero intero positivo
+    - Risultato: lista di `int`
+    - Cifre che compongono il numero, dalle unità in su
+- Divedere il numero ripetutamente per 10
+    - Ad ogni passaggio, la cifra è il resto della divisione
+    - *Non* usare la rappresentazione come `str`!
+    - Es. `6543 → [3, 4, 5, 6]`
+- Chiamare la funzione da `main`
+    - Chiedere dei numeri all'utente, fino a riga vuota
+    - Di volta in volta, mostrare la lista risultante
+
+---
+
+# 5.3 Lettere iniziali uguali
+
+- Scrivere una funzione `len_common_prefix`
+    - Parametri: due stringhe da confrontare
+    - Risultato: numero di lettere iniziali uguali tra le due stringhe
+- Scrivere una funzione `main`
+    - Chiedere all'utente due stringhe di testo
+    - Invocare `len_common_prefix` sulle due stringhe
+    - Mostrare all'utente il risultato
+- Es. `“carta”` vs. `“carota”` → 3 (`“car”`)
+
+---
+
+# 5.4 Classe per quadratiche
+
+- Definire una classe delle espressioni quadratiche
+- Campi per memorizzare i tre coefficienti
+- Metodo per valutare l'espressione in un punto dato
+    - Parametro per il valore di *x*
+- Nella parte principale del programma
+    - Chiedere all'utente i coefficienti per istanziare un unico oggetto
+    - In un ciclo, valutare l'espressione per vari valori *x* inseriti dall'utente
+
+![large](https://fondinfo.github.io/images/misc/quadratic.svg)
+
+---
+
+# 5.5 Classe per polinomi
+
+- Definire una classe delle espressioni polinomiali
+- Campo per la *lista* dei coefficienti
+    - Parametro del costruttore
+    - Lunghezza: *n+1* (*n*: grado)
+- Metodo per valutare l'espressione in un punto dato
+    - Parametro per il valore di *x*
+- Nella parte principale del programma
+    - Chiedere all'utente i coefficienti per istanziare un unico oggetto
+    - In un ciclo, valutare l'espressione per vari valori *x* inseriti dall'utente
+
+![large](https://fondinfo.github.io/images/misc/polynomial.svg)
+
+---
+
+![](https://fondinfo.github.io/images/games/super-sprint.png)
+# 5.6 Super Sprint - Giri e traguardo [P1]
+
+- Definire una sequenza di *checkpoint* lungo il circuito (traguardo compreso)
+- L'auto deve attraversarli in ordine, per far avanzare il conteggio di un *giro*
+    - Attraversare un checkpoint "sbagliato" (fuori ordine) non ha effetto
+- Dopo 3 giri completi, la gara termina
+- Mostrare a schermo: giro corrente e tempo trascorso
+
+>
+
+Un checkpoint può essere un *actor*, per sfruttare il controllo delle collisioni
+
+---
+
+# 5.7 Super Sprint - Fuoripista [P1]
+
+- Il circuito è definito da oggetti che ne formano i bordi (interno ed esterno)
+- Se l'auto tocca un bordo esterno o un muro…
+    - La velocità si riduce bruscamente (l'auto "sbatte")
+- Opzionalmente, definire alcuni tratti *fuoripista*
+    - Se l'auto è fuori dai bordi della pista (sull'"erba")…
+    - La velocità massima raggiungibile si riduce (per es. a un terzo)
+
+>
+
+Un bordo può essere un *actor*, per sfruttare il controllo delle collisioni
