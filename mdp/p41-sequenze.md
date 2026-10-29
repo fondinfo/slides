@@ -212,7 +212,7 @@ days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
 
 ---
 
-# Spacchettamento
+# 🧪 Spacchettamento
 
 - Qualsiasi sequenza può essere spacchettata su un *numero corrispondente* di variabili
 
@@ -407,12 +407,12 @@ print(val)
 
 ---
 
-# 🥷 Funzioni su sequenze
+# Funzioni su sequenze
 
 ---
 
 ![](http://fondinfo.github.io/images/misc/thanos-glove.png)
-# 🥷 List comprehension
+# 💡 List comprehension
 
 - Modo conciso per creare una lista, rielaborando una data sequenza
     - Espressione di *output*
@@ -435,7 +435,7 @@ nums = [int(c) for c in "h3ll0 w0rld" if "0" <= c <= "9"]
 ---
 
 ![](http://fondinfo.github.io/images/fun/zip.png)
-# 🥷 Zip
+# 💡 Zip
 
 - Accoppia elementi di due (o +) sequenze
 - Genera sequenza *lazy* di coppie (tuple)
@@ -458,7 +458,7 @@ z = list(zip(groceries, quantities))  # if you *really* need a list
 ---
 
 ![](http://fondinfo.github.io/images/repr/child-fingers.png)
-# 🥷 Enumerate
+# 💡 Enumerate
 
 - Accoppia un indice crescente con i valori di una sequenza
 - Genera sequenza *lazy* di coppie
@@ -477,7 +477,7 @@ e = list(enumerate(groceries))  # if you *really* need a list
 
 ---
 
-# 🥷 Liste ordinate o rovesciate
+# 🧪 Liste ordinate o rovesciate
 
 - Funzioni `sorted` e `reversed` non alterano la lista
 - Metodi `sort` e `reverse` alterano la lista (*in place*)
@@ -499,7 +499,7 @@ print(groceries)     # ["spam", "egg", "bacon"]
 
 ---
 
-# 🥷 Chiavi di ordinamento
+# 🧪 Chiavi di ordinamento
 
 ``` py
 vals = sorted([2, 4, -1, -5], key=abs)  # [-1, 2, 4, -5]
@@ -565,7 +565,7 @@ for v in filter(pos, vals):
 
 ---
 
-# 🥷 Istruzioni ed espressioni
+# 💡 Istruzioni ed espressioni
 
 - **Espressione**: codice la cui valutazione produce un valore
     - Adatta a parte destra di un assegnamento (*rvalue*)
@@ -587,7 +587,7 @@ while (v := float(input("val? "))) >= 0:  # sentinel
 
 ---
 
-# 🥷 Valore di verità
+# 💡 Valore di verità
 
 - Ogni oggetto può essere convertito in `bool`
 - Costanti e numeri *falsy*
@@ -611,7 +611,7 @@ while v := input("val? "):  # sentinel, "" is falsy
 
 ---
 
-# 🥷 Funzioni di aggregazione
+# 🧪 Funzioni di aggregazione
 
 - Da sequenza a risultato singolo
 - Operazioni logiche
@@ -632,7 +632,7 @@ True
 
 ---
 
-# 🥷 Valori casuali da sequenze
+# 🧪 Valori casuali da sequenze
 
 - **`choice`** : estrazione casuale da sequenza, probabilità uniforme
 
