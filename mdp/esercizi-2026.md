@@ -604,7 +604,7 @@ diff_angle = coterminal(o_angle - self._angle * rot) # …
 
 - Definire una classe delle espressioni quadratiche
 - Campi per memorizzare i tre coefficienti
-- Metodo per valutare l'espressione in un punto dato
+- Metodo `predict` per valutare l'espressione in un punto dato
     - Parametro per il valore di *x*
 - Nella parte principale del programma
     - Chiedere all'utente i coefficienti per istanziare un unico oggetto
@@ -620,7 +620,7 @@ diff_angle = coterminal(o_angle - self._angle * rot) # …
 - Campo per la *lista* dei coefficienti
     - Parametro del costruttore
     - Lunghezza: *n+1* (*n*: grado)
-- Metodo per valutare l'espressione in un punto dato
+- Metodo `predict` per valutare l'espressione in un punto dato
     - Parametro per il valore di *x*
 - Nella parte principale del programma
     - Chiedere all'utente i coefficienti per istanziare un unico oggetto
@@ -631,7 +631,7 @@ diff_angle = coterminal(o_angle - self._angle * rot) # …
 ---
 
 ![](https://fondinfo.github.io/images/games/super-sprint.png)
-# 5.6 Super Sprint - Giri e traguardo [P1]
+# 5.6 Super Sprint - Checkpoint [P1]
 
 - Definire una sequenza di *checkpoint* lungo il circuito (traguardo compreso)
 - L'auto deve attraversarli in ordine, per far avanzare il conteggio di un *giro*
@@ -648,7 +648,7 @@ Un checkpoint può essere un *actor*, per sfruttare il controllo delle collision
 # 5.7 Super Sprint - Fuoripista [P1]
 
 - Il circuito è definito da oggetti che ne formano i bordi (interno ed esterno)
-	- <https://fondinfo.github.io/sprites/super-sprint-bg.png>
+    - <https://fondinfo.github.io/sprites/super-sprint-bg.png>
 - Se l'auto tocca un bordo esterno o un muro…
     - La velocità si riduce bruscamente (l'auto "sbatte")
 - Opzionalmente, definire alcuni tratti *fuoripista*
@@ -658,3 +658,164 @@ Un checkpoint può essere un *actor*, per sfruttare il controllo delle collision
 >
 
 Un bordo può essere un *actor*, per sfruttare il controllo delle collisioni
+
+---
+
+
+# Esercitazione 6 (2026-11-02)
+
+---
+
+![](https://fondinfo.github.io/images/misc/censorship.jpg)
+# 6.1 Censura di testo
+
+- Chiedere all’utente una riga di testo
+- Il testo compreso tra asterischi (`*`) è considerato “*riservato*”
+- Scrivere in output l’intera riga, ma sostituendo ogni carattere riservato con un `#`
+- Gli asterischi stessi non vanno scritti in output
+- Esempio:
+
+```
+La password di Marco è *tigre2024* e il suo PIN è *4821*.
+La password di Marco è ######### e il suo PIN è ####.
+```
+
+>
+
+Segnare in un bool se si è dentro una parte riservata (cioè se si è letto un asterisco di apertura, ma non ancora quello di chiusura)
+
+---
+
+# 6.2 Conteggio per iniziale
+
+- Leggere varie righe di testo inserite dall'utente
+    - Fino all'inserimento di una riga vuota
+- Dividere il testo in parole in base alla presenza di spazi
+- Calcolare il numero delle parole…
+    - Raggruppate in base alla loro prima lettera
+    - Indifferentemente, maiuscola o minuscola (*case-insensitive*)
+- Per esempio
+    - Le parole che iniziano con “`a`” sono 18
+    - Quelle con “`b`” sono 3
+    - Quelle con “`c`” sono 13 …
+- Dopo ogni riga mostrare i conteggi aggiornati, su tutte le righe precedenti
+
+>
+
+Usare lista di 26 contatori
+
+---
+
+# 6.3 Lettere finali uguali
+
+- Scrivere una funzione `len_common_suffix`
+    - Parametri: due stringhe da confrontare
+    - Risultato: numero di lettere finali uguali tra le due stringhe
+- Fornire due implementazioni di `len_common_suffix`
+    - Indice, o `zip`
+- Scrivere una funzione `main`
+    - Chiedere all'utente due stringhe di testo
+    - Invocare `len_common_suffix` sulle due stringhe
+    - Mostrare all'utente il risultato
+- Es. `"lucertola"` vs. `"pistola"` → 4 (`"tola"`)
+
+---
+
+![](https://fondinfo.github.io/images/misc/dice.png)
+# 6.4 Sequenze di dado
+
+- Simulare `n` lanci di un singolo dado
+    - `n` scelto dall'utente
+- Contare la lunghezza massima di una sequenza di lanci consecutivi con lo stesso risultato
+- Es. `[3, 3, 5, 1, 1, 1, 6, 2]` → 3 (i tre `1` consecutivi)
+
+>
+
+Mantenere due contatori: la sequenza corrente e la sequenza massima trovata finora
+
+---
+
+# 6.5 Cerchi sovrapposti
+
+- Disegnare dei cerchi casuali su un canvas 400×400
+    - Posizione e colore casuale
+    - Tutti di raggio 15
+- Il numero dei cerchi non è fissato
+    - Il programma termina quando…
+    - L'ultimo cerchio disegnato interseca uno dei precedenti
+
+>
+
+Memorizzare in una lista le posizioni dei cerchi
+
+---
+
+![](https://fondinfo.github.io/images/games/super-sprint.png)
+# 6.6 Super Sprint, gioco e GUI [P1]
+
+- Classe `SuperSprintGame`, per gestire il gioco
+    - Inizializzare i personaggi, prendendo i dati da un file di configurazione
+    - Incapsulare personaggi e arena
+    - Controllare la conclusione della partita, positiva o negativa
+- Classe `SuperSprintGui` per la rappresentazione del gioco
+    - Disegno immagini e funzionalità legate a `g2d`
+    - Metodi `tick` etc.
+- Prendere spunto (…) da `BounceGame` e `BounceGui`
+    - <https://fondinfo.github.io/play/?c07_bouncegame.py>
+
+---
+
+# 6.7 Estensioni opzionali [P1]
+
+- *Pozze d'olio* 🫟 lungo il circuito
+    - L'auto perde il controllo dello sterzo
+    - L'angolo varia in modo casuale (“testacoda”)
+    - Dopo ~ 30 frame, il controllo torna normale
+- *Chiavi inglesi* 🔧 raccoglibili lungo il circuito
+    - Ogni 3 chiavi raccolte, si ottiene un potenziamento casuale
+    - Velocità massima più alta, oppure…
+    - Accelerazione più rapida, oppure…
+    - Sterzata più reattiva
+- Mostrare a schermo il numero di chiavi raccolte e i potenziamenti attivi
+
+---
+
+# 6.8 Modello fisico opzionale [P1]
+
+- In `move`, controllare ulteriormente se auto abbastanza vicine
+    - P.es.: distanza tra i *centri* è sotto una certa soglia?
+    - Cioè, trascurare gli alettoni, per la collisione
+- Calcolare direzione in base all'asse tra i due centri (…)
+    - <https://en.wikipedia.org/wiki/Elastic_collision#Two-dimensional>
+- Considerare la forma allungata delle auto (…)
+- Concedere alle auto un tempo di *grazia* dopo una collisione
+
+---
+
+![](https://fondinfo.github.io/images/games/nurikabe.svg)
+# 6.9 Nurikabe puzzle [P2]
+
+- Definire sottoclasse di `BoardGame`
+- Inizializzazione con *vincoli* numerici prefissati
+    - Come in figura
+- Metodo `play` per *annerire* o *marcare* una cella
+    - Liberamente, senza restrizioni
+    - Ma non su celle con numero
+    - Per esempio: 0 □ / -1 ■ / -2 •
+- Metodo `finished` : controllare le regole del gioco
+    - Per ora, sempre `False`
+- Implementare gli altri metodi, tutti *getter*
+- Visualizzare la matrice con `boardgamegui`
+
+---
+
+# Nurikabe, regole [P2]
+
+- ① A number tells the number of continuous white cells
+- ② Each area of white cells contains only one number
+- ③ The black cells are linked to be a continuous wall
+- ④ Black cells cannot be linked to be 2×2 square or larger
+
+>
+
+<https://www.nikoli.co.jp/en/puzzles/nurikabe/>

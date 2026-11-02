@@ -212,6 +212,7 @@ days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
 
 ---
 
+![](http://fondinfo.github.io/images/fun/list-monster.svg)
 # 🧪 Spacchettamento
 
 - Qualsiasi sequenza può essere spacchettata su un *numero corrispondente* di variabili
