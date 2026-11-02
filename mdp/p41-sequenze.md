@@ -212,28 +212,26 @@ days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
 
 ---
 
-![](http://fondinfo.github.io/images/fun/list-monster.svg)
+![large](http://fondinfo.github.io/images/fun/list-monster.svg)
 # 🧪 Spacchettamento
 
-- Qualsiasi sequenza può essere spacchettata su un *numero corrispondente* di variabili
+- Spacchettatamento per qualsiasi sequenza
+    - *Numero corrispondente* di variabili
 
 ``` py
 >>> a, b, c = [1, 2, 3]
 ```
 
 - Assegnamento *con stella* per catturare una sequenza in una lista
-    - Provare a omettere `first`, `second`, o `last`
 
 ``` py
->>> first, second, *middle, last = [0, 1, 2, 3, 4, 5]  # range(6)
->>> first
-0
->>> second
-1
->>> middle
-[2, 3, 4]
->>> last
-5
+head, *tail = [1, 2, 3, 4, 5]  # most common
+# head = 0; tail = [1, 2, 3, 4, 5]
+
+*init, last = [1, 2, 3, 4, 5]  # or, range(1, 6)…
+# init = [1, 2, 3, 4]; last = 5
+
+fst, snd, *middle, lst = [1, 2, 3, 4, 5]  # guess…
 ```
 
 ---
