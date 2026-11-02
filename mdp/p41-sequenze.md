@@ -219,10 +219,11 @@ days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
     - *Numero corrispondente* di variabili
 
 ``` py
->>> a, b, c = [1, 2, 3]
+a, b, c = [1, 2, 3]  # try also: "123"
 ```
 
-- Assegnamento *con stella* per catturare una sequenza in una lista
+- Assegnamento con asterisco (*starred*)
+    - Cattura di sottosequenza in una lista
 
 ``` py
 head, *tail = [1, 2, 3, 4, 5]  # most common
