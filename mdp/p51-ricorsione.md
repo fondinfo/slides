@@ -279,13 +279,13 @@ print(contains(t, 5))
 class Node:
     pass
 class Document(Node):
-    def __init__(self, name: str, data: str):
+    def __init__(self, name: str, text: str):
         self._name = name
-        self._data = data
+        self._text = text
 class Folder(Node):
-    def __init__(self, name: str, children: list[Node]):
+    def __init__(self, name: str, subnodes: list[Node]):
         self._name = name
-        self._children = children
+        self._subnodes = subnodes
 ```
 
 ---
@@ -330,14 +330,29 @@ print(count_tree(tree))
 # 🧪 Esempio - Struttura di un sito
 
 ``` py
-site = {"title": "Home", "children": [
-    {"title": "News", "children": [
+site = {
+  "title": "Home",
+  "children": [
+    {
+      "title": "News",
+      "children": [
         {"title": "2026"},
-        {"title": "Archive"},
-    ]},
-    {"title": "About", "content": "Best news website"},
-]}
+        {"title": "Archive"}
+      ]
+    },
+    {
+      "title": "About",
+      "content": "Best news website"
+    }
+  ]
+}
+```
 
+---
+
+# 🧪 Esempio - Conteggio pagine
+
+``` py
 def count_pages(node: dict) -> int:
     count = 1  # the node itself
     for child in node.get("children", []):  # leaf without the key
@@ -614,27 +629,19 @@ tree = [["spam"], [["egg", "sausage"], [], "spam"]]
     - In albero, passato come parametro
     - In caso di lista vuota, restituire `""`
 
-
 ---
 
 # Mappa del sito
 
 - Riprendere l'albero di dizionari `site` visto a lezione
-    - Ogni pagina ha un `"title"` e una lista `"children"`
-- Funzione ricorsiva `show(node, indent)`
-    - Mostra il titolo di ogni pagina, uno per riga
-    - Indenta ogni livello di 4 spazi in più rispetto alla pagina che lo contiene
+    - Ogni pagina ha un `"title"`
+    - Può avere una lista `"children"`, che può mancare nelle foglie
+- Funzione ricorsiva `show(node, indent=0)`
+    - `indent` è il numero di spazi da scrivere prima del titolo
+    - Mostra il titolo di ogni pagina, una per riga
+    - Ogni livello ha 4 spazi in più rispetto alla pagina che lo contiene
 - Funzione ricorsiva `find_page(node, title)`
     - Restituisce il *dizionario* della pagina con quel titolo
     - Se non esiste, restituisce `None`
-- Con `find_page` e `count_pages`, mostrare quante pagine contiene `"News"` (compresa se stessa)
-
->
-
-Risultato atteso di `show(site, 0)`:
-<br>
-`Home` / `····News` / `········2026` / `········Archive` / `····About`
-<br><br>
-`find_page`: se il titolo è quello cercato, restituire il nodo; altrimenti provare con i figli, fermandosi al primo trovato.
-<br>
-Attenzione a distinguere `None` dal risultato di una ricerca riuscita.
+- Infine, mostrare quante pagine contiene `"News"`, compresa se stessa
+    - Usare `find_page` e poi `count_pages`
