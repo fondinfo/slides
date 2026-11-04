@@ -588,6 +588,27 @@ d = sqrt(dx ** 2 + dy ** 2)
 
 ---
 
+![](http://fondinfo.github.io/images/algo/clock0-9-1.svg)
+![](http://fondinfo.github.io/images/algo/clock0-1-9.svg)
+# 🧪 Aritmetica dell'orologio
+
+- Aritmetica modulare
+    - Basata sul resto della divisione
+- Python: *floor division*
+    - Quoziente arrotondato a sinistra
+    - Resto positivo
+- Es. modulo 12
+    - Resto ruota nel range 0-11
+
+``` py
+>>> (9 + 4) % 12
+1
+>>> (1 - 4) % 12
+9
+```
+
+---
+
 # 🏊 Esercizi
 
 ---
