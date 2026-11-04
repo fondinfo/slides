@@ -380,7 +380,7 @@ print(sqrt(4))
 
 - Modulo [`random`](https://docs.python.org/3/library/random.html) in *Python Standard Library*
     - Non necessita d'installazione
-    - `randint, randrange, random, choice, shuffle`…
+    - `randint, randrange, random, uniform, choice, shuffle`…
 
 ``` py
 from random import randint, randrange, choice
