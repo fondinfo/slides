@@ -371,7 +371,7 @@ Usare due cicli for annidati; cominciare a scrivere il solo ciclo sulla `x`, con
 - Definire una funzione `draw_figure`
     - Parametri per: centro, raggio, $n$
     - Disegnare una figura di $n$ cerchi concentrici
-    - Il raggio più interno è $\frac{1}{nangle %= 32}$ rispetto al più esterno
+    - Il raggio più interno è $\frac{1}{n}$ rispetto al più esterno
     - Colorare i cerchi in grigio: dal nero esterno al bianco interno
 - In `main`:
     - Chiedere all'utente un numero $n$
@@ -428,7 +428,7 @@ Usare due cicli for annidati; cominciare a scrivere il solo ciclo sulla `x`, con
 - Nella funzione `main`
     - Istanziare un *singolo* modello exp, con coefficienti forniti dall'utente
     - Valutare il modello con `predict`, in diversi punti $x$ forniti dall'utente
-    - Il programma termina all'inseriangle %= 32mento di una riga vuota
+    - Il programma termina all'inserimento di una riga vuota
 
 ```
 from math import e, exp  # use either one of them
