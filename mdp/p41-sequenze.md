@@ -403,7 +403,7 @@ print(val)
 
 >
 
-<https://docs.python.org/3/library/stdtypes.html#dict>
+<https://fondinfo.github.io/play/?c08_sparse.py>
 
 ---
 
