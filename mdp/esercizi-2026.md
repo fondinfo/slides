@@ -819,3 +819,167 @@ Memorizzare in una lista le posizioni dei cerchi
 >
 
 <https://www.nikoli.co.jp/en/puzzles/nurikabe/>
+
+---
+
+# Esercitazione 7 (2026-11-09)
+
+---
+
+![](https://fondinfo.github.io/images/fun/matryoshka.png)
+# 7.1 Potenze con ricorsione
+
+- Definire una funzione ricorsiva `recursive_pow` per calcolare la potenza intera positiva di un numero
+- Per qualsiasi numero $x$, $x^0 = 1$
+- La potenza $n$-esima di un numero $x$ si può calcolare come:
+    - Prodotto tra $x$ e la potenza $n-1$ di $x$ (*ricorsione*)
+- In una funzione `main`
+    - Chiedere i dati all'utente
+    - Mostrare il risultato
+
+>
+
+Saranno accettate esclusivamente le soluzioni ricorsive
+
+---
+
+# 7.2 Lettere finali con ricorsione
+
+- Scrivere una funzione ricorsiva `rec_common_suffix`
+    - Parametri: due stringhe da confrontare
+    - Risultato: numero di lettere finali uguali tra le due stringhe
+- Idea
+    - Confrontare gli ultimi caratteri (*last*)
+    - Applicare lo stesso procedimento al resto (*init*)
+- Invocare da shell la funzione con diversi argomenti
+
+>
+
+Saranno accettate solo le soluzioni ricorsive
+
+---
+
+![](https://fondinfo.github.io/images/misc/characters.png)
+# 7.3 Matrice casuale
+
+- Definire funzione `randchar`
+- Due parametri di tipo carattere
+    - Estremi dell'intervallo di caratteri possibili
+    - Estremi *inclusi* (l'intervallo è *chiuso*)
+- Risultato: carattere casuale scelto dall'intervallo dato
+- Chiedere all'utente le dimensioni $w, h$ di una matrice
+- Riempire con una *comprehension* una lista
+    - Con $w·h$ lettere minuscole casuali, con possibili ripetizioni
+
+---
+
+# 7.4 Analisi matrice
+
+- Partire da una matrice simile a es. 7.3
+- Mostrare a console la lista come una matrice, riga per riga, in formato *CSV*
+    - Caratteri separati da virgola (ma senza virgola a fine riga)
+- Salvare la stessa matrice in un file di testo `matrix.csv`
+- In un ciclo
+    - Chiedere un carattere all'utente
+    - Elencare le posizioni in cui il carattere è presente
+    - Marcare con asterisco le posizioni trovate che siano celle di bordo <br> (celle in prima o ultima colonna, o riga)
+- Es.: la `r` è presente 4 volte in tutto, 3 volte su celle di bordo
+
+``` txt
+a,c,r,a
+r,r,t,a
+t,r,e,f
+```
+
+---
+
+![](https://fondinfo.github.io/images/draw/palette-circles.svg)
+# 7.5 Tavolozza di colori
+
+- Leggere da un file una sequenza di colori
+    - In ogni riga ci sono tre valori separati da virgola, per le componenti *R, G, B*
+    - I colori vengono memorizzati in una lista (di tuple)
+- Chiedere all'utente un numero $n$
+- Su un canvas 400×400, disegnare $n$ cerchi in maniera concentrica
+    - Il raggio decresce linearmente, da $200$ a $\frac{200}{n}$
+    - I colori dei cerchi sono presi in sequenza dalla lista
+    - Se si esaurisce la sequenza, si ricomincia dal primo colore
+
+---
+
+# 7.6 Scomposizione in cifre
+
+- Scrivere una funzione ricorsiva `digits`, che prende un numero $n$
+    - Restituisce una *lista* di cifre che compongono il numero, dalle unità in su
+- Se $n$ è zero, il risultato è una lista vuota
+- Altrimenti
+    - Calcolare quoziente $q$ e resto $r$ di $n / 10$
+    - Il risultato parziale è una lista contenente il resto $r$
+    - Per ottenere la restante parte del risultato, si applica lo stesso procedimento al quoziente $q$
+- Es. `345` → `[5, 4, 3]`
+
+>
+
+Usare divisione e resto, **non** usare la rappresentazione come `str`!
+<br>
+Saranno accettate solo le soluzioni ricorsive
+
+---
+
+# 7.7 Verifica di cifre
+
+- Definire funzione ricorsiva `rebuild`
+    - Riceve lista di cifre, ordinate a partire dalle unità (vedi 7.6)
+    - Restituisce il numero che esse compongono
+- Caso base: `[]` → 0
+- Passo ricorsivo: separare *head* e *tail*
+    - Risultato: $head + 10 · r$
+    - $r$ è ottenuto per ricorsione su *tail*
+
+$$6543 \to [3, 4, 5, 6]$$
+$$[3, 4, 5, 6] \to 3 \cdot 10^0 + 4 \cdot 10^1 + 5 \cdot 10^2 + 6 \cdot 10^3$$
+
+---
+
+# 7.8 Super Sprint - Test [P1]
+
+- Creare degli *unit test* per il gioco *Super Sprint*
+    - Sono consigliati *test parametrizzati*
+- Cercare di testare ciascun personaggio separatamente
+    - Chiamare direttamente `move`, `pos` ecc., in varie situazioni
+- Es. Testare il protagonista simulando varie sequenze di comandi
+    - Percorre sempre la traiettoria prevista?
+    - Sceglie sempre lo sprite corretto?
+    - Reagisce correttamente alle diverse collisioni?
+
+---
+
+![](https://fondinfo.github.io/images/games/nurikabe.svg)
+# 7.9 Nurikabe, quadrati neri [P2]
+
+- Aggiungere al gioco un metodo booleano `black_2x2`, senza parametri
+    - Vero se $\exists$ quadrato 2×2 di celle nere
+    - Regola ④: *Black cells cannot be linked to be 2×2 square or larger*
+- Controllare ogni cella, come angolo in alto a sinistra del quadrato
+    - Attenzione ai bordi della matrice
+- Verificare il metodo dopo varie chiamate a `play`
+    - Usare per ora `status` per segnalare 2×2 nere
+
+>
+
+Il metodo servirà poi per `finished`
+
+---
+
+![](https://fondinfo.github.io/images/misc/handwriting.jpg)
+# Progetti in bella copia [P1, P2]
+
+- **Codice leggibile**
+    - *Costanti*, anzichè numeri “*magici*” sparsi nel codice
+    - *Nomi esplicativi*, semplici, in inglese
+    - *Regole di stile* : `variable_name`, `function_name`, `ClassName`, `CONSTANT_NAME`, `_private_field`
+    - *Commenti*, quando utili: *function annotation*, *docstring*
+- **Codice ben organizzato**
+    - *No copia&incolla* del codice: funzioni parametrizzate e/o cicli
+    - *Programmazione strutturata* : preferibilmente, cicli senza `break`
+    - *OOP* : *incapsulamento*, *ereditarietà*, *polimorfismo*
