@@ -609,6 +609,25 @@ d = sqrt(dx ** 2 + dy ** 2)
 
 ---
 
+![large](http://fondinfo.github.io/images/algo/matrix.svg)
+# 🧪 Quoziente e resto
+
+- $n$ multiplo di $d$? Il resto è 0?
+    - `6 % 3 == 0  # True`
+    - ~ numeri in fila per 3
+- Parte intera e frazionaria
+    - `3.25 // 1  # 3.0`
+    - `3.25 % 1  # 0.25`
+- Arrotondamento sempre a sinistra
+    - `-3.25 // 1  # -4.0`
+    - `-3.25 % 1  # 0.75`
+    - `-4 // 3  # -2`
+    - `-4 % 3  # 2`
+- Troncamento
+    - `int(-3.25)  # -3`
+
+---
+
 # 🏊 Esercizi
 
 ---
