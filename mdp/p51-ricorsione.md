@@ -224,7 +224,7 @@ class TreeNode:
 
 ``` py
 def insert(tree, val) -> TreeNode:
-    if tree == None:
+    if tree is None:
         tree = TreeNode(val)
     elif val < tree.data:
         tree.left = insert(tree.left, val)
@@ -233,7 +233,7 @@ def insert(tree, val) -> TreeNode:
     return tree
 
 def flatten(tree) -> list:
-    if tree == None:
+    if tree is None:
         return []
     return flatten(tree.left) + [tree.data] + flatten(tree.right)
 ```
@@ -247,7 +247,7 @@ def flatten(tree) -> list:
 
 ``` py
 def contains(tree, val) -> bool:
-    if tree == None:
+    if tree is None:
         return False
     if val == tree.data:
         return True
