@@ -8,7 +8,7 @@
 ---
 
 ![](http://fondinfo.github.io/images/misc/number-train.png)
-# 💡 Array: vettori di dimensione fissa
+# 💡 Array: dimensione fissa
 
 - Python `list`: dinamica, elementi di tipi diversi
 - C **array**: dimensione *fissa*, elementi dello *stesso tipo*
@@ -145,7 +145,7 @@ Risposta: tra poche slide
 
 ---
 
-![](http://fondinfo.github.io/images/scipy/c-array-array.svg)
+![large](http://fondinfo.github.io/images/scipy/c-array-array.svg)
 # ⭐ Matrici
 
 ``` c
@@ -173,13 +173,13 @@ for (int y = 0; y < ROWS; y++) {
 
 ---
 
-![](http://fondinfo.github.io/images/sys/pointer.svg)
+![large](http://fondinfo.github.io/images/sys/pointer.svg)
 # 💡 La memoria ha indirizzi
 
 - Memoria: sequenza di celle *numerate*
 - Ogni variabile occupa alcune celle, a un certo **indirizzo**
 - **Puntatore**: variabile che contiene un indirizzo
-- ❓ Una scatola ha un *contenuto*... e una *posizione*
+- ❓ Una scatola ha un *contenuto* … e una *posizione*
 
 ---
 
@@ -226,8 +226,9 @@ inc(&n);
 printf("%d\n", n);   // 6
 ```
 
-- Risposta alla domanda di prima: l'indirizzo *permette di modificare* l'originale
-- `scanf("%d", &n)`: stessa tecnica!
+- Risposta alla domanda di prima:
+    - L'indirizzo *permette di modificare* l'originale
+    - `scanf("%d", &n)`: stessa tecnica!
 
 ---
 
@@ -302,7 +303,8 @@ if (q != NULL) {
 ```
 
 - Puntatore non inizializzato: indirizzo *casuale*
-- `NULL`: "nessun indirizzo". Dereferenziarlo → crash (*segmentation fault*)
+- `NULL`: “nessun indirizzo”
+    - Dereferenziarlo → crash (*segmentation fault*)
 - Mai restituire l'indirizzo di una variabile *locale*
 
 ---
@@ -368,7 +370,7 @@ for (int i = 0; s[i] != '\0'; i++) {
 int digits = 0, vowels = 0;
 for (int i = 0; s[i] != '\0'; i++) {
     char c = tolower(s[i]);
-    if (isdigit(c)) {
+    if ('0' <= c <= '9')) {
         digits++;
     } else if (c == 'a' || c == 'e' || c == 'i' ||
                c == 'o' || c == 'u') {
