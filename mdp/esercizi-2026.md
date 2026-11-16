@@ -983,3 +983,176 @@ Il metodo servirà poi per `finished`
     - *No copia&incolla* del codice: funzioni parametrizzate e/o cicli
     - *Programmazione strutturata* : preferibilmente, cicli senza `break`
     - *OOP* : *incapsulamento*, *ereditarietà*, *polimorfismo*
+
+---
+
+# Esercitazione 8 (2026-11-16)
+
+---
+
+![](https://fondinfo.github.io/images/draw/rec-circles.svg)
+# 8.1 Cerchi ricorsivi
+
+- Funzione *ricorsiva* `rec_circles`
+    - Parametri: centro $p$ e raggio $r$
+- Se $r \leq 5$, non disegna niente
+- Altrimenti
+    - Disegna il cerchio specificato
+    - Disegna ricorsivamente altri 4 cerchi
+    - Spostati in orizzontale e in verticale di $\pm r$
+    - Con raggio ridotto al 42% ($\sqrt{2}-1$)
+
+---
+
+![](https://fondinfo.github.io/images/fun/matryoshka.png)
+# 8.2 Somma ricorsiva di cifre
+
+- Funzione *ricorsiva* `sum_digits`
+    - Riceve come parametro un numero naturale $n$
+- Se $n < 10$, $n$ è il risultato
+- Altrimenti, si calcola la somma $s$ delle cifre di $n$
+    - Su $s$ si applica lo stesso algoritmo
+    - Per sommarne ricorsivamente le cifre
+- Esempi
+    - *f(41)=f(4+1)=f(5)=5*
+    - *f(327)=f(12)=f(3)=3*
+    - Infatti, *3+2+7=12* e *1+2=3*
+
+---
+
+![](http://fondinfo.github.io/images/misc/numbers.png)
+# 8.3 Cifra di controllo
+
+- Funzione `is_valid(digits)`
+    - Stringa di cifre → `bool`
+    - `ValueError` se vuota o con altri caratteri
+- Algoritmo di Luhn (carte di credito…)
+    - A partire dalla *2ᵃ da destra*, verso sinistra, raddoppiare una cifra sì e una no <br> (se supera 9, sottrarre 9)
+    - Valido se somma di tutte le cifre è multipla di 10
+- In `main`, chiedere righe fino a riga vuota; mostrare se ognuna è valida
+- Opzionale: `check_digit`, che calcola la cifra da aggiungere in fondo
+
+>
+
+Es. `"79927398713"` è valido (somma 70); `"79927398710"` no (67)
+<br>
+Es. `check_digit("7992739871")` → `3`
+<br>
+Utile: `enumerate` e `reversed`, per avere a disposizione cifra e posizione
+
+---
+
+![large](https://fondinfo.github.io/images/fun/sin-cos.png) ![](https://fondinfo.github.io/images/misc/interpolation.svg)
+# 8.4 Classe FastSin
+
+- Classe `FastSin`
+    - Alla creazione, precalcola `sin` per gli angoli interi 0-359° (lista di 360 valori)
+- Metodo `eval`, con param. $x$ in gradi
+    - $x$: `float`, anche $<0$ o $>360$
+- `eval` approssima `sin` con *interpolazione lineare*
+    - $v = (1-f) \cdot v_i + f \cdot v_j$
+    - $f$: parte frazionaria di $x$
+    - $i$: parte intera di $x$ (0-359)
+    - $j$: successore di $x$ (dopo 359, 0);
+- Confrontare `eval` con `math.sin`
+
+>
+
+<https://fondinfo.github.io/slides/p12-basi.html#/30>
+
+---
+
+![](https://fondinfo.github.io/images/games/minesweeper.svg)
+# 8.5 Mines
+
+- Chiedere all'utente numeri $w, h, n$
+- Creare matrice $w×h$ con…
+    - Esattamente $n$ valori 1 (💣) in posizioni casuali
+    - Altre celle a 0
+- Salvare matrice in file `output.csv`
+- Chiedere una posizione per riga, fino a riga vuota
+    - Posizione: coppia $(x, y)$ con spazio separatore
+- Per ogni posizione, comunicare:
+    - Se la cella contiene 1 (💣)
+    - Altrimenti, quanti 1 ci sono *intorno* (in orizzontale, verticale e diagonale)
+
+---
+
+# 8.6 Tutti sotto soglia
+
+- Funzione *ricorsiva* `all_below`
+    - Parametri: una lista di numeri *data* e un numero *limit*
+    - Controllare che tutti i numeri in *data* siano minori della soglia *limit*
+- Algoritmo:
+    - Una lista vuota non ha valori sopra la soglia
+    - Altrimenti, separare il primo elemento *head* dal resto della lista *tail*
+    - Se *head* non è minore di *limit*, risultato *falso*
+    - Altrimenti, infine, controllare gli altri valori
+
+>
+
+Saranno accettate solo le soluzioni ricorsive
+
+---
+
+![](https://fondinfo.github.io/images/draw/rec-cross.svg)
+# 8.7 Quadrati a croce
+
+- Funzione *ricorsiva* `rec_squares`
+    - Parametri: $p$, $s$, $depth$, $skipdir$
+- Se $depth$ è 0, non disegna niente
+- Altrimenti, disegna il quadrato di lato $s$ centrato in $p$
+    - Poi 4 quadrati *adiacenti* (destra, sinistra, sopra, sotto), con lato $s/2$ e livello $depth - 1$
+    - Non disegnare dalla parte del quadrato di provenienza
+- Colore in base al livello (palette globale casuale, ~ es. 7.5)
+- In `main`: canvas 400×400, centro $(200, 200)$, lato 120, $depth$ 4
+
+>
+
+Centro dei 4 quadrati: spostato di ¾·s nella direzione scelta
+<br>
+Direzioni come tuple $(\pm 1, 0)$, $(0, \pm 1)$; per il primo quadrato, nessuna da evitare: $(0, 0)$
+<br>
+Stesso colore per quadrati della stessa dimensione
+<br>
+Saranno accettate esclusivamente le soluzioni ricorsive
+
+---
+
+![](https://fondinfo.github.io/images/games/nurikabe.svg)
+# 8.8 Nurikabe, regole [P2]
+
+- Metodo `finished`: vero solo se tutte e 4 le regole sono rispettate
+- Celle nere tutte connesse (in orizzontale e verticale)
+    - Cercare con la ricorsione l'*area contigua* di una cella nera (come `find_area`)
+    - Confrontarne la dimensione col numero totale di celle nere
+- Ogni *area* contigua di celle bianche ha un solo numero, uguale alla sua dimensione (num. di celle)
+- Considerare nere solo le celle annerite: le altre sono bianche
+
+>
+
+<https://fondinfo.github.io/play/?c11_findarea.py>
+
+---
+
+![](https://fondinfo.github.io/images/games/nurikabe.svg)
+# 8.9 Nurikabe, automatismi [P2]
+
+- *“Isola marcata”* : numero e marcature • adiacenti
+- Automatismo tasto `w`, *opzionale*
+    - Marcare • (*bianca*) la cella libera…
+    - Quarta di un quadrato 2×2 con 3 nere, o…
+    - Unica adiacente a un'*isola marcata* incompleta
+    - …
+- Automatismo tasto `b`, *opzionale*
+    - Annerire ■ (*nera*) la cella libera…
+    - Adiacente a un'*isola marcata* completa, o…
+    - Adiacente a due *isole marcate* (le unirebbe), o…
+    - Non raggiungibile da nessun numero
+    - …
+
+>
+
+Alcuni schemi si risolvono ripetendo `b` e `w`, finché non cambia più nulla
+<br>
+<https://www.conceptispuzzles.com/index.aspx?uri=puzzle/nurikabe/techniques>
