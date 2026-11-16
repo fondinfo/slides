@@ -265,7 +265,7 @@ Se `x, y = 3, 4`, ad esempio, i due risultati sono `-2` e `4`
 
 ---
 
-![](/images/oop/pointer.png)
+![](/images/sys/pointer.svg)
 # Puntatori
 
 - Ogni dato in memoria ha un indirizzo

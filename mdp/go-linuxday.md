@@ -282,7 +282,7 @@ func moveBall(x, y, dx, dy int) (int, int, int, int) {
 
 ---
 
-![](/images/oop/pointer.png)
+![](/images/sys/pointer.svg)
 # ⏩ Puntatori
 
 - Ogni dato in memoria ha un indirizzo

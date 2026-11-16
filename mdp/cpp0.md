@@ -592,7 +592,7 @@ for i in range(25):
 
 ---
 
-![](/images/oop/pointer.png)
+![](/images/sys/pointer.svg)
 # 🔬 Puntatori
 
 - Ogni dato presente in memoria ha un indirizzo: variabile puntatore per memorizzarlo
