@@ -1053,7 +1053,7 @@ Utile: `enumerate` e `reversed`, per avere a disposizione cifra e posizione
     - $v = (1-f) \cdot v_i + f \cdot v_j$
     - $f$: parte frazionaria di $x$
     - $i$: parte intera di $x$ (0-359)
-    - $j$: successore di $x$ (dopo 359, 0);
+    - $j$: successore di $i$ (dopo 359, 0);
 - Confrontare `eval` con `math.sin`
 
 >
