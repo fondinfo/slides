@@ -152,9 +152,9 @@ Risposta: tra poche slide
 #define ROWS 3
 #define COLS 4
 
-int m[ROWS][COLS] = {{1, 2, 3, 4},
-                     {5, 6, 7, 8},
-                     {9, 10, 11, 12}};
+int m[ROWS][COLS] = { {1, 2, 3, 4},
+                      {5, 6, 7, 8},
+                      {9, 10, 11, 12} };
 
 for (int y = 0; y < ROWS; y++) {
     for (int x = 0; x < COLS; x++) {
