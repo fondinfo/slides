@@ -227,7 +227,7 @@ a, b, c = [1, 2, 3]  # try also: "123"
 
 ``` py
 head, *tail = [1, 2, 3, 4, 5]  # most common
-# head = 0; tail = [1, 2, 3, 4, 5]
+# head = 1; tail = [2, 3, 4, 5]
 
 *init, last = [1, 2, 3, 4, 5]  # or, range(1, 6)…
 # init = [1, 2, 3, 4]; last = 5
