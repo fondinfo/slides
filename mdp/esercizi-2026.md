@@ -944,6 +944,7 @@ $$[3, 4, 5, 6] \to 3 \cdot 10^0 + 4 \cdot 10^1 + 5 \cdot 10^2 + 6 \cdot 10^3$$
 # 7.8 Super Sprint - Test [P1]
 
 - Creare degli *unit test* per il gioco *Super Sprint*
+    - Usare il modulo `unittest`
     - Sono consigliati *test parametrizzati*
 - Cercare di testare ciascun personaggio separatamente
     - Chiamare direttamente `move`, `pos` ecc., in varie situazioni
@@ -951,6 +952,10 @@ $$[3, 4, 5, 6] \to 3 \cdot 10^0 + 4 \cdot 10^1 + 5 \cdot 10^2 + 6 \cdot 10^3$$
     - Percorre sempre la traiettoria prevista?
     - Sceglie sempre lo sprite corretto?
     - Reagisce correttamente alle diverse collisioni?
+
+>
+
+<https://fondinfo.github.io/slides/p34-collaudo.html#/16>
 
 ---
 
