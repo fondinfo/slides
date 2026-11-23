@@ -493,7 +493,7 @@ IEEE definisce `0⁰ = 1`, anzichè indeterminato
 
 ---
 
-![large](https://fondinfo.github.io/images/fun/sierpinski-carpet.svg)
+![large](https://fondinfo.github.io/images/draw/sierpinski-carpet.svg)
 # 4.6 Sierpinski carpet
 
 - Disegnare un *frattale di Sierpinski*, di ordine `n` (scelto dall'utente)

@@ -1086,12 +1086,12 @@ Utile: `enumerate` e `reversed`, per avere a disposizione cifra e posizione
 # 8.6 Tutti sotto soglia
 
 - Funzione *ricorsiva* `all_below`
-    - Parametri: una lista di numeri *data* e un numero *limit*
-    - Controllare che tutti i numeri in *data* siano minori della soglia *limit*
+    - Parametri: una lista di numeri $data$ e un numero $limit$
+    - Controllare che tutti i numeri in $data$ siano minori della soglia $limit$
 - Algoritmo:
     - Una lista vuota non ha valori sopra la soglia
     - Altrimenti, separare il primo elemento *head* dal resto della lista *tail*
-    - Se *head* non è minore di *limit*, risultato *falso*
+    - Se *head* non è minore di $limit$, risultato *falso*
     - Altrimenti, infine, controllare gli altri valori
 
 >
@@ -1161,3 +1161,184 @@ Saranno accettate esclusivamente le soluzioni ricorsive
 Alcuni schemi si risolvono ripetendo `b` e `w`, finché non cambia più nulla
 <br>
 <https://www.conceptispuzzles.com/index.aspx?uri=puzzle/nurikabe/techniques>
+
+---
+
+# Esercitazione 9 (2026-11-23)
+
+---
+
+# 9.1 Matrice simmetrica
+
+- Leggere da un file CSV una matrice quadrata di interi
+    - Inoltre, $\forall$ riga, stessa lunghezza
+    - Se non è quadrata, sollevare `ValueError` con messaggio
+- Salvare in un file `transposed.csv` la matrice *trasposta*
+    - Righe e colonne scambiate
+- Verificare se è *simmetrica*
+    - Cella $(x, y)$ sempre uguale alla cella $(y, x)$
+    - Altr., mostrare *prima* cella $(x, y)$ in ordine di riga diversa da $(y, x)$
+    - Mostrare entrambi i valori
+
+``` txt
+1,2,3        1,4,7
+4,5,6   →    2,5,8
+7,8,9        3,6,9
+```
+
+>
+
+Per il primo esempio: cella $(1, 0)$ vale `2`, ma $(0, 1)$ vale `4`
+
+---
+
+# 9.2 Matrice a serpentina
+
+- Chiedere all'utente le dimensioni $w$ e $h$ di una matrice
+- Riempirla con i numeri da $1$ a $w \cdot h$, *a serpentina*
+    - Prima riga da sinistra a destra
+    - Seconda riga da destra a sinistra
+    - E così via, alternando il verso
+- Mostrare la matrice a console, con le colonne incolonnate
+
+``` txt
+w = 4, h = 3
+
+ 1   2   3   4
+ 8   7   6   5
+ 9  10  11  12
+```
+
+>
+
+Usare una lista semplice: cella $(x, y)$ in posizione $x + y \cdot w$
+
+---
+
+# 9.3 Conteggio parole
+
+- Leggere il contenuto del file `g2d.py` e ottenerne le parole
+- *V1* : Separazione con qualsiasi carettere bianco
+    - Contare le occorrenze di tutte le parole trovate
+    - Mostrare le 10 parole più comuni assieme ai relativi conteggi
+- *V2* : Ripetere le operazioni, separando le parole con *regex*:
+    - `words = re.split(r"\W+", text)` <br> <br>
+- Poi, usando gli insiemi su *V2*
+    - Quante parole *distinte* ci sono in `g2d.py`? Quante in `license.txt`?
+    - Quante sono presenti solo in `g2d.py` e non in `license.txt`?
+    - Infine, tra le parole presenti in *entrambi* i file… <br> mostrarne le prime 10, in ordine alfabetico
+
+---
+
+![](https://fondinfo.github.io/images/fun/matryoshka.png)
+# 9.4 Liste annidate, più lunga
+
+- Definire una funzione *ricorsiva* `find_max`
+    - Parametro: semplice stringa o lista annidata di stringhe
+    - Risultato: stringa più lunga, anche nelle liste annidate
+    - In caso di parità, la prima in ordine alfabetico
+- Una stringa semplice coincide con il risultato
+- In una lista, si applica la ricerca (ricorsivamente) a ogni elemento
+- Esempio : `["Ann", ["Bart", ["Carol", "Cindy"], "Bob", "Art"], ["Bea"], "Bill"]`
+    - → Risultato: *Carol*
+
+---
+
+![](https://fondinfo.github.io/images/repr/file-system.svg)
+# 9.5 Profondità albero
+
+- Partire dall'albero di documenti e cartelle
+- Aggiungere a tutti i *nodi* un metodo `depth`
+    - Riporta la profondità della struttura
+    - Livello di annidamento massimo
+- Astratto nella classe base
+- Per un *documento*: 0
+- Per una *cartella*: 1 + profondità massima dei sottonodi
+- Rispetto alla struttura raffigurata a fianco
+    - Calcolare `depth` della cartella radice (*3*, nell'esempio)
+
+>
+
+<https://fondinfo.github.io/play/?c12_folders.py>
+
+---
+
+![](https://fondinfo.github.io/images/draw/sierpinski-carpet.svg)
+
+# 9.6 Tappeto di Sierpinski
+
+- Funzione ricorsiva `carpet` con parametri:
+    - Angolo in alto a sinistra $(x, y)$, lato $s$, livello $i$
+- Se $i = 0$, non disegna niente
+- Altrimenti, divide il quadrato in 3×3 di lato $\frac{s}{3}$
+    - Disegna quello *centrale* in bianco
+    - Sugli altri 8, stesso procedimento con livello $i - 1$
+- In `main`, canvas grigio scuro di lato 532 e bordo 10
+    - Tappeto da $(10, 10)$, lato 512, livello 4
+- In aggiunta, *palette* globale di 16 colori casuali
+    - A livello $i$, quadrato *centrale* di colore $i$ dalla *palette*
+
+---
+
+# 9.7 Tutti sotto soglia, con indice
+
+- Riprendere `all_below` (es. 8.6)
+    - Aggiungere terzo parametro $start$ (predefinito `0`)
+    - Controllare gli elementi in $data$ dalla posizione $start$ in poi
+- *Senza spezzare la lista* e senza *slice* : $start$ indica *head*, i successivi sono *tail*
+    - Se $start$ è oltre l'ultimo indice → *vero*
+    - Se il valore in $start$ non è minore di $limit$ → *falso*
+    - Altrimenti, ricorsione con $start + 1$
+- Esempi
+    - `all_below([9, 2, 4], 5)` → `False`
+    - `all_below([9, 2, 4], 5, 1)` → `True`
+
+>
+
+Niente `head, *tail = data`: la lista non viene copiata, cambia solo `start`
+<br>
+Da `main`, chiamare la funzione senza fornire `start` (`=0`)
+<br>
+Saranno accettate solo le soluzioni ricorsive
+
+---
+
+![](https://fondinfo.github.io/images/misc/dead-end.jpg)
+# 9.8 Nurikabe, vicolo cieco [P2]
+
+- Metodo booleano `wrong`, senza parametri
+    - Controlla se le annotazioni inserite impediscono la soluzione del gioco
+    - Può restituire `False` anche se la partita non è finita (celle ancora non marcate)
+- Esempi
+    - Quadrato 2×2 di celle nere
+    - Isola marcata: contenente due numeri, oppure più grande del suo numero
+    - Isola marcata senza celle libere adiacenti: incompleta, o senza numero
+    - Gruppo isolato di celle nere senza celle libere adiacenti
+
+>
+
+*Non si può risolvere il gioco senza rimuovere una annotazione*
+<br>
+<https://www.conceptispuzzles.com/index.aspx?uri=puzzle/nurikabe/techniques>
+
+---
+
+![](https://fondinfo.github.io/images/games/nurikabe.svg)
+# 9.9 Nurikabe, test [P2]
+
+- Creare degli *unit test* per il gioco Nurikabe
+    - Usare il modulo `unittest`
+- Verificare il gioco dopo varie chiamate a `play`
+    - Usare `read` per osservare lo stato
+    - Le celle con numero non devono cambiare
+- Verificare il funzionamento di `finished` rispetto alle regole
+    - Nessun quadrato 2×2 di celle nere
+    - Celle nere tutte contigue
+    - Ogni area bianca con un solo numero, della dimensione giusta
+- Verificare `wrong` su alcune configurazioni sbagliate
+
+>
+
+<https://fondinfo.github.io/slides/p34-collaudo.html#/16>
+<br>
+<https://fondinfo.github.io/play/?c21_fifteentest.py>

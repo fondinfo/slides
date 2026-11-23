@@ -543,7 +543,10 @@ table th {
   font-weight: 600;
   background: linear-gradient(to bottom, #4387fd 40%, #2a7cdf 80%) no-repeat;
 }
+th:empty {
+  visibility: hidden;
 
+}
 table td, table th {
   padding: 1em 0.5em;
   border: 1px solid white;

@@ -370,7 +370,7 @@ for (int i = 0; s[i] != '\0'; i++) {
 int digits = 0, vowels = 0;
 for (int i = 0; s[i] != '\0'; i++) {
     char c = tolower(s[i]);
-    if ('0' <= c <= '9')) {
+    if ('0' <= c && c <= '9') {
         digits++;
     } else if (c == 'a' || c == 'e' || c == 'i' ||
                c == 'o' || c == 'u') {

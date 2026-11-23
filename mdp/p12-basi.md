@@ -50,7 +50,7 @@ T   | T   | T         | T        | F
 - Tipo **`bool`**, per valori booleani: `True, False`
     - Operatori logici: `and, or, not` (→ [Logica](t11-logica.html))
 - Confronti: `==, !=, <, <=, >, >=`
-    - Solo tra valori omogenei; risultato booleano
+    - Solo tra valori confrontabili; risultato `bool`
     - Confronti concatenabili, sottinteso `and`
 - Valore **`None`**, unico del tipo `NoneType`: *niente*
 
@@ -592,39 +592,34 @@ d = sqrt(dx ** 2 + dy ** 2)
 ![](http://fondinfo.github.io/images/algo/clock0-1-9.svg)
 # 🧪 Aritmetica dell'orologio
 
-- Aritmetica modulare
-    - Basata sul resto della divisione
-- Python: *floor division*
-    - Quoziente arrotondato a sinistra
-    - Resto positivo
-- Es. modulo 12
-    - Resto ruota nel range 0-11
+- Aritmetica modulare: basata sul resto della divisione
+- Es.: Resto modulo 12 ruota nel range 0-11
+    - `(9 + 4) % 12 → 1`
+    - `(1 - 4) % 12 → 9` <br> <br>
+- *Floor division* : `//` (anche per `float`)
+    - Arrotonda a sinistra ($-\infty$), resto positivo
 
-``` py
->>> (9 + 4) % 12
-1
->>> (1 - 4) % 12
-9
-```
+| | |
+|-|-|
+| `4 // 3 → 1` | `4 % 3 → 1` |
+| `-4 // 3 → -2` | `-4 % 3 → 2` |
+| `3.25 // 1 → 3.0` (parte int) | `3.25 % 1 → 0.25` (parte fraz) |
+| `-3.25 // 1 → -4.0` | `-3.25 % 1 → 0.75` |
+| `int(-3.25) → -3` (tronca verso 0) ||
 
 ---
 
 ![large](http://fondinfo.github.io/images/algo/matrix.svg)
 # 🧪 Quoziente e resto
 
-- $n$ multiplo di $d$? Il resto è 0?
-    - `6 % 3 == 0  # True`
-    - ~ numeri in fila per 3
-- Parte intera e frazionaria
-    - `3.25 // 1  # 3.0`
-    - `3.25 % 1  # 0.25`
-- Arrotondamento sempre a sinistra
-    - `-3.25 // 1  # -4.0`
-    - `-3.25 % 1  # 0.75`
-    - `-4 // 3  # -2`
-    - `-4 % 3  # 2`
-- Troncamento
-    - `int(-3.25)  # -3`
+- “$n$ è multiplo di $d$?” ≡ “$d$ è divisore di $n$?”
+    - Il resto è 0?
+    - `6 % 3 == 0 → True`
+    - ~ numeri in fila per 3 <br> <br>
+- *Ceil division* : arrotonda a destra ($+\infty$)
+    - P.es. “Quante righe di $d$ elementi servono per contenerne $N$?”
+    - `1 + (N - 1) // d`
+    - *Python trick* : `-(-N // d)`
 
 ---
 
@@ -683,7 +678,7 @@ Hello, Adam!
 - Se le risposte sono `"Lancelot"`, `"Holy Grail"` e `"Blue"`, stampare:
     - `"Right. Off you go."`
 - Altrimenti, stampare:
-    - `"Down into the Gorge of Ethernal Peril!"`
+    - `"Down into the Gorge of Eternal Peril!"`
 
 >
 
