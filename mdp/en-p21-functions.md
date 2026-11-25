@@ -98,7 +98,7 @@ main()
 # ⭐ Animation
 
 ``` py
-x, y, dx = 50, 50, 4  # sequence unpacking
+x, y, dx = 80, 80, 4  # sequence unpacking
 ARENA_W, ARENA_H = 480, 360
 
 def tick():
@@ -352,7 +352,7 @@ Polar = tuple[float, float]  # Pt in polar coords (r, angle)
 
 def from_polar(plr: Polar) -> Point:
     r, angle = plr
-    a = polar(angle)
+    a = radians(angle)
     return (r * cos(a), r * sin(a))
 
 def move_around(start: Point, length: float, angle: float) -> Point:
@@ -373,7 +373,7 @@ def move_around(start: Point, length: float, angle: float) -> Point:
 
 ---
 
-![](/images/misc/thermometer.png)
+![](http://fondinfo.github.io/images/misc/thermometer.png)
 # Function, Fahrenheit
 
 - Define a function `cels_to_fahr`

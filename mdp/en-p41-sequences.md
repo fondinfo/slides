@@ -153,7 +153,7 @@ def main():
     values = []
     for _ in range(12):
         append_fib(values)
-        print(values)  # let's see what's going on
+    print(values)  # let's see what's going on
 ```
 
 >
@@ -448,8 +448,8 @@ groceries = ["spam", "egg", "beans"]
 quantities = ["100 g", "6 pc", "200 g", "too much"]
 
 for p, q in zip(groceries, quantities):  # unpacking
-    print(p, q, end=" ``` ")
-# spam 100 g ``` egg 6 pc ``` beans 200 g ```
+    print(p, q, end=" § ")
+# spam 100 g § egg 6 pc § beans 200 g §
 
 z = list(zip(groceries, quantities))  # if you *really* need a list
 # [("spam", "100 g"), ("egg", "6 pc"), ("beans", "200 g")]
@@ -468,8 +468,8 @@ z = list(zip(groceries, quantities))  # if you *really* need a list
 groceries = ["spam", "egg", "bacon", "sausage"]
 
 for i, val in enumerate(groceries):  # ~ zip(range(4), groceries)
-    print(i, val, end=" ``` ")
-# 0 spam ``` 1 egg ``` 2 bacon ``` 3 sausage ```
+    print(i, val, end=" § ")
+# 0 spam § 1 egg § 2 bacon § 3 sausage §
 
 e = list(enumerate(groceries))  # if you *really* need a list
 [(0, "spam"), (1, "egg"), (2, "bacon"), (3, "sausage")]

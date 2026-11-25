@@ -113,7 +113,7 @@ class Ball:  # …
         self._x += self._dx
         self._y += self._dy
 
-    def pos(self) -> (int, int):  # getter
+    def pos(self) -> tuple[int, int]:  # getter
         return self._x, self._y
 ```
 

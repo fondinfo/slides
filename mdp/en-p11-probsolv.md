@@ -120,4 +120,4 @@ A shorter and clearer solution is obtained after several iterations
 
 >
 
-<https://blockly.games/maze?lang=it> — Puzzles 3, 4, 6, 7, 9
+<https://blockly.games/maze?lang=en>

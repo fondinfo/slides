@@ -50,7 +50,7 @@ T   | T   | T         | T        | F
 - Type **`bool`**, for boolean values: `True, False`
     - Logical operators: `and, or, not` (→ [Logic](t11-logica.html))
 - Comparisons: `==, !=, <, <=, >, >=`
-    - Only between homogeneous values; boolean result
+    - Only between comparable values; boolean result
     - Chainable comparisons, `and` implicit
 - Value **`None`**, unique of type `NoneType`: *nothing*
 
