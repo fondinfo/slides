@@ -153,7 +153,7 @@ def main():
     values = []
     for _ in range(12):
         append_fib(values)
-    print(values)  # let's see what's going on
+        print(values)  # let's see what's going on
 ```
 
 >
@@ -212,27 +212,27 @@ days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
 
 ---
 
-# Unpacking
+![large](http://fondinfo.github.io/images/fun/list-monster.svg)
+# 🧪 Unpacking
 
-- Any sequence can be unpacked into a *corresponding number* of variables
+- Unpacking for any sequence
+    - *Corresponding number* of variables
 
 ``` py
->>> a, b, c = [1, 2, 3]
+a, b, c = [1, 2, 3]  # try also: "123"
 ```
 
-- *Starred* assignment for capturing a sequence into a list
-    - Try to omit `first`, `second`, or `last`
+- *Starred* assignment
+    - Capturing a subsequence into a list
 
 ``` py
->>> first, second, *middle, last = [0, 1, 2, 3, 4, 5]  # range(6)
->>> first
-0
->>> second
-1
->>> middle
-[2, 3, 4]
->>> last
-5
+head, *tail = [1, 2, 3, 4, 5]  # most common
+# head = 1; tail = [2, 3, 4, 5]
+
+*init, last = [1, 2, 3, 4, 5]  # or, range(1, 6)…
+# init = [1, 2, 3, 4]; last = 5
+
+fst, snd, *middle, lst = [1, 2, 3, 4, 5]  # guess…
 ```
 
 ---
@@ -403,16 +403,16 @@ print(val)
 
 >
 
-<https://docs.python.org/3/library/stdtypes.html#dict>
+<https://fondinfo.github.io/play/?c08_sparse.py>
 
 ---
 
-# 🥷 Functions on sequences
+# Functions on sequences
 
 ---
 
 ![](http://fondinfo.github.io/images/misc/thanos-glove.png)
-# 🥷 List comprehension
+# 💡 List comprehension
 
 - Concise way to create a list, re-processing a given sequence
     - *Output* expression
@@ -435,7 +435,7 @@ nums = [int(c) for c in "h3ll0 w0rld" if "0" <= c <= "9"]
 ---
 
 ![](http://fondinfo.github.io/images/fun/zip.png)
-# 🥷 Zip
+# 💡 Zip
 
 - Pairs elements of two (or +) sequences
 - Generates a *lazy* sequence of pairs (tuples)
@@ -458,7 +458,7 @@ z = list(zip(groceries, quantities))  # if you *really* need a list
 ---
 
 ![](http://fondinfo.github.io/images/repr/child-fingers.png)
-# 🥷 Enumerate
+# 💡 Enumerate
 
 - Pairs an incrementing index with the values of a sequence
 - Generates a *lazy* sequence of pairs
@@ -477,18 +477,20 @@ e = list(enumerate(groceries))  # if you *really* need a list
 
 ---
 
-# 🥷 Sorted or reversed lists
+# 🧪 Sorted or reversed lists
 
 - Functions `sorted` and `reversed` do not alter the list
 - Methods `sort` and `reverse` alter the list (*in place*)
 - `key` parameter: comparison between results of a *function*
+    - For `list.sort`, `sorted`, `max`, `min`
+    - *Stability* : original order preserved for equal keys
 
 ``` py
-groceries = ["spam", "bacon", "egg"]
-s1 = sorted(groceries)           # ["bacon", "egg", "spam"]
-s2 = sorted(groceries, key=len)  # ["egg", "spam", "bacon"]
-rev = list(reversed(groceries))  # ["egg", "bacon", "spam"]
-print(groceries)                 # ["spam", "bacon", "egg"]
+groceries = ["spam", "pork", "bacon", "egg"]
+s1 = sorted(groceries)           # ['bacon', 'egg', 'pork', 'spam']
+s2 = sorted(groceries, key=len)  # ['egg', 'spam', 'pork', 'bacon']
+rev = list(reversed(groceries))  # ['egg', 'bacon', 'pork', 'spam']
+print(groceries)                 # ['spam', 'pork', 'bacon', 'egg']
 ```
 
 ``` py
@@ -499,10 +501,11 @@ print(groceries)     # ["spam", "egg", "bacon"]
 
 ---
 
-# 🥷 Sorting keys
+# 🧪 Sorting keys
 
 ``` py
-vals = sorted([2, 4, -1, -5], key=abs)  # [-1, 2, 4, -5]
+# stability: try to sort w/o any key, first
+vals = sorted([2, 4, -2, -1, -5], key=abs)  # [-1, 2, -2, 4, -5]
 ```
 
 - `itemgetter` function in `operator` module
@@ -565,7 +568,7 @@ for v in filter(pos, vals):
 
 ---
 
-# 🥷 Instructions and expressions
+# 💡 Instructions and expressions
 
 - **Expression**: code whose evaluation produces a value
     - Suitable for the right side of an assignment (*rvalue*)
@@ -587,7 +590,7 @@ while (v := float(input("val? "))) >= 0:  # sentinel
 
 ---
 
-# 🥷 Truth value
+# 💡 Truth value
 
 - Every object can be converted to `bool`
 - *Falsy* constants and numbers
@@ -611,7 +614,7 @@ while v := input("val? "):  # sentinel, "" is falsy
 
 ---
 
-# 🥷 Aggregation functions
+# 🧪 Aggregation functions
 
 - From sequence to single result
 - Logical operations
@@ -632,7 +635,7 @@ True
 
 ---
 
-# 🥷 Random values from sequences
+# 🧪 Random values from sequences
 
 - **`choice`** : random extraction from sequence, uniform probability
 
