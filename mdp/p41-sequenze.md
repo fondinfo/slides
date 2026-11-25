@@ -482,13 +482,15 @@ e = list(enumerate(groceries))  # if you *really* need a list
 - Funzioni `sorted` e `reversed` non alterano la lista
 - Metodi `sort` e `reverse` alterano la lista (*in place*)
 - Parametro `key`: contronto tra risultati di una *funzione*
+    - Per `list.sort`, `sorted`, `max`, `min`
+    - *Stabilità* : ordine originale preservato a parità di chiave
 
 ``` py
-groceries = ["spam", "bacon", "egg"]
-s1 = sorted(groceries)           # ["bacon", "egg", "spam"]
-s2 = sorted(groceries, key=len)  # ["egg", "spam", "bacon"]
-rev = list(reversed(groceries))  # ["egg", "bacon", "spam"]
-print(groceries)                 # ["spam", "bacon", "egg"]
+groceries = ["spam", "pork", "bacon", "egg"]
+s1 = sorted(groceries)           # ['bacon', 'egg', 'pork', 'spam']
+s2 = sorted(groceries, key=len)  # ['egg', 'spam', 'pork', 'bacon']
+rev = list(reversed(groceries))  # ['egg', 'bacon', 'pork', 'spam']
+print(groceries)                 # ['spam', 'pork', 'bacon', 'egg']
 ```
 
 ``` py
@@ -502,7 +504,8 @@ print(groceries)     # ["spam", "egg", "bacon"]
 # 🧪 Chiavi di ordinamento
 
 ``` py
-vals = sorted([2, 4, -1, -5], key=abs)  # [-1, 2, 4, -5]
+# stability: try to sort w/o any key, first
+vals = sorted([2, 4, -2, -1, -5], key=abs)  # [-1, 2, -2, 4, -5]
 ```
 
 - Funzione `itemgetter` in modulo `operator`
