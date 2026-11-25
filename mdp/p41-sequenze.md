@@ -496,7 +496,7 @@ print(groceries)                 # ['spam', 'pork', 'bacon', 'egg']
 ``` py
 groceries.sort()     # in-place
 groceries.reverse()  # in-place
-print(groceries)     # ["spam", "egg", "bacon"]
+print(groceries)     # ["spam", "pork", "egg", "bacon"]
 ```
 
 ---

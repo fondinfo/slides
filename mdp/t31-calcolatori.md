@@ -78,7 +78,7 @@ Grace Hopper, Margaret Hamilton — Donne in corsi CS: 37%, 1983 → 18%, 2013
 
 # ⭐ Architettura CPU
 
-![large](http://fondinfo.github.io/images/sys/cpu-architecture.png)
+![large](http://fondinfo.github.io/images/sys/cpu-architecture.svg)
 
 ---
 
@@ -155,6 +155,28 @@ Grace Hopper, Margaret Hamilton — Donne in corsi CS: 37%, 1983 → 18%, 2013
 # 🔬 Esecuzione istruzioni
 
 ![large](http://fondinfo.github.io/images/sys/cpu-exec.svg)
+
+---
+
+# ⭐ Mini-ISA didattica (16 bit)
+
+- **Parole a 16 bit** (4 cifre hex): 4 bit *op-code* + 12 bit operando
+    - Operandi a 12 bit (`xxx` / `vvv`): estensione del segno (MSB) a 16 bit
+- **Registri**: `PC`, `IR`, `ACC` (accumulatore), `R0`–`R3` (4 registri generali)
+
+| Hex | Mnemonico | Operazione | Note |
+| :--- | :--- | :--- | :--- |
+| **`100r`** | `MOV ACC, Rr` | `ACC ← Rr` | Copia `Rr` in `ACC` (`r` ∈ `0..3`) |
+| **`200r`** | `MOV Rr, ACC` | `Rr ← ACC` | Copia `ACC` in `Rr` (`r` ∈ `0..3`) |
+| **`3vvv`** | `LDI vvv` | `ACC ← sext(vvv)` | Load immediato (costante 12 bit) |
+| **`4xxx`** | `LOAD xxx` | `ACC ← MEM[xxx]` | Carica da RAM in `ACC` |
+| **`5xxx`** | `STORE xxx` | `MEM[xxx] ← ACC` | Salva `ACC` in RAM |
+| **`6xxx`** | `JMP xxx` | `PC ← xxx` | Salto incondizionato |
+| **`7xxx`** | `JZ xxx` | se `ACC == 0`, `PC ← xxx` | Salto se zero |
+| **`800r`** | `ADD Rr` | `ACC ← ACC + Rr` | Somma `Rr` ad `ACC` |
+| **`900r`** | `SUB Rr` | `ACC ← ACC - Rr` | Sottrae `Rr` da `ACC` |
+| **`A00r`** | `MUL Rr` | `ACC ← ACC * Rr` | Moltiplicazione intera |
+| **`B00r`** | `DIV Rr` | `ACC ← ACC / Rr` | Divisione intera |
 
 ---
 
