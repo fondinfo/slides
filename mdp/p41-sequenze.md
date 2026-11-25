@@ -215,7 +215,7 @@ days = "mon|wed|fri".split("|")  # ["mon", "wed", "fri"]
 ![large](http://fondinfo.github.io/images/fun/list-monster.svg)
 # 🧪 Spacchettamento
 
-- Spacchettatamento per qualsiasi sequenza
+- Spacchettamento per qualsiasi sequenza
     - *Numero corrispondente* di variabili
 
 ``` py
@@ -481,7 +481,7 @@ e = list(enumerate(groceries))  # if you *really* need a list
 
 - Funzioni `sorted` e `reversed` non alterano la lista
 - Metodi `sort` e `reverse` alterano la lista (*in place*)
-- Parametro `key`: contronto tra risultati di una *funzione*
+- Parametro `key`: confronto tra risultati di una *funzione*
     - Per `list.sort`, `sorted`, `max`, `min`
     - *Stabilità* : ordine originale preservato a parità di chiave
 
@@ -618,8 +618,8 @@ while v := input("val? "):  # sentinel, "" is falsy
 
 - Da sequenza a risultato singolo
 - Operazioni logiche
-    - **`all`** : *AND* logico su tutti i valori di *thrutiness*
-    - **`any`** : *OR* logico su tutti i valori di *thrutiness*
+    - **`all`** : *AND* logico su tutti i valori di *truthiness*
+    - **`any`** : *OR* logico su tutti i valori di *truthiness*
 - Operazioni numeriche
     - **`sum`, `max`, `min`, `len`**
     - Metodo **count** su sequenza: numero di occorrenze di un valore

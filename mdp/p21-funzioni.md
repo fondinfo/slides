@@ -130,7 +130,7 @@ g2d.main_loop(tick)  # call tick 30 times/second
 - **`g2d.current_keys`**: *tutti i tasti attualmente premuti*
     - Risultato: sequenza di `str` – [Possibili valori](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values)
     - Es.: `"q", "1", "ArrowLeft", "Enter", "Spacebar", "LeftButton"`
-- **`g2d.close_canvas`**: *chiude il  canvas, termina l'esecuzione*
+- **`g2d.close_canvas`**: *chiude il canvas, termina l'esecuzione*
 
 >
 
@@ -185,7 +185,7 @@ if __name__ == "__main__":  # file executed directly, or imported?
 # 💡 Condizioni d'errore
 
 - Precondizioni per attivazione non soddisfatte
-- ⇒ Errore, instruzione **`raise`**
+- ⇒ Errore, istruzione **`raise`**
 - Es. Triangolo errato
 
 ``` py
@@ -374,7 +374,7 @@ def move_around(start: Point, length: float, angle: float) -> Point:
 
 ---
 
-![](/images/misc/thermometer.png)
+![](http://fondinfo.github.io/images/misc/thermometer.png)
 # Funzione, Fahrenheit
 
 - Definire una funzione `cels_to_fahr`
@@ -436,7 +436,7 @@ Partire dalla formula `fahr = cels * 1.8 + 32`
 # Parole di tre lettere
 
 - Scrivere una funzione con un parametro di tipo `str`
-    - La stringa rappresente un alfabeto di caratteri validi
+    - La stringa rappresenta un alfabeto di caratteri validi
 - Genera la lista di tutte le parole
     - Di lunghezza esattamente uguale a 3
     - Composte con quei soli caratteri
@@ -469,7 +469,7 @@ Non usare `math.sqrt` e simili — Risolvere con una iterazione
     - Prende due numeri naturali come parametri
     - Restituisce una lista con tutti i divisori comuni ai due numeri
 - Funzione `main` per eseguire `common_divisors`
-    - Su numeri fornito dall'utente
+    - Su numeri forniti dall'utente
     - Mostrare il risultato
 
 ---

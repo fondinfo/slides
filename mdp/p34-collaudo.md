@@ -165,7 +165,7 @@ def swap_elements(v: list, i: int, j: int):
     - Contro fantasma
     - Contro tartaruga
     - Contro altra pallina
-    - Per ogni personaggio, considerare la posizone rispetto alla pallina <br> alto / basso / destra / sinistra
+    - Per ogni personaggio, considerare la posizione rispetto alla pallina <br> alto / basso / destra / sinistra
 
 ---
 

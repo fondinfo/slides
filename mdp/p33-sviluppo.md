@@ -169,7 +169,7 @@ def sqrt(x: float) -> float
 
 # 💡 Design by contract
 
-- Paradigma proposto nel linguaggio *Eiffel* (Betrand *Meyer*, 1986)
+- Paradigma proposto nel linguaggio *Eiffel* (Bertrand *Meyer*, 1986)
 - Uso di asserzioni in varie fasi di sviluppo
     - *Progetto* : approccio pragmatico alle specifiche
     - *Implementazione* : guida per la programmazione

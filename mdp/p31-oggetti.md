@@ -343,14 +343,14 @@ for product in groceries:
 ```
 
 - Istruzione `for` per cicli su sequenze di valori
-- Ogni stringa è un oggetto, di class `str`
+- Ogni stringa è un oggetto, di classe `str`
 - `capitalize` è un metodo della classe `str`
 
 ---
 
 # 🧪 Lista di oggetti
 
-- Una lista può contenere quasiasi tipo di dato
+- Una lista può contenere qualsiasi tipo di dato
 - Utile per gestire numerose palline
 - Chiamata a `move` in un ciclo `for`
 

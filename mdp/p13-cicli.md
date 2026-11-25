@@ -22,7 +22,7 @@
 False
 >>> "arT" < "arc"
 True
->>> "Py" in "Monthy Python"
+>>> "Py" in "Monty Python"
 True
 >>> chr(83)
 "S"

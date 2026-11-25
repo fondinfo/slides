@@ -390,7 +390,7 @@ print(matrix)
 
 with open("some.csv", "w") as f:
     writer = csv.writer(f)
-    for row in matrix
+    for row in matrix:
         writer.writerow(row)  # quotes are added, where needed
 ```
 
