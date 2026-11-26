@@ -106,7 +106,7 @@ $q_3$         | $q_2$ | $q_1$
 # 💡️ Linguaggio riconosciuto da FSM
 
 - F. transiz. estesa a stringhe: `$\delta: Q \times \Sigma^\star \to Q$`
-    - `$\delta(q_i, \varepsilon) := q_i, \forall q_j \in Q$`
+    - `$\delta(q_i, \varepsilon) := q_i, \forall q_i \in Q$`
     - `$\delta(q_i, \sigma_j x) := \delta(\delta(q_i, \sigma_j), x) \\ \forall \sigma_j \in \Sigma, \forall x \in \Sigma^\star$`
 - Linguaggio riconosciuto da una macchina `M`:
     - `$L(M) = \{x \in \Sigma^\star : \delta(q_0, x) \in F\}$`
