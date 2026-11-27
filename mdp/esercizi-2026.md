@@ -1349,10 +1349,11 @@ Saranno accettate solo le soluzioni ricorsive
 
 ---
 
-![](https://fondinfo.github.io/images/fun/matryoshka.png)
+![](https://fondinfo.github.io/images/misc/catbus.png) Was it a car or a cat I saw?
+
 # 10.1 Palindromo, con indice
 
-- Funzione *ricorsiva* `is_palindrome`: testo e indice $start$ (predefinito $0$), risultato `bool`
+- Funzione *ricorsiva* <br> `is_palindrome(text, start=0) -> bool`
     - *Palindromo*: testo uguale se letto al contrario
 - *Senza creare nuove stringhe* (niente *slice*): <br> confrontare caratteri in $start$ e $-1 - start$
     - Se $start$ ha raggiunto la metà del testo: *vero*
