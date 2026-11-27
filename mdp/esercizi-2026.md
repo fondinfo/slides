@@ -1342,3 +1342,154 @@ Saranno accettate solo le soluzioni ricorsive
 <https://fondinfo.github.io/slides/p34-collaudo.html#/16>
 <br>
 <https://fondinfo.github.io/play/?c21_fifteentest.py>
+
+---
+
+# Esercitazione 10 (2026-11-30)
+
+---
+
+![](https://fondinfo.github.io/images/fun/matryoshka.png)
+# 10.1 Palindromo, con indice
+
+- Funzione *ricorsiva* `is_palindrome`: testo e indice `start` (predefinito `0`), risultato `bool`
+    - *Palindromo*: testo uguale se letto al contrario
+- *Senza creare nuove stringhe* (niente *slice*): confrontare `text[start]` con `text[-1 - start]`
+    - Se `start` ha raggiunto la metà del testo, *vero*; se i due caratteri sono diversi, *falso*
+    - Altrimenti, controllare con `start + 1`
+- Da `main`, chiedere righe fino a riga vuota; mostrare il risultato
+
+---
+
+# 10.2 Percorsi delle pagine
+
+- Riprendere l'albero di dizionari `site` negli esempi (`"title"`, e `"children"` assente nelle foglie)
+- Funzione *ricorsiva* `leaf_paths(node, prefix="")`
+    - Risultato: lista dei percorsi dalla radice a ogni *foglia*, titoli separati da `"/"`
+    - Ordine di visita: dall'alto verso il basso, da sinistra a destra
+- Es. per `site`: `["Home/News/2026", "Home/News/Archive", "Home/About"]`
+- In `main`, mostrare i percorsi, uno per riga, poi il numero di foglie e il percorso più lungo
+
+---
+
+![](https://fondinfo.github.io/images/draw/rot-squares.svg)
+# 10.3 Quadrati inscritti
+
+- Funzione *ricorsiva* `inscribed`: lista $pts$ dei 4 vertici (tuple), livello $i$
+- Se $i = 0$, non disegna niente
+- Altrimenti
+    - Disegna il *contorno* con `g2d.draw_polygon`, colore $(20 \cdot i, 0, 255 - 20 \cdot i)$
+    - Nuovo quadrato inscritto: vertici a $⅕$ del lato, da ogni vertice verso il successivo
+    - Stesso procedimento, livello $i - 1$
+- In `main`, canvas 500×500: quadrato dell'intero canvas, livello 12
+
+>
+
+Per il solo contorno, indicare lo spessore in `set_color`
+
+---
+
+# 10.4 Frequenza di n-grammi
+
+- Leggere per intero il file “`license.txt`”
+- Ottenere le parole, in minuscolo, formate di sole lettere
+- Contare i *bigrammi*: coppie di lettere consecutive, nella stessa parola
+    - Es. “`copy`” contiene `co`, `op`, `py`
+- Mostrare i 5 bigrammi più frequenti, con i relativi conteggi
+- Estensione: chiedere all'utente la lunghezza $n$ dei gruppi
+    - Contare *n-grammi* (con $n = 3$: “`cop`”, “`opy`”)
+
+``` py
+import re
+words = re.findall(r"[a-z]+", text.lower())
+```
+
+>
+
+Con una *slice* `word[i:i + n]` si estrae il gruppo che inizia in $i$
+
+---
+
+# 10.5 Celle libere al contorno
+
+- Leggere da un file CSV una matrice composta dai soli valori 0, 1 e 2
+    - 0 = cella libera, 1 = cella dell'area, 2 = cella bloccata
+- Definire una funzione *ricorsiva* `find_border(board, x, y, area=None, border0=None)`
+    - Simile a `find_area` negli esempi
+    - Memorizza in $border0$ l'insieme delle coordinate delle celle con valore 0 direttamente adiacenti all'area
+- In main, chiedere le coordinate $(x, y)$ di partenza
+    - Mostrare la matrice e marcare le celle di bordo a 0 trovate
+
+``` txt
+2,0,1,2        2,*,1,2
+0,1,1,2   →    *,1,1,2
+2,0,2,0        2,*,2,0
+```
+
+---
+
+# 10.6 Pagare con le monete
+
+- Funzione *ricorsiva* `pay(coins, amount)`
+    - $coins$: singole monete disponibili, con possibili ripetizioni
+    - Risultato: lista di monete (ciascuna usabile al più una volta) con somma $amount$, precisa senza resto, oppure `None`
+- Se $amount$ è $0$, lista vuota; senza monete, `None`
+- Altrimenti, separare la prima moneta *head* dalle altre *tail*
+    - Se $head ≤ amount$, provare a pagare $amount - head$ con *tail*
+    - Se non si riesce, provare solo con *tail*, stesso $amount$
+- In `main`, chiedere monete tutte su una per riga e poi importo su altra riga
+
+>
+
+Es. con `[5, 2, 2, 10, 1]`: 9 → `[5, 2, 2]`; 18 → `[5, 2, 10, 1]`; 21 → `None`
+<br>
+Attenzione: la lista vuota è un risultato valido, da distinguere da `None`
+
+---
+
+![](https://fondinfo.github.io/images/misc/artificial-intelligence.png)
+# 10.7 Nurikabe, suggerimenti [P2]
+
+- Cercare automaticamente la prossima mossa
+    - Ragionamento simile a giocatore umano
+    - Avviare la ricerca col tasto `a`
+- *Provare* a annerire una cella non annotata
+    - Applicare gli automatismi degli es. 8.8 e 8.9
+    - Se le regole sono violate (`wrong`), inserire un •
+- *Provare* un • in una cella non annotata
+    - Applicare gli automatismi degli es. 8.8 e 8.9
+    - Se le regole sono violate (`wrong`), annerire la cella
+
+>
+
+Se invece una ipotesi non risulta `wrong`, non è detto che sia giusta; non si possono trarre conclusioni!
+
+---
+
+# 10.8 Nurikabe, altri suggerimenti [P2]
+
+- Considerare ogni cella non annotata, singolarmente
+- *Provare ad annerire*
+    - Applicare gli automatismi degli es. 8.8 e 8.9
+- *Provare a marcare •*
+    - Applicare gli automatismi degli es. 8.8 e 8.9
+- *Confrontare* tutte le annotazioni, aggiunte nei due casi
+    - Se una qualsiasi cella diventa *nera* in entrambe le ipotesi ⇒ *nera* nel gioco
+    - Se una qualsiasi cella diventa • in entrambe le ipotesi ⇒ • nel gioco
+
+---
+
+# 10.9 Nurikabe, test soluzione [P2]
+
+- Permettere di inizializzare il gioco da un file di testo
+    - Usare gli schemi in `nurikabe-games.zip` su Elly
+- Provare inoltre a risolvere quegli schemi automaticamente
+    - Per ogni mossa, applicare i suggerimenti
+    - Suggerimenti degli es. 10.7 e 10.8
+- Ricordarsi…
+    - Inizializzare la partita da un *file* (parametro)
+    - Preparare vari *unit test*, per le principali funzionalità
+    
+<https://elly2026.didattica.unipr.it/mod/resource/view.php?id=69111>
+<br>
+<https://www.syndicatedpuzzles.com/Nurikabe_Sample_Pack.pdf>
