@@ -1352,11 +1352,12 @@ Saranno accettate solo le soluzioni ricorsive
 ![](https://fondinfo.github.io/images/fun/matryoshka.png)
 # 10.1 Palindromo, con indice
 
-- Funzione *ricorsiva* `is_palindrome`: testo e indice `start` (predefinito `0`), risultato `bool`
+- Funzione *ricorsiva* `is_palindrome`: testo e indice $start$ (predefinito $0$), risultato `bool`
     - *Palindromo*: testo uguale se letto al contrario
-- *Senza creare nuove stringhe* (niente *slice*): confrontare `text[start]` con `text[-1 - start]`
-    - Se `start` ha raggiunto la metà del testo, *vero*; se i due caratteri sono diversi, *falso*
-    - Altrimenti, controllare con `start + 1`
+- *Senza creare nuove stringhe* (niente *slice*): <br> confrontare caratteri in $start$ e $-1 - start$
+    - Se $start$ ha raggiunto la metà del testo: *vero*
+    - Se i due caratteri sono diversi: *falso*
+    - Altrimenti, controllare con $start + 1$
 - Da `main`, chiedere righe fino a riga vuota; mostrare il risultato
 
 ---
@@ -1368,7 +1369,7 @@ Saranno accettate solo le soluzioni ricorsive
     - Risultato: lista dei percorsi dalla radice a ogni *foglia*, titoli separati da `"/"`
     - Ordine di visita: dall'alto verso il basso, da sinistra a destra
 - Es. per `site`: `["Home/News/2026", "Home/News/Archive", "Home/About"]`
-- In `main`, mostrare i percorsi, uno per riga, poi il numero di foglie e il percorso più lungo
+- In `main`, mostrare i percorsi, uno per riga
 
 ---
 
@@ -1412,12 +1413,12 @@ Con una *slice* `word[i:i + n]` si estrae il gruppo che inizia in $i$
 
 # 10.5 Celle libere al contorno
 
-- Leggere da un file CSV una matrice composta dai soli valori 0, 1 e 2
-    - 0 = cella libera, 1 = cella dell'area, 2 = cella bloccata
-- Definire una funzione *ricorsiva* `find_border(board, x, y, area=None, border0=None)`
-    - Simile a `find_area` negli esempi
+- Leggere matrice da file CSV, con soli valori 0, 1 e 2
+    - 0 = cella libera, 1 = area da cercare, 2 = cella bloccata
+- Funzione *ricorsiva* simile a `find_area` negli esempi
+    - `find_border(board, x, y, area=None, border0=None)`
     - Memorizza in $border0$ l'insieme delle coordinate delle celle con valore 0 direttamente adiacenti all'area
-- In main, chiedere le coordinate $(x, y)$ di partenza
+- In `main`, chiedere le coordinate $(x, y)$ di partenza
     - Mostrare la matrice e marcare le celle di bordo a 0 trovate
 
 ``` txt
@@ -1437,7 +1438,7 @@ Con una *slice* `word[i:i + n]` si estrae il gruppo che inizia in $i$
 - Altrimenti, separare la prima moneta *head* dalle altre *tail*
     - Se $head ≤ amount$, provare a pagare $amount - head$ con *tail*
     - Se non si riesce, provare solo con *tail*, stesso $amount$
-- In `main`, chiedere monete tutte su una per riga e poi importo su altra riga
+- In `main`, chiedere monete tutte su una riga e poi importo su altra riga
 
 >
 
@@ -1453,16 +1454,16 @@ Attenzione: la lista vuota è un risultato valido, da distinguere da `None`
 - Cercare automaticamente la prossima mossa
     - Ragionamento simile a giocatore umano
     - Avviare la ricerca col tasto `a`
-- *Provare* a annerire una cella non annotata
-    - Applicare gli automatismi degli es. 8.8 e 8.9
+- *Provare* ad annerire una cella non annotata
+    - Applicare automatismi (es. 8.9) e `wrong` (es. 9.8)
     - Se le regole sono violate (`wrong`), inserire un •
 - *Provare* un • in una cella non annotata
-    - Applicare gli automatismi degli es. 8.8 e 8.9
+    - Applicare automatismi e `wrong`
     - Se le regole sono violate (`wrong`), annerire la cella
 
 >
 
-Se invece una ipotesi non risulta `wrong`, non è detto che sia giusta; non si possono trarre conclusioni!
+Se invece un'ipotesi non risulta `wrong`, non è detto che sia giusta; non si possono trarre conclusioni!
 
 ---
 
@@ -1470,16 +1471,16 @@ Se invece una ipotesi non risulta `wrong`, non è detto che sia giusta; non si p
 
 - Considerare ogni cella non annotata, singolarmente
 - *Provare ad annerire*
-    - Applicare gli automatismi degli es. 8.8 e 8.9
+    - Applicare automatismi
 - *Provare a marcare •*
-    - Applicare gli automatismi degli es. 8.8 e 8.9
+    - Applicare automatismi
 - *Confrontare* tutte le annotazioni, aggiunte nei due casi
     - Se una qualsiasi cella diventa *nera* in entrambe le ipotesi ⇒ *nera* nel gioco
     - Se una qualsiasi cella diventa • in entrambe le ipotesi ⇒ • nel gioco
 
 ---
 
-# 10.9 Nurikabe, test soluzione [P2]
+# 10.9 Nurikabe, soluzione logica [P2]
 
 - Permettere di inizializzare il gioco da un file di testo
     - Usare gli schemi in `nurikabe-games.zip` su Elly
@@ -1487,7 +1488,7 @@ Se invece una ipotesi non risulta `wrong`, non è detto che sia giusta; non si p
     - Per ogni mossa, applicare i suggerimenti
     - Suggerimenti degli es. 10.7 e 10.8
 - Ricordarsi…
-    - Inizializzare la partita da un *file* (parametro)
+    - Inizializzare la partita da uno dei *file* forniti (parametro)
     - Preparare vari *unit test*, per le principali funzionalità
     
 <https://elly2026.didattica.unipr.it/mod/resource/view.php?id=69111>
